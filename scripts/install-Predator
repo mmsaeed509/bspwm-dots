@@ -1,0 +1,10 @@
+#!/bin/bash
+
+yes | sudo pacman -S linux-headers
+
+git clone https://github.com/JafarAkhondali/acer-predator-turbo-and-rgb-keyboard-linux-module
+cd "acer-predator-turbo-and-rgb-keyboard-linux-module"
+chmod +x ./*.sh
+sudo ./install_service.sh
+sudo cp PredatorSense.py /bin
+
