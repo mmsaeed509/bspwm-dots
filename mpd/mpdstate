@@ -1,0 +1,45 @@
+sw_volume: 86
+audio_device_state:1:pulse audio
+audio_device_state:1:my_fifo
+state: pause
+current: 5
+time: 152.667000
+random: 0
+repeat: 1
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Alexandra Stan - Mr Saxo Beat.mp3
+1:𝐵𝑒𝑧𝑜𝑠 𝑖 𝑋 - 𝑔𝑖𝑚𝑚𝑒 𝑔𝑖𝑚𝑚𝑒 .mp3
+2:Cloud Up - Suit.mp3
+3:Dua Lipa - Don't Start Now .mp3
+4:Empire Of The Sun - Alive.mp3
+5:Euro 2016 Montage - Magic In The Air.mp3
+6:Eye of the Tiger - Theme from Rocky 3.mp3
+7:Gloria Gaynor - I Will Survive.mp3
+8:Hans Zimmer - S.T.A.Y.mp3
+9:Imagine Dragons - Believer .mp3
+10:INNA x Sean Paul - Up.mp3
+11:John Newman - Love Me Again.mp3
+12:M.I.A. - Paper Planes.mp3
+13:Madonna - La Isla Bonita.mp3
+14:Major Lazer - Watch Out For This.mp3
+15:Måneskin - Beggin.mp3
+16:Marie Wegener - Countdown.mp3
+17:Mark Marku - Da si htjela .mp3
+18:Masked Wolf  - Astronaut in the Ocean .mp3
+19:MGK - Invincible .mp3
+20:Olivia Addams - I'm Lost.mp3
+21:Olympic ayres magic .mp3
+22:Phosphorescent - Song for Zula .mp3
+23:Shakira - Rabiosa.mp3
+24:Stern des Südens _ FC Bayern.mp3
+25:The Final Countdown - Europe.mp3
+26:You’re My Love -  (My Life) .mp3
+27:Cartoon - On & On (feat. Daniel Levi) [NCS Release].mp3
+28:Culture Code - Make Me Move (feat. Karra) [NCS Release].mp3
+29:Janji - Heroes Tonight (feat. Johnning) [NCS Release].mp3
+playlist_end
