@@ -1,2 +1,2 @@
 # Predator-BSPWM
-dotfiles
+## dotfiles
