@@ -1,0 +1,41 @@
+! -----------------------------------------------------------------------------
+! Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
+! Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+!
+! Light color scheme
+! -----------------------------------------------------------------------------
+
+*background: #fafafa
+*foreground: #383a42
+
+! Black + DarkGrey
+*color0:  #383a42
+*color8:  #383a42
+
+! DarkRed + Red
+*color1:  #e45649
+*color9:  #e45649
+
+! DarkGreen + Green
+*color2:  #50a14f
+*color10: #50a14f
+
+! DarkYellow + Yellow
+*color3:  #c18401
+*color11: #c18401
+
+! DarkBlue + Blue
+*color4:  #0184bc
+*color12: #0184bc
+
+! DarkMagenta + Magenta
+*color5:  #a626a4
+*color13: #a626a4
+
+! DarkCyan + Cyan
+*color6:  #0997b3
+*color14: #0997b3
+
+! LightGrey + White
+*color7:  #909090
+*color15: #909090

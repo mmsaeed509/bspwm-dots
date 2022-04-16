@@ -1,0 +1,41 @@
+! -----------------------------------------------------------------------------
+! Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
+! Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+!
+! Beach color scheme
+! -----------------------------------------------------------------------------
+
+*background: #141c21
+*foreground: #93a1a1
+
+! Black + DarkGrey
+*color0:  #263640
+*color8:  #4a697d
+
+! DarkRed + Red
+*color1:  #d12f2c
+*color9:  #fa3935
+
+! DarkGreen + Green
+*color2:  #819400
+*color10: #a4bd00
+
+! DarkYellow + Yellow
+*color3:  #b08500
+*color11: #d9a400
+
+! DarkBlue + Blue
+*color4:  #2587cc
+*color12: #2ca2f5
+
+! DarkMagenta + Magenta
+*color5:  #696ebf
+*color13: #8086e8
+
+! DarkCyan + Cyan
+*color6:  #289c93
+*color14: #33c5ba
+
+! LightGrey + White
+*color7:  #bfbaac
+*color15: #fdf6e3
