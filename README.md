@@ -1,5 +1,9 @@
 # Predator-BSPWM
 ## dotfiles
 
-https://user-images.githubusercontent.com/62524855/163693576-47cd6ea5-5dbd-4dec-b675-cffa6a7248d2.mp4
+
+
+
+
+https://user-images.githubusercontent.com/62524855/164373707-c297b57c-603f-4c3b-8069-42f824f808dc.mp4
 
