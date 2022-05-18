@@ -1,0 +1,16 @@
+###########################################
+# @author ozil
+# GitHub : https://github.com/mmsaeed509
+###########################################
+
+Net/ThemeName "Blade2"
+Net/IconThemeName "Red-Icons"
+Gtk/CursorThemeName "LyraS"
+Net/EnableEventSounds "0"
+Net/EnableInputFeedbackSounds "0"
+Xft/DPI "-1"
+Xft/Hinting 1
+Xft/HintStyle "hintslight"
+Xft/Antialias 1
+Xft/RGBA "none"
+
