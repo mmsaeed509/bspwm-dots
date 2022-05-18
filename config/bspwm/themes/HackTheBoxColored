@@ -1,0 +1,28 @@
+! -----------------------------------------------------------------------------
+! Copyright (C) 29-March 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+! Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+! 
+! Hack The Box color scheme
+! -----------------------------------------------------------------------------
+
+
+*.background:  #1a2332
+*.foreground:  #a4b1cd
+*.cursorColor: #313f55
+
+*.color0:  #000000
+*.color8:  #666666
+*.color1:  #ff3e3e
+*.color9:  #ff8484
+*.color2:  #9fef00
+*.color10: #c5f467
+*.color3:  #ffaf00
+*.color11: #ffcc5c
+*.color4:  #004cff
+*.color12: #5cb2ff
+*.color5:  #9f00ff
+*.color13: #c16cfa
+*.color6:  #2ee7b6
+*.color14: #5cecc6
+*.color7:  #ffffff
+*.color15: #ffffff
