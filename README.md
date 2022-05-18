@@ -36,6 +36,8 @@
 
 - **Text Editor** :- [**`geany`**](https://www.geany.org/) [**`Visual Studio Code`**](https://code.visualstudio.com/) [**`inkdrop`**](https://www.inkdrop.app/)
 
+- **Predator Sense App** :- [**`PredatorSenseCLI`**](https://github.com/JafarAkhondali/acer-predator-turbo-and-rgb-keyboard-linux-module) [**`PredatorSenseGUI`**](https://github.com/zehratullayl/Linux-Predator-GUI)
+
 <!-- Dependencies -->
 
 <!-- ###########################################  ########################################### -->
