@@ -3,7 +3,8 @@
 ![](GIFs/ALLTHEMES.gif)
 
 
-### Previews
+ 
+<h2 align="center"> Available Themes Previews </h2>
 
 |Blade|CyberPunk|Hack|
 |--|--|--|
@@ -22,5 +23,5 @@
 | ![](GIFs/Bouquet.gif) | ![](GIFs/Dracula.gif) | ![](GIFs/Nord.gif) |
 
 |Groot|Gruvbox|
-|--|--|--|
+|--|--|
 | ![](GIFs/Groot.gif) | ![](GIFs/Gruvbox.gif) |
