@@ -16,3 +16,11 @@
 |BlackArch|Neon|Tigger In Atlantis|
 |--|--|--|
 | ![](GIFs/BlackArch.gif) | ![](GIFs/Neon.gif) | ![](GIFs/TiggerInAtlantis.gif) |
+
+|Bouquet|Dracula|Nord|
+|--|--|--|
+| ![](GIFs/Bouquet.gif) | ![](GIFs/Dracula.gif) | ![](GIFs/Nord.gif) |
+
+|Groot|Gruvbox|
+|--|--|--|
+| ![](GIFs/Groot.gif) | ![](GIFs/Gruvbox.gif) |
