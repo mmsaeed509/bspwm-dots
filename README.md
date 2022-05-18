@@ -1,4 +1,4 @@
-<h1 align="center"> Ozoz bspwm dots</h1>
+<h1 align="center"> Ozoz bspwm dots for Predator </h1>
 
 ![](images/predator-bspwm.gif)
 
