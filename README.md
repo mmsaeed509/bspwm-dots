@@ -1,3 +1,3 @@
-<h1 align="center"> Ozoz bspwm dots for Predator </h1>
+<h1 align="center"> Ozoz dotfiles for bspwm </h1>
 
 ![](GIFs/ALLTHEMES.gif)
