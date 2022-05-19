@@ -1,10 +1,8 @@
-/* Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com> */
-/* Everyone is permitted to copy and distribute copies of this file under GNU-GPL3 */
 
 configuration {
     location: 						0;
     fixed-num-lines: 				true;
-    show-icons: 					false;
+    show-icons: 					true;
     sidebar-mode: 					true;
     scroll-method: 					1;
     window-format: 					"[{w}] ··· {c} ···   {t}";
