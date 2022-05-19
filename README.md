@@ -60,6 +60,21 @@ sudo cp bin/* /bin
 # Copy config to ~/.config #
 cp -r config/* ~/.config
 
+# copy themes, backgrounds, etc.. #
+sudo cp -r backgrounds/* /usr/share/backgrounds/
+
+sudo unzip cursors.zip -d /usr/share/icons/
+
+sudo unzip themes.zip -d /usr/share/themes/
+
+cd icons
+
+unzip \*.zip -d /usr/share/icons/
+
+sud cp -r dunst /usr/share/icons/
+
+cd ..
+
 # Clean #
 cd .. && rm -rf bspwm-dots
 ~~~
