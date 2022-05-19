@@ -2,6 +2,7 @@
 
 ## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
 ## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+## reconfigured Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 
 ## Script To Manage Brightness For Archcraft.
 
@@ -24,15 +25,15 @@ get_icon() {
 	backlight="$(get_backlight)"
 	current="${backlight%%%}"
 	if [[ ("$current" -ge "0") && ("$current" -le "20") ]]; then
-		icon='/usr/share/archcraft/icons/dunst/brightness-20.png'
+		icon='/usr/share/icons/dunst/brightness-20.png'
 	elif [[ ("$current" -ge "20") && ("$current" -le "40") ]]; then
-		icon='/usr/share/archcraft/icons/dunst/brightness-40.png'
+		icon='/usr/share/icons/dunst/brightness-40.png'
 	elif [[ ("$current" -ge "40") && ("$current" -le "60") ]]; then
-		icon='/usr/share/archcraft/icons/dunst/brightness-60.png'
+		icon='/usr/share/icons/dunst/brightness-60.png'
 	elif [[ ("$current" -ge "60") && ("$current" -le "80") ]]; then
-		icon='/usr/share/archcraft/icons/dunst/brightness-80.png'
+		icon='/usr/share/icons/dunst/brightness-80.png'
 	elif [[ ("$current" -ge "80") && ("$current" -le "100") ]]; then
-		icon='/usr/share/archcraft/icons/dunst/brightness-100.png'
+		icon='/usr/share/icons/dunst/brightness-100.png'
 	fi
 }
 
