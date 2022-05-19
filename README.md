@@ -10,6 +10,8 @@
 
 <!-- Table of content -->
 
+### See [**`Predator Branch`**](https://github.com/mmsaeed509/bspwm-dots/tree/Predator) For Acer Predator Helios
+
 ### [Table of content](#table-of-content)
 
 + **Dependencies**
