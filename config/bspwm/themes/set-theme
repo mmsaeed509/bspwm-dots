@@ -152,8 +152,17 @@ set_style () {
 		echo "#!/bin/bash
           KeyProfileColor -Neon" > ~/.config/predator/keyColorProfileForStartup
           
-    fi
+	# ---------------------------- No. 14 -- > TiggerInAtlantis Theme ----------------------------
 	
+	elif [[ "$6" == "TiggerInAtlantis" ]]
+	then
+	
+		KeyProfileColor -TiggerInAtlantis 
+		echo "#!/bin/bash
+          KeyProfileColor -TiggerInAtlantis" > ~/.config/predator/keyColorProfileForStartup
+          
+    fi
+		
 	# ---------------------------- Apply RGB Colors For Keyboard ----------------------------
 	
 	# reload config
