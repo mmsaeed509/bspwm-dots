@@ -35,9 +35,9 @@
 
 - **Terminal Apps** :- [**`alacritty`**](https://alacritty.org/) [**`nvim`**](https://neovim.io/) [**`zsh`**](https://wiki.archlinux.org/title/zsh) [**`powerline`**](https://wiki.archlinux.org/title/Powerline) [**`power10k`**](https://github.com/romkatv/powerlevel10k)  [**`oh my zsh`**](https://ohmyz.sh/)
 
-- **Media** :- [**`viewnior`**](https://archlinux.org/packages/community/x86_64/viewnior/) [**`gwenview`**](https://archlinux.org/packages/extra/x86_64/gwenview/) [**`nitrogen`**](https://wiki.archlinux.org/title/nitrogen) [**`feh`**](https://wiki.archlinux.org/title/feh) [**`thunar`**](https://wiki.archlinux.org/title/thunar) [**`mpd`**](https://wiki.archlinux.org/title/Music_Player_Daemon) [**`ncmpcpp`**](https://wiki.archlinux.org/title/ncmpcpp) [**`mpc`**](https://archlinux.org/packages/extra/x86_64/mpc/) [**`maim`**](https://github.com/naelstrof/maim)
+- **Media** :- [**`viewnior`**](https://archlinux.org/packages/community/x86_64/viewnior/) [**`gwenview`**](https://archlinux.org/packages/extra/x86_64/gwenview/) [**`nitrogen`**](https://wiki.archlinux.org/title/nitrogen) [**`feh`**](https://wiki.archlinux.org/title/feh) [**`thunar`**](https://wiki.archlinux.org/title/thunar) [**`mpd`**](https://wiki.archlinux.org/title/Music_Player_Daemon) [**`ncmpcpp`**](https://wiki.archlinux.org/title/ncmpcpp) [**`mpc`**](https://archlinux.org/packages/extra/x86_64/mpc/) [**`maim`**](https://github.com/naelstrof/maim) [**`Nerd Fonts`**](https://github.com/ryanoasis/nerd-fonts)
 
-- **Text Editor** :- [**`geany`**](https://www.geany.org/) [**`Visual Studio Code`**](https://code.visualstudio.com/) [**`inkdrop`**](https://www.inkdrop.app/)
+- **Text Editor** :- [**`geany`**](https://www.geany.org/) [**`Visual Studio Code`**](https://code.visualstudio.com/) [**`inkdrop`**](https://www.inkdrop.app/) [**`MarkText`**](https://github.com/marktext/marktext)
 
 <!-- Dependencies -->
 
