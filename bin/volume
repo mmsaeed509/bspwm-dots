@@ -42,7 +42,7 @@ toggle_mute() {
 	status=`amixer get Master | tail -n1 | grep -wo 'on'`
 
 	if [[ "$status" == "on" ]]; then
-		amixer set Master toggle && dunstify -u low --replace=69 -i '/usr/share/archcraft/icons/dunst/volume-mute.png' "Mute"
+		amixer set Master toggle && dunstify -u low --replace=69 -i '/usr/share/icons/dunst/volume-mute.png' "Mute"
 	else
 		amixer set Master toggle && get_icon && dunstify -u low --replace=69 -i "$icon" "Unmute"
 	fi
