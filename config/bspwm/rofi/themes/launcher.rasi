@@ -2,7 +2,7 @@
 configuration {
     location: 						0;
     fixed-num-lines: 				true;
-    show-icons: 					false;
+    show-icons: 					true;
     sidebar-mode: 					true;
     scroll-method: 					1;
     window-format: 					"[{w}] ··· {c} ···   {t}";
