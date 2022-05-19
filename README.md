@@ -1,7 +1,7 @@
 <h1 align="center"> Ozoz bspwm dotfiles for Acer Predator Helios  </h1>
 
 <!-- reviewing themes -->
-[![Predator](GIFs/ALLTHEMES.gif)](https://drive.google.com/file/d/1oAnRYYdb1zVIZLnppeKMABg10MFjrGJ6/view?usp=sharing)
+[![Predator](GIFs/Predator.gif)](https://drive.google.com/file/d/1oAnRYYdb1zVIZLnppeKMABg10MFjrGJ6/view?usp=sharing)
 
 <!-- reviewing themes -->
 
