@@ -48,7 +48,8 @@
 
 ~~~bash
 
-https://github.com/mmsaeed509/bspwm-dots.git
+git clone https://github.com/mmsaeed509/bspwm-dots.git
+
 cd bspwm-dots
 
 # Copy misc to home #
