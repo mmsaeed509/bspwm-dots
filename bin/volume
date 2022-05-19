@@ -2,6 +2,7 @@
 
 ## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
 ## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+## reconfigured Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 
 ## Script To Manage Speaker Volume For Archcraft.
 
@@ -16,13 +17,13 @@ get_icon() {
 	vol="$(get_volume)"
 	current="${vol%%%}"
 	if [[ "$current" -eq "0" ]]; then
-		icon='/usr/share/archcraft/icons/dunst/volume-mute.png'
+		icon='/usr/share/icons/dunst/volume-mute.png'
 	elif [[ ("$current" -ge "0") && ("$current" -le "30") ]]; then
-		icon='/usr/share/archcraft/icons/dunst/volume-low.png'
+		icon='/usr/share/icons/dunst/volume-low.png'
 	elif [[ ("$current" -ge "30") && ("$current" -le "60") ]]; then
-		icon='/usr/share/archcraft/icons/dunst/volume-mid.png'
+		icon='/usr/share/icons/dunst/volume-mid.png'
 	elif [[ ("$current" -ge "60") && ("$current" -le "100") ]]; then
-		icon='/usr/share/archcraft/icons/dunst/volume-high.png'
+		icon='/usr/share/icons/dunst/volume-high.png'
 	fi
 }
 
