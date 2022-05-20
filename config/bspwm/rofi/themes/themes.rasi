@@ -29,7 +29,7 @@ window {
 
 prompt {
     enabled: 						true;
-	margin: 						0px 0px 0px 8px;
+	margin: 						0px 0px 0px 15px;
     padding:    					6px ;
 	background-color: 				@background;
 	text-color: 					@foreground;
