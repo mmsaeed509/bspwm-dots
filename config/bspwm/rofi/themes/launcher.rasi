@@ -1,3 +1,6 @@
+/* Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com> */
+/* reconfigured Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509> <> */
+/* Everyone is permitted to copy and distribute copies of this file under GNU-GPL3 */
 
 configuration {
     location: 						0;
@@ -24,9 +27,9 @@ configuration {
 }
 
 window {
-    border: 						1px;
+    border: 						2px;
     border-color: 					@selected;
-    border-radius: 					0px;
+    border-radius: 					10px;
     width: 							500px;
     height: 						0px;
 }
@@ -34,13 +37,14 @@ window {
 prompt {
     spacing: 						0;
     border: 						0;
+    border-radius: 					5px;
     background-color:             	@highlight;
     text-color: 					@background;
     padding:    					6px 10px 6px 10px;
 }
 
 textbox-prompt-colon {
-    expand: 						false;
+    expand: 						true;
     str: 							"";
     padding:    					6px 4px 6px 4px;
     text-color: 					inherit;
@@ -52,11 +56,11 @@ entry {
     horizontal-align:               0;
     text-color: 					@foreground;
     placeholder-color:              @FG;
-    placeholder:                    "Search...";
-    padding:    					6px 2px 6px 2px;
-    border: 						0px 0px 1px 0px;
+    placeholder:                    " Search... ";
+    padding:    					6px ;
+    border: 						2px ;
     border-color: 					@selected;
-    border-radius: 					0px;
+    border-radius: 					5px;
 }
 
 case-indicator {
@@ -69,13 +73,14 @@ inputbar {
     text-color: 					@foreground;
     border: 						0px;
     border-color: 					@selected;
-    border-radius: 					0px;
+    border-radius: 					5px;
     children: 						[ prompt,textbox-prompt-colon,entry ];
 }
 
 mainbox {
-    border: 						0px;
-    border-color: 					@selected;
+    border: 						5px;
+    // border-color: 					@selected;
+    border-radius:                  10px;
     spacing: 						6px;
     padding: 						10px;
 }
@@ -83,7 +88,8 @@ mainbox {
 listview {
     lines:							7;
     columns:						1;
-    fixed-height: 					0;
+    fixed-height: 					2;
+    border-radius:                  10px;
     border: 						0px;
     border-color: 					@foreground;
     spacing: 						2px;
@@ -97,7 +103,8 @@ element-text, element-icon {
 }
 
 element {
-    border: 						0px;
+    border: 						2px;
+    border-radius:                  10px;
     padding: 						7px;
 }
 element normal.normal {
@@ -115,7 +122,7 @@ element normal.active {
 element selected.normal {
     background-color: 				@selected;
     text-color:       				@background;
-    border: 						0px;
+    border: 						2px;
     border-color: 					@selected;
 }
 element selected.urgent {
@@ -140,9 +147,9 @@ element alternate.active {
 }
 
 sidebar {
-    border:       					0px;
+    border:       					5px;
     border-color: 					@selected;
-    border-radius: 					0px;
+    border-radius: 					10px;
 }
 
 button {
@@ -152,7 +159,7 @@ button {
     padding: 						7px;
     text-color: 					@foreground;
     border: 						0px;
-    border-radius: 					0px;
+    border-radius: 					10px;
     border-color: 					@selected;
 }
 
@@ -160,7 +167,7 @@ button selected {
     background-color:             	@selected;
     text-color: 					@background;
     border: 						0px;
-    border-radius: 					0px;
+    border-radius: 					10px;
     border-color: 					@selected;
 }
 
