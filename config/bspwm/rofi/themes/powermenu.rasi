@@ -1,3 +1,6 @@
+/* Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com> */
+/* reconfigured Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509> <> */
+/* Everyone is permitted to copy and distribute copies of this file under GNU-GPL3 */
 
 configuration {
     font:                           "Iosevka 10";
@@ -14,10 +17,10 @@ window {
     transparency:                   "real";
     background-color:               @background;
     text-color:                     @foreground;
-    border:                  		1px;
+    border:                  		2px;
     border-color:                  	@selected;
-    border-radius:                  0px;
-    width:                          416px;
+    border-radius:                  10px;
+    width:                          430px;
     location:                       center;
     anchor:                         center;
     x-offset:                       0;
@@ -27,18 +30,18 @@ window {
 prompt {
     enabled: 						true;
 	margin: 						0px 0px 0px 8px;
-    padding:    					6px 0px 6px 0px;
+    padding:    					6px 6px 6px 6px;
 	background-color: 				@background;
 	text-color: 					@foreground;
-    border:                  		0px 0px 0px 0px;
+    border:                  		2px 2px 2px 2px;
     border-color:                  	@selected;
-    border-radius:                  0px;
+    border-radius:                  5px;
 }
 
 textbox-prompt-colon {
 	expand: 						false;
 	str: 							"";
-    border-radius:                  0px;
+    border-radius:                  5px;
     background-color:               @selected;
     text-color:                     @background;
     padding:    					6px 10px 6px 10px;
@@ -61,8 +64,8 @@ inputbar {
     spacing:                        0;
     background-color:               @background;
     text-color:                     @foreground;
-    border:                  		0px 0px 1px 0px;
-    border-radius:                  0px;
+    border:                  		0px 0px 0px 0px;
+    border-radius:                  5px;
     border-color:                  	@selected;
     expand:                         false;
     margin:                         0px 0px 0px 0px;
@@ -98,8 +101,8 @@ element {
     background-color:               @background;
     text-color:                     @foreground;
     orientation:                    horizontal;
-    border:                  		1px;
-    border-radius:                  0px;
+    border:                  		2px;
+    border-radius:                  5px;
     border-color:                  	@selected;
     padding:                        23.5px 25px 23.5px 25px;
 }
@@ -126,8 +129,8 @@ element-text {
 element selected {
     background-color:               @selected;
     text-color:                     @background;
-    border:                  		0px;
-    border-radius:                  0px;
+    border:                  		2px;
+    border-radius:                  5px;
     border-color:                  	@selected;
 }
 

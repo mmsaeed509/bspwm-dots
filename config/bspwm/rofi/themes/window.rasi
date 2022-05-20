@@ -1,3 +1,6 @@
+/* Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com> */
+/* reconfigured Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509> <> */
+/* Everyone is permitted to copy and distribute copies of this file under GNU-GPL3 */
 
 configuration {
     font:                           "Iosevka 10";
@@ -14,9 +17,9 @@ window {
     transparency:                   "real";
     background-color:               @background;
     text-color:                     @foreground;
-    border:                  		1px;
+    border:                  		2px;
     border-color:                  	@selected;
-    border-radius:                  0px;
+    border-radius:                  10px;
     width:                          500px;
     location:                       center;
     anchor:                         center;
@@ -27,18 +30,18 @@ window {
 prompt {
     enabled: 						true;
 	margin: 						0px 0px 0px 8px;
-    padding:    					6px 0px 6px 0px;
+    padding:    					6px 6px 6px 6px;
 	background-color: 				@background;
 	text-color: 					@foreground;
-    border:                  		0px 0px 1px 0px;
+    border:                  		2px;
     border-color:                  	@selected;
-    border-radius:                  0px;
+    border-radius:                  5px;
 }
 
 textbox-prompt-colon {
 	expand: 						false;
 	str: 							"";
-    border-radius:                  0px;
+    border-radius:                  5px;
     background-color:               @highlight;
     text-color:                     @background;
     padding:    					6px 10px 6px 10px;
@@ -48,11 +51,12 @@ textbox-prompt-colon {
 entry {
     background-color:               @background;
     text-color:                     @foreground;
-    border:                  		0px 0px 1px 0px;
-    border-radius:                  0px;
+    margin: 						0px 0px 0px 8px;
+    border:                  		2px;
+    border-radius:                  5px;
     border-color:                  	@selected;
     placeholder-color:              @foreground;
-    placeholder:                    "Find...";
+    placeholder:                    "  Find...  ";
     expand:                         true;
     horizontal-align:               0;
     blink:                          true;
@@ -98,7 +102,7 @@ element {
     background-color:               @background;
     text-color:                     @foreground;
     orientation:                    horizontal;
-    border-radius:                  0px;
+    border-radius:                  5px;
     padding:                        5px;
 }
 
@@ -124,7 +128,7 @@ element selected {
     background-color:               @selected;
     text-color:                     @background;
     border:                  		0px;
-    border-radius:                  0px;
+    border-radius:                  5px;
     border-color:                  	@selected;
 }
 
