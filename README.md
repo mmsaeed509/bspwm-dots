@@ -2,7 +2,7 @@
 
 <!-- reviewing themes -->
 
-![](GIFs/ALLTHEMES.gif)
+![](GIFs/THEMES.gif)
 
 <!-- reviewing themes -->
 
