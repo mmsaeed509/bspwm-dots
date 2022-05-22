@@ -251,3 +251,12 @@ label-indicator-foreground = ${colors.background}
 label-indicator-background = ${colors.secondary}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/weather]
+type = custom/script
+exec = ~/.config/bspwm/polybar/scripts/openweathermap-fullfeatured.sh
+interval = 600
+format-foreground = ${color.BACKGROUND}
+format-background = ${color.YELLOW}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
