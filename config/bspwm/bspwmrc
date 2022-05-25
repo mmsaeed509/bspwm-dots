@@ -114,8 +114,9 @@ bspc rule -a MEGAsync desktop='^2' state=floating follow=on focus=on
 bspc rule -a Free desktop='^2' state=floating follow=on focus=on
 bspc rule -a qBittorrent desktop='^2' state=floating follow=on focus=on
 
-# Windscribe2 VPN
+# VPNs
 bspc rule -a Windscribe2 desktop='^2' state=floating follow=on focus=on
+bspc rule -a Protonvpn desktop='^2' state=floating follow=on focus=on
 
 # ------------ apps open in web workspaces
 
