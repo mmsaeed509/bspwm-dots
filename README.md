@@ -1,5 +1,21 @@
 <h1 align="center"> Ozoz bspwm dotfiles for Acer Predator Helios  </h1>
 
+<!-- ###########################################  ########################################### -->
+
+<!-- shields -->
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Maintained%3F-Yes-green?style=for-the-badge">
+  <img src="https://img.shields.io/github/license/mmsaeed509/bspwm-dots?style=for-the-badge">
+  <img src="https://img.shields.io/github/stars/mmsaeed509/bspwm-dots?style=for-the-badge">
+  <img src="https://img.shields.io/github/issues/mmsaeed509/bspwm-dots?color=violet&style=for-the-badge">
+  <img src="https://img.shields.io/github/forks/mmsaeed509/bspwm-dots?color=teal&style=for-the-badge">
+</p>
+
+<!-- shields -->
+
+<!-- ###########################################  ########################################### -->
+
 <!-- reviewing themes -->
 [![](GIFs/Predator.gif)](https://drive.google.com/file/d/1ia3OG3ZWhcE1rNqaud7cfaXRYcX-wKNx/view?usp=sharing)
 <!-- reviewing themes -->
