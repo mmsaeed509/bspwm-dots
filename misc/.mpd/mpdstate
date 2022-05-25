@@ -1,0 +1,46 @@
+sw_volume: 100
+audio_device_state:1:pulse audio
+audio_device_state:1:my_fifo
+state: play
+current: 30
+time: 101.261000
+random: 0
+repeat: 1
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Alexandra Stan - Mr Saxo Beat.mp3
+1:𝐵𝑒𝑧𝑜𝑠 𝑖 𝑋 - 𝑔𝑖𝑚𝑚𝑒 𝑔𝑖𝑚𝑚𝑒 .mp3
+2:Dua Lipa - Don't Start Now .mp3
+3:Empire Of The Sun - Alive.mp3
+4:Euro 2016 Montage - Magic In The Air.mp3
+5:Eye of the Tiger - Theme from Rocky 3.mp3
+6:Gloria Gaynor - I Will Survive.mp3
+7:Hans Zimmer - S.T.A.Y.mp3
+8:Imagine Dragons - Believer .mp3
+9:INNA x Sean Paul - Up.mp3
+10:John Newman - Love Me Again.mp3
+11:M.I.A. - Paper Planes.mp3
+12:Madonna - La Isla Bonita.mp3
+13:Major Lazer - Watch Out For This.mp3
+14:Måneskin - Beggin.mp3
+15:Marie Wegener - Countdown.mp3
+16:Mark Marku - Da si htjela .mp3
+17:Masked Wolf  - Astronaut in the Ocean .mp3
+18:MGK - Invincible .mp3
+19:Olivia Addams - I'm Lost.mp3
+20:Olympic ayres magic .mp3
+21:Phosphorescent - Song for Zula .mp3
+22:Post Malone - rockstar.mp3
+23:Shakira - Rabiosa.mp3
+24:Stern des Südens _ FC Bayern.mp3
+25:The Final Countdown - Europe.mp3
+26:You’re My Love -  (My Life) .mp3
+27:NEFFEX - Grateful .mp3
+28:Cartoon - On & On (feat. Daniel Levi) [NCS Release].mp3
+29:Culture Code - Make Me Move (feat. Karra) [NCS Release].mp3
+30:Janji - Heroes Tonight (feat. Johnning) [NCS Release].mp3
+playlist_end
