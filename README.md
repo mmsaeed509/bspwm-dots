@@ -1,5 +1,9 @@
 <h1 align="center"> Ozoz dotfiles for bspwm </h1>
 
+<!-- ###########################################  ########################################### -->
+
+<!-- shields -->
+
 <p align="center">
   <img src="https://img.shields.io/badge/Maintained%3F-Yes-green?style=for-the-badge">
   <img src="https://img.shields.io/github/license/mmsaeed509/bspwm-dots?style=for-the-badge">
@@ -7,6 +11,10 @@
   <img src="https://img.shields.io/github/issues/mmsaeed509/bspwm-dots?color=violet&style=for-the-badge">
   <img src="https://img.shields.io/github/forks/mmsaeed509/bspwm-dots?color=teal&style=for-the-badge">
 </p>
+
+<!-- shields -->
+
+<!-- ###########################################  ########################################### -->
 
 <!-- reviewing themes -->
 
