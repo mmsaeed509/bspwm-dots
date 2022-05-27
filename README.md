@@ -83,7 +83,11 @@ sudo cp bin/* /bin
 # Copy config to ~/.config #
 cp -r config/* ~/.config
 
+
 # copy themes, backgrounds, etc.. #
+
+git checkout master
+
 sudo cp -r backgrounds/* /usr/share/backgrounds/
 
 sudo unzip themes.zip -d /usr/share/themes/
