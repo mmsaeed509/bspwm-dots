@@ -3,7 +3,7 @@
 #
 # Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 # Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
-# added HackTheBox/HackTheBoxColored/BlackArch/Neon Theme by Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# added HackTheBox/BlackArch/Neon Theme by Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 #
 
 DIR="$HOME/.config/bspwm"
@@ -27,6 +27,8 @@ theme_12=" BlackArch"
 theme_13=" Neon"
 theme_14=" Tigger In Atlantis"
 
+
+
 # pass available themes to rofi 
 availableThemes="$theme_1\n$theme_2\n$theme_3\n$theme_4\
 \n$theme_5\n$theme_6\n$theme_7\n$theme_8\
@@ -45,7 +47,7 @@ case $chosen in
         bash ${BSP}/set-theme  'bouquet.jpg' 'bouquet' 'Juno-mirage' 'Luna-Dark' 'Future-dark'
         ;;
     $theme_3)
-        bash ${BSP}/set-theme  'cyberpunk15.jpg' 'cyberpunk' 'Cyberpunk-Neon' 'candy-icons' 'LyraB'
+        bash ${BSP}/set-theme  'cyberpunk15.jpg' 'cyberpunk' 'Cyberpunk-Neon' 'candy-icons' 'Cyberpunk'
         ;;
     $theme_4)
         bash ${BSP}/set-theme  'dracula.png' 'dracula' 'Dracula' 'Nordic-Folders' 'Sweet'
@@ -70,14 +72,14 @@ case $chosen in
         ;;
     $theme_11)
         bash ${BSP}/set-theme  'HackTheBoxColored.jpg' 'HackTheBoxColored' 'Green' 'Green-Color-Icons' 'Hack-C'
-        ;;
+        ;;    
     $theme_12)
         bash ${BSP}/set-theme  'hacktheplanet.png' 'BlackArch' 'BlackArch-theme' 'BlackArch-icons' 'BlackArch-cursor'
         ;;
     $theme_13)
-        bash ${BSP}/set-theme  'neon.jpg' 'neon' 'Neon2' 'neon-icon' 'neon-cursor2'
+        bash ${BSP}/set-theme  'neon.jpg' 'neon' 'neon-theme' 'neon-icon' 'neon-cursor2'
         ;;
     $theme_14)
-        bash ${BSP}/set-theme  'Tigger-In-Atlantis.png' 'Tigger-In-Atlantis' 'Juno-mirage' 'Luna-Dark' 'Future-dark'
+        bash ${BSP}/set-theme  'Tigger-In-Atlantis.png' 'Tigger-In-Atlantis' 'Juno-palenight' 'Luna-Dark' 'Future-dark'
         ;;
 esac
