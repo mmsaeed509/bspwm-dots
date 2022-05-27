@@ -5,11 +5,18 @@
 <!-- shields -->
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Maintained%3F-Yes-green?style=for-the-badge">
   <img src="https://img.shields.io/github/license/mmsaeed509/bspwm-dots?style=for-the-badge">
+  </br>
+  <img src="https://img.shields.io/badge/Maintained%3F-Yes-green?style=for-the-badge">
+  <img src="https://img.shields.io/github/issues/mmsaeed509/bspwm-dots?color=purple&style=for-the-badge">
+  </br>
   <img src="https://img.shields.io/github/stars/mmsaeed509/bspwm-dots?style=for-the-badge">
-  <img src="https://img.shields.io/github/issues/mmsaeed509/bspwm-dots?color=violet&style=for-the-badge">
   <img src="https://img.shields.io/github/forks/mmsaeed509/bspwm-dots?color=teal&style=for-the-badge">
+  <img src="https://img.shields.io/github/repo-size/mmsaeed509/bspwm-dots?color=blueviolet&style=for-the-badge">
+  </br>
+  <img src="https://img.shields.io/github/languages/count/mmsaeed509/bspwm-dots?color=red&style=for-the-badge">
+  <img src="https://img.shields.io/github/languages/code-size/mmsaeed509/bspwm-dots?color=yellow&style=for-the-badge">
+  <img src="https://img.shields.io/github/last-commit/mmsaeed509/bspwm-dots?color=deeppink&style=for-the-badge">
 </p>
 
 <!-- shields -->
