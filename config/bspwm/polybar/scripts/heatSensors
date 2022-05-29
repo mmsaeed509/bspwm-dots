@@ -18,31 +18,31 @@ heatSensors=$(sensors | grep -m 1 id | awk '{print substr($4, 2, length($4)-5)}'
 # Here we will print the appropriate symbol based on the temperature result stored in the heat sensors variable as mentioned above
 # from  0°C to 40°C print ->  , from 40°C to 60°C print -> 
 # from 60°C to 85°C print ->  , from 85°C to +... print -> 
-# you can use -e \x1b[1m -> print temperature in bold font (e.g echo -e "\x1b[1m $heatSensors°C" )
-#
+# 
+###################################################################################################################################
 
 # from  0°C to 40°C print ->  
 if [[ "$heatSensors" -le 40 ]] 
 	then
 		# the ' %{T3} ' -> pass font type to polybar config file 
 		# the selected font type is number 3, which is (font-3 = "Iosevka:style=bold:"size=12;3" )
-		echo "%{T3}%{F#FA00FF} %{F#00B2FC}$heatSensors°C"
+		echo "%{T3} %{F}$heatSensors°C"
 
 # from 40°C to 60°C print -> 
 elif [[ "$heatSensors" -le 60 ]] 
 	then
-		echo "%{T3}%{F#FA00FF} %{F#00B2FC}$heatSensors°C"
+		echo "%{T3} %{F}$heatSensors°C"
 
 # from 60°C to 85°C print -> 
 elif [[ "$heatSensors" -le 85 ]]
 	then
-		echo "%{T3}%{F#FA00FF} %{F#00B2FC}$heatSensors°C"
+		echo "%{T3} %{F}$heatSensors°C"
 
 # from 85°C to +... print ->  
 elif [[ "$heatSensors" -gt 85 ]] 
 	then
 		# the  ' -n "%{F#FF0008}"  ' -> red font as 85°C to +... is the default warn temperature
-		echo -n "%{T3}%{F#FF0008} $heatSensors°C"
+		echo -n "%{T3}%{F#FF0008} %{F#FF0008}$heatSensors°C"
 fi
 
 #
@@ -68,12 +68,3 @@ fi
 #    heatSensors=$(sensors | grep "Package id 0:" | tr -d '+' | awk '{print $4}')
 #
 ##################################################################################
-
-#########################
-#
-# heat_to_40=""
-# heat_from_40_to_60=""
-# heat_from_60_to_85=""
-# heat_above_85=""
-#
-#########################
