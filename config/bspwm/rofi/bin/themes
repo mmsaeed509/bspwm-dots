@@ -80,7 +80,7 @@ case $chosen in
         bash ${BSP}/set-theme  'hacktheplanet.png' 'BlackArch' 'BlackArch-theme' 'BlackArch-icons' 'BlackArch-cursor'
         ;;
     $theme_13)
-        bash ${BSP}/set-theme  'neon.jpg' 'neon' 'neon-theme' 'neon-icon' 'neon-cursor2'
+        bash ${BSP}/set-theme  'neon4.jpg' 'neon' 'neon-theme' 'neon-icon' 'neon-cursor2'
         ;;
     $theme_14)
         bash ${BSP}/set-theme  'Tigger-In-Atlantis.png' 'Tigger-In-Atlantis' 'Juno-palenight' 'Luna-Dark' 'Future-dark'
