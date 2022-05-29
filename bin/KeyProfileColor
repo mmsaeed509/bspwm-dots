@@ -20,6 +20,9 @@ then
   echo -e "\e[0;36m -BlackArch      Apply HackTheBox Theme \e[0m"
   echo -e "\e[1;31m -Neon          Apply Blade Theme \e[0m"
   echo -e "\e[1;31m -TiggerInAtlantis          Apply Blade Theme \e[0m"
+  echo -e "\e[1;31m -AXYL          Apply Blade Theme \e[0m"
+  echo -e "\e[1;31m -Amarena          Apply Blade Theme \e[0m"
+  echo -e "\e[1;31m -Everblush          Apply Blade Theme \e[0m"
 	
 # ---------------------------- No. 1 -- > Blade Theme ----------------------------
 
@@ -159,7 +162,37 @@ then
 	facer_rgb.py -m 0 -z 3 -cR 255 -cB 0 -cG 0 -b 100
 	facer_rgb.py -m 0 -z 4 -cR 255 -cB 0 -cG 255 -b 100
 
-fi
+# ---------------------------- No. 15 -- > AXYL Theme ----------------------------
 
+elif [[ "$1" == "-AXYL" ]]
+then
+
+	facer_rgb.py -m 0 -z 1 -cR 0 -cB 255 -cG 0 -b 100
+	facer_rgb.py -m 0 -z 2 -cR 0 -cB 127 -cG 0 -b 100
+	facer_rgb.py -m 0 -z 3 -cR 255 -cB 127 -cG 93 -b 100
+	facer_rgb.py -m 0 -z 4 -cR 255 -cB 127 -cG 93 -b 100
+	
+# ---------------------------- No. 16 -- > Amarena Theme ----------------------------
+
+elif [[ "$1" == "-Amarena" ]]
+then
+	
+	facer_rgb.py -m 0 -z 1 -cR 148 -cB 149 -cG 207 -b 100
+	facer_rgb.py -m 0 -z 2 -cR 148 -cB 149 -cG 207 -b 100
+	facer_rgb.py -m 0 -z 3 -cR 148 -cB 149 -cG 207 -b 100
+	facer_rgb.py -m 0 -z 4 -cR 148 -cB 149 -cG 207 -b 100
+	
+# ---------------------------- No. 17 -- > Everblush Theme ----------------------------
+
+elif [[ "$1" == "-Everblush" ]]
+then
+	
+	facer_rgb.py -m 0 -z 1 -cR 148 -cB 149 -cG 207 -b 100
+	facer_rgb.py -m 0 -z 2 -cR 148 -cB 149 -cG 207 -b 100
+	facer_rgb.py -m 0 -z 3 -cR 148 -cB 149 -cG 207 -b 100
+	facer_rgb.py -m 0 -z 4 -cR 148 -cB 149 -cG 207 -b 100
+	
+fi
 # ------------------------------------------------------------------------------- #
+
 
