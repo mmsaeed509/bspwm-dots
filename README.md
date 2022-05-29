@@ -84,19 +84,20 @@ sudo cp bin/* /bin
 cp -r config/* ~/.config
 
 
-# copy themes, backgrounds, etc.. #
+# install themes, backgrounds, etc.. #
 
-git checkout master
+git clone https://github.com/Exodia-OS/exodia-themes.git
+
+cd exodia-themes
 
 sudo cp -r backgrounds/* /usr/share/backgrounds/
-
 sudo unzip themes.zip -d /usr/share/themes/
 
 cd icons
 
 sudo unzip \*.zip -d /usr/share/icons/
 
-cd ..
+cd ../..
 
 # Clean #
 cd .. && rm -rf bspwm-dots
