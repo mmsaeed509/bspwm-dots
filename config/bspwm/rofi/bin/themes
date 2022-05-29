@@ -26,18 +26,21 @@ theme_11=" Hack The Box Colored"
 theme_12=" BlackArch"
 theme_13=" Neon"
 theme_14=" Tigger In Atlantis"
+theme_15=" AXYL style"
+theme_16=" Amarena"
+theme_17=" Everblush"
 
 
 
 # pass available themes to rofi 
 availableThemes="$theme_1\n$theme_2\n$theme_3\n$theme_4\
 \n$theme_5\n$theme_6\n$theme_7\n$theme_8\
-\n$theme_9\n$theme_10\n$theme_11\n$theme_12\n$theme_13\n$theme_14"
+\n$theme_9\n$theme_10\n$theme_11\n$theme_12\n$theme_13\n$theme_14\n$theme_15\n$theme_16\n$theme_17"
 
-chosen="$(echo -e "$availableThemes" | $rofi_command -p "Available themes : (14)" -dmenu -selected-row 0)"
+chosen="$(echo -e "$availableThemes" | $rofi_command -p "Available themes : (17)" -dmenu -selected-row 0)"
 #
 # the 1st var -> background, the 2th var -> color file name, the 3th var -> the theme name, 
-# the 4th var -> icons name, the 5th var -> the cursor name
+# the 4th var -> icons name, the 5th var -> the cursor name, the 6th var -> RGB mood for keyboard
 #
 case $chosen in
     $theme_1)
@@ -81,5 +84,14 @@ case $chosen in
         ;;
     $theme_14)
         bash ${BSP}/set-theme  'Tigger-In-Atlantis.png' 'Tigger-In-Atlantis' 'Juno-palenight' 'Luna-Dark' 'Future-dark'
+        ;;
+    $theme_15)
+        bash ${BSP}/set-theme  'axyl.jpg' 'axyl' 'Qogir-dark' 'Qogir-dark' 'phinger-cursors'
+        ;;
+    $theme_16)
+        bash ${BSP}/set-theme  'Amarena.jpg' 'Amarena' 'amarena' 'Elena-dark-icons' 'neon-cursor2'
+        ;;
+    $theme_17)
+        bash ${BSP}/set-theme  'Bridge.png' 'Everblush' 'everblush' 'oomox-Everblush-icons' 'macOSBigSur-cursors'
         ;;
 esac
