@@ -161,6 +161,33 @@ set_style () {
 		echo "#!/bin/bash
           KeyProfileColor -TiggerInAtlantis" > ~/.config/predator/keyColorProfileForStartup
           
+    # ---------------------------- No. 15 -- > AXYL Theme ----------------------------
+	
+	elif [[ "$6" == "AXYL" ]]
+	then
+	
+		KeyProfileColor -AXYL 
+		echo "#!/bin/bash
+          KeyProfileColor -AXYL" > ~/.config/predator/keyColorProfileForStartup
+          
+    # ---------------------------- No. 16 -- > Amarena Theme ----------------------------
+	
+	elif [[ "$6" == "Amarena" ]]
+	then
+	
+		KeyProfileColor -Amarena 
+		echo "#!/bin/bash
+          KeyProfileColor -Amarena" > ~/.config/predator/keyColorProfileForStartup
+          
+    # ---------------------------- No. 17 -- > Everblush Theme ----------------------------
+	
+	elif [[ "$6" == "Everblush" ]]
+	then
+	
+		KeyProfileColor -Everblush 
+		echo "#!/bin/bash
+          KeyProfileColor -Everblush" > ~/.config/predator/keyColorProfileForStartup
+          
     fi
 		
 	# ---------------------------- Apply RGB Colors For Keyboard ----------------------------
