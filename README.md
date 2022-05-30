@@ -61,7 +61,7 @@
 
 - **Utilities** :- [**`rofi`**](https://github.com/davatorium/rofi) [**`polybar`**](https://github.com/polybar/polybar) [**`xorg-xsetroot`**](https://archlinux.org/packages/extra/x86_64/xorg-xsetroot/) [**`xsettingsd`**](https://wiki.archlinux.org/title/Xsettingsd) [**`xfce4-power-manager`**](https://wiki.archlinux.org/title/Power_management) [**`xfce-polkit`**](https://wiki.archlinux.org/title/Polkit)
 
-- **Terminal Apps** :- [**`alacritty`**](https://alacritty.org/) [**`nvim`**](https://neovim.io/) [**`zsh`**](https://wiki.archlinux.org/title/zsh) [**`powerline`**](https://wiki.archlinux.org/title/Powerline) [**`power10k`**](https://github.com/romkatv/powerlevel10k)  [**`oh my zsh`**](https://ohmyz.sh/)
+- **Terminal Apps** :- [**`alacritty`**](https://alacritty.org/) [**`nvim`**](https://neovim.io/) [**`zsh`**](https://wiki.archlinux.org/title/zsh) [**`powerline`**](https://wiki.archlinux.org/title/Powerline) [**`power10k`**](https://github.com/romkatv/powerlevel10k)  [**`oh my zsh`**](https://ohmyz.sh/) [**`ueberzug`**](https://github.com/seebye/ueberzug)
 
 - **Media** :- [**`viewnior`**](https://archlinux.org/packages/community/x86_64/viewnior/) [**`gwenview`**](https://archlinux.org/packages/extra/x86_64/gwenview/) [**`nitrogen`**](https://wiki.archlinux.org/title/nitrogen) [**`feh`**](https://wiki.archlinux.org/title/feh) [**`thunar`**](https://wiki.archlinux.org/title/thunar) [**`mpd`**](https://wiki.archlinux.org/title/Music_Player_Daemon) [**`ncmpcpp`**](https://wiki.archlinux.org/title/ncmpcpp) [**`mpc`**](https://archlinux.org/packages/extra/x86_64/mpc/) [**`music`**](https://github.com/Exodia-OS/exodia-music) [**`maim`**](https://github.com/naelstrof/maim) [**`Nerd Fonts`**](https://github.com/ryanoasis/nerd-fonts)
 
