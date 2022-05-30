@@ -1,12 +1,14 @@
-<h1 align="center"> Ozoz bspwm dotfiles for Acer Predator Helios  </h1>
+<!-- <h1 align="center"> Ozoz bspwm dotfiles for Acer Predator Helios  </h1> -->
 
+<h1 align="left"> :herb: Ozoz bspwm dotfiles for Acer Predator Helios <img align="right" src="https://badges.pufler.dev/visits/mmsaeed509/bspwm-dots?style=for-the-badge&color=A7D9B2"/> </h1> 
+
+</br></br></br>
 <!-- ###########################################  ########################################### -->
+
 
 <!-- shields -->
 
 <p align="center">
-  <img src="https://badges.pufler.dev/visits/mmsaeed509/bspwm-dots?style=for-the-badge&color=A7D9B2">
-  </br></br>
   <img src="https://img.shields.io/github/license/mmsaeed509/bspwm-dots?style=for-the-badge">
   </br>
   <img src="https://img.shields.io/badge/Maintained%3F-Yes-green?style=for-the-badge">
@@ -20,6 +22,8 @@
   <img src="https://img.shields.io/github/languages/code-size/mmsaeed509/bspwm-dots?color=yellow&style=for-the-badge">
   <img src="https://img.shields.io/github/last-commit/mmsaeed509/bspwm-dots?color=deeppink&style=for-the-badge">
 </p>
+
+</br></br>
 
 <!-- shields -->
 
