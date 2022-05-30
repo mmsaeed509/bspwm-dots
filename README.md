@@ -5,6 +5,8 @@
 <!-- shields -->
 
 <p align="center">
+  <img src="https://badges.pufler.dev/visits/mmsaeed509/bspwm-dots?style=for-the-badge&color=A7D9B2">
+  </br></br>
   <img src="https://img.shields.io/github/license/mmsaeed509/bspwm-dots?style=for-the-badge">
   </br>
   <img src="https://img.shields.io/badge/Maintained%3F-Yes-green?style=for-the-badge">
