@@ -52,8 +52,8 @@ super + shift + {g,e}
 	{google-chrome-stable,geany}
 
 # Terminal Apps
-ctrl + alt + {r,h,b}
-	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {ranger,htop,bashtop}
+ctrl + alt + {r,h,b,n}
+	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {ranger,htop,bashtop,nvim}
 
 # Color Picker
 super + p
