@@ -31,9 +31,11 @@
 <!-- reviewing themes -->
 
 <h1 align="center"> :herb: BSPWM </h1>
+
 ![](GIFs/THEMES.gif)
 
 <h1 align="center"> :herb: i3WM </h1>
+
 ![](GIFs/i3WM.gif)
 
 <!-- reviewing themes -->
