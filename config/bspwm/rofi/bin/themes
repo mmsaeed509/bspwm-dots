@@ -92,6 +92,6 @@ case $chosen in
         bash ${BSP}/set-theme  'Amarena.jpg' 'Amarena' 'amarena' 'Elena-dark-icons' 'neon-cursor2'
         ;;
     $theme_17)
-        bash ${BSP}/set-theme  'Bridge.png' 'Everblush' 'everblush' 'oomox-Everblush-icons' 'macOSBigSur-cursors'
+        bash ${BSP}/set-theme  'Night.png' 'Everblush' 'everblush' 'oomox-Everblush-icons' 'macOSBigSur-cursors'
         ;;
 esac
