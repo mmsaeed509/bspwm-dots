@@ -32,9 +32,11 @@
 <!-- reviewing themes -->
 
 <h1 align="center"> :herb: BSPWM </h1>
+
 [![](GIFs/Predator.gif)](https://drive.google.com/file/d/1ia3OG3ZWhcE1rNqaud7cfaXRYcX-wKNx/view?usp=sharing)
 
 <h1 align="center"> :herb: i3WM </h1>
+
 ![](GIFs/i3WM.gif)
 
 <!-- reviewing themes -->
