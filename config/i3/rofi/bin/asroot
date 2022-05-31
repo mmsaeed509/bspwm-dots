@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
+## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+
+DIR="$HOME/.config/i3"
+
+rofi_command="rofi -theme $DIR/rofi/themes/asroot.rasi"
+
+# Apps
+terminal=" Alacritty"
+files=" Thunar"
+editor=" Geany"
+clifm=" Ranger"
+lpad=" Leafpad"
+vim=" Vim"
+
+# Variable passed to rofi
+options="$terminal\n$files\n$editor\n$clifm\n$vim"
+
+# Functions
+
+chosen="$(echo -e "$options" | $rofi_command -p "Run as root" -dmenu -selected-row 0)"
+case $chosen in
+    $terminal)
+        "$DIR"/bin/apps_as_root.sh 'alacritty --class alacritty-float,alacritty-float --config-file /root/.config/alacritty/alacritty.yml'
+        ;;
+    $files)
+        "$DIR"/bin/apps_as_root.sh 'dbus-run-session thunar'
+        ;;
+    $editor)
+        "$DIR"/bin/apps_as_root.sh geany
+        ;;
+    $clifm)
+        "$DIR"/bin/apps_as_root.sh 'alacritty --class alacritty-float,alacritty-float --config-file /root/.config/alacritty/alacritty.yml -e ranger'
+        ;;
+    $lpad)
+        "$DIR"/bin/apps_as_root.sh leafpad
+        ;;
+    $vim)
+        "$DIR"/bin/apps_as_root.sh 'alacritty --class alacritty-float,alacritty-float --config-file /root/.config/alacritty/alacritty.yml -e vim'
+        ;;
+esac
+
+

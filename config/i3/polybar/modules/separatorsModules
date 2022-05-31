@@ -1,0 +1,82 @@
+#
+# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+#
+;;_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/sep]
+type = custom/text
+content = -
+
+content-background = ${color.BG}
+content-foreground = ${color.BG}
+
+[module/dot]
+type = custom/text
+content = 
+
+content-background = ${color.BG}
+content-foreground = ${color.PURPLE}
+content-padding = 2
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/LD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${color.BG}
+content-foreground = ${color.BGL}
+
+[module/RD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${color.BG}
+content-foreground = ${color.BGL}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/pip]
+type = custom/text
+content = "%{T3}| %{T-}"
+content-background = ${color.BGL}
+content-foreground = ${color.RED}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/space]
+type = custom/text
+content = "%{T3} %{T-}"
+;; content-background = ${color.BGL}
+;; content-foreground = ${color.RED}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/col]
+type = custom/text
+content = "%{T3} : %{T-}"
+content-background = ${color.BGL}
+content-foreground = ${color.PURPLE}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RDmpd]
+type = custom/text
+
+content = "%{T5})%{T-}"
+;content = "%{T5} )%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.YELLOW}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/LDmpd]
+type = custom/text
+
+;content = "%{T5}(|%{T-}"
+content = "%{T5}(%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.YELLOW}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
