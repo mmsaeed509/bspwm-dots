@@ -1,0 +1,167 @@
+## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
+## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+;; Global WM Settings
+
+[global/wm]
+
+margin-bottom = 0
+
+
+margin-top = 0
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+;; File Inclusion
+; include an external file, like module file, etc.
+
+include-file = ~/.config/i3/polybar/colors
+include-file = ~/.config/i3/polybar/system
+
+include-file = ~/.config/i3/polybar/modules/modules
+include-file = ~/.config/i3/polybar/modules/separatorsModules
+include-file = ~/.config/i3/polybar/modules/monitoringModules
+include-file = ~/.config/i3/polybar/modules/mediaModules
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+;; Bar Settings
+
+[bar/main]
+
+monitor =
+
+monitor-fallback =
+
+monitor-strict = false
+
+override-redirect = false
+
+bottom = false
+
+
+fixed-center = true
+
+
+width = 100%
+height = 26
+
+offset-x = 0%
+offset-y = 0%
+
+background = ${color.BG}
+
+foreground = ${color.FG}
+
+
+radius-top = 0.0
+radius-bottom = 0.0
+
+line-size = 2
+line-color = ${color.BLUE}
+
+
+border-size = 6
+border-color = ${color.BG}
+
+
+padding = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+
+
+font-0 = "JetBrains Mono:bold:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "Iosevka Nerd Font:size=15;4"
+font-3 = "Iosevka Nerd Font:bold:size=12;4"
+font-4 = "archcraft:size=14;4"
+
+; Modules are added to one of the available blocks
+;   modules-left = cpu ram
+;   modules-center = xwindow xbrightness
+;   modules-right = ipc clock
+
+# Default
+modules-left = LD i3 RD dot  LD info-cava RD
+modules-center = LDmpd mpd space RDmpd
+modules-right = volume dot backlight dot LD network RD space LD cpu col cpuTemp RD space LD battery date RD space LD sysmenu RD
+
+
+separator =
+
+
+spacing = 0
+
+dim-value = 1.0
+
+
+wm-name = 
+
+
+locale = 
+
+
+tray-position = right
+
+
+tray-detached = false
+
+
+tray-maxsize = 16
+
+
+tray-background = ${color.BG}
+
+
+tray-offset-x = 0
+tray-offset-y = 0
+
+tray-padding = 0
+
+tray-scale = 1.0
+
+
+enable-ipc = true
+
+click-left = 
+click-middle = 
+click-right =
+scroll-up =
+scroll-down =
+double-click-left =
+double-click-middle =
+double-click-right =
+
+cursor-click = 
+cursor-scroll = 
+
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+;; Application Settings
+
+[settings]
+
+throttle-output = 5
+throttle-output-for = 10
+
+
+screenchange-reload = false
+
+
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+
+pseudo-transparency = false
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
