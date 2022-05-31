@@ -187,10 +187,10 @@ then
 elif [[ "$1" == "-Everblush" ]]
 then
 	
-	facer_rgb.py -m 0 -z 1 -cR 148 -cB 149 -cG 207 -b 100
-	facer_rgb.py -m 0 -z 2 -cR 148 -cB 149 -cG 207 -b 100
-	facer_rgb.py -m 0 -z 3 -cR 148 -cB 149 -cG 207 -b 100
-	facer_rgb.py -m 0 -z 4 -cR 148 -cB 149 -cG 207 -b 100
+	facer_rgb.py -m 0 -z 1 -cR 255 -cB 80 -cG 202 -b 100
+	facer_rgb.py -m 0 -z 2 -cR 255 -cB 80 -cG 202 -b 100
+	facer_rgb.py -m 0 -z 3 -cR 255 -cB 80 -cG 202 -b 100
+	facer_rgb.py -m 0 -z 4 -cR 255 -cB 80 -cG 202 -b 100
 	
 fi
 # ------------------------------------------------------------------------------- #
