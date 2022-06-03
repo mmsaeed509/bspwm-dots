@@ -137,7 +137,7 @@ interval = 180
 format = <label>
 
 ;label = %output% Updates
-label = "%{A1:alacritty -e sudo pacman -Syyu &:}  %output% Updates%{A}"
+label = "%{A1:alacritty -e sudo pacman -Syyu &:} %output% Updates%{A}"
 
 format-font = 4
 label-foreground = #e92ef0
