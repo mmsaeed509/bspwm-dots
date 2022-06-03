@@ -191,8 +191,16 @@ then
 	facer_rgb.py -m 0 -z 2 -cR 255 -cB 80 -cG 202 -b 100
 	facer_rgb.py -m 0 -z 3 -cR 255 -cB 80 -cG 202 -b 100
 	facer_rgb.py -m 0 -z 4 -cR 255 -cB 80 -cG 202 -b 100
+
+# ---------------------------- No. 18 -- > JapaneseCity Theme ----------------------------
+
+elif [[ "$1" == "-JapaneseCity" ]]
+then
+	
+	facer_rgb.py -m 0 -z 1 -cR 175 -cB 255 -cG 0 -b 100
+	facer_rgb.py -m 0 -z 2 -cR 175 -cB 255 -cG 0 -b 100
+	facer_rgb.py -m 0 -z 3 -cR 175 -cB 255 -cG 0 -b 100
+	facer_rgb.py -m 0 -z 4 -cR 175 -cB 255 -cG 0 -b 100
 	
 fi
 # ------------------------------------------------------------------------------- #
-
-
