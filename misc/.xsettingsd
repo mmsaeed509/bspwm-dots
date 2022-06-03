@@ -1,11 +1,9 @@
-###########################################
-# @author ozil
-# GitHub : https://github.com/mmsaeed509
-###########################################
+## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
+## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
 
-Net/ThemeName "Blade2"
-Net/IconThemeName "Red-Icons"
-Gtk/CursorThemeName "LyraS"
+Net/ThemeName "everblush"
+Net/IconThemeName "Elena-dark-icons"
+Gtk/CursorThemeName "phinger-cursors"
 Net/EnableEventSounds "0"
 Net/EnableInputFeedbackSounds "0"
 Xft/DPI "-1"
