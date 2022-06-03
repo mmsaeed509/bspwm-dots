@@ -8,9 +8,7 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to guiscrcpy
-export XDG_DESKTOP_DIR="~/.config/guiscrcpy/"
-
+export EDITOR=nvim
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -169,6 +167,7 @@ alias remove="sudo pacman -R"
 alias autoremove="sudo pacman -Rns"
 
 # ------------ Pacman -------------------------
+
 
 alias eDEX="cd ~/Public/packages && ./eDEX-UI-Linux-x86_64.AppImage"
 

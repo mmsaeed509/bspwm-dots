@@ -1,27 +1,29 @@
 ! -----------------------------------------------------------------------------
-! Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+! Copyright (C) 29-March 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 ! Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
-!
-! Blade color scheme
+! 
+! Japanese City color scheme
 ! -----------------------------------------------------------------------------
 
-*foreground:        #f1c4c0
-*background:        #0c1018
 
-! Colors 0-15.
-*color0:  #20242C
-*color1:  #F8506D
-*color2:  #F06576
-*color3:  #87001C
-*color4:  #FA3C82
-*color5:  #E70037
-*color6:  #EA7288
-*color7:  #f1c4c0
-*color8:  #a88986
-*color9:  #F8506D
-*color10:  #F06576
-*color11:  #87001C
-*color12:  #FA3C82
-*color13:  #E70037
-*color14:  #EA7288
-*color15:  #f1c4c0
+*background:  #1e222a
+*foreground:  #c8ccd4
+*cursorColor: #abb2bf
+
+*color0:  #282c34
+*color1:  #e06c75
+*color2:  #98c379
+*color3:  #e5c07b
+*color4:  #61afef
+*color5:  #c678dd
+*color6:  #56b6c2
+*color7:  #abb2bf
+
+*color8:  #545862
+*color9:  #e06c75
+*color10: #98c379
+*color11: #e5c07b
+*color12: #61afef
+*color13: #c678dd
+*color14: #56b6c2
+*color15: #c8ccd4

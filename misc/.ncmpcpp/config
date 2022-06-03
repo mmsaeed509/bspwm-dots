@@ -117,8 +117,10 @@ progressbar_elapsed_color   = "yellow"
 ##################
 
 alternative_ui_separator_color 		  = "red"
-alternative_header_first_line_format  = $b$5$/b  $b$8{%t}|{%f}$/b $/b 
-alternative_header_second_line_format = {$b{$2  %a$9}{ - $7  %b$9}{ ($2%y$9)}}|{%D}
+; alternative_header_first_line_format  = $b$5$/b  $b$8{%t}|{%f}$/b $/b 
+; alternative_header_second_line_format = {$b{$2  %a$9}{ - $7  %b$9}{ ($2%y$9)}}|{%D}
+alternative_header_first_line_format = "$0$aqqu$/a {$7%a - $9}{$5%t$9}|{$8%f$9} $0$atqq$/a$9"
+alternative_header_second_line_format = "{{$6%b$9}{ [$6%y$9]}}|{%D}"
 
 ##################
 # Alternative UI #
@@ -128,10 +130,13 @@ alternative_header_second_line_format = {$b{$2  %a$9}{ - $7  %b$9}{ ($2%y$
 # Song list #
 #############
 
-song_status_format		 = "$7%t"
-song_list_format 		 = "  %t $R%a %l  "
+; song_status_format		 = "$7%t"
+song_status_format = " $2%a $4⟫$3⟫ $8%t $4⟫$3⟫ $5%b "
+; song_list_format 		 = "  %t $R%a %l  "
+song_list_format = "{$3%n $9}{$7%a - $9}{$5%t$9}|{$8%f$9}$R{$6  %b$9}{$3 │ %l$9}"
 song_library_format 	 = {{%a - %t} (%b)}|{%f}
-song_columns_list_format = "(53)[white]{tr} (45)[blue]{a}"
+; song_columns_list_format = "(53)[white]{tr} (45)[blue]{a}"
+song_columns_list_format = "(50)[yellow]{t} (30)[green]{a} "  
 now_playing_prefix = "$b"
 now_playing_suffix = "$/b"
 
