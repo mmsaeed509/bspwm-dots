@@ -139,7 +139,7 @@ cd .. && rm -rf bspwm-dots
 |--|--|--|
 | ![](GIFs/Bouquet.gif) | ![](GIFs/Dracula.gif) | ![](GIFs/Nord.gif) |
 
-|AXYL_STYLE|Amarena|Everblush|
+|AXYL|Amarena|Everblush|
 |--|--|--|
 | ![](GIFs/AXYL.gif) | ![](GIFs/Amarena.gif) | ![](GIFs/Everblush.gif) |
 
