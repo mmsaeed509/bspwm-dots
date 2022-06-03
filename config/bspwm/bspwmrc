@@ -63,7 +63,7 @@ fi
 workspaces() {
 	name=1
 	for monitor in `bspc query -M`; do
-		bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '' ''
+		bspc monitor ${monitor} -n "$name" -d '' '' '' ' ' '' '' '' ''
 		let name++
 	done
 }
@@ -140,6 +140,7 @@ for i in ${code[@]}; do
 bspc rule -a Code desktop ='^4' follow=on focus=on
 bspc rule -a kate desktop ='^4' follow=on focus=on
 bspc rule -a Leafpad desktop ='^4' follow=on focus=on
+bspc rule -a github-desktop desktop ='^4' state=floating follow=on focus=on
 
 # jetBrains IDEs
 bspc rule -a jetbrains-clion desktop ='^4' state=floating follow=on focus=on
@@ -259,7 +260,7 @@ exec mpd &
 
 # Start bspwm scripts
 bspcolors
-bspbar
 bspcomp
+bspbar
 bspfloat &
 

@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
-## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+#
+# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+#
+
+
+# launch a custom Polybar if it exists  #
+Bar=$(head ~/.config/bspwm/selectedThemeName)
+# launch a custom Polybar if it exists  #
 
 ## Files and Directories
 DIR="$HOME/.config/bspwm/polybar"
@@ -52,7 +59,24 @@ launch_bar() {
 	fi
 		
 	if [[ ! `pidof polybar` ]]; then
-		polybar -q main -c "$DIR"/config &
+		
+		if [[ $Bar == "axylBar" ]]
+			then
+				pkill polybar
+				polybar -q bar -c "$DIR"/AXYL/config &
+		
+		elif [[ $Bar == "JapaneseCityBar" ]]
+			then 
+				pkill polybar
+				polybar -q main -c "$DIR"/JapaneseCity/config &
+
+		elif [[ $Bar == "defaultBar" ]]
+			then
+				pkill polybar
+				polybar -q main -c "$DIR"/default/config &
+		fi
+	
+
 	else
 		polybar-msg cmd restart
 	fi

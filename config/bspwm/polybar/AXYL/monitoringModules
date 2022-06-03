@@ -1,0 +1,29 @@
+#
+# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+#
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/cpuTemp]
+type = custom/script
+exec = ~/.config/bspwm/polybar/AXYL/heatSensors
+interval = 0.5
+click-left = xsensors
+format-foreground = ${color.BLUE}
+format-font = 2
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/updates-pacman]
+type = custom/script
+exec = ~/.config/bspwm/polybar/JapaneseCity/scripts/updates-pacman.sh
+interval = 600
+format = <label>
+label = %output% Updates
+format-font = 7
+label-foreground = #e92ef0
+;label-foreground = #BF616A
+
+label-background = ${color.BGL}
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
