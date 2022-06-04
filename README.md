@@ -1,5 +1,5 @@
 <!-- <h1 align="center"> Ozoz dotfiles for bspwm </h1> -->
-<h1 align="left"> :herb: Ozoz dotfiles for bspwm <img align="right" src="https://badges.pufler.dev/visits/mmsaeed509/bspwm-dots?style=for-the-badge&color=A7D9B2"/> </h1> 
+<h1 align="center"> :herb: Ozoz dotfiles for bspwm <img align="right" src="https://badges.pufler.dev/visits/mmsaeed509/bspwm-dots?style=for-the-badge&color=A7D9B2"/> </h1> 
 
 </br></br></br>
 <!-- ###########################################  ########################################### -->
