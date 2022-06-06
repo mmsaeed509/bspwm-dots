@@ -69,7 +69,7 @@ font-7 = Material Design Icons:style=Bold:size=9;3
 font-8 = unifont:fontformat=truetype:size=9;3
 
 
-modules-left   = space LD mod RD space LD bspwm RD Dspace xkeyboard sep LD info-cava RD
+modules-left   = space LD mod RD space LD bspwm RD space LD info-cava RD sep xkeyboard
 modules-center = LDmpd space mpd space RDmpd  
 modules-right  = volume space battery space LD cpu RD Dspace LD updates-pacman RD Dspace cpuTemp space network memory space backlight Dspace LD date RD Dspace sysmenu space
 
