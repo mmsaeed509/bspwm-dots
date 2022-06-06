@@ -32,7 +32,7 @@
 
 <h1 align="center"> :herb: BSPWM </h1>
 
-![](GIFs/THEMES.gif)
+![](GIFs/DEMO_THEMES.gif)
 
 <h1 align="center"> :herb: i3WM </h1>
 
