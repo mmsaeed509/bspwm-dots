@@ -106,7 +106,7 @@ icon-next-foreground = ${color.CYAN}
 
 [module/info-cava]
 type = custom/script
-exec =  ~/.config/bspwm/polybar/scripts/cava -f 24 -c average -e 000000
+exec =  ~/.config/bspwm/polybar/scripts/cava
 
 format = <label>
 label = %output%
