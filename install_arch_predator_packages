@@ -1,0 +1,61 @@
+#!/bin/sh
+
+#
+# Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+#
+
+echo ""
+echo "Installing Xorg Packages.... "
+
+sudo pacman -S --noconfirm --needed xorg-serverxorg-xbacklight xorg-fonts-misc xorg-xfd xorg-xkill xorg-xrandr xorg-xrdb xorg-xset xorg-xev xorg-xmodmap xorg-xwininfo xorg-xsetroot
+
+echo ""
+echo "Installing GPU/Touchpad/Mouse Drivers ...."
+
+sudo pacman -S --noconfirm --needed xf86-video-fbdev xf86-video-vesa xf86-video-intel xf86-video-ati xf86-video-nouveau nvidia nvidia-utils nvidia-settings xorg-xinput xf86-input-libinput numlockx
+  
+echo ""
+echo "Installing WM Packages.... "
+
+sudo pacman -S --noconfirm --needed bspwm wmname sxhkd picom-ibhagwan-git xclip i3-wm
+
+
+echo ""
+echo "Installing Networking/wireless Programs.... "
+
+sudo pacman -S --noconfirm --needed inetutils networkmanager networkmanager-openvpn nethogs nm-connection-editor bluez bluez-utils blueman pulseaudio-bluetooth 
+
+echo ""
+echo "Installing multimedia Programs.... "
+
+sudo pacman -S --noconfirm --needed alsa-plugins alsa-tools alsa-utils pavucontrol pulseaudio pulseaudio-alsa pulseaudio-equalizer-ladspa cava viewnior gwenview ffmpeg ffmpegthumbnailer mpc mpd mplayer ncmpcpp tumbler feh
+
+
+echo ""
+echo "Installing Files/Terminals/Docs/Editors/Fonts Programs.... "
+
+sudo pacman -S --noconfirm --needed ranger highlight trash-cli ueberzug thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman zip p7zip unzip unrar xarchiver xdg-user-dirs xdg-user-dirs-gtk alacritty xfce4-terminal atril geany geany-plugins vim nvim noto-fonts noto-fonts-emoji terminus-font ttf-dejavu
+
+
+echo ""
+echo "Installing System Programs.... "
+
+sudo pacman -S --noconfirm --needed  acpi autoconf automake binutils bison calc fakeroot gcc gparted gtk-engine-murrine gvfs gvfs-mtp gvfs-afc gvfs-gphoto2 gvfs-smb gvfs-google inotify-tools jq make patch pkg-config polkit powertop python2 sshfs udisks2 wmctrl xclip xdotool xmlstarlet yad
+
+
+echo ""
+echo "Installing Utilities/XFCE tools/Hypervisors .... "
+
+sudo pacman -S --noconfirm --needed baobab dialog dunst gpick htop lxappearance meld ncdu nitrogen plank python-pywal rofi maim slop xfce4-power-manager xfce4-settings xsettingsd kvantum qt5ct virtualbox-guest-utils qemu-guest-agent open-vm-tools xf86-input-vmmouse xf86-video-vmware
+
+echo ""
+echo "Installing AUR Packages.... "
+
+sudo pacman -S --noconfirm --needed betterlockscreen downgrade i3lock-color ksuperkey light networkmanager-dmenu-git obmenu-generator perl-linux-desktopfiles picom-ibhagwan-git polybar timeshift xfce-polkit yay
+
+
+echo "#################"
+echo "#    D O N E    #"
+echo "#################"
+

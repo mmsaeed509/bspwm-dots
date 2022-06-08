@@ -88,6 +88,11 @@ git clone https://github.com/mmsaeed509/bspwm-dots.git
 
 cd bspwm-dots
 
+chmod +x install_arch_predator_packages
+
+# install needed packages #
+sudo ./install_arch_predator_packages
+
 # Copy misc to home #
 cp misc/* ~/
 
