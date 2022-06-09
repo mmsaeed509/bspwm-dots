@@ -43,11 +43,11 @@
 
 <!-- EWW -->
 
-<h1 align="center"> :herb: EWW </h1>
+<h1 align="center"> EWW </h1>
+
+Credit : [Aditya Shakya](https://github.com/adi1090x/widgets) 
 
 ![](img/eww.png)
-
-## Credit : [Aditya Shakya](https://github.com/adi1090x/widgets) 
 
 <!-- EWW -->
 <!-- ###########################################  ########################################### -->
