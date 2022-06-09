@@ -1,0 +1,33 @@
+#!/bin/bash
+
+## Open Applications
+FILE="$HOME/.cache/eww_launch.dashboard"
+CFG="$HOME/.config/eww/dashboard"
+EWW=`which eww`
+
+close_dash() {
+	${EWW} --config "$CFG" close \
+					background profile system clock uptime music github \
+					reddit facebook youtube weather apps cava mail logout sleep reboot poweroff folders
+	rm -rf "$FILE"
+}
+
+if [[ "$1" == "--gc" ]]; then
+	close_dash && google-chrome-stable &
+
+elif [[ "$1" == "--nvim" ]]; then
+	close_dash && alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e nvim&
+
+elif [[ "$1" == "--dc" ]]; then
+	close_dash && discord &
+
+elif [[ "$1" == "--clion" ]]; then
+	close_dash && clion &
+
+elif [[ "$1" == "--idea" ]]; then
+	close_dash && idea &
+
+elif [[ "$1" == "--charm" ]]; then
+	close_dash && charm &
+
+fi

@@ -43,6 +43,17 @@
 
 <!-- ###########################################  ########################################### -->
 
+<!-- EWW -->
+
+<h1 align="center"> EWW </h1>
+
+Credit : [Aditya Shakya](https://github.com/adi1090x/widgets) 
+
+![](img/eww.png)
+
+<!-- EWW -->
+<!-- ###########################################  ########################################### -->
+
 <!-- Table of content -->
 
 ### [Table of content](#table-of-content)
@@ -64,7 +75,7 @@
 
 - **WM** :- [**`bspwm`**](https://madnight.github.io/bspwm/) [**`wmname`**](https://archlinux.org/packages/?name=wmname) [**`sxhkd`**](https://wiki.archlinux.org/title/Sxhkd) [**`dunst`**](https://wiki.archlinux.org/title/Dunst)  [**`ksuperkey`**](https://github.com/hanschen/ksuperkey) [**`betterlockscreen`**](https://github.com/betterlockscreen/betterlockscreen)  [**`picom-ibhagwan-git`**](https://aur.archlinux.org/packages/picom-ibhagwan-git) [**`xclip`**](https://wiki.archlinux.org/title/clipboard) [**`i3WM`**](https://i3wm.org/)
 
-- **Utilities** :- [**`rofi`**](https://github.com/davatorium/rofi) [**`polybar`**](https://github.com/polybar/polybar) [**`xorg-xsetroot`**](https://archlinux.org/packages/extra/x86_64/xorg-xsetroot/) [**`xsettingsd`**](https://wiki.archlinux.org/title/Xsettingsd) [**`xfce4-power-manager`**](https://wiki.archlinux.org/title/Power_management) [**`xfce-polkit`**](https://wiki.archlinux.org/title/Polkit)
+- **Utilities** :- [**`rofi`**](https://github.com/davatorium/rofi) [**`polybar`**](https://github.com/polybar/polybar) [**`xorg-xsetroot`**](https://archlinux.org/packages/extra/x86_64/xorg-xsetroot/) [**`xsettingsd`**](https://wiki.archlinux.org/title/Xsettingsd) [**`xfce4-power-manager`**](https://wiki.archlinux.org/title/Power_management) [**`xfce-polkit`**](https://wiki.archlinux.org/title/Polkit) [**`eww`**](https://github.com/elkowar/eww)
 
 - **Terminal Apps** :- [**`alacritty`**](https://alacritty.org/) [**`nvim`**](https://neovim.io/) [**`zsh`**](https://wiki.archlinux.org/title/zsh) [**`powerline`**](https://wiki.archlinux.org/title/Powerline) [**`power10k`**](https://github.com/romkatv/powerlevel10k)  [**`oh my zsh`**](https://ohmyz.sh/) [**`ueberzug`**](https://github.com/seebye/ueberzug)
 

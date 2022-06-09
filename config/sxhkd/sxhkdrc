@@ -40,7 +40,7 @@ super + {w,m,x,r,s,i}
 
 # Open/close dashboard
 super + d
-	launch_dashboard
+	sh ~/.config/eww/dashboard/launch_dashboard
 
 
 # Inkdrop ( Markdown Editor)
