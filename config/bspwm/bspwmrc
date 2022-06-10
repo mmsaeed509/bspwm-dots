@@ -111,6 +111,7 @@ bspc rule -a discord desktop='^2' state=floating follow=on focus=on
 bspc rule -a guiscrcpy desktop='^2' state=floating follow=on focus=on
 bspc rule -a kdeconnect.app desktop='^2' state=floating follow=on focus=on
 bspc rule -a MEGAsync desktop='^2' state=floating follow=on focus=on
+bspc rule -a Element desktop='^2' state=floating follow=on focus=on
 # free download manager
 bspc rule -a Free desktop='^2' state=floating follow=on focus=on
 bspc rule -a qBittorrent desktop='^2' state=floating follow=on focus=on
