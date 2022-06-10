@@ -5,21 +5,15 @@
 ## reconfigured by Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 ## Autostart Programs
 
-# set purple as the RGB color for the keyboard #
-
-    facer_rgb.py -m 0 -z 1 -cR 175 -cB 255 -cG 0 -b 100
-	facer_rgb.py -m 0 -z 2 -cR 175 -cB 255 -cG 0 -b 100
-	facer_rgb.py -m 0 -z 3 -cR 175 -cB 255 -cG 0 -b 100
-	facer_rgb.py -m 0 -z 4 -cR 175 -cB 255 -cG 0 -b 100
 	
-if [[ $(xrandr -q | grep 'HDMI-1-0 connected') ]]; then
+# if [[ $(xrandr -q | grep 'HDMI-1-0 connected') ]]; then
 
-		  # use arandr or xrandr to set monitors config
-		  # in my case, i use laptop monitor (eDP1) as Primary display 
-		  # and the second monitor (HDMI-1-0) as external display (extended to right)
-		  # add your config to this directory  ~/.screenlayout/   ||  If it doesn't exist, create one
-		  bash ~/.screenlayout/mainLeftExRight.sh
-fi
+# 		  # use arandr or xrandr to set monitors config
+# 		  # in my case, i use laptop monitor (eDP1) as Primary display 
+# 		  # and the second monitor (HDMI-1-0) as external display (extended to right)
+# 		  # add your config to this directory  ~/.screenlayout/   ||  If it doesn't exist, create one
+# 		  bash ~/.screenlayout/mainLeftExRight.sh
+# fi
 
 # -------------------- set En & Ar for keyboard --------------------
 setxkbmap -layout us,ar # change 'us,ar' for your own uses #

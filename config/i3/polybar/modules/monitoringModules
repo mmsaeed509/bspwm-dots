@@ -139,3 +139,18 @@ label-mounted = " %free%"
 label-unmounted = " %mountpoint%: NM"
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+[module/updates-pacman]
+type = custom/script
+exec = ~/.config/i3/polybar/scripts/updates-pacman.sh
+interval = 180
+format = <label>
+
+;label = %output% Updates
+label = "%{A1:alacritty -e sudo pacman -Syyu &:} %output% Updates%{A}"
+
+format-font = 4
+label-foreground = #e92ef0
+;label-foreground = #BF616A
+label-background = ${color.BGL}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
