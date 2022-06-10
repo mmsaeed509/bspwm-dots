@@ -79,6 +79,12 @@ wrapping-scroll = false
 reverse-scroll = false
 fuzzy-match = true
 
+; Number of workspaces to display
+ws-num = 10
+
+; Display all workspaces (even when there isn't a window open)
+show-all = true
+
 ; ws-icon-[0-9]+ = label;icon
 ; NOTE: The label needs to match the name of the i3 workspace
 ws-icon-0 = 1;
@@ -257,10 +263,26 @@ content-padding = 0
 click-left = ~/.config/i3/rofi/bin/powermenu
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-;;	    __________  ______
-;;	   / ____/ __ \/ ____/
-;;	  / __/ / / / / /_    
-;;	 / /___/ /_/ / __/    
-;;	/_____/\____/_/       
-;;
+
+[module/notification-github]
+type = custom/script
+exec = ~/.config/i3/polybar/scripts/notification-github.sh
+interval = 60
+label-background = ${color.BGL}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+label-layout = %layout%
+label-layout-foreground = ${colors.primary}
+label-layout-font = 4
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-foreground = ${colors.background}
+label-indicator-background = ${colors.secondary}
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

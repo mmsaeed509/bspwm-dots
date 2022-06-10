@@ -98,6 +98,9 @@ bindsym $alt+Control+l 			exec --no-startup-id "betterlockscreen --lock"
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Open/close dashboard
+bindsym $mod+Shift+d 	exec --no-startup-id  ~/.config/eww/dashboard/launch_dashboard
+
 # kill focused window
 bindsym $mod+q kill
 bindsym $mod+c kill

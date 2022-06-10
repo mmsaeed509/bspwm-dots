@@ -1,5 +1,7 @@
-## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
-## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+#
+# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+#
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -86,7 +88,7 @@ font-4 = "archcraft:size=14;4"
 ;   modules-right = ipc clock
 
 # Default
-modules-left = LD i3 RD dot  LD info-cava RD
+modules-left = menu dot LD i3 RD dot  LD info-cava RD dot LD updates-pacman RD dot LD notification-github RD dot xkeyboard
 modules-center = LDmpd mpd space RDmpd
 modules-right = volume dot backlight dot LD network RD space LD cpu col cpuTemp RD space LD battery date RD space LD sysmenu RD
 
