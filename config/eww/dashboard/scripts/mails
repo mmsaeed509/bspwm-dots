@@ -2,6 +2,7 @@
 
 import imaplib
 obj = imaplib.IMAP4_SSL('imap.gmail.com',993)
-obj.login('mmsaeed509@gmail.com','nbvgvznkiqgwtewc')
+# get your passored from here : https://myaccount.google.com/apppasswords
+obj.login('YourUserName@gmail.com','password')
 obj.select()
 print(len(obj.search(None, 'UnSeen')[1][0].split()))
