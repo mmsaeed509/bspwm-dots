@@ -72,12 +72,12 @@ interval = 1
 
 format = <label>
 
-format-prefix = " CPU"
-format-prefix-font = 4
+format-prefix = " "
+format-prefix-font = 5
 format-prefix-foreground = #fc035a
 format-prefix-background = ${color.BGL}
-label = "%{A1:stacer &:} %percentage%%%{A}"
-label-font = 4
+label = "%{A1:stacer &:}CPU %percentage%%%{A}"
+label-font = 10
 label-background = ${color.BGL}
 label-foreground = #fc035a
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
