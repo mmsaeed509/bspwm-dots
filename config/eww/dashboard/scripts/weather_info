@@ -9,8 +9,10 @@ cache_weather_hex=${cache_dir}/weather-hex
 cache_weather_icon=${cache_dir}/weather-icon
 
 ## Weather data
-KEY="58099776aa171cc5fb36696c5536a685"
-ID="360995"
+# get Your data from here : https://openweathermap.org/
+KEY=545sfsd...... # change it , get your API-Kye : https://home.openweathermap.org/api_keys 
+# git your city id , in search city -> yourCity -> select your city -> from link "https://openweathermap.org/city/360995" after "/city/" get City ID in my case is "360995"
+ID=360995 # git your city id  
 UNIT="metric"	# Available options : 'metric' or 'imperial'
 
 ## Make cache dir
@@ -20,8 +22,8 @@ fi
 
 ## Get data
 get_weather_data() {
-	weather=`curl -sf "http://api.openweathermap.org/data/2.5/weather?APPID="$KEY"&id="$ID"&units="$UNIT""`
-	echo ${weather}
+	weather=$(curl -sf "http://api.openweathermap.org/data/2.5/weather?APPID="$KEY"&id="$ID"&units="$UNIT"")
+	#decho ${weather}
 
 	if [ ! -z "$weather" ]; then
 		weather_temp=`echo "$weather" | jq ".main.temp" | cut -d "." -f 1`
@@ -129,9 +131,10 @@ get_weather_data() {
 }
 
 ## Execute
-if [[ "$1" == "--getdata" ]]; then
-	get_weather_data
-elif [[ "$1" == "--icon" ]]; then
+
+get_weather_data
+
+if [[ "$1" == "--icon" ]]; then
 	cat ${cache_weather_icon}
 elif [[ "$1" == "--temp" ]]; then
 	cat ${cache_weather_degree}
