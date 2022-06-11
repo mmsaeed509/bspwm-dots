@@ -61,7 +61,7 @@ Credit : [Aditya Shakya](https://github.com/adi1090x/widgets)
 ### [Table of content](#table-of-content)
 
 + **Dependencies**
-  - [**`Install the programs below in your system`**](#dependencies)
+  - [**`Install the programs below in your system`**](#dependencies) OR RUN [**`install_arch_packages`**](install_arch_packages) TO install All Dependencies
 + **Installation**
   - [**`How To Install dotfiles`**](#installation)
 + **Previews**
