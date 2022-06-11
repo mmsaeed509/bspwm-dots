@@ -18,6 +18,7 @@ sudo pacman -S --noconfirm --needed xf86-video-fbdev xf86-video-vesa xf86-video-
 echo "Which GPU in Your PC/Laptop?"
 echo "1- NVIDIA"
 echo "2- AMD"
+echo "Any Key To SKIP"
 read choice
 
 if [[ "$choice" -eq 1 ]]; then
