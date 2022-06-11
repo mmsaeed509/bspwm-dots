@@ -7,7 +7,7 @@
 ;; ** Variables ***********************************************************************
 
 ;; Profile vars
-(defvar IMAGE "images/profile.jpg")
+(defvar IMAGE "images/ozil.png")
 (defvar NAME "Mahmoud Mohamed")
 (defpoll UNAME :interval "5m" `whoami`)
 
@@ -38,12 +38,12 @@
 (defpoll TTIME :interval "1s" `scripts/music_info --ttime`)
 
 ;; Weather vars
-(defpoll ICON :interval "15m" `scripts/weather_info --icon`)
-(defpoll STAT :interval "15m" `scripts/weather_info --stat`)
-(defpoll TEMP :interval "15m" `scripts/weather_info --temp`)
-(defpoll HEX :interval "15m" `scripts/weather_info --hex`)
-(defpoll QUOTE :interval "15m" `scripts/weather_info --quote`)
-(defpoll QUOTE2 :interval "15m" `scripts/weather_info --quote2`)
+(defpoll ICON :interval "15s" `scripts/weather_info --icon`)
+(defpoll STAT :interval "15s" `scripts/weather_info --stat`)
+(defpoll TEMP :interval "15s" `scripts/weather_info --temp`)
+(defpoll HEX :interval "15s" `scripts/weather_info --hex`)
+(defpoll QUOTE :interval "15s" `scripts/weather_info --quote`)
+(defpoll QUOTE2 :interval "15s" `scripts/weather_info --quote2`)
 
 ;; Apps vars
 (defpoll MAILS :interval "5m" `scripts/mails`)
