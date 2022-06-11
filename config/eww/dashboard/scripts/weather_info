@@ -8,11 +8,9 @@ cache_weather_quote=${cache_dir}/weather-quote
 cache_weather_hex=${cache_dir}/weather-hex
 cache_weather_icon=${cache_dir}/weather-icon
 
-#
-# Weather data
-# get Your data from here : https://openweathermap.org/
-KEY="" #
-ID=""
+## Weather data
+KEY="58099776aa171cc5fb36696c5536a685"
+ID="360995"
 UNIT="metric"	# Available options : 'metric' or 'imperial'
 
 ## Make cache dir
