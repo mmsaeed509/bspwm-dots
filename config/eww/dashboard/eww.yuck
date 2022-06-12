@@ -120,22 +120,22 @@
 ;; github
 (defwidget github [] 
 	(box :class "github" :vexpand "false" :hexpand "false" 
-		(button :class "iconweb" :onclick "scripts/open_links --gh" "")))
+		(button :class "iconGitHub" :onclick "scripts/open_links --gh" "")))
 
 ;; reddit
 (defwidget reddit [] 
 	(box :class "reddit" :vexpand "false" :hexpand "false" 
-		(button :class "iconweb" :onclick "scripts/open_links --rd" "")))
+		(button :class "iconReddit" :onclick "scripts/open_links --rd" "")))
 
 ;; facebook
 (defwidget facebook [] 
 	(box :class "facebook" :vexpand "false" :hexpand "false" 
-		(button :class "iconweb" :onclick "scripts/open_links --fb" "")))
+		(button :class "iconFacebook" :onclick "scripts/open_links --fb" "")))
 
 ;; youtube
 (defwidget youtube [] 
 	(box :class "youtube" :vexpand "false" :hexpand "false" 
-		(button :class "iconweb" :onclick "scripts/open_links --yt" "")))
+		(button :class "iconYoutube" :onclick "scripts/open_links --yt" "")))
 
 ;; mail
 (defwidget mail [] 
