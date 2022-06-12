@@ -49,6 +49,8 @@
 
 Credit : [Aditya Shakya](https://github.com/adi1090x/widgets) 
 
+![](img/eww3.png)
+
 ![](img/eww2.png)
 
 ![](img/eww.png)
