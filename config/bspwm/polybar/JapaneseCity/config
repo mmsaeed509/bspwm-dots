@@ -71,7 +71,7 @@ font-9 = "Iosevka:style=bold:size=15;4"
 
 modules-left   = space LD mod RD space LD bspwm RD space LD info-cava RD space LD notification-github RD sep xkeyboard 
 modules-center = LDmpd space mpd space RDmpd  
-modules-right  = LD cpu RD space LD updates-pacman RD space battery Dspace volume Dspace cpuTemp space network memory space backlight Dspace LD date RD Dspace sysmenu space
+modules-right  = LD cpu RD space LD updates-pacman RD space battery Dspace volume Dspace cpuTemp space network memory space backlight space LD date RD Dspace sysmenu space
 
 separator =
 spacing = 0
