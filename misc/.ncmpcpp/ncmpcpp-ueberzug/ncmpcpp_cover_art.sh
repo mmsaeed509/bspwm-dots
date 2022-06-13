@@ -22,18 +22,20 @@ dunstify -u low --replace=69 -i ${art} "Playing : $RUNNING_SONG"
 
 # SETTINGS
 music_library="$HOME/Music"
-padding_top=4
-padding_bottom=-1
-padding_right=0
-max_width=31
-reserved_playlist_cols=31
-reserved_cols_in_percent="false"
-force_square="true"
+fallback_image="$HOME/.ncmpcpp/cover/album_cover.jpg"
+padding_top=6
+padding_bottom=2
+padding_right=1
+padding_left=1
+max_width=30
+reserved_playlist_cols=75
+reserved_cols_in_percent="true"
+force_square="false"
 
 square_alignment="top"
 
 left_aligned="true"
-padding_left=0
+
 
 # Only set this if the geometries are wrong or ncmpcpp shouts at you to do it.
 # Visually select/highlight a character on your terminal, zoom in an image 
