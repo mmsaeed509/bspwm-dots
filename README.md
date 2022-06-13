@@ -54,13 +54,11 @@
 
 <!-- reviewing themes -->
 
-<h1 align="center"> :shamrock: BSPWM </h1>
 
-[![](GIFs/DEMO.gif)](https://drive.google.com/file/d/1ia3OG3ZWhcE1rNqaud7cfaXRYcX-wKNx/view?usp=sharing)
+|:shamrock: BSPWM|:shamrock: i3WM|
+|--|--|
+| [![](GIFs/DEMO.gif)](https://drive.google.com/file/d/1ia3OG3ZWhcE1rNqaud7cfaXRYcX-wKNx/view?usp=sharing) | ![](GIFs/i3WM.gif) |
 
-<h1 align="center"> :shamrock: i3WM </h1>
-
-![](GIFs/i3WM.gif)
 
 <!-- reviewing themes -->
 
@@ -68,17 +66,18 @@
 
 <!-- EWW -->
 
-<h1 align="center"> :butterfly: EWW :butterfly: </h1>
+
+<h1 align="center"> 🦋 EWW 🦋 </h1>
 
 Credit : [Aditya Shakya](https://github.com/adi1090x/widgets) 
 
-![](img/eww3.png)
+| 🦋 | 🦋 | 🦋 |
+|--|--|--|
+| ![](img/eww3.png) | ![](img/eww2.png) | ![](img/eww.png) |
 
-![](img/eww2.png)
-
-![](img/eww.png)
 
 <!-- EWW -->
+
 <!-- ###########################################  ########################################### -->
 
 <!-- Table of content -->
