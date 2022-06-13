@@ -1,6 +1,6 @@
 <!-- <h1 align="center"> Ozoz bspwm dotfiles for Acer Predator Helios  </h1> -->
 
-<h1 align="center"> :herb: dotfiles for Acer Predator Helios <img align="right" src="https://badges.pufler.dev/visits/mmsaeed509/bspwm-dots?style=for-the-badge&color=A7D9B2"/> </h1> 
+<h1 align="center"> :four_leaf_clover: dotfiles for Acer Predator Helios <img align="right" src="https://badges.pufler.dev/visits/mmsaeed509/bspwm-dots?style=for-the-badge&color=A7D9B2"/> </h1> 
 
 <!-- ###########################################  ########################################### -->
 
@@ -57,11 +57,11 @@
 
 <!-- reviewing themes -->
 
-<h1 align="center"> :herb: BSPWM </h1>
+<h1 align="center"> :shamrock: BSPWM </h1>
 
 [![](GIFs/DEMO.gif)](https://drive.google.com/file/d/1ia3OG3ZWhcE1rNqaud7cfaXRYcX-wKNx/view?usp=sharing)
 
-<h1 align="center"> :herb: i3WM </h1>
+<h1 align="center"> :shamrock: i3WM </h1>
 
 ![](GIFs/i3WM.gif)
 
