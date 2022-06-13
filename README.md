@@ -56,6 +56,9 @@
 
 <!-- reviewing themes -->
 
+<h1 align="center"> ☘️ TWMs ☘️ </h1>
+
+
 |:shamrock: BSPWM|:shamrock: i3WM|
 |--|--|
 | ![](GIFs/DEMO_THEMES.gif) | ![](GIFs/i3WM.gif) |
