@@ -1,5 +1,5 @@
 <!-- <h1 align="center"> Ozoz dotfiles for bspwm </h1> -->
-<h1 align="center"> :hot_pepper: Ozoz dotfiles 🔥 <img align="right" src="https://badges.pufler.dev/visits/mmsaeed509/bspwm-dots?style=for-the-badge&color=A7D9B2"/> </h1> 
+<h1 align="center"> :hot_pepper: Ozoz dotfiles 🔥 </h1> 
 
 <!-- ###########################################  ########################################### -->
 
@@ -31,7 +31,7 @@
 
 <!-- About -->
 
-# :herb: about
+<h1 align="left"> :herb: about  <img align="right" src="https://badges.pufler.dev/visits/mmsaeed509/bspwm-dots?style=for-the-badge&color=A7D9B2"/> </h1> 
 
 <img src="img/desktop.png" alt="rice" align="right" width="500px">
 
