@@ -2,7 +2,6 @@
 
 <h1 align="center"> :herb: dotfiles for Acer Predator Helios <img align="right" src="https://badges.pufler.dev/visits/mmsaeed509/bspwm-dots?style=for-the-badge&color=A7D9B2"/> </h1> 
 
-</br></br></br>
 <!-- ###########################################  ########################################### -->
 
 
@@ -23,7 +22,7 @@
   <img src="https://img.shields.io/github/last-commit/mmsaeed509/bspwm-dots?color=deeppink&style=for-the-badge">
 </p>
 
-</br></br>
+</br>
 
 <!-- shields -->
 
