@@ -27,6 +27,31 @@
 
 <!-- ###########################################  ########################################### -->
 
+<!-- About -->
+
+# :herb: about
+
+<img src="img/desktop.png" alt="rice" align="right" width="500px">
+
+</br>
+
+ - OS: [**`Archcraft`**](https://archcraft.io/)
+ - WM: [**`bspwm`**](https://github.com/baskerville/bspwm) , [**`i3WM`**](https://i3wm.org/)
+ - Bar: [**`Polybar`**](https://github.com/polybar/polybar)
+ - Bar: [**`Widget`**](https://github.com/elkowar/eww)
+ - Compositor: [**`picom`**](https://github.com/yshui/picom)
+ - terminal: [**`alacritty`**](https://github.com/alacritty/alacritty)
+ - Aapp Launcher: [**`rofi`**](https://github.com/davatorium/rofi)
+ - Shell: [**`zsh`**](https://ohmyz.sh)
+
+</br>
+
+#
+
+<!-- About -->
+
+<!-- ###########################################  ########################################### -->
+
 <!-- reviewing themes -->
 
 <h1 align="center"> :herb: BSPWM </h1>
@@ -38,6 +63,7 @@
 ![](GIFs/i3WM.gif)
 
 <!-- reviewing themes -->
+
 <!-- ###########################################  ########################################### -->
 
 <!-- EWW -->
