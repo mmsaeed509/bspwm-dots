@@ -1,5 +1,5 @@
 <!-- <h1 align="center"> Ozoz dotfiles for bspwm </h1> -->
-<h1 align="center"> :herb: Ozoz dotfiles for bspwm <img align="right" src="https://badges.pufler.dev/visits/mmsaeed509/bspwm-dots?style=for-the-badge&color=A7D9B2"/> </h1> 
+<h1 align="center"> :four_leaf_clover: Ozoz dotfiles for bspwm <img align="right" src="https://badges.pufler.dev/visits/mmsaeed509/bspwm-dots?style=for-the-badge&color=A7D9B2"/> </h1> 
 
 <!-- ###########################################  ########################################### -->
 
@@ -56,11 +56,11 @@
 
 <!-- reviewing themes -->
 
-<h1 align="center"> :herb: BSPWM </h1>
+<h1 align="center"> :shamrock: BSPWM </h1>
 
 ![](GIFs/DEMO_THEMES.gif)
 
-<h1 align="center"> :herb: i3WM </h1>
+<h1 align="center"> :shamrock: i3WM </h1>
 
 ![](GIFs/i3WM.gif)
 
