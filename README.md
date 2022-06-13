@@ -7,6 +7,8 @@
 
 <!-- shields -->
 
+</br>
+
 <p align="center">
   <img src="https://img.shields.io/github/license/mmsaeed509/bspwm-dots?style=for-the-badge">
   </br>
@@ -21,6 +23,8 @@
   <img src="https://img.shields.io/github/languages/code-size/mmsaeed509/bspwm-dots?color=yellow&style=for-the-badge">
   <img src="https://img.shields.io/github/last-commit/mmsaeed509/bspwm-dots?color=deeppink&style=for-the-badge">
 </p>
+
+</br>
 
 <!-- shields -->
 
