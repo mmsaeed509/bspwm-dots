@@ -1,6 +1,6 @@
 <!-- <h1 align="center"> Ozoz bspwm dotfiles for Acer Predator Helios  </h1> -->
 
-<h1 align="center"> :four_leaf_clover: dotfiles for Acer Predator Helios <img align="right" src="https://badges.pufler.dev/visits/mmsaeed509/bspwm-dots?style=for-the-badge&color=A7D9B2"/> </h1> 
+<h1 align="center"> :hot_pepper: Ozoz dotfiles for Predator Helios 🔥 <img align="right" src="https://badges.pufler.dev/visits/mmsaeed509/bspwm-dots?style=for-the-badge&color=A7D9B2"/> </h1> 
 
 <!-- ###########################################  ########################################### -->
 
@@ -71,7 +71,7 @@
 
 <!-- EWW -->
 
-<h1 align="center"> EWW </h1>
+<h1 align="center"> :butterfly: EWW :butterfly: </h1>
 
 Credit : [Aditya Shakya](https://github.com/adi1090x/widgets) 
 
