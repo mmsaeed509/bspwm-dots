@@ -22,9 +22,32 @@
   <img src="https://img.shields.io/github/last-commit/mmsaeed509/bspwm-dots?color=deeppink&style=for-the-badge">
 </p>
 
+<!-- shields -->
+
+<!-- ###########################################  ########################################### -->
+
+<!-- About -->
+
+# :herb: about
+
+<img src="img/desktop.png" alt="rice" align="right" width="500px">
+
 </br>
 
-<!-- shields -->
+ - OS: [**`Archcraft`**](https://archcraft.io/)
+ - WM: [**`bspwm`**](https://github.com/baskerville/bspwm) , [**`i3WM`**](https://i3wm.org/)
+ - Bar: [**`Polybar`**](https://github.com/polybar/polybar)
+ - Bar: [**`Widget`**](https://github.com/elkowar/eww)
+ - Compositor: [**`picom`**](https://github.com/yshui/picom)
+ - terminal: [**`alacritty`**](https://github.com/alacritty/alacritty)
+ - Aapp Launcher: [**`rofi`**](https://github.com/davatorium/rofi)
+ - Shell: [**`zsh`**](https://ohmyz.sh)
+
+</br>
+
+#
+
+<!-- About -->
 
 <!-- ###########################################  ########################################### -->
 
