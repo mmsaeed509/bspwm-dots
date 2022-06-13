@@ -56,13 +56,10 @@
 
 <!-- reviewing themes -->
 
-<h1 align="center"> :shamrock: BSPWM </h1>
+|:shamrock: BSPWM|:shamrock: i3WM|
+|--|--|
+| ![](GIFs/DEMO_THEMES.gif) | ![](GIFs/i3WM.gif) |
 
-![](GIFs/DEMO_THEMES.gif)
-
-<h1 align="center"> :shamrock: i3WM </h1>
-
-![](GIFs/i3WM.gif)
 
 <!-- reviewing themes -->
 
@@ -70,17 +67,18 @@
 
 <!-- EWW -->
 
+
 <h1 align="center"> 🦋 EWW 🦋 </h1>
 
 Credit : [Aditya Shakya](https://github.com/adi1090x/widgets) 
 
-![](img/eww3.png)
+| 🦋 | 🦋 | 🦋 |
+|--|--|--|
+| ![](img/eww3.png) | ![](img/eww2.png) | ![](img/eww.png) |
 
-![](img/eww2.png)
-
-![](img/eww.png)
 
 <!-- EWW -->
+
 <!-- ###########################################  ########################################### -->
 
 <!-- Table of content -->
