@@ -24,8 +24,10 @@ mpd_crossfade_time 	= "2"
 
 ### Script ###
 
-#execute_on_song_change = "bash ~/.ncmpcpp/notification"
-execute_on_song_change = "bash ~/.ncmpcpp/cover_art"
+# execute_on_song_change = "bash ~/.ncmpcpp/notification"
+# execute_on_song_change = "bash ~/.ncmpcpp/cover_art"
+
+execute_on_song_change = "~/.ncmpcpp/ncmpcpp-ueberzug/ncmpcpp_cover_art.sh"
 
 ### Script ###
 
@@ -44,6 +46,10 @@ lines_scrolled = "1"
 #############
 # Behaviour #
 #############
+  
+startup_slave_screen = playlist  
+startup_slave_screen_focus = yes 
+locked_screen_width_part = 30
 
 ##############
 # Visualizer #
@@ -54,14 +60,14 @@ visualizer_output_name = "Visualizer"
 #visualizer_output_name = "mpd_visualizer"
 visualizer_in_stereo = "yes"
 visualizer_type = "ellipse"
-visualizer_look = ●●
+visualizer_look = "  "
 visualizer_fps = "60"
 
-###########################################################################
-# available looks ( "●▮" "∙▋" "▋▍" "▋█" "▋█" "▋░" "▋▓" "▋☰" "☰⛆" "☰▓" ) #
-# visualizer_type -> spectrum , ellipse , wave , wave_filled              #
-# visualizer_color = "33,39,63,75,81,99,117,153,189"                      #
-###########################################################################
+################################################################################
+# available looks ( "●●" "●▮" "∙▋" "▋▍" "▋█" "▋█" "▋░" "▋▓" "▋☰" "☰⛆" "☰▓" ) #
+# visualizer_type -> spectrum , ellipse , wave , wave_filled                   #
+# visualizer_color = "33,39,63,75,81,99,117,153,189"                           #
+################################################################################
 
 ##############
 # Visualizer #
@@ -77,12 +83,12 @@ browser_display_mode = "columns"
 search_engine_display_mode = "columns"
 playlist_editor_display_mode = "columns"
 colors_enabled 		  = "yes"
-#user_interface       = classic
+# user_interface       = classic
 user_interface 		  = alternative
 volume_color 		  = "white"
 follow_now_playing_lyrics = "yes"
 display_bitrate = "yes"
-startup_screen = "playlist"
+startup_screen = "visualizer"
 
 ##########
 # Window #
@@ -133,12 +139,16 @@ alternative_header_second_line_format = "{{$6%b$9}{ [$6%y$9]}}|{%D}"
 ; song_status_format		 = "$7%t"
 song_status_format = " $2%a $4⟫$3⟫ $8%t $4⟫$3⟫ $5%b "
 ; song_list_format 		 = "  %t $R%a %l  "
-song_list_format = "{$3%n $9}{$7%a - $9}{$5%t$9}|{$8%f$9}$R{$6  %b$9}{$3 │ %l$9}"
+# song_list_format = "{$3%n $9}{$7%a - $9}{$5%t$9}|{$8%f$9}$R{$6  %b$9}{$3 │ %l$9}"
+song_list_format = "$6{%a »$4 %t$/r$R}"
 song_library_format 	 = {{%a - %t} (%b)}|{%f}
 ; song_columns_list_format = "(53)[white]{tr} (45)[blue]{a}"
-song_columns_list_format = "(50)[yellow]{t} (30)[green]{a} "  
+# song_columns_list_format = "(50)[yellow]{t} (30)[green]{a} "  
+song_columns_list_format = "(25)[6]{a} (35)[4]{t} "
 now_playing_prefix = "$b"
 now_playing_suffix = "$/b"
+# playlist_display_mode = "classic"
+
 
 #############
 # Song list #
