@@ -54,7 +54,8 @@ entry {
     spacing:    					0;
     expand:                         true;
     horizontal-align:               0;
-    text-color: 					@foreground;
+    background-color:             	@selected;
+    text-color: 					@background;
     placeholder-color:              @FG;
     placeholder:                    " Search... ";
     padding:    					6px ;

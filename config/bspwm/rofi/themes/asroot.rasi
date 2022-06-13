@@ -31,8 +31,8 @@ prompt {
     enabled: 						true;
 	margin: 						0px 0px 0px 10px;
     padding:    					8px;
-	background-color: 				@background;
-	text-color: 					@foreground;
+	background-color: 				@selected;
+	text-color: 					@background;
     border:                  		2px;
     border-color:                  	@selected;
     border-radius:                  5px;
@@ -44,7 +44,7 @@ textbox-prompt-colon {
     border-radius:                  5px;
     background-color:               @selected;
     text-color:                     @background;
-    padding:    					6px 10px 6px 10px;
+    padding:    					10px;
 	font:							"Iosevka Nerd Font 10";
 }
 
