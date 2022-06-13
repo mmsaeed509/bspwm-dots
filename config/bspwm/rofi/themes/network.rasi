@@ -31,8 +31,8 @@ prompt {
     enabled: 						true;
 	margin: 						0px 0px 0px 10px;
     padding:    					6px 6px 6px 6px;
-	background-color: 				@background;
-	text-color: 					@foreground;
+	background-color: 				@selected;
+	text-color: 					@background;
     border:                  		2px;
     border-color:                  	@selected;
     border-radius:                  5px;

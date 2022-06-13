@@ -29,8 +29,8 @@ prompt {
     enabled: 						true;
 	margin: 						0px 0px 0px 8px;
     padding:    					6px 6px 6px 6px;
-	background-color: 				@background;
-	text-color: 					@foreground;
+	background-color: 				@selected;
+	text-color: 					@background;
     border:                  		2px 2px 2px 2px;
     border-color:                  	@selected;
     border-radius:                  5px;
@@ -48,14 +48,14 @@ textbox-prompt-colon {
 }
 
 entry {
-    background-color:               @background;
-    text-color:                     @foreground;
+    background-color:               @selected;
+    text-color:                     @background;
     margin: 						0px 0px 0px 8px;
     padding:    					6px 6px 6px 6px;
     border:                  		2px;
     border-radius:                  5px;
     border-color:                  	@selected;
-    placeholder-color:              @foreground;
+    placeholder-color:              @background;
     placeholder:                    " Search... ";
     expand:                         true;
     horizontal-align:               0;
