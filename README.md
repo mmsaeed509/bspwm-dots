@@ -6,6 +6,8 @@
 
 <!-- shields -->
 
+</br>
+
 <p align="center">
   <img src="https://img.shields.io/github/license/mmsaeed509/bspwm-dots?style=for-the-badge">
   </br>
