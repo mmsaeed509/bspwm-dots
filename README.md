@@ -81,6 +81,18 @@ Credit : [Aditya Shakya](https://github.com/adi1090x/widgets)
 
 <!-- ###########################################  ########################################### -->
 
+<!-- ncmpcpp -->
+
+<h1 align="center"> 🎵 ncmpcpp 🎵 </h1>
+
+| 🎵 | 🎵 |
+|--|--|
+| ![](img/ncmpcpp_1.png) | ![](img/ncmpcpp_2.png) |
+
+<!-- ncmpcpp -->
+
+<!-- ###########################################  ########################################### -->
+
 <!-- Table of content -->
 
 ### See [**`Predator Branch`**](https://github.com/mmsaeed509/bspwm-dots/tree/Predator) For Acer Predator Helios
