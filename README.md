@@ -1,4 +1,4 @@
-<h1 align="center"> :hot_pepper: Ozoz dotfiles for Predator Helios 🔥 </h1> 
+<h1 align="center"> :hot_pepper: Ozofiles for Predator Helios 🔥 </h1> 
 
 <!-- ###########################################  ########################################### -->
 
