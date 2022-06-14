@@ -9,18 +9,18 @@
 </br>
 
 <p align="center">
-  <img src="https://img.shields.io/github/license/mmsaeed509/bspwm-dots?style=for-the-badge">
+  <img src="https://img.shields.io/github/license/mmsaeed509/Ozofiles?style=for-the-badge">
   </br>
   <img src="https://img.shields.io/badge/Maintained%3F-Yes-green?style=for-the-badge">
-  <img src="https://img.shields.io/github/issues/mmsaeed509/bspwm-dots?color=purple&style=for-the-badge">
+  <img src="https://img.shields.io/github/issues/mmsaeed509/Ozofiles?color=purple&style=for-the-badge">
   </br>
-  <img src="https://img.shields.io/github/stars/mmsaeed509/bspwm-dots?style=for-the-badge">
-  <img src="https://img.shields.io/github/forks/mmsaeed509/bspwm-dots?color=teal&style=for-the-badge">
-  <img src="https://img.shields.io/github/repo-size/mmsaeed509/bspwm-dots?color=blueviolet&style=for-the-badge">
+  <img src="https://img.shields.io/github/stars/mmsaeed509/Ozofiles?style=for-the-badge">
+  <img src="https://img.shields.io/github/forks/mmsaeed509/Ozofiles?color=teal&style=for-the-badge">
+  <img src="https://img.shields.io/github/repo-size/mmsaeed509/Ozofiles?color=blueviolet&style=for-the-badge">
   </br>
-  <img src="https://img.shields.io/github/languages/count/mmsaeed509/bspwm-dots?color=red&style=for-the-badge">
-  <img src="https://img.shields.io/github/languages/code-size/mmsaeed509/bspwm-dots?color=yellow&style=for-the-badge">
-  <img src="https://img.shields.io/github/last-commit/mmsaeed509/bspwm-dots?color=deeppink&style=for-the-badge">
+  <img src="https://img.shields.io/github/languages/count/mmsaeed509/Ozofiles?color=red&style=for-the-badge">
+  <img src="https://img.shields.io/github/languages/code-size/mmsaeed509/Ozofiles?color=yellow&style=for-the-badge">
+  <img src="https://img.shields.io/github/last-commit/mmsaeed509/Ozofiles?color=deeppink&style=for-the-badge">
 </p>
 
 </br>
@@ -31,7 +31,7 @@
 
 <!-- About -->
 
-<h1 align="left"> :herb: about  <img align="right" src="https://badges.pufler.dev/visits/mmsaeed509/bspwm-dots?style=for-the-badge&color=A7D9B2"/> </h1> 
+<h1 align="left"> :herb: about  <img align="right" src="https://badges.pufler.dev/visits/mmsaeed509/Ozofiles?style=for-the-badge&color=A7D9B2"/> </h1> 
 
 <img src="img/desktop.png" alt="rice" align="right" width="500px">
 
@@ -98,7 +98,7 @@ Credit : [Aditya Shakya](https://github.com/adi1090x/widgets)
 
 <!-- Table of content -->
 
-### See [**`Predator Branch`**](https://github.com/mmsaeed509/bspwm-dots/tree/Predator) For Acer Predator Helios
+### See [**`Predator Branch`**](https://github.com/mmsaeed509/Ozofiles/tree/Predator) For Acer Predator Helios
 
 ### [Table of content](#table-of-content)
 
