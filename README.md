@@ -1,5 +1,5 @@
 <!-- <h1 align="center"> Ozoz dotfiles for bspwm </h1> -->
-<h1 align="center"> :hot_pepper: Ozoz dotfiles 🔥 </h1> 
+<h1 align="center"> :hot_pepper: Ozofiles 🔥 </h1> 
 
 <!-- ###########################################  ########################################### -->
 
