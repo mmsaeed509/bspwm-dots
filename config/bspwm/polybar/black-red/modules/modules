@@ -11,7 +11,7 @@ type = custom/text
 content = " NA"
 content-prefix = 
 content-prefix-font = 2
-content-prefix-foreground = ${color.RED}
+content-prefix-foreground = #BA0000
 content-padding = 0
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -24,7 +24,8 @@ card = intel_backlight
 format = <ramp> <label>
 
 label = %percentage%%
-label-font = 7
+label-font = 
+; label-foreground = #BA0000
 
 ramp-0 = 
 ramp-1 = 
@@ -36,8 +37,8 @@ ramp-6 = 
 ramp-7 = 
 ramp-8 = 
 ramp-9 = 
-ramp-font = 7
-ramp-foreground = ${color.MAGENTA}
+ramp-font = 
+ramp-foreground = #BA0000
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -64,7 +65,7 @@ ramp-7 = 
 ramp-8 = 
 ramp-9 = 
 ramp-font = 7
-ramp-foreground = ${color.MAGENTA}
+ramp-foreground = #BA0000
 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -95,34 +96,35 @@ format-font = 2
 label-monitor = %name%
 
 
-label-focused = %name%
-label-focused-foreground = ${color.BLUE}
+label-focused = [%name%]
+label-focused-foreground = #E5131E
 label-focused-background = ${color.BGL}
 label-focused-underline = ${color.BLUE}
 label-focused-padding = 0
 
 label-occupied = %name%
-label-occupied-foreground = ${color.GREEN}
+label-occupied-foreground = #F66D78
 label-occupied-background = ${color.BGL}
 label-occupied-underline = ${color.GREEN}
 label-occupied-padding = 0
 
 label-urgent = %name%
-label-urgent-foreground = ${color.RED}
+label-urgent-foreground = #BA0000
 label-urgent-background = ${color.BGL}
 label-urgent-underline = ${color.RED}
 label-urgent-padding = 0
 
 label-empty = %name%
-label-empty-foreground = ${color.FOREGROUND}
+label-empty-foreground = #5E0F0B
 label-empty-background = ${color.BGL}
 label-empty-padding = 0
 
 ; Separator in between workspaces
-label-separator = " ◆ "
+label-separator = " "
 label-separator-padding = 0
-label-separator-foreground = ${color.ALTBLACK}
+label-separator-foreground = #BA0000
 label-separator-background = ${color.BGL}
+
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -131,7 +133,7 @@ type = internal/bspwm
 
 format = <label-mode>
 format-background = ${color.BGL}
-format-foreground = #AD8EE6
+format-foreground = #BA0000
 format-padding = 1
 format-font = 4
 
@@ -158,12 +160,12 @@ time-alt = %A, %d %B %Y
 
 format = <label>
 format-prefix = " "
-format-prefix-font = 3
-format-prefix-foreground = ${color.CYAN2}
+format-prefix-font = 
+format-prefix-foreground = #BA0000
 format-prefix-background = ${color.BGL}
 
 label = %time%
-label-font = 4
+label-font = 
 label-foreground = ${color.CYAN2}
 label-background = ${color.BGL}
 
@@ -200,21 +202,18 @@ interface = ${system.network_interface}
 
 interval = 1.0
 
-;;ping-interval = 3
-;;udspeed-minwidth = 5
 
 accumulate-stats = true
 unknown-as-up = true
 
 format-connected = <ramp-signal> <label-connected>
-;format-connected = <ramp-signal>
 
 format-disconnected = <label-disconnected>
 format-disconnected-prefix = " "
-format-disconnected-prefix-font = 7
-format-disconnected-prefix-foreground = ${color.RED}
+format-disconnected-prefix-font = 
+format-disconnected-prefix-foreground =  #BA0000
 
-label-connected = "%{A1:nmd &:} %{A}"
+label-connected = "%{A1:nmd &:}%essid%%{A}"
 label-disconnected = "%{A1:nmd &:} %{A}"
 
 ramp-signal-0 = 
@@ -222,8 +221,8 @@ ramp-signal-1 = 
 ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
-ramp-signal-font = 3
-ramp-signal-foreground = ${color.CYAN}
+ramp-signal-font = 
+ramp-signal-foreground = #BA0000
 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -233,26 +232,14 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 
 label-layout = %layout%
-label-layout-foreground = ${colors.primary}
+label-layout-foreground = #BA0000
 label-layout-font = 4
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-foreground = ${colors.background}
+label-indicator-foreground = #BA0000
 label-indicator-background = ${colors.secondary}
 
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/sysmenu]
-type = custom/text
-
-content = ""
-content-font = 7
-content-foreground = ${color.RED}
-;content-background = ${color.BGL}
-content-padding = 0
-
-click-left = ~/.config/bspwm/rofi/bin/powermenu
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/notification-github]
@@ -260,5 +247,6 @@ type = custom/script
 exec = ~/.config/bspwm/polybar/scripts/notification-github.sh
 interval = 60
 label-background = ${color.BGL}
+label-foreground = #BA0000
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

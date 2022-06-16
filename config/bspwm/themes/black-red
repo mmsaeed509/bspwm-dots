@@ -1,0 +1,42 @@
+! -----------------------------------------------------------------------------
+! Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+! Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+! 
+! black-red color scheme
+! -----------------------------------------------------------------------------
+
+*background: #000000
+*foreground: #ff0000
+
+
+
+*color0:  #282C34
+*color8:  #FA454C
+
+
+*color1:  #6A0106
+*color9:  #5E0F0B
+
+
+*color2:  #8D0209
+*color10: #7D1611
+
+
+*color3:  #AE0309
+*color11: #9B1A15
+
+! 
+*color4:  #D2030D
+*color12: #BC1F1A
+
+! 
+*color5:  #F5040D
+*color13: #DC251F
+
+! 
+*color6:  #E5131E
+*color14: #ED3037
+
+! 
+*color7:  #460104
+*color15: #3D0A07

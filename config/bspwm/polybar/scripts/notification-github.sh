@@ -1,11 +1,7 @@
 #!/bin/sh
 
-#
-# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
-#
 
-USER=""
+USER="UserName"
 # You can get your Personal access tokens from here : https://github.com/settings/tokens #
 TOKEN=""
 

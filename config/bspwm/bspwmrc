@@ -24,19 +24,12 @@ getcolors() {
 }
 getcolors
 
-# ------------ Configurations ------------ #
-
-
-
 # -------------------- set En & Ar for keyboard --------------------
 # setxkbmap -layout us,ar # change 'us,ar' for your own uses #
 # setxkbmap -option 'grp:alt_shift_toggle'
 # -------------------- set En & Ar for keyboard --------------------
 
 export _JAVA_AWT_WM_NONREPARENTING=1 # Solve java apps issues (e.g. JetBrains IDEs like PyCharm, CLion, etc).
-
-# launch conky #
-# conky -c ~/.config/conky/conky.conf
 
 # ------------ Dual monitor setup ------------
 
@@ -47,11 +40,11 @@ export _JAVA_AWT_WM_NONREPARENTING=1 # Solve java apps issues (e.g. JetBrains ID
  
 # if [[ $(xrandr -q | grep 'HDMI-1-0 connected') ]]; then
 
-		  # use arandr or xrandr to set monitors config
-		  # in my case, i use laptop monitor (eDP1) as Primary display 
-		  # and the second monitor (HDMI-1-0) as external display (extended to right)
-		  # add your config to this directory  ~/.screenlayout/   ||  If it doesn't exist, create one
-		#   bash ~/.screenlayout/mainLeftExRight.sh
+# 		  # use arandr or xrandr to set monitors config
+# 		  # in my case, i use laptop monitor (eDP1) as Primary display 
+# 		  # and the second monitor (HDMI-1-0) as external display (extended to right)
+# 		  # add your config to this directory  ~/.screenlayout/   ||  If it doesn't exist, create one
+# 		  bash ~/.screenlayout/mainLeftExRight.sh
 # fi
 
 # ------------ Dual monitor setup ------------
@@ -253,7 +246,7 @@ xsetroot -cursor_name left_ptr
 bash $HOME/.fehbg
 
 # enable num lock
-numlockx &
+# numlockx &
 
 # Start mpd
 exec mpd &

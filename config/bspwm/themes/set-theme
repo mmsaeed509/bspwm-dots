@@ -35,21 +35,13 @@ set_style () {
 	zz
 	
 
-	# ---------------------------- launch a custom Polybar if it exists ----------------------------
-
-	if [[ "$6" == "axylBar" ]]
-	then
-		echo "axylBar">~/.config/bspwm/selectedThemeName
-
-	elif [[ "$6" == "JapaneseCityBar" ]]
-	then
-		echo "JapaneseCityBar">~/.config/bspwm/selectedThemeName
-	
-	elif [[ "$6" == "" ]]
+	if [[ "$6" == "" ]]
 	then
 		echo "defaultBar">~/.config/bspwm/selectedThemeName
-	fi
 
+	else 
+		echo "$6">~/.config/bspwm/selectedThemeName
+	fi
 
 	# ---------------------------- launch a custom Polybar if it exists ----------------------------
 

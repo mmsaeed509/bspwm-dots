@@ -19,7 +19,7 @@ theme_4=" Dracula"
 theme_5=" Groot"
 theme_6=" Gruvbox"
 theme_7=" Hack"
-theme_8=" Nord"
+theme_8=" Black And Red"
 theme_9=" Rick"
 theme_10=" Hack The Box"
 theme_11=" Hack The Box Colored"
@@ -42,6 +42,7 @@ chosen="$(echo -e "$availableThemes" | $rofi_command -p "Available themes : (18)
 # the 1st var -> background, the 2th var -> color file name, the 3th var -> the theme name, 
 # the 4th var -> icons name, the 5th var -> the cursor name, the 6th var ( if it exists )-> for customized polybar
 #
+
 case $chosen in
     $theme_1)
         bash ${BSP}/set-theme  'blade3.png' 'blade' 'Blade2' 'Red-Icons' 'LyraS'
@@ -62,10 +63,10 @@ case $chosen in
         bash ${BSP}/set-theme  'gruvbox.jpg' 'gruvbox' 'Gruvbox' 'Luna-Dark' 'Future-dark'
         ;;
     $theme_7)
-        bash ${BSP}/set-theme  'hack.jpg' 'hack' 'Hack' 'Hack' 'LyraB'
+        bash ${BSP}/set-theme  'hack.jpg' 'hack' 'Hack' 'Hack' 'LyraB' 'Hack'
         ;;
     $theme_8)
-        bash ${BSP}/set-theme  'nord.jpg' 'nord' 'Arc-Dark' 'Arc-Circle' 'Qogirr'
+        bash ${BSP}/set-theme  'Arch-red.png' 'black-red' 'SIth Empire' 'HUD EVOLUTION RED' 'Black-and-red' 'BlackRedBAr'
         ;;
     $theme_9)
         bash ${BSP}/set-theme  'rick.jpg' 'rick' 'Rick' 'Zafiro' 'Vimix-dark'
