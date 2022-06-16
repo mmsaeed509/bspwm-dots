@@ -1,0 +1,237 @@
+#!/usr/bin/env bash
+
+#
+# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+#
+
+# Environtment path
+export PATH="${PATH}:$HOME/.config/bspwm/bin"
+
+# Get colors from .Xresources 
+xrdb ~/.Xresources
+getcolors() {
+	FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
+	BACKGROUND=$(xrdb -query | grep 'background:'| awk '{print $NF}')
+	BLACK=$(xrdb -query | grep 'color0:'| awk '{print $NF}')
+	RED=$(xrdb -query | grep 'color1:'| awk '{print $NF}')
+	GREEN=$(xrdb -query | grep 'color2:'| awk '{print $NF}')
+	YELLOW=$(xrdb -query | grep 'color3:'| awk '{print $NF}')
+	BLUE=$(xrdb -query | grep 'color4:'| awk '{print $NF}')
+	MAGENTA=$(xrdb -query | grep 'color5:'| awk '{print $NF}')
+	CYAN=$(xrdb -query | grep 'color6:'| awk '{print $NF}')
+	WHITE=$(xrdb -query | grep 'color7:'| awk '{print $NF}')
+}
+getcolors
+
+# ------------ Configurations ------------ #
+
+export _JAVA_AWT_WM_NONREPARENTING=1 # Solve java apps issues (e.g. JetBrains IDEs like PyCharm, CLion, etc).
+
+# ------------ workspaces config ------------
+
+workspaces() {
+	name=1
+	for monitor in `bspc query -M`; do
+		bspc monitor ${monitor} -n "$name" -d '' '' '' ' ' '' '' '' ''
+		let name++
+	done
+}
+workspaces
+
+bspc config border_width 1
+bspc config window_gap 10
+bspc config split_ratio 0.50
+
+bspc config focused_border_color "$BLUE" 
+bspc config normal_border_color "$BACKGROUND"
+bspc config active_border_color "$MAGENTA"
+bspc config presel_feedback_color "$GREEN"
+
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+bspc config paddingless_monocle true
+bspc config single_monocle false
+bspc config focus_follows_pointer true
+
+# ------------ workspaces config ------------
+
+
+# ------------ Window rules ------------
+
+# remove all rules first
+bspc rule -r *:*
+
+
+# ------------ apps open in terminal workspaces
+
+bspc rule -a Alacritty desktop='^1' follow=on focus=on
+bspc rule -a Xfce4-terminal desktop='^1' follow=on focus=on
+bspc rule -a gnome-calculator desktop='^1' state=floating follow=on focus=on
+
+# ------------ apps open in terminal workspaces
+
+
+# ------------ apps open in web workspaces
+
+bspc rule -a firefox desktop='^2' follow=on focus=on
+bspc rule -a chromium desktop='^2' follow=on focus=on
+bspc rule -a Google-chrome desktop='^2' follow=on focus=on
+bspc rule -a Brave-browser desktop='^2' follow=on focus=on
+bspc rule -a discord desktop='^2' state=floating follow=on focus=on
+bspc rule -a guiscrcpy desktop='^2' state=floating follow=on focus=on
+bspc rule -a kdeconnect.app desktop='^2' state=floating follow=on focus=on
+bspc rule -a MEGAsync desktop='^2' state=floating follow=on focus=on
+bspc rule -a Element desktop='^2' state=floating follow=on focus=on
+# free download manager
+bspc rule -a Free desktop='^2' state=floating follow=on focus=on
+bspc rule -a qBittorrent desktop='^2' state=floating follow=on focus=on
+
+# VPNs
+bspc rule -a Windscribe2 desktop='^2' state=floating follow=on focus=on
+bspc rule -a Protonvpn desktop='^2' state=floating follow=on focus=on
+
+# ------------ apps open in web workspaces
+
+
+# ------------ apps open in files workspaces
+
+declare -a files=(Pcmanfm Thunar qBittorrent)
+for i in ${files[@]}; do
+   bspc rule -a $i desktop='^3' follow=on focus=on; done
+
+# ------------ apps open in files workspaces
+
+
+# ------------ apps open in code workspaces
+declare -a code=(Geany code-oss)
+for i in ${code[@]}; do
+   bspc rule -a $i desktop='^4' follow=on focus=on; done
+   
+bspc rule -a Code desktop ='^4' follow=on focus=on
+bspc rule -a kate desktop ='^4' follow=on focus=on
+bspc rule -a Leafpad desktop ='^4' follow=on focus=on
+bspc rule -a github-desktop desktop ='^4' state=floating follow=on focus=on
+
+# jetBrains IDEs
+bspc rule -a jetbrains-clion desktop ='^4' state=floating follow=on focus=on
+bspc rule -a jetbrains-idea desktop ='^4' state=floating follow=on focus=on
+bspc rule -a jetbrains-pycharm desktop ='^4' state=floating follow=on focus=on
+
+# Markdown editors
+bspc rule -a inkdrop desktop ='^4' state=floating follow=on focus=on
+
+
+
+# ------------ apps open in code workspaces
+
+
+# ------------ apps open in office and docs workspaces
+
+declare -a office=(Gucharmap Atril Evince \
+libreoffice-writer libreoffice-calc libreoffice-impress \
+libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice)
+for i in ${office[@]}; do
+   bspc rule -a $i desktop='^5' follow=on focus=on; done
+
+# WPS Office
+bspc rule -a wps desktop='^5' follow=on focus=on
+bspc rule -a wpp desktop='^5' follow=on focus=on
+bspc rule -a et desktop='^5' follow=on focus=on
+bspc rule -a pdf desktop='^5' follow=on focus=on
+
+# ------------ apps open in office and docs workspaces
+
+
+# ------------ apps open in Communication workspaces
+
+declare -a comm=(Thunderbird TelegramDesktop Hexchat)
+for i in ${comm[@]}; do
+   bspc rule -a $i desktop='^6' follow=on focus=on; done
+
+# ------------ apps open in Communication workspaces
+
+
+# ------------ apps open in media workspaces
+
+declare -a media=(Audacity Music MPlayer Lxmusic Inkscape Gimp-2.10 obs vlc)
+for i in ${media[@]}; do
+   bspc rule -a $i desktop='^7' state=floating follow=on focus=on; done
+
+# ------------ apps open in media workspaces
+
+
+# ------------ apps open in settings workspaces
+
+bspc rule -a 'VirtualBox Manager' desktop='^8' follow=on focus=on
+bspc rule -a GParted desktop='^8' follow=on focus=on
+declare -a settings=(Lxappearance Lxtask Lxrandr Arandr \
+System-config-printer.py Pavucontrol Exo-helper-1 \
+Xfce4-power-manager-settings)
+for i in ${settings[@]}; do
+   bspc rule -a $i desktop='^8' state=floating follow=on focus=on; done
+
+bspc rule -a stacer desktop ='^8' state=floating follow=on focus=on
+bspc rule -a Xsensors desktop ='^8' state=floating follow=on focus=on
+
+
+# ------------ apps open in settings workspaces
+
+
+# ------------ special rules
+declare -a floating=(alacritty-float Pcmanfm Onboard Yad 'Firefox:Places' \
+Viewnior feh Nm-connection-editor)
+for i in ${floating[@]}; do
+   bspc rule -a $i state=floating follow=on focus=on; done
+
+bspc rule -a Conky state=floating manage=off
+bspc rule -a stalonetray state=floating manage=off
+bspc rule -a gwenview state=floating follow=on focus=on
+# ------------ Autostart
+
+# Kill if already running
+killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager
+
+# Lauch notification daemon
+dunst \
+-geom "280x50-10+42" -frame_width "1" -font "Iosevka Custom 9" \
+-lb "$BACKGROUND" -lf "$FOREGROUND" -lfr "$BLUE" \
+-nb "$BACKGROUND" -nf "$FOREGROUND" -nfr "$BLUE" \
+-cb "$BACKGROUND" -cf "$RED" -cfr "$RED" &
+
+# Lauch xsettingsd daemon
+xsettingsd &
+
+# polkit agent
+if [[ ! `pidof xfce-polkit` ]]; then
+	/usr/lib/xfce-polkit/xfce-polkit &
+fi
+
+# Lauch keybindings daemon
+sxhkd &
+
+# Enable Super Keys For Menu
+ksuperkey -e 'Super_L=Alt_L|F1' &
+ksuperkey -e 'Super_R=Alt_L|F1' &
+
+# Enable power management
+xfce4-power-manager &
+
+# Fix cursor
+xsetroot -cursor_name left_ptr
+
+# Restore wallpaper
+bash $HOME/.fehbg
+
+# enable num lock
+# numlockx &
+
+# Start mpd
+exec mpd &
+
+# Start bspwm scripts
+bspcolors
+bspcomp
+bspbar
+bspfloat &
+

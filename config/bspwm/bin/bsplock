@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
+## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+
+## i3lock for bspwm for Archcraft OS.
+
+## Get colors -----------------
+FG="$(xrdb -query | grep 'foreground:'| awk '{print $NF}')"
+BG="$(xrdb -query | grep 'background:'| awk '{print $NF}')"
+
+BLACK="$(xrdb -query | grep 'color0:'| awk '{print $NF}')"
+RED="$(xrdb -query | grep 'color1:'| awk '{print $NF}')"
+GREEN="$(xrdb -query | grep 'color2:'| awk '{print $NF}')"
+YELLOW="$(xrdb -query | grep 'color3:'| awk '{print $NF}')"
+BLUE="$(xrdb -query | grep 'color4:'| awk '{print $NF}')"
+MAGENTA="$(xrdb -query | grep 'color5:'| awk '{print $NF}')"
+CYAN="$(xrdb -query | grep 'color6:'| awk '{print $NF}')"
+WHITE="$(xrdb -query | grep 'color7:'| awk '{print $NF}')"
+
+TOTD=`fortune -n 90 -s | head -n 1`
+
+## Exec	-----------------
+i3lock \
+--color="${BG}D9"			\
+\
+--insidever-color=${GREEN}	\
+--insidewrong-color=${RED}	\
+--inside-color="${BG}00"	\
+\
+--ringver-color=${GREEN}	\
+--ringwrong-color=${RED}	\
+--ring-color=${BLUE}		\
+\
+--line-color=${BG}			\
+--separator-color=${BG}		\
+\
+--keyhl-color=${YELLOW}		\
+--bshl-color=${RED}			\
+\
+--verif-color=${BG}			\
+--wrong-color=${FG}			\
+--layout-color=${FG}		\
+\
+--time-color=${FG}			\
+--date-color=${FG}			\
+\
+--pass-media-keys			\
+--pass-screen-keys			\
+--pass-power-keys			\
+--pass-volume-keys			\
+--{time,date,layout,verif,wrong,greeter}-font="Iosevka"			\
+--{layout,verif,wrong,greeter}-size=18							\
+--time-size=34													\
+--date-size=18													\
+--greeter-text="${TOTD}"			\
+--greeter-color=${CYAN}				\
+--verif-text="verifying..."			\
+--wrong-text="wrong!"				\
+--noinput-text="Empty"				\
+--lock-text="Locking..."			\
+--lockfailed-text="Failed to lock"	\
+--radius 120				\
+--ring-width 8.0			\
+--screen 1					\
+--clock						\
+--indicator					\
+--time-str="%I:%M %p"		\
+--date-str="%b %d, %G"		\
+#--blur 5					\
