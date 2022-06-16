@@ -19,7 +19,7 @@ theme_4=" Dracula"
 theme_5=" Groot"
 theme_6=" Gruvbox"
 theme_7=" Hack"
-theme_8=" Nord"
+theme_8=" Black And Red"
 theme_9=" Rick"
 theme_10=" Hack The Box"
 theme_11=" Hack The Box Colored"
@@ -66,7 +66,7 @@ case $chosen in
         bash ${BSP}/set-theme  'hack.jpg' 'hack' 'Hack' 'Hack' 'LyraB' 'Hack'
         ;;
     $theme_8)
-        bash ${BSP}/set-theme  'nord.jpg' 'nord' 'Arc-Dark' 'Arc-Circle' 'Qogirr' 'Nord'
+        bash ${BSP}/set-theme  'Arch-red.png' 'black-red' 'SIth Empire' 'HUD EVOLUTION RED' 'Black-and-red' 'Blade' 'BlackRedBAr'
         ;;
     $theme_9)
         bash ${BSP}/set-theme  'rick.jpg' 'rick' 'Rick' 'Zafiro' 'Vimix-dark' 'Rick'

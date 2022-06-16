@@ -114,7 +114,7 @@ format-unmounted-prefix = " "
 format-unmounted-prefix-foreground = ${color.background}
 format-unmounted-prefix-background = ${color.cyan}
 
-label-mounted = "%{A1:terminal -e duf &:} %free%%{A}"
+label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e duf &:} %free%%{A}"
 label-unmounted = " %mountpoint%: NA"
 label-mounted-foreground = ${color.background}
 

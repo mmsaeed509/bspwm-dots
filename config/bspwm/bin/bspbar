@@ -69,6 +69,11 @@ launch_bar() {
 			then 
 				pkill polybar
 				polybar -q main -c "$DIR"/JapaneseCity/config &
+				
+		elif [[ $Bar == "BlackRedBAr" ]]
+			then 
+				pkill polybar
+				polybar -q main -c "$DIR"/black-red/config &
 
 		elif [[ $Bar == "defaultBar" ]]
 			then
