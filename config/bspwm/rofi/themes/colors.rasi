@@ -1,9 +1,0 @@
-* {
-background:			#000000;
-foreground:			#ff0000;
-selected:			#D2030D;
-highlight:			#AE0309;
-urgent:				#6A0106;
-on:					#8D0209;
-off:				#6A0106;
-}
