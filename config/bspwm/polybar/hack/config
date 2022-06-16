@@ -1,0 +1,116 @@
+#
+# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+#
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+;; Global WM Settings
+
+
+[global/wm]
+margin-bottom = 0
+margin-top = 0
+
+include-file = ~/.config/bspwm/polybar/hack/system
+include-file = ~/.config/bspwm/polybar/hack/colors
+
+# contains brightness, workspaces, Date, etc.... #
+include-file = ~/.config/bspwm/polybar/hack/modules/modules
+
+# contains Music, microphone, etc.... #
+include-file = ~/.config/bspwm/polybar/hack/modules/mediaModules
+
+# contains CPU, Temperature, etc.... #
+include-file = ~/.config/bspwm/polybar/hack/modules/monitoringModules
+
+# contains the separators (e.g  , | , <| ,  ,etc..) #
+include-file = ~/.config/bspwm/polybar/hack/modules/separatorsModules
+
+
+[bar/main]
+monitor = 
+monitor-strict = false
+override-redirect = false
+
+bottom = false
+fixed-center = true
+
+width = 99s%
+height = 27
+
+offset-x = 0.5%
+offset-y = 0.5%
+
+background = ${color.BACKGROUND}
+foreground = ${color.FOREGROUND}
+
+radius-top = 0.0
+radius-bottom = 0.0
+
+line-size = 2
+line-color = ${color.BLUE}
+
+border-size = 1
+border-color = #06CCD7
+
+padding = 0
+module-margin-left = 0
+module-margin-right = 0
+
+
+font-0 = "Iosevka Nerd Font:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "google\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:"size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
+font-5 = JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3
+font-6 = JetBrainsMono Nerd Font:size=13;4
+font-7 = Material Design Icons:style=Bold:size=9;3
+font-8 = unifont:fontformat=truetype:size=9;3
+font-9 = "Iosevka:style=bold:size=15;4"
+
+modules-left   = mod  pip  bspwm  pip  info-cava  pip  notification-github pip xkeyboard pip
+modules-center =  space mpd space   
+modules-right  =  pip cpu Dspace cpuTemp pip volume  space network space backlight space memory pip battery space date space
+
+separator =
+spacing = 0
+
+dim-value = 1.0
+
+wm-name = bspwm
+locale = 
+
+tray-position = right
+tray-detached = false
+tray-maxsize = 16
+tray-transparent = false
+tray-background = ${color.BACKGROUND}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+tray-scale = 1.0
+
+wm-restack = bspwm
+
+enable-ipc = true
+
+; bspwm
+scroll-up = bspc desktop -f prev.local
+scroll-down = bspc desktop -f next.local
+
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+
+screenchange-reload = false
+
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

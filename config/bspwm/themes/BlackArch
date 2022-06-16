@@ -1,0 +1,29 @@
+! -----------------------------------------------------------------------------
+! Copyright (C) 29-March 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+! Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+! 
+! BlackArch color scheme
+! -----------------------------------------------------------------------------
+
+*background:#000000
+*foreground: #0000fc
+
+! Colors 0-15.
+*color0:  #ebf4ff
+*color1:  #AA0000  
+*color2:  #00AA00  
+*color3:  #0000ff
+*color4:  #0F98F3
+*color5:  #AA00AA
+*color6:  #00AAAA
+*color7:  #AAAAAA
+
+*color8:  #555555
+*color9:  #FF5555
+*color10:  #18A0FA
+*color11:  #18A0FA
+*color12:  #18A0FA
+*color13:  #FF55FF
+*color14:  #18A0FA
+*color15:  #FFFFFF
+

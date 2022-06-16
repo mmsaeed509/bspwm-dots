@@ -1,0 +1,222 @@
+#!/usr/bin/env bash
+
+#
+# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+#
+
+## paths
+CFG="$HOME/.config"
+BSP="$HOME/.config/bspwm"
+XRES="$HOME/.Xresources.d"
+
+## Set Style
+set_style () {
+	# apply wallpaper
+	feh --bg-fill /usr/share/backgrounds/${1}
+	
+	# apply color-scheme
+	cat "$BSP"/themes/${2} > "$XRES"/colors
+	
+	# set gtk theme, icons and cursor
+	if [[ `pidof xsettingsd` ]]; then
+		sed -i -e "s|Net/ThemeName .*|Net/ThemeName \"$3\"|g" ${HOME}/.xsettingsd
+		sed -i -e "s|Net/IconThemeName .*|Net/IconThemeName \"$4\"|g" ${HOME}/.xsettingsd
+		sed -i -e "s|Gtk/CursorThemeName .*|Gtk/CursorThemeName \"$5\"|g" ${HOME}/.xsettingsd
+	else
+		sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=\"$3\"/g" ${HOME}/.gtkrc-2.0
+		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=\"$4\"/g" ${HOME}/.gtkrc-2.0
+		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=\"$5\"/g" ${HOME}/.gtkrc-2.0
+		
+		sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=$3/g" ${CFG}/gtk-3.0/settings.ini
+		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=$4/g" ${CFG}/gtk-3.0/settings.ini
+		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$5/g" ${CFG}/gtk-3.0/settings.ini
+	fi
+	zz
+	# ---------------------------- Apply RGB Colors For Keyboard ----------------------------
+	
+	# ---------------------------- No. 1 -- > Blade Theme ----------------------------
+
+	if [[ "$6" == "Blade" ]]
+	then
+	
+		KeyProfileColor -Blade 
+		echo "#!/bin/bash
+          KeyProfileColor -Blade" > ~/.config/predator/keyColorProfileForStartup
+	
+	# ---------------------------- No. 2 -- > Bouquet Theme ----------------------------
+	
+	elif [[ "$6" == "Bouquet" ]]
+	then
+	
+		KeyProfileColor -Bouquet 
+		echo "#!/bin/bash
+          KeyProfileColor -Bouquet" > ~/.config/predator/keyColorProfileForStartup
+
+	# ---------------------------- No. 3 -- > Cyberpunk Theme ----------------------------
+	
+	elif [[ "$6" == "Cyberpunk" ]]
+	then
+	
+		KeyProfileColor -Cyberpunk 
+		echo "#!/bin/bash
+          KeyProfileColor -Cyberpunk" > ~/.config/predator/keyColorProfileForStartup
+	
+	# ---------------------------- No. 4 -- > Dracula Theme ----------------------------
+	
+	elif [[ "$6" == "Dracula" ]]
+	then
+	
+		KeyProfileColor -Dracula 
+		echo "#!/bin/bash
+          KeyProfileColor -Dracula" > ~/.config/predator/keyColorProfileForStartup
+	
+	# ---------------------------- No. 5 -- > Groot Theme ----------------------------
+	
+	elif [[ "$6" == "Groot" ]]
+	then
+	
+		KeyProfileColor -Groot 
+		echo "#!/bin/bash
+          KeyProfileColor -Groot" > ~/.config/predator/keyColorProfileForStartup
+	
+	# ---------------------------- No. 6 -- > Gruvbox Theme ----------------------------
+	
+	elif [[ "$6" == "Gruvbox" ]]
+	then
+	
+		KeyProfileColor -Gruvbox 
+		echo "#!/bin/bash
+          KeyProfileColor -Gruvbox" > ~/.config/predator/keyColorProfileForStartup
+
+	# ---------------------------- No. 7 -- > Hack Theme ----------------------------
+	
+	elif [[ "$6" == "Hack" ]]
+	then
+	
+		KeyProfileColor -Hack 
+		echo "#!/bin/bash
+          KeyProfileColor -Hack" > ~/.config/predator/keyColorProfileForStartup
+	
+	# ---------------------------- No. 8 -- > Nord Theme ----------------------------
+	
+	elif [[ "$6" == "Nord" ]]
+	then
+	
+		KeyProfileColor -Nord 
+		echo "#!/bin/bash
+          KeyProfileColor -Nord" > ~/.config/predator/keyColorProfileForStartup
+	
+	# ---------------------------- No. 9 -- > Rick Theme ----------------------------
+	
+	elif [[ "$6" == "Rick" ]]
+	then
+	
+		KeyProfileColor -Rick 
+		echo "#!/bin/bash
+          KeyProfileColor -Rick" > ~/.config/predator/keyColorProfileForStartup
+	
+	# ---------------------------- No. 10 -- > Hack The Box Theme ----------------------------
+	
+	elif [[ "$6" == "HackTheBox" ]]
+	then
+	
+		KeyProfileColor -HackTheBox 
+		echo "#!/bin/bash
+          KeyProfileColor -HackTheBox" > ~/.config/predator/keyColorProfileForStartup
+
+	# ---------------------------- No. 11 -- > Hack The Box Colored Theme ----------------------------
+	
+	elif [[ "$6" == "HackTheBoxColored" ]]
+	then
+	
+		KeyProfileColor -HackTheBoxColored 
+		echo "#!/bin/bash
+          KeyProfileColor -HackTheBoxColored" > ~/.config/predator/keyColorProfileForStartup
+
+	# ---------------------------- No. 12 -- > BlackArch Theme ----------------------------
+	
+	elif [[ "$6" == "BlackArch" ]]
+	then
+	
+		KeyProfileColor -BlackArch 
+		echo "#!/bin/bash
+          KeyProfileColor -BlackArch" > ~/.config/predator/keyColorProfileForStartup
+	
+	# ---------------------------- No. 13 -- > Neon Theme ----------------------------
+	
+	elif [[ "$6" == "Neon" ]]
+	then
+	
+		KeyProfileColor -Neon 
+		echo "#!/bin/bash
+          KeyProfileColor -Neon" > ~/.config/predator/keyColorProfileForStartup
+          
+	# ---------------------------- No. 14 -- > TiggerInAtlantis Theme ----------------------------
+	
+	elif [[ "$6" == "TiggerInAtlantis" ]]
+	then
+	
+		KeyProfileColor -TiggerInAtlantis 
+		echo "#!/bin/bash
+          KeyProfileColor -TiggerInAtlantis" > ~/.config/predator/keyColorProfileForStartup
+          
+    # ---------------------------- No. 15 -- > AXYL Theme ----------------------------
+	
+	elif [[ "$6" == "AXYL" ]]
+	then
+	
+		KeyProfileColor -AXYL 
+		echo "#!/bin/bash
+          KeyProfileColor -AXYL" > ~/.config/predator/keyColorProfileForStartup
+          
+    # ---------------------------- No. 16 -- > Amarena Theme ----------------------------
+	
+	elif [[ "$6" == "Amarena" ]]
+	then
+	
+		KeyProfileColor -Amarena 
+		echo "#!/bin/bash
+          KeyProfileColor -Amarena" > ~/.config/predator/keyColorProfileForStartup
+          
+    # ---------------------------- No. 17 -- > Everblush Theme ----------------------------
+	
+	elif [[ "$6" == "Everblush" ]]
+	then
+	
+		KeyProfileColor -Everblush 
+		echo "#!/bin/bash
+          KeyProfileColor -Everblush" > ~/.config/predator/keyColorProfileForStartup
+
+	# ---------------------------- No. 18 -- > Everblush Theme ----------------------------
+	
+	elif [[ "$6" == "JapaneseCity" ]]
+	then
+	
+		KeyProfileColor -JapaneseCity 
+		echo "#!/bin/bash
+          KeyProfileColor -JapaneseCity" > ~/.config/predator/keyColorProfileForStartup
+          
+    fi
+		
+	# ---------------------------- Apply RGB Colors For Keyboard ----------------------------
+
+
+	# ---------------------------- launch a custom Polybar if it exists ----------------------------
+
+	if [[ "$7" == "" ]]
+	then
+		echo "defaultBar">~/.config/bspwm/selectedThemeName
+
+	else 
+		echo "$7">~/.config/bspwm/selectedThemeName
+	fi
+
+	# ---------------------------- launch a custom Polybar if it exists ----------------------------
+
+	# ----- reload config ----- #
+	pkill polybar
+	bspc wm -r
+}
+
+set_style "${1}" "${2}" "${3}" "${4}" "${5}" "${6}" "${7}"
