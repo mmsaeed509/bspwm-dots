@@ -99,7 +99,7 @@ label-monitor = %name%
 label-focused = [%name%]
 label-focused-foreground = #A3B5B8
 label-focused-background = ${color.BGL}
-label-focused-underline = ${color.BLUE}
+label-focused-underline = #A3B5B8
 label-focused-padding = 0
 
 label-occupied = %name%

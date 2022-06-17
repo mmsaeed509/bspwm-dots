@@ -1,36 +1,70 @@
 #!/bin/sh
 
-###################################################################################################################################
 #
 # Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 # Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
 #
 
+#
+# this variable print temperature withot "°C" (e.g  45 instead of  45°C )
+# used in comparison
+#
+
 heatSensors=$(sensors | grep -m 1 id | awk '{print substr($4, 2, length($4)-5)}')
+
+
+###################################################################################################################################
+#
+# Here we will print the appropriate symbol based on the temperature result stored in the heat sensors variable as mentioned above
+# from  0°C to 40°C print ->  , from 40°C to 60°C print -> 
+# from 60°C to 85°C print ->  , from 85°C to +... print -> 
+# 
+###################################################################################################################################
 
 # from  0°C to 40°C print ->  
 if [[ "$heatSensors" -le 40 ]] 
 	then
 		# the ' %{T3} ' -> pass font type to polybar config file 
 		# the selected font type is number 3, which is (font-3 = "Iosevka:style=bold:"size=12;3" )
-		echo "%{T3} %{F}$heatSensors°C"
+		echo "%{F}%{T2} $heatSensors°C"
 
 # from 40°C to 60°C print -> 
 elif [[ "$heatSensors" -le 60 ]] 
 	then
-		echo "%{T3} %{F}$heatSensors°C"
+		echo "%{F}%{T2} $heatSensors°C"
 
 # from 60°C to 85°C print -> 
 elif [[ "$heatSensors" -le 85 ]]
 	then
-		echo "%{T3} %{F}$heatSensors°C"
+		echo "%{F}%{T2} $heatSensors°C"
 
 # from 85°C to +... print ->  
 elif [[ "$heatSensors" -gt 85 ]] 
 	then
 		# the  ' -n "%{F#FF0008}"  ' -> red font as 85°C to +... is the default warn temperature
-		echo -n "%{T3}%{F#FF0008} %{F#FF0008}$heatSensors°C"
+		echo -n "%{T2}%{F#FF0008} %{F#FF0008}$heatSensors°C"
 fi
 
 #
 ###################################################################################################################################
+
+
+####################################################
+#
+# Integers can be compared with these operators :- 
+# -eq  ->  Equal
+# -ne  ->  Not equal
+# -lt  ->  Less than
+# -le  ->  Less than or equal
+# -gt  ->  Greater than
+# -ge  ->  Greater than or equal
+#
+####################################################
+
+##################################################################################
+#
+# Here we store the temperature result in this variable
+# this variable print temperature with "°C" (e.g  45°C )
+#    heatSensors=$(sensors | grep "Package id 0:" | tr -d '+' | awk '{print $4}')
+#
+##################################################################################
