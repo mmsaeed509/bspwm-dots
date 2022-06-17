@@ -66,7 +66,7 @@ case $chosen in
         bash ${BSP}/set-theme  'hack.jpg' 'hack' 'Hack' 'Hack' 'LyraB' 'Hack' 'HackBar'
         ;;
     $theme_8)
-        bash ${BSP}/set-theme  'Arch-red.png' 'black-red' 'SIth Empire' 'HUD EVOLUTION RED' 'Black-and-red' 'Blade' 'BlackRedBAr'
+        bash ${BSP}/set-theme  'Arch-red.png' 'black-red' 'SIth Empire' 'Red-Black' 'Black-and-red' 'Blade' 'BlackRedBAr'
         ;;
     $theme_9)
         bash ${BSP}/set-theme  'rick.jpg' 'rick' 'Rick' 'Zafiro' 'Vimix-dark' 'Rick'
