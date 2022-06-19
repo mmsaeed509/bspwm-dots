@@ -7,7 +7,7 @@
 ;; ** Variables ***********************************************************************
 
 ;; Profile vars
-(defvar IMAGE "images/ozil.png")
+(defvar IMAGE "images/ozil.jpg")
 (defvar NAME "Mahmoud Mohamed")
 (defpoll UNAME :interval "5m" `whoami`)
 
