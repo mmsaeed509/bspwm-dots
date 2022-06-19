@@ -145,9 +145,9 @@ bspc rule -a pdf desktop='^5' follow=on focus=on
 
 # ------------ apps open in Communication workspaces
 
-declare -a comm=(Thunderbird TelegramDesktop Hexchat)
+declare -a comm=(Thunderbird TelegramDesktop Hexchat streamlink-twitch-gui)
 for i in ${comm[@]}; do
-   bspc rule -a $i desktop='^6' follow=on focus=on; done
+   bspc rule -a $i desktop='^6' state=floating follow=on focus=on; done
 
 # ------------ apps open in Communication workspaces
 
