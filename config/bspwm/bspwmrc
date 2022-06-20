@@ -108,7 +108,6 @@ bspc rule -a firefox desktop='^2' follow=on focus=on
 bspc rule -a chromium desktop='^2' follow=on focus=on
 bspc rule -a Google-chrome desktop='^2' follow=on focus=on
 bspc rule -a Brave-browser desktop='^2' follow=on focus=on
-bspc rule -a discord desktop='^2' state=floating follow=on focus=on
 bspc rule -a guiscrcpy desktop='^2' state=floating follow=on focus=on
 bspc rule -a kdeconnect.app desktop='^2' state=floating follow=on focus=on
 bspc rule -a MEGAsync desktop='^2' state=floating follow=on focus=on
@@ -175,7 +174,7 @@ bspc rule -a pdf desktop='^5' follow=on focus=on
 
 # ------------ apps open in Communication workspaces
 
-declare -a comm=(Thunderbird TelegramDesktop Hexchat streamlink-twitch-gui)
+declare -a comm=(Thunderbird TelegramDesktop Hexchat streamlink-twitch-gui discord)
 for i in ${comm[@]}; do
    bspc rule -a $i desktop='^6' state=floating follow=on focus=on; done
 
