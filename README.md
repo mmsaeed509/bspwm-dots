@@ -74,7 +74,7 @@ Credit : [Aditya Shakya](https://github.com/adi1090x/widgets)
 
 | 🦋 | 🦋 | 🦋 |
 |--|--|--|
-| ![](img/eww4.png) | ![](img/eww2.png) | ![](img/eww.png) |
+| ![](img/EWW.png) | ![](img/eww4.png) | ![](img/eww.png) |
 
 
 <!-- EWW -->
