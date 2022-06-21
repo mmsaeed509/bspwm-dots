@@ -262,3 +262,19 @@ interval = 60
 label-background = ${color.BGL}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/menu]
+type = custom/text
+
+; content = ""
+; content = ""
+content = ""
+content-font = 5
+
+;content-font = 3
+content-foreground = ${color.GREEN}
+content-padding = 0
+
+click-left = ~/.config/bspwm/rofi/bin/launcher
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
