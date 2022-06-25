@@ -127,6 +127,8 @@ Credit : [Aditya Shakya](https://github.com/adi1090x/widgets)
 
 - **Predator Sense App** :- [**`PredatorSenseCLI`**](https://github.com/JafarAkhondali/acer-predator-turbo-and-rgb-keyboard-linux-module) [**`PredatorSenseGUI`**](https://github.com/zehratullayl/Linux-Predator-GUI) [**`linux-headers`**](https://archlinux.org/packages/core/x86_64/linux-headers/)
 
+- **Themes** :- [**`icons-cursor`**](https://github.com/Exodia-OS/exodia-icons) [**`Backgrounds`**](https://github.com/Exodia-OS/exodia-backgrounds) [**`themes`**](https://github.com/Exodia-OS/exodia-themes) 
+
 <!-- Dependencies -->
 
 <!-- ###########################################  ########################################### -->
@@ -155,24 +157,51 @@ sudo cp bin/* /bin
 # Copy config to ~/.config #
 cp -r config/* ~/.config
 
+# Clean #
+cd .. && rm -rf bspwm-dots
 
 # install themes, backgrounds, etc.. #
 
-git clone https://github.com/Exodia-OS/exodia-themes.git
+git clone https://github.com/Exodia-OS/exodia-backgrounds.git
 
-cd exodia-themes
+cd exodia-backgrounds/backgrounds
 
-sudo cp -r backgrounds/* /usr/share/backgrounds/
-sudo unzip themes.zip -d /usr/share/themes/
-
-cd icons
-
-sudo unzip \*.zip -d /usr/share/icons/
+sudo cp -r * /usr/share/backgrounds/
 
 cd ../..
 
-# Clean #
-cd .. && rm -rf bspwm-dots
+rm -rf exodia-backgrounds
+
+git clone https://github.com/Exodia-OS/exodia-icons.git
+
+cd exodia-icons/files
+
+sudo cp -r * /usr/share/icons/
+
+cd ../..
+
+rm -rf exodia-icons
+
+git clone https://github.com/Exodia-OS/exodia-themes.git
+
+cd exodia-themes/files
+
+sudo cp -r * /usr/share/themes/
+
+cd ../..
+
+rm -rf exodia-themes
+
+# install predator sense
+
+git clone https://github.com/JafarAkhondali/acer-predator-turbo-and-rgb-keyboard-linux-module
+
+cd "acer-predator-turbo-and-rgb-keyboard-linux-module"
+
+chmod +x ./*.sh
+
+sudo ./install_service.sh
+
 ~~~
 
 <!-- Installation -->
