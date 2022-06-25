@@ -75,9 +75,9 @@ https://user-images.githubusercontent.com/62524855/175541828-d4ef64a7-1359-435d-
 
 Credit : [Aditya Shakya](https://github.com/adi1090x/widgets) 
 
-| 🦋 | 🦋 | 🦋 |
+| 🦋 | 🦋 Ozoz EWW | 🦋 |
 |--|--|--|
-| ![](img/EWW.png) | ![](img/eww4.png) | ![](img/eww.png) |
+| ![](img/EWW.png) | ![](img/ozozEWW.png) | ![](img/eww.png) |
 
 
 <!-- EWW -->
