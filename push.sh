@@ -1,11 +1,9 @@
 #!/bin/bash
 
 #
-# Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+# @author Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 #
 
-#
 # you can run script with 2 arguments (your commit comment)
 # ./push.sh -m "yourCommit"
 #
@@ -56,5 +54,6 @@ git push -u origin $Branch
 
 echo ""
 echo -e "\e[0;35m########################### \e[0m"
-echo -e "\e[0;35m#      Git Push Done      # \e[0m"
+echo -e "\e[0;35m#         D O N E         # \e[0m"
 echo -e "\e[0;35m########################### \e[0m"
+
