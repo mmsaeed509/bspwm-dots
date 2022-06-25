@@ -127,6 +127,8 @@ Credit : [Aditya Shakya](https://github.com/adi1090x/widgets)
 
 - **Text Editor** :- [**`geany`**](https://www.geany.org/) [**`Visual Studio Code`**](https://code.visualstudio.com/) [**`inkdrop`**](https://www.inkdrop.app/) [**`MarkText`**](https://github.com/marktext/marktext)
 
+- **Themes** :- [**`icons-cursor`**](https://github.com/Exodia-OS/exodia-icons) [**`Backgrounds`**](https://github.com/Exodia-OS/exodia-backgrounds) [**`themes`**](https://github.com/Exodia-OS/exodia-themes) 
+
 <!-- Dependencies -->
 
 <!-- ###########################################  ########################################### -->
@@ -155,24 +157,43 @@ sudo cp bin/* /bin
 # Copy config to ~/.config #
 cp -r config/* ~/.config
 
+# Clean #
+cd .. && rm -rf bspwm-dots
+
 # install themes, backgrounds, etc.. #
 
-git clone https://github.com/Exodia-OS/exodia-themes.git
+git clone https://github.com/Exodia-OS/exodia-backgrounds.git
 
-cd exodia-themes
+cd exodia-backgrounds/backgrounds
 
-sudo cp -r backgrounds/* /usr/share/backgrounds/
-sudo unzip themes.zip -d /usr/share/themes/
-
-cd icons
-
-sudo unzip \*.zip -d /usr/share/icons/
+sudo cp -r * /usr/share/backgrounds/
 
 cd ../..
 
-# Clean #
-cd .. && rm -rf bspwm-dots
+rm -rf exodia-backgrounds
+
+git clone https://github.com/Exodia-OS/exodia-icons.git
+
+cd exodia-icons/files
+
+sudo cp -r * /usr/share/icons/
+
+cd ../..
+
+rm -rf exodia-icons
+
+git clone https://github.com/Exodia-OS/exodia-themes.git
+
+cd exodia-themes/files
+
+sudo cp -r * /usr/share/themes/
+
+cd ../..
+
+rm -rf exodia-themes
+
 ~~~
+
 
 <!-- Installation -->
 
