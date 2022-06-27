@@ -11,12 +11,12 @@ configuration {
     window-format: 					"[{w}] ··· {c} ···   {t}";
     click-to-exit: 					true;
     combi-hide-mode-prefix: 		false;
-    display-window: 				"";
-    display-windowcd: 				"";
-    display-run: 					"";
-    display-ssh: 					"";
-    display-drun: 					"";
-    display-combi: 					"";
+    display-window: 				"  ";
+    display-windowcd: 				"  ";
+    display-run: 					" RUN   ";
+    display-ssh: 					" SSH  ";
+    display-drun: 					" APPS  ";
+    display-combi: 					"  ";
 }
 
 @import "colors.rasi"
@@ -38,7 +38,7 @@ prompt {
     spacing: 						0;
     border: 						0;
     border-radius: 					5px;
-    background-color:             	@highlight;
+    background-color:             	@selected;
     text-color: 					@background;
     padding:    					6px 10px 6px 10px;
 }
