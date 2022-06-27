@@ -41,7 +41,7 @@ textbox-prompt-colon {
 	str: 							" 直 ";
     border-radius:                  2px;
     border-radius:                  5px;
-    background-color:               @highlight;
+    background-color:               @selected;
     text-color:                     @background;
     padding:    					6px 10px 6px 10px;
 	font:							"Iosevka Nerd Font 10";
