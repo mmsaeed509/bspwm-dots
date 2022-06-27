@@ -172,7 +172,7 @@ alias autoremove="sudo pacman -Rns"
 alias eDEX="cd ~/Public/packages && ./eDEX-UI-Linux-x86_64.AppImage"
 
 alias M="ncmpcpp"
-alias MA="cd ~/.ncmpcpp/ncmpcpp-ueberzug/ && ./ncmpcpp-ueberzug"
+alias MA="cd ~/.ncmpcpp/scripts/ && ./ncmpcpp-art"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
