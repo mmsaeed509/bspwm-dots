@@ -96,6 +96,6 @@ case $chosen in
         bash ${BSP}/set-theme  'Night.png' 'Everblush' 'everblush' 'oomox-Everblush-icons' 'macOSBigSur-cursors' 'Everblush'
         ;;
     $theme_18)
-        bash ${BSP}/set-theme  'JapaneseCity.png' 'JapaneseCity' 'everblush' 'Elena-dark-icons' 'phinger-cursors' 'JapaneseCity' 'JapaneseCityBar'
+        bash ${BSP}/set-theme  'JapaneseCity.png' 'JapaneseCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'phinger-cursors' 'JapaneseCity' 'JapaneseCityBar'
         ;;
 esac
