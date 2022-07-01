@@ -89,7 +89,7 @@ case $chosen in
         bash ${BSP}/set-theme  'axyl.jpg' 'axyl' 'Qogir-dark' 'Qogir-dark' 'phinger-cursors' 'axylBar'
         ;;
     $theme_16)
-        bash ${BSP}/set-theme  'Retro.png' 'Amarena' 'amarena' 'Elena-dark-icons' 'neon-cursor2'
+        bash ${BSP}/set-theme  'amarena.jpg' 'Amarena' 'amarena' 'Elena-dark-icons' 'neon-cursor2'
         ;;
     $theme_17)
         bash ${BSP}/set-theme  'Night.png' 'Everblush' 'everblush' 'oomox-Everblush-icons' 'macOSBigSur-cursors'
