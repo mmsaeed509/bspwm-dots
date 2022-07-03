@@ -224,9 +224,9 @@ sudo ./install_service.sh
 |--|--|--|
 | ![](GIFs/BlackArch.gif) | ![](GIFs/Neon.gif) | ![](GIFs/TiggerInAtlantis.gif) |
 
-|Bouquet|Dracula|Red and Black|
+|Bouquet|Emilia|Red and Black|
 |--|--|--|
-| ![](GIFs/Bouquet.gif) | ![](GIFs/Dracula.gif) | ![](GIFs/RedAndBlack.gif) |
+| ![](GIFs/Bouquet.gif) | ![](GIFs/Emilia.gif) | ![](GIFs/RedAndBlack.gif) |
 
 |AXYL|Amarena|Everblush|
 |--|--|--|
