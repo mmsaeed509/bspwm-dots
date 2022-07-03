@@ -54,8 +54,18 @@
 
 <!-- reviewing themes -->
 
-https://user-images.githubusercontent.com/62524855/175541828-d4ef64a7-1359-435d-8b47-80035f7756a5.mp4
+<details>
+   <summary><h2> Demo </h2></summary>
 
+  <h3 align="center"> NEW rice :rice: :hot_pepper: 🔥 </h3> 
+
+  https://user-images.githubusercontent.com/62524855/177046486-d5c8f161-52eb-486d-be5a-69852bc51271.mp4
+  
+  <h3 align="center"> OLD rice :rice: :hot_pepper: 🔥 </h3> 
+  
+  https://user-images.githubusercontent.com/62524855/175541828-d4ef64a7-1359-435d-8b47-80035f7756a5.mp4
+
+</details>
 
 <h1 align="center"> ☘️ TWMs ☘️ </h1>
 
