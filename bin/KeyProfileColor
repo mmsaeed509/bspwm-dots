@@ -30,8 +30,11 @@ elif [[ "$1" == "-Blade" ]]
 then
 	
 	facer_rgb.py -m 0 -z 1 -cR 255 -cB 0 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 2 -cR 255 -cB 0 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 3 -cR 255 -cB 0 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 255 -cB 0 -cG 0 -b 100
 	
 # ---------------------------- No. 2 -- > Bouquet Theme ----------------------------
@@ -40,8 +43,11 @@ elif [[ "$1" == "-Bouquet" ]]
 then
 	
 	facer_rgb.py -m 0 -z 1 -cR 255 -cB 0 -cG 255 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 2 -cR 255 -cB 0 -cG 255 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 3 -cR 255 -cB 0 -cG 255 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 255 -cB 0 -cG 255 -b 100
 	
 # ---------------------------- No. 3 -- > Cyberpunk Theme ----------------------------
@@ -50,8 +56,11 @@ elif [[ "$1" == "-Cyberpunk" ]]
 then
 	
 	facer_rgb.py -m 0 -z 1 -cR 175 -cB 255 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 2 -cR 175 -cB 255 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 3 -cR 175 -cB 255 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 175 -cB 255 -cG 0 -b 100
 	
 # ---------------------------- No. 4 -- > Dracula Theme ----------------------------
@@ -60,8 +69,11 @@ elif [[ "$1" == "-Dracula" ]]
 then
 	
 	facer_rgb.py -m 0 -z 1 -cR 175 -cB 255 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 2 -cR 175 -cB 255 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 3 -cR 175 -cB 255 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 175 -cB 255 -cG 0 -b 100
 	
 
@@ -71,8 +83,11 @@ elif [[ "$1" == "-Groot" ]]
 then
 	
 	facer_rgb.py -m 0 -z 1 -cR 152 -cB 74 -cG 118 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 2 -cR 152 -cB 74 -cG 118 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 3 -cR 152 -cB 74 -cG 118 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 152 -cB 74 -cG 118 -b 100
 	
 # ---------------------------- No. 6 -- > Gruvbox Theme ----------------------------
@@ -81,8 +96,11 @@ elif [[ "$1" == "-Gruvbox" ]]
 then
 	
 	facer_rgb.py -m 0 -z 1 -cR 255 -cB 0 -cG 255 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 2 -cR 255 -cB 0 -cG 255 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 3 -cR 255 -cB 0 -cG 255 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 255 -cB 0 -cG 255 -b 100
 	
 # ---------------------------- No. 7 -- > Hack Theme ----------------------------
@@ -91,8 +109,11 @@ elif [[ "$1" == "-Hack" ]]
 then
 	
 	facer_rgb.py -m 0 -z 1 -cR 4 -cB 181 -cG 172 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 2 -cR 4 -cB 181 -cG 172 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 3 -cR 4 -cB 181 -cG 172 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 4 -cB 181 -cG 172 -b 100
 
 # ---------------------------- No. 8 -- > Nord Theme ----------------------------
@@ -101,8 +122,11 @@ elif [[ "$1" == "-Nord" ]]
 then
 	
 	facer_rgb.py -m 0 -z 1 -cR 255 -cB 255 -cG 255 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 2 -cR 255 -cB 255 -cG 255 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 3 -cR 255 -cB 255 -cG 255 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 255 -cB 255 -cG 255 -b 100
 
 # ---------------------------- No. 9 -- > Rick Theme ----------------------------
@@ -111,8 +135,11 @@ elif [[ "$1" == "-Rick" ]]
 then
 	
 	facer_rgb.py -m 0 -z 1 -cR 77 -cB 200 -cG 247 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 2 -cR 77 -cB 200 -cG 247 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 3 -cR 77 -cB 200 -cG 247 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 77 -cB 200 -cG 247 -b 100
 
 # ---------------------------- No. 10 -- > Hack The Box Theme ----------------------------
@@ -121,8 +148,11 @@ elif [[ "$1" == "-HackTheBox" ]]
 then
 	
 	facer_rgb.py -m 0 -z 1 -cR 0 -cB 0 -cG 255 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 2 -cR 0 -cB 0 -cG 255 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 3 -cR 0 -cB 0 -cG 255 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 0 -cB 0 -cG 255 -b 100
 
 # ---------------------------- No. 11 -- > Hack The Box Colored Theme ---------------------
@@ -131,8 +161,11 @@ elif [[ "$1" == "-HackTheBoxColored" ]]
 then
 	
 	facer_rgb.py -m 0 -z 1 -cR 0 -cB 0 -cG 255 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 2 -cR 0 -cB 255 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 3 -cR 255 -cB 255 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 0 -cB 255 -cG 255 -b 100
 
 # ---------------------------- No. 12 -- > BlackArch Theme ----------------------------
@@ -141,14 +174,19 @@ elif [[ "$1" == "-BlackArch" ]]
 then
 	
 	facer_rgb.py -m 0 -z 1 -cR 0 -cB 255 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 2 -cR 0 -cB 255 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 3 -cR 0 -cB 255 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 0 -cB 255 -cG 0 -b 100
 
 # ---------------------------- No. 13 -- > Neon Theme ----------------------------
 
 elif [[ "$1" == "-Neon" ]]
 then
+
+	sleep 0.3
 	facer_rgb.py -m 2 -b 100 -s 9
 
 
@@ -158,8 +196,11 @@ elif [[ "$1" == "-TiggerInAtlantis" ]]
 then
 
 	facer_rgb.py -m 0 -z 1 -cR 6 -cB 235 -cG 189 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 2 -cR 0 -cB 0 -cG 255 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 3 -cR 255 -cB 0 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 255 -cB 0 -cG 255 -b 100
 
 # ---------------------------- No. 15 -- > AXYL Theme ----------------------------
@@ -168,8 +209,11 @@ elif [[ "$1" == "-AXYL" ]]
 then
 
 	facer_rgb.py -m 0 -z 1 -cR 0 -cB 255 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 2 -cR 0 -cB 127 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 3 -cR 255 -cB 127 -cG 93 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 255 -cB 127 -cG 93 -b 100
 	
 # ---------------------------- No. 16 -- > Amarena Theme ----------------------------
@@ -178,8 +222,11 @@ elif [[ "$1" == "-Amarena" ]]
 then
 	
 	facer_rgb.py -m 0 -z 1 -cR 148 -cB 149 -cG 207 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 2 -cR 148 -cB 149 -cG 207 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 3 -cR 148 -cB 149 -cG 207 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 148 -cB 149 -cG 207 -b 100
 	
 # ---------------------------- No. 17 -- > Everblush Theme ----------------------------
@@ -188,8 +235,11 @@ elif [[ "$1" == "-Everblush" ]]
 then
 	
 	facer_rgb.py -m 0 -z 1 -cR 255 -cB 80 -cG 202 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 2 -cR 255 -cB 80 -cG 202 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 3 -cR 255 -cB 80 -cG 202 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 255 -cB 80 -cG 202 -b 100
 
 # ---------------------------- No. 18 -- > JapaneseCity Theme ----------------------------
@@ -198,8 +248,11 @@ elif [[ "$1" == "-JapaneseCity" ]]
 then
 	
 	facer_rgb.py -m 0 -z 1 -cR 175 -cB 255 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 2 -cR 175 -cB 255 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 3 -cR 175 -cB 255 -cG 0 -b 100
+	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 175 -cB 255 -cG 0 -b 100
 	
 fi
