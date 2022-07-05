@@ -67,9 +67,9 @@ content-background = ${color.background}
 type = custom/text
 ;content = ◆
 content = 
-
+content-font = 6
 content-background = ${color.BACKGROUND}
-content-foreground = ${color.GREEN}
+content-foreground = ${color.blue-gray}
 content-padding = 2
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -82,19 +82,8 @@ content-padding = 2
 [module/LD]
 type = custom/text
 content = "%{T5}%{T-}"
-content-background = ${color.background}
-content-foreground = ${color.BGL}
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/LDmpd]
-type = custom/text
-
-;content = "%{T5}(|%{T-}"
-content = "%{T5}(%{T-}"
-
-content-background = ${color.BACKGROUND}
-content-foreground = #989cff
+content-foreground = ${color.mb}
+content-background = ${color.bg}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -105,20 +94,25 @@ content-foreground = #989cff
 [module/RD]
 type = custom/text
 
-;content = "%{T5}█%{T-}"
 content = "%{T5}%{T-}"
 
-content-background = ${color.background}
-content-foreground = ${color.BGL}
+content-foreground = ${color.mb}
+content-background = ${color.bg}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/RDmpd]
+[module/BL]
+
 type = custom/text
+content = "[ "
+content-foreground = ${color.cyan}
 
-content = "%{T5})%{T-}"
-;content = "%{T5}|)%{T-}"
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-content-background = ${color.BACKGROUND}
-content-foreground = #989cff
+[module/BR]
+
+type = custom/text
+content = " ]"
+content-foreground = ${color.cyan}
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

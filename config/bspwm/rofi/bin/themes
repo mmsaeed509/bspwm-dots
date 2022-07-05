@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 #
-# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
-# added HackTheBox/BlackArch/Neon Theme by Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# @author : Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Copyright (C) GNU-GPL3
 #
 
 DIR="$HOME/.config/bspwm"
@@ -15,7 +14,7 @@ rofi_command="rofi -theme $DIR/rofi/themes/themes.rasi"
 theme_1=" Blade"
 theme_2=" Bouquet"
 theme_3=" Cyberpunk"
-theme_4=" Dracula"
+theme_4=" Emilia"
 theme_5=" Groot"
 theme_6=" Gruvbox"
 theme_7=" Hack"
@@ -54,7 +53,7 @@ case $chosen in
         bash ${BSP}/set-theme  'cyberpunk15.jpg' 'cyberpunk' 'Cyberpunk-Neon' 'candy-icons' 'Cyberpunk' 'Cyberpunk'
         ;;
     $theme_4)
-        bash ${BSP}/set-theme  'dracula.png' 'dracula' 'Dracula' 'Nordic-Folders' 'Sweet' 'Dracula'
+        bash ${BSP}/set-theme  'amilia.jpg' 'amilia' 'Dracula' 'Elena-dark-icons' 'Sweet' 'Dracula' 'Emilia'
         ;;
     $theme_5)
         bash ${BSP}/set-theme  'groot.jpg' 'groot' 'Groot' 'Luna-Dark' 'Pear' 'Groot'
@@ -90,7 +89,7 @@ case $chosen in
         bash ${BSP}/set-theme  'axyl.jpg' 'axyl' 'Qogir-dark' 'Qogir-dark' 'phinger-cursors' 'AXYL' 'axylBar'
         ;;
     $theme_16)
-        bash ${BSP}/set-theme  'amarena.jpg' 'Amarena' 'amarena' 'Elena-dark-icons' 'neon-cursor2' 'Amarena'
+        bash ${BSP}/set-theme  'amarena.jpg' 'Amarena' 'amarena' 'Elena-dark-icons' 'neon-cursor2' 'Amarena' 'Amarena'
         ;;
     $theme_17)
         bash ${BSP}/set-theme  'Night.png' 'Everblush' 'everblush' 'oomox-Everblush-icons' 'macOSBigSur-cursors' 'Everblush'

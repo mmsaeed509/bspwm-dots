@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 #
-# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# LICENSE © GNU-GPL3
 #
 
 # Environtment path
@@ -25,22 +25,17 @@ getcolors() {
 getcolors
 
 # ------------ Configurations ------------ #
-
 bash ~/.config/predator/keyColorProfileForStartup # Load RGB keyboard Color Based On The Selected Theme
 
-
 # -------------------- set En & Ar for keyboard --------------------
-# setxkbmap -layout us,ar # change 'us,ar' for your own uses #
-# setxkbmap -option 'grp:alt_shift_toggle'
-# -------------------- set En & Ar for keyboard --------------------
+setxkbmap -layout us,ar # change 'us,ar' for your own uses #
+setxkbmap -option 'grp:alt_shift_toggle'
 
-export _JAVA_AWT_WM_NONREPARENTING=1 # Solve java apps issues (e.g. JetBrains IDEs like PyCharm, CLion, etc).
+# Solve java apps issues (e.g. JetBrains IDEs like PyCharm, CLion, etc).
+export _JAVA_AWT_WM_NONREPARENTING=1 
 
-# launch conky #
-# conky -c ~/.config/conky/conky.conf
 
 # ------------ Dual monitor setup ------------
-
 #
 # run xrandr -q | grep " connected" | cut -d ' ' -f1   to list monitors
 # in my case eDP1 , HDMI-1-0
@@ -48,18 +43,16 @@ export _JAVA_AWT_WM_NONREPARENTING=1 # Solve java apps issues (e.g. JetBrains ID
  
 # if [[ $(xrandr -q | grep 'HDMI-1-0 connected') ]]; then
 
-		  # use arandr or xrandr to set monitors config
-		  # in my case, i use laptop monitor (eDP1) as Primary display 
-		  # and the second monitor (HDMI-1-0) as external display (extended to right)
-		  # add your config to this directory  ~/.screenlayout/   ||  If it doesn't exist, create one
-		#   bash ~/.screenlayout/mainLeftExRight.sh
+# 		  # use arandr or xrandr to set monitors config
+# 		  # in my case, i use laptop monitor (eDP1) as Primary display 
+# 		  # and the second monitor (HDMI-1-0) as external display (extended to right)
+# 		  # add your config to this directory  ~/.screenlayout/   ||  If it doesn't exist, create one
+# 		  bash ~/.screenlayout/mainLeftExRight.sh
 # fi
 
 # ------------ Dual monitor setup ------------
 
-
 # ------------ workspaces config ------------
-
 workspaces() {
 	name=1
 	for monitor in `bspc query -M`; do
@@ -67,6 +60,7 @@ workspaces() {
 		let name++
 	done
 }
+
 workspaces
 
 bspc config border_width 1
@@ -177,7 +171,6 @@ bspc rule -a pdf desktop='^5' follow=on focus=on
 declare -a comm=(Thunderbird TelegramDesktop Hexchat streamlink-twitch-gui discord)
 for i in ${comm[@]}; do
    bspc rule -a $i desktop='^6' state=floating follow=on focus=on; done
-
 # ------------ apps open in Communication workspaces
 
 

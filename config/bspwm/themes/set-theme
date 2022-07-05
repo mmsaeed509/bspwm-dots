@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 #
-# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# LICENSE © GNU-GPL3
 #
 
 ## paths
@@ -214,6 +214,11 @@ set_style () {
 
 	# ---------------------------- launch a custom Polybar if it exists ----------------------------
 
+	# ---------------------------- set background for i3look based on the selected theme ---------------------------- #
+	echo "$1">~/.config/bspwm/i3lockBackground
+	# ---------------------------- set background for i3look based on the selected theme ---------------------------- #
+
+	
 	# ----- reload config ----- #
 	pkill polybar
 	bspc wm -r
