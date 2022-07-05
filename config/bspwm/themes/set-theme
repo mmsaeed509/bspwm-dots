@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 #
-# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# LICENSE © GNU-GPL3
 #
 
 ## paths
@@ -33,22 +33,27 @@ set_style () {
 		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$5/g" ${CFG}/gtk-3.0/settings.ini
 	fi
 	zz
-
+	
 	# ---------------------------- launch a custom Polybar if it exists ----------------------------
 
-	if [[ "$6" == "" ]]
+	if [[ "$7" == "" ]]
 	then
 		echo "defaultBar">~/.config/bspwm/selectedThemeName
 
 	else 
-		echo "$6">~/.config/bspwm/selectedThemeName
+		echo "$7">~/.config/bspwm/selectedThemeName
 	fi
 
 	# ---------------------------- launch a custom Polybar if it exists ----------------------------
 
+	# ---------------------------- set background for i3look based on the selected theme ---------------------------- #
+	echo "$1">~/.config/bspwm/i3lockBackground
+	# ---------------------------- set background for i3look based on the selected theme ---------------------------- #
+
+	
 	# ----- reload config ----- #
 	pkill polybar
 	bspc wm -r
 }
 
-set_style "${1}" "${2}" "${3}" "${4}" "${5}" "${6}"
+set_style "${1}" "${2}" "${3}" "${4}" "${5}" "${6}" "${7}"

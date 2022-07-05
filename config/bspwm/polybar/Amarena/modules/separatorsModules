@@ -56,10 +56,10 @@ content-background = ${color.background}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/Dspace]
+[module/spaceB]
 type = custom/text
-content = "  "
-content-background = ${color.background}
+content = " "
+content-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -83,10 +83,17 @@ content-padding = 2
 type = custom/text
 content = "%{T5}%{T-}"
 content-background = ${color.background}
-content-foreground = ${color.BGL}
+content-foreground = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+[module/LDD]
+type = custom/text
+content = "%{T5}█%{T-}"
+content-background = ${color.background}
+content-foreground = ${color.BACKGROUND}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 [module/LDmpd]
 type = custom/text
 
@@ -109,7 +116,7 @@ type = custom/text
 content = "%{T5}%{T-}"
 
 content-background = ${color.background}
-content-foreground = ${color.BGL}
+content-foreground = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

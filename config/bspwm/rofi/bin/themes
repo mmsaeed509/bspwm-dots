@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 #
-# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
-# added HackTheBox/BlackArch/Neon Theme by Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# @author : Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Copyright (C) GNU-GPL3
 #
 
 DIR="$HOME/.config/bspwm"
@@ -15,7 +14,7 @@ rofi_command="rofi -theme $DIR/rofi/themes/themes.rasi"
 theme_1=" Blade"
 theme_2=" Bouquet"
 theme_3=" Cyberpunk"
-theme_4=" Dracula"
+theme_4=" Emilia"
 theme_5=" Groot"
 theme_6=" Gruvbox"
 theme_7=" Hack"
@@ -40,61 +39,62 @@ availableThemes="$theme_1\n$theme_2\n$theme_3\n$theme_4\
 chosen="$(echo -e "$availableThemes" | $rofi_command -p "Available themes : (18)" -dmenu -selected-row 0)"
 #
 # the 1st var -> background, the 2th var -> color file name, the 3th var -> the theme name, 
-# the 4th var -> icons name, the 5th var -> the cursor name, the 6th var -> ( if it exists )-> for customized polybar
+# the 4th var -> icons name, the 5th var -> the cursor name, the 6th var -> RGB mood for keyboard (FOR Predator edition only)
+# the 7th var ( if it exists )-> for customized polybar
 #
 case $chosen in
     $theme_1)
-        bash ${BSP}/set-theme  'blade3.png' 'blade' 'Blade2' 'Red-Icons' 'LyraS'
+        bash ${BSP}/set-theme  'blade3.png' 'blade' 'Blade2' 'Red-Icons' 'LyraS' 'Blade'
         ;;
     $theme_2)
-        bash ${BSP}/set-theme  'bouquet.jpg' 'bouquet' 'Juno-mirage' 'Luna-Dark' 'Future-dark'
+        bash ${BSP}/set-theme  'bouquet.jpg' 'bouquet' 'Juno-mirage' 'Luna-Dark' 'Future-dark' 'Bouquet'
         ;;
     $theme_3)
-        bash ${BSP}/set-theme  'cyberpunk15.jpg' 'cyberpunk' 'Cyberpunk-Neon' 'candy-icons' 'Cyberpunk'
+        bash ${BSP}/set-theme  'cyberpunk15.jpg' 'cyberpunk' 'Cyberpunk-Neon' 'candy-icons' 'Cyberpunk' 'Cyberpunk'
         ;;
     $theme_4)
-        bash ${BSP}/set-theme  'dracula.png' 'dracula' 'Dracula' 'Nordic-Folders' 'Sweet'
+        bash ${BSP}/set-theme  'amilia.jpg' 'amilia' 'Dracula' 'Elena-dark-icons' 'Sweet' 'Dracula' 'Emilia'
         ;;
     $theme_5)
-        bash ${BSP}/set-theme  'groot.jpg' 'groot' 'Groot' 'Luna-Dark' 'Pear'
+        bash ${BSP}/set-theme  'groot.jpg' 'groot' 'Groot' 'Luna-Dark' 'Pear' 'Groot'
         ;;
     $theme_6)
-        bash ${BSP}/set-theme  'gruvbox.jpg' 'gruvbox' 'Gruvbox' 'Luna-Dark' 'Future-dark'
+        bash ${BSP}/set-theme  'gruvbox.jpg' 'gruvbox' 'Gruvbox' 'Luna-Dark' 'Future-dark' 'Gruvbox'
         ;;
     $theme_7)
-        bash ${BSP}/set-theme  'hack.jpg' 'hack' 'Hack' 'Hack' 'LyraB' 'HackBar'
+        bash ${BSP}/set-theme  'hack.jpg' 'hack' 'Hack' 'Hack' 'LyraB' 'Hack' 'HackBar'
         ;;
     $theme_8)
-        bash ${BSP}/set-theme  'Arch-red.png' 'black-red' 'SIth Empire' 'Red-Black' 'Black-and-red' 'BlackRedBAr'
+        bash ${BSP}/set-theme  'Arch-red.png' 'black-red' 'SIth Empire' 'Red-Black' 'Black-and-red' 'Blade' 'BlackRedBAr'
         ;;
     $theme_9)
-        bash ${BSP}/set-theme  'rick.jpg' 'rick' 'Rick' 'Zafiro' 'Vimix-dark'
+        bash ${BSP}/set-theme  'rick.jpg' 'rick' 'Rick' 'Zafiro' 'Vimix-dark' 'Rick'
         ;;
     $theme_10)
-        bash ${BSP}/set-theme  'hackthebox.jpg' 'HackTheBox' 'Green' 'Green-Color-Icons' 'Hack-C'
+        bash ${BSP}/set-theme  'hackthebox.jpg' 'HackTheBox' 'Green' 'Green-Color-Icons' 'Hack-C' 'HackTheBox'
         ;;
     $theme_11)
-        bash ${BSP}/set-theme  'HackTheBoxColored.jpg' 'HackTheBoxColored' 'Green' 'Green-Color-Icons' 'Hack-C'
+        bash ${BSP}/set-theme  'HackTheBoxColored.jpg' 'HackTheBoxColored' 'Green' 'Green-Color-Icons' 'Hack-C' 'HackTheBoxColored'
         ;;    
     $theme_12)
-        bash ${BSP}/set-theme  'hacktheplanet.png' 'BlackArch' 'BlackArch-theme' 'BlackArch-icons' 'BlackArch-cursor'
+        bash ${BSP}/set-theme  'hacktheplanet.png' 'BlackArch' 'BlackArch-theme' 'BlackArch-icons' 'BlackArch-cursor' 'BlackArch'
         ;;
     $theme_13)
-        bash ${BSP}/set-theme  'neon4.jpg' 'neon' 'neon-theme' 'neon-icon' 'neon-cursor2'
+        bash ${BSP}/set-theme  'neon4.jpg' 'neon' 'neon-theme' 'neon-icon' 'neon-cursor2' 'Neon'
         ;;
     $theme_14)
-        bash ${BSP}/set-theme  'Tigger-In-Atlantis.png' 'Tigger-In-Atlantis' 'Juno-palenight' 'Luna-Dark' 'Future-dark'
+        bash ${BSP}/set-theme  'Tigger-In-Atlantis.png' 'Tigger-In-Atlantis' 'Juno-palenight' 'Luna-Dark' 'Future-dark' 'TiggerInAtlantis'
         ;;
     $theme_15)
-        bash ${BSP}/set-theme  'axyl.jpg' 'axyl' 'Qogir-dark' 'Qogir-dark' 'phinger-cursors' 'axylBar'
+        bash ${BSP}/set-theme  'axyl.jpg' 'axyl' 'Qogir-dark' 'Qogir-dark' 'phinger-cursors' 'AXYL' 'axylBar'
         ;;
     $theme_16)
-        bash ${BSP}/set-theme  'amarena.jpg' 'Amarena' 'amarena' 'Elena-dark-icons' 'neon-cursor2'
+        bash ${BSP}/set-theme  'amarena.jpg' 'Amarena' 'amarena' 'Elena-dark-icons' 'neon-cursor2' 'Amarena' 'Amarena'
         ;;
     $theme_17)
-        bash ${BSP}/set-theme  'Night.png' 'Everblush' 'everblush' 'oomox-Everblush-icons' 'macOSBigSur-cursors'
+        bash ${BSP}/set-theme  'Night.png' 'Everblush' 'everblush' 'oomox-Everblush-icons' 'macOSBigSur-cursors' 'Everblush'
         ;;
     $theme_18)
-        bash ${BSP}/set-theme  'tokyo-night31.png' 'JapaneseCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'phinger-cursors' 'JapaneseCityBar'
+        bash ${BSP}/set-theme  'tokyo-night31.png' 'JapaneseCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'phinger-cursors' 'JapaneseCity' 'JapaneseCityBar'
         ;;
 esac

@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
-## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+#
+# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# LICENSE © GNU-GPL3
+#
 
 DIR="$HOME/.config/bspwm"
 
 rofi_command="rofi -theme $DIR/rofi/themes/powermenu.rasi"
+
+# set background for betterlockscreen based on the selected theme  #
+Background=$(head ~/.config/bspwm/i3lockBackground)
 
 uptime=$(uptime -p | sed -e 's/up //g')
 
@@ -51,6 +56,7 @@ case $chosen in
         mpc -q pause
         amixer set Master mute
         betterlockscreen --suspend
+        #betterlockscreen --suspend -u /usr/share/backgrounds/"$Background"
 		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
         exit
         else

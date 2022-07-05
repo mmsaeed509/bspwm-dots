@@ -5,22 +5,22 @@
 font:
   # Normal (roman) font face
   normal:
-    family: "Iosevka Custom"
+    family: "JetBrains Mono"
     #style: Regular
 
   # Bold font face
   bold:
-    family: "Iosevka Custom"
+    family: "JetBrains Mono"
     #style: Bold
 
   # Italic font face
   italic:
-    family: "Iosevka Custom"
+    family: "JetBrains Mono"
     #style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: "Iosevka Custom"
+    family: "JetBrains Mono"
     #style: Bold Italic
 
   # Point size

@@ -1,9 +1,8 @@
 #!/bin/sh
 
-###################################################################################################################################
 #
-# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# LICENSE © GNU-GPL3
 #
 
 heatSensors=$(sensors | grep -m 1 id | awk '{print substr($4, 2, length($4)-5)}')
@@ -31,6 +30,3 @@ elif [[ "$heatSensors" -gt 85 ]]
 		# the  ' -n "%{F#FF0008}"  ' -> red font as 85°C to +... is the default warn temperature
 		echo -n "%{T3}%{F#FF0008} %{F#FF0008}$heatSensors°C"
 fi
-
-#
-###################################################################################################################################

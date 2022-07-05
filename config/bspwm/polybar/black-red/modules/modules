@@ -1,8 +1,7 @@
 #
-# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# LICENSE © GNU-GPL3
 #
-
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/bna]
@@ -80,15 +79,15 @@ enable-scroll = true
 reverse-scroll = true
 fuzzy-match = true
 
-ws-icon-0 = I;
-ws-icon-1 = II;
-ws-icon-2 = III;
-ws-icon-3 = IV;
-ws-icon-4 = V;
-ws-icon-5 = VI;
-ws-icon-6 = VII;
-ws-icon-7 = VIII;
-ws-icon-default = 
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;碌
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI;
+ws-icon-6 = VII;
+ws-icon-7 = VIII
+ws-icon-default = 
 
 format = <label-state>
 format-font = 2
@@ -140,9 +139,9 @@ format-font = 4
 label-monocle = "Monocle"
 label-tiled = "Tiled"
 
-label-floating = " : Float"
-label-pseudotiled = " : Pseudo"
-label-fullscreen = " : Full"
+label-floating = " | Float"
+label-pseudotiled = " | Pseudo"
+label-fullscreen = " | Full"
 
 label-locked = " | Locked"
 label-sticky = " | Sticky"

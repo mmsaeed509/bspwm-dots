@@ -1,8 +1,7 @@
 #
-# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# LICENSE © GNU-GPL3
 #
-
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/volume]
@@ -49,52 +48,6 @@ ramp-volume-foreground = ${color.BLUE}
 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
-
-
-
-; format-volume = <ramp-volume> <bar-volume>
-
-
-; format-muted = <label-muted>
-; format-muted-prefix = 
-; format-muted-prefix-font = 2
-
-
-; label-muted = " Mute"
-; label-muted-foreground = ${color.FGA}
-
-
-; bar-volume-width = 7
-; bar-volume-gradient = false
-
-; bar-volume-indicator = 雷
-; bar-volume-indicator-font = 2
-; bar-volume-indicator-foreground = ${color.BLUE}
-
-; bar-volume-fill = 絛
-; bar-volume-fill-font = 3
-; bar-volume-foreground-0 = ${color.BLUE}
-; bar-volume-foreground-1 = ${color.BLUE}
-; bar-volume-foreground-2 = ${color.BLUE}
-; bar-volume-foreground-3 = ${color.BLUE}
-; bar-volume-foreground-4 = ${color.BLUE}
-
-; bar-volume-empty = 
-; bar-volume-empty-font = 3
-; bar-volume-empty-foreground = ${color.BGL}
-
-; ramp-volume-0 = 
-; ramp-volume-1 = 
-; ramp-volume-2 = 
-; ramp-volume-3 = 
-; ramp-volume-4 = 
-; ramp-volume-5 = 
-; ramp-volume-6 = 
-; ramp-volume-7 = 
-; ramp-volume-8 = 
-; ramp-volume-9 = 
-; ramp-volume-font = 2
-; ramp-volume-foreground = ${color.BLUE}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

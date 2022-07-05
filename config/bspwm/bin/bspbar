@@ -2,7 +2,7 @@
 
 #
 # Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+# LICENSE © GNU-GPL3
 #
 
 
@@ -68,8 +68,8 @@ launch_bar() {
 		elif [[ $Bar == "JapaneseCityBar" ]]
 			then 
 				pkill polybar
-				polybar -q main -c "$DIR"/JapaneseCity/config &
-				
+				polybar -q main -c "$DIR"/JapaneseCity/config &          
+								
 		elif [[ $Bar == "BlackRedBAr" ]]
 			then 
 				pkill polybar
@@ -79,6 +79,16 @@ launch_bar() {
 			then
 				pkill polybar
 				polybar -q main -c "$DIR"/default/config &
+
+		elif [[ $Bar == "Amarena" ]]
+			then
+				pkill polybar
+				polybar -q main -c "$DIR"/Amarena/config &
+
+		elif [[ $Bar == "Emilia" ]]
+			then
+				pkill polybar
+				polybar -q main -c "$DIR"/Emilia/config &
 
 		elif [[ $Bar == "HackBar" ]]
 			then

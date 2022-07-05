@@ -4,7 +4,6 @@
 #
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-
 [module/battery]
 type = internal/battery
 
@@ -15,30 +14,33 @@ adapter = ${system.adapter}
 
 format-charging = <animation-charging><label-charging>
 label-charging = %percentage%%
-format-charging-foreground = #BA0000
-format-charging-background = ${colors.background}
-format-charging-font = 
+format-charging-foreground = ${colors.color4}
+format-charging-background =  #282A36
+; format-charging-font = 4
 
 format-discharging = <ramp-capacity><label-discharging>
 label-discharging = %percentage%%
-format-discharging-foreground = #BA0000
-format-discharging-background = ${colors.background}
-format-discharging-font = 
+format-discharging-foreground = ${colors.red}
+format-discharging-background =  #282A36
+; format-discharging-font = 4
 
 format-full-prefix = " "
-format-full-prefix-foreground = #BA0000
-format-foreground = #BA0000
-format-background = ${colors.background}
-format-full-prefix-font = 
+format-full-prefix-foreground = ${color.pink}
+format-full-prefix-background = #282A36
+; format-full-prefix-font = 4
+
+
 label-full = %percentage%%
-label-full-font = 
+label-full-background = ${color.mb}
+label-full-foreground = #D4BFFF
+; label-full-font = 4
 
-label-discharging-foreground =#BA0000
-label-discharging-font = 
+label-discharging-foreground = #D4BFFF
+; label-discharging-font = 4
 
-ramp-capacity-foreground =  #BA0000
-label-charging-foreground = #BA0000
-label-charging-font = 
+ramp-capacity-foreground =  #A0E8A2  
+label-charging-foreground = #D4BFFF
+; label-charging-font = 4
 
 label-padding = 1
 
@@ -56,9 +58,9 @@ animation-charging-3 = " "
 animation-charging-4 = " "
 
 
-animation-charging-foreground = #BA0000
+animation-charging-foreground = #DF8890
 animation-charging-framerate = 750
-animation-charging-font = 4
+; animation-charging-font = 4
 
 format-charging-padding = 1
 format-discharging-padding = 1
@@ -73,12 +75,14 @@ interval = 1
 format = <label>
 
 format-prefix = " "
-format-prefix-font = 5
-format-prefix-foreground = #BA0000
-format-prefix-background = ${color.BGL}
+format-prefix-font = 2
+format-prefix-foreground = ${color.red}
+format-prefix-background = ${color.mb}
 label = "%{A1:stacer &:}CPU %percentage%%%{A}"
-label-font = 
-label-background = ${color.BGL}
+; label-font = 10
+label-background = ${color.mb}
+label-foreground = #D4BFFF
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/filesystem]
@@ -90,13 +94,13 @@ fixed-values = true
 
 format-mounted = <label-mounted>
 format-mounted-prefix = " "
-format-mounted-prefix-foreground = ${color.background}
-format-mounted-prefix-background = ${color.cyan}
+format-mounted-prefix-foreground = ${color.amber}
+format-mounted-prefix-background = ${color.mb}
 
 format-unmounted = <label-unmounted>
 format-unmounted-prefix = " "
-format-unmounted-prefix-foreground = ${color.background}
-format-unmounted-prefix-background = ${color.cyan}
+format-unmounted-prefix-foreground = ${color.amber}
+format-unmounted-prefix-background = ${color.mb}
 
 label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e duf &:} %free%%{A}"
 label-unmounted = " %mountpoint%: NA"
@@ -107,26 +111,20 @@ label-unmounted-background = ${color.cyan}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/cpuTemp]
-type = custom/script
-exec = ~/.config/bspwm/polybar/black-red/modules/heatSensors
-interval = 0.5
-click-left = xsensors
-format-foreground = #BA0000
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
 [module/memory]
 type = custom/script
 exec = free -g | sed -n 's/^Mem:\s\+[0-9]\+\s\+\([0-9]\+\)\s.\+/\1/p'
 format = <label>
 format-prefix = "" 
-format-prefix-font = 
+; format-prefix-font = 2
 
-label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e htop &:}%output%GB%{A}"
-label-padding = 1
-label-font = 
-format-prefix-foreground =#BA0000
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e htop &:} %output% GB%{A}"
+; label-padding = 1
+label-foreground = #D4BFFF
+format-prefix-foreground = ${color.cyan}
+
+format-background = ${color.mb}
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/updates-pacman]
@@ -136,18 +134,10 @@ interval = 180
 format = <label>
 
 ;label = %output% Updates
-label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e sudo pacman -Syyu &:} %output% Updates%{A}"
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e sudo pacman -Syyu &:} %output%%{A}"
 
 format-font = 4
 label-foreground = #e92ef0
-;label-foreground = #BF616A
-label-background = ${color.BGL}
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/time]
-type = custom/script
-exec = date '+%I:%M:%S%P'
-interval = 1.0
+label-background = ${color.mb}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

@@ -11,21 +11,20 @@
 margin-bottom = 0
 margin-top = 0
 
-include-file = ~/.config/bspwm/polybar/hack/system
-include-file = ~/.config/bspwm/polybar/hack/colors
+include-file = ~/.config/bspwm/polybar/Amarena/system
+include-file = ~/.config/bspwm/polybar/Amarena/colors
 
 # contains brightness, workspaces, Date, etc.... #
-include-file = ~/.config/bspwm/polybar/hack/modules/modules
+include-file = ~/.config/bspwm/polybar/Amarena/modules/modules
 
 # contains Music, microphone, etc.... #
-include-file = ~/.config/bspwm/polybar/hack/modules/mediaModules
+include-file = ~/.config/bspwm/polybar/Amarena/modules/mediaModules
 
 # contains CPU, Temperature, etc.... #
-include-file = ~/.config/bspwm/polybar/hack/modules/monitoringModules
+include-file = ~/.config/bspwm/polybar/Amarena/modules/monitoringModules
 
 # contains the separators (e.g  , | , <| ,  ,etc..) #
-include-file = ~/.config/bspwm/polybar/hack/modules/separatorsModules
-
+include-file = ~/.config/bspwm/polybar/Amarena/modules/separatorsModules
 
 [bar/main]
 monitor = 
@@ -35,23 +34,32 @@ override-redirect = false
 bottom = false
 fixed-center = true
 
-width = 99s%
-height = 27
-
+width = 99%
+height = 30
 offset-x = 0.5%
 offset-y = 0.5%
 
-background = ${color.BACKGROUND}
+# width = 100%
+# height = 24
+# offset-x = 0
+# offset-y = 0
+
+
+
+background = #00
 foreground = ${color.FOREGROUND}
 
-radius-top = 0.0
-radius-bottom = 0.0
+radius-top = 5
+radius-bottom = 5
+
+# radius-top = 0.0
+# radius-bottom = 0.0
 
 line-size = 2
 line-color = ${color.BLUE}
 
-border-size = 1
-border-color = #06CCD7
+border-size = 0
+border-color = #00
 
 padding = 0
 module-margin-left = 0
@@ -63,15 +71,12 @@ font-1 = "Iosevka Nerd Font:size=12;3"
 font-2 = "google\-mdi:size=12;3"
 font-3 = "Iosevka:style=bold:"size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
-font-5 = JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3
-font-6 = JetBrainsMono Nerd Font:size=13;4
-font-7 = Material Design Icons:style=Bold:size=9;3
-font-8 = unifont:fontformat=truetype:size=9;3
-font-9 = "Iosevka:style=bold:size=15;4"
 
-modules-left   = mod  pip  bspwm  pip  info-cava  pip  notification-github pip xkeyboard pip
-modules-center =  space mpd space   
-modules-right  =  pip cpu Dspace cpuTemp pip volume  space network space backlight space memory pip battery space date space
+
+
+modules-left = space LD menu RD space space LD date RD space space LD mod RD space space info-cava space space mpd
+modules-center = LD bspwm RD
+modules-right = LD network spaceB volume spaceB backlight spaceB battery RD space space space LD sysmenu RD space
 
 separator =
 spacing = 0
