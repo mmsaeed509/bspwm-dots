@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #
-# @author Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# LICENSE © GNU-GPL3
 #
 
 # you can run script with 2 arguments (your commit comment)
