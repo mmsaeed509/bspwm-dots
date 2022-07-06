@@ -23,8 +23,6 @@
   <img src="https://img.shields.io/github/last-commit/mmsaeed509/bspwm-dots?color=deeppink&style=for-the-badge">
 </p>
 
-</br>
-
 <!-- shields -->
 
 <!-- ###########################################  ########################################### -->
