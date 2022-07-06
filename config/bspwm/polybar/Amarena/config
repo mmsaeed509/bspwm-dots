@@ -1,7 +1,8 @@
 #
-# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-# LICENSE © GNU-GPL3
+# @author : Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Copyright (C) GNU-GPL3
 #
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 ;; Global WM Settings
@@ -74,7 +75,7 @@ font-4 = "Iosevka Nerd Font:size=18;4"
 
 
 
-modules-left = space LD menu RD space space LD date RD space space LD mod RD space space info-cava space space mpd
+modules-left = space LD menu RD space space LD date RD space space LD mod RD space cpuTemp space space info-cava space space mpd 
 modules-center = LD bspwm RD
 modules-right = LD network spaceB volume spaceB backlight spaceB battery RD space space space LD sysmenu RD space
 
