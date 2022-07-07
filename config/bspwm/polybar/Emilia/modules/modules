@@ -103,9 +103,9 @@ label-focused-underline = ${color.green}
 label-focused-padding = 0
 
 label-occupied = %name%
-label-occupied-foreground = ${color.blue}
+label-occupied-foreground = ${color.red}
 label-occupied-background = ${color.mb}
-label-occupied-underline = ${color.blue}
+label-occupied-underline = ${color.red}
 label-occupied-padding = 0
 
 label-urgent = %name%
