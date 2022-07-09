@@ -1,7 +1,8 @@
 #
-# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-# LICENSE © GNU-GPL3
+# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
 #
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/bna]
@@ -94,7 +95,7 @@ format-font = 2
 label-monitor = %name%
 
 
-label-focused =[%name%]
+label-focused = [%name%]
 label-focused-foreground = ${color.BLUE}
 label-focused-background = ${color.BGL}
 label-focused-underline = ${color.BLUE}
@@ -213,7 +214,7 @@ format-disconnected-prefix = " "
 format-disconnected-prefix-font = 7
 format-disconnected-prefix-foreground = ${color.RED}
 
-label-connected = "%{A1:nmd &:} %{A}"
+label-connected = "%{A1:nmd &:}%essid% %{A}"
 label-disconnected = "%{A1:nmd &:} %{A}"
 
 ramp-signal-0 = 
@@ -245,7 +246,8 @@ label-indicator-background = ${colors.secondary}
 [module/sysmenu]
 type = custom/text
 
-content = ""
+; content = ""
+content = ""
 content-font = 7
 content-foreground = ${color.RED}
 ;content-background = ${color.BGL}
@@ -267,7 +269,8 @@ type = custom/text
 
 ; content = ""
 ; content = ""
-content = ""
+; content = ""
+content = ""
 content-font = 5
 
 ;content-font = 3
