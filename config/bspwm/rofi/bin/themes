@@ -44,7 +44,7 @@ chosen="$(echo -e "$availableThemes" | $rofi_command -p "Available themes : (18)
 #
 case $chosen in
     $theme_1)
-        bash ${BSP}/set-theme  'blade3.png' 'blade' 'Blade2' 'Red-Icons' 'LyraS' 'Blade'
+        bash ${BSP}/set-theme  'BloodJungles.jpg' 'blade' 'Blade2' 'Red-Icons' 'LyraS' 'Blade'
         ;;
     $theme_2)
         bash ${BSP}/set-theme  'bouquet.jpg' 'bouquet' 'Juno-mirage' 'Luna-Dark' 'Future-dark' 'Bouquet'
