@@ -65,7 +65,7 @@ sudo pacman -S --noconfirm --needed ranger highlight trash-cli ueberzug thunar t
 echo ""
 echo "Installing System Programs.... "
 
-sudo pacman -S --noconfirm --needed  acpi autoconf automake binutils bison calc fakeroot gcc gparted gtk-engine-murrine gvfs gvfs-mtp gvfs-afc gvfs-gphoto2 gvfs-smb gvfs-google inotify-tools jq make patch pkg-config polkit powertop python2 sshfs udisks2 wmctrl xclip xdotool xmlstarlet yad
+sudo pacman -S --noconfirm --needed  acpi autoconf automake binutils bison calc fakeroot gcc gparted gtk-engine-murrine gvfs gvfs-mtp gvfs-afc gvfs-gphoto2 gvfs-smb gvfs-google inotify-tools jq make patch pkg-config polkit powertop python2 sshfs udisks2 wmctrl xclip xdotool xmlstarlet yad sndio
 
 
 echo ""
