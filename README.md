@@ -29,7 +29,9 @@
 
 <!-- About -->
 
-<h1 align="left"> :herb: about  <img align="right" src="https://badges.pufler.dev/visits/mmsaeed509/bspwm-dots?style=for-the-badge&color=A7D9B2"/> </h1> 
+
+
+<h1 align="left"> :herb: about  <img align="right" src="https://visitor-badge-reloaded.herokuapp.com/badge?color=A7D9B2&page_id=mmsaeed509/bspwm-dots&style=for-the-badge&lcolor=555555"/> </h1> 
 
 <img src="img/desktop.png" alt="rice" align="right" width="500px">
 
