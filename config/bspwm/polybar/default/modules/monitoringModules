@@ -2,6 +2,7 @@
 # Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 # LICENSE © GNU-GPL3
 #
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/battery]
@@ -84,6 +85,15 @@ format-prefix-foreground = ${color.YELLOW}
 ; label = "%{A1:alacritty -e stacer &:} %percentage%%%{A}"
 label = "%{A1:stacer &:} %percentage%%%{A}"
 label-font = 3
+
+; Spacing between individual per-core ramps
+;;ramp-coreload-spacing = 1
+;;ramp-coreload-0 = 
+;;ramp-coreload-1 = 
+;;ramp-coreload-2 = 
+;;ramp-coreload-3 = 
+;;ramp-coreload-4 = 
+
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

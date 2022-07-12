@@ -90,6 +90,21 @@ launch_bar() {
 				pkill polybar
 				polybar -q main -c "$DIR"/Emilia/config &
 
+		elif [[ $Bar == "BlackArch" ]]
+			then
+				pkill polybar
+				polybar -q main -c "$DIR"/BlackArch/config &
+
+		elif [[ $Bar == "Jungles" ]]
+			then
+				pkill polybar
+				polybar -q main -c "$DIR"/Jungles/config &
+
+		elif [[ $Bar == "neon" ]]
+			then
+				pkill polybar
+				polybar -q main -c "$DIR"/neon/config &
+
 		elif [[ $Bar == "HackBar" ]]
 			then
 				pkill polybar

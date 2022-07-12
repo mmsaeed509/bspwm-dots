@@ -26,7 +26,6 @@ getcolors
 
 # ------------ Configurations ------------ #
 
-
 # -------------------- set En & Ar for keyboard --------------------
 setxkbmap -layout us,ar # change 'us,ar' for your own uses #
 setxkbmap -option 'grp:alt_shift_toggle'
@@ -246,7 +245,7 @@ xsetroot -cursor_name left_ptr
 bash $HOME/.fehbg
 
 # enable num lock
-numlockx &
+# numlockx &
 
 # Start mpd
 exec mpd &
