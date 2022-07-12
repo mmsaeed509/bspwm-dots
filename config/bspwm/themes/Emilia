@@ -1,9 +1,10 @@
-! ----------------------------------------------------------------------------------
-! Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-! Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+! -----------------------------------------------------------------------------
 ! 
-! amilia color scheme
-! ----------------------------------------------------------------------------------
+! Copyright (C) 2022 Mahmoud Mohamed (Ozil) <https://github.com/mmsaeed509>
+! LICENSE © GNU-GPL3
+! 
+! Emilia color scheme
+! -----------------------------------------------------------------------------
 
 *.foreground: #D4BFFF
 *.background: #1A1B26
