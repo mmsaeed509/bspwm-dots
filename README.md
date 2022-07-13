@@ -61,7 +61,7 @@
 
 |:shamrock: BSPWM|:shamrock: i3WM|
 |--|--|
-| ![](GIFs/DEMO_THEMES.gif) | ![](GIFs/i3WM.gif) |
+| ![](GIFs/theme.gif) | ![](GIFs/i3WM.gif) |
 
 
 <!-- reviewing themes -->
