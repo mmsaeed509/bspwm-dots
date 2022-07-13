@@ -220,29 +220,21 @@ sudo ./install_service.sh
 
 <h2 align="center">Available Themes Previews</h2>
 
-|Blade|CyberPunk|Hack|
+|Red Jungles|Emilia|Gruvbox|
 |--|--|--|
-| ![](GIFs/Blade.gif) | ![](GIFs/CyberPunk.gif) | ![](GIFs/Hack.gif) |
+| ![](GIFs/RedJungles.gif) | ![](GIFs/Emilia.gif) | ![](GIFs/Gruvbox.gif) |
 
-|Rick|Hack The Box|Hack The Box Colored|
+|Hack|Red and Black|Rick|
 |--|--|--|
-| ![](GIFs/Rick.gif) | ![](GIFs/HackTheBox.gif) | ![](GIFs/HackTheBoxColored.gif) |
+| ![](GIFs/Hack.gif) | ![](GIFs/RedandBlack.gif) | ![](GIFs/Rick.gif) |
 
-|BlackArch|Neon|Tigger In Atlantis|
+|Hack The Box|BlackArch|Neon|
 |--|--|--|
-| ![](GIFs/BlackArch.gif) | ![](GIFs/Neon.gif) | ![](GIFs/TiggerInAtlantis.gif) |
+| ![](GIFs/HackTheBox.gif) | ![](GIFs/BlackArch.gif) | ![](GIFs/Neon.gif) |
 
-|Bouquet|Emilia|Red and Black|
+|AXYL|Amarena|JapaneseCity|
 |--|--|--|
-| ![](GIFs/Bouquet.gif) | ![](GIFs/Emilia.gif) | ![](GIFs/RedAndBlack.gif) |
-
-|AXYL|Amarena|Everblush|
-|--|--|--|
-| ![](GIFs/AXYL.gif) | ![](GIFs/Amarena.gif) | ![](GIFs/Everblush.gif) |
-
-|Groot|Gruvbox|JapaneseCity|
-|--|--|--|
-| ![](GIFs/Groot.gif) | ![](GIFs/Gruvbox.gif) | ![](GIFs/JapaneseCity.gif) |
+| ![](GIFs/AXYL.gif) | ![](GIFs/Amarena.gif) | ![](GIFs/JapaneseCity.gif) |
 
 <!-- Available Themes Previews -->
 
