@@ -69,7 +69,7 @@
 
 |:shamrock: BSPWM|:shamrock: i3WM|
 |--|--|
-| [![](GIFs/DEMO.gif)](https://drive.google.com/file/d/1ia3OG3ZWhcE1rNqaud7cfaXRYcX-wKNx/view?usp=sharing) | ![](GIFs/i3WM.gif) |
+| [![](GIFs/themes.gif)](https://drive.google.com/file/d/1mR9TWm1-hK3ykdHdFQCJduFSDosoOilc/view?usp=sharing) | ![](GIFs/i3WM.gif) |
 
 
 <!-- reviewing themes -->
