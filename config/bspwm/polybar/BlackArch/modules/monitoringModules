@@ -132,7 +132,7 @@ format = <label>
 ;label = %output% Updates
 label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e sudo pacman -Syyu &:} %output%%{A}"
 
-format-font = 5
+format-font = 6
 label-foreground = #0000FF
 label-background = #6FA4F0
 
