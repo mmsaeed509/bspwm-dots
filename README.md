@@ -108,6 +108,8 @@ Credit : [Aditya Shakya](https://github.com/adi1090x/widgets)
   - [**`How To Install dotfiles`**](#installation)
 + **Previews**
   - [**`reviewing available themes`**](#available-themes-previews)
++ **Keybinding**
+  - [**`Keybinding with Preview`**](https://github.com/mmsaeed509/bspwm-dots/wiki/Keybinding)
 
 <!-- Table of content -->
 
