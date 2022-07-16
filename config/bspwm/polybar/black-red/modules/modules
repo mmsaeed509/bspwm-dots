@@ -248,5 +248,6 @@ exec = ~/.config/bspwm/polybar/scripts/notification-github.sh
 interval = 60
 label-background = ${color.BGL}
 label-foreground = #BA0000
+click-left = google-chrome-stable --newtab https://github.com/notifications
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
