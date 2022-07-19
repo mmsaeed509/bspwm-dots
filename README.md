@@ -69,7 +69,7 @@ https://user-images.githubusercontent.com/62524855/179009506-b9ca5188-0409-45db-
 
 |:shamrock: BSPWM|:shamrock: i3WM|
 |--|--|
-| [![](GIFs/themes.gif)](https://drive.google.com/file/d/1mR9TWm1-hK3ykdHdFQCJduFSDosoOilc/view?usp=sharing) | ![](GIFs/i3WM.gif) |
+| [![](GIFs/view.gif)](https://drive.google.com/file/d/1mR9TWm1-hK3ykdHdFQCJduFSDosoOilc/view?usp=sharing) | ![](GIFs/i3WM.gif) |
 
 
 <!-- reviewing themes -->
