@@ -33,7 +33,7 @@
 
 </br>
 
- - OS: [**`Archcraft`**](https://archcraft.io/)
+ - OS: [**`Arch`**](https://archcraft.io/)
  - WM: [**`bspwm`**](https://github.com/baskerville/bspwm) , [**`i3WM`**](https://i3wm.org/)
  - Bar: [**`Polybar`**](https://github.com/polybar/polybar)
  - Bar: [**`Widget`**](https://github.com/elkowar/eww)
