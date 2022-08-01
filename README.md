@@ -56,9 +56,9 @@
    <summary><h2> Demo </h2></summary>
 
   <h3 align="center"> NEW rice :rice: :hot_pepper: 🔥 </h3> 
-
-https://user-images.githubusercontent.com/62524855/179009506-b9ca5188-0409-45db-8f98-e4b1e67bfbc8.mp4
-    
+  
+https://user-images.githubusercontent.com/62524855/182076512-28721e71-e772-4342-bbdb-2804a1587076.mp4
+  
   <h3 align="center"> OLD rice :rice: :hot_pepper: 🔥 </h3> 
   
   https://user-images.githubusercontent.com/62524855/175541828-d4ef64a7-1359-435d-8b47-80035f7756a5.mp4
@@ -69,7 +69,7 @@ https://user-images.githubusercontent.com/62524855/179009506-b9ca5188-0409-45db-
 
 |:shamrock: BSPWM|:shamrock: i3WM|
 |--|--|
-| [![](GIFs/view.gif)](https://drive.google.com/file/d/1mR9TWm1-hK3ykdHdFQCJduFSDosoOilc/view?usp=sharing) | ![](GIFs/i3WM.gif) |
+| [![](GIFs/view.gif)](https://drive.google.com/file/d/17AhFlv3E8t-pNak883Eoda97DicuXHw6/view?usp=sharing) | ![](GIFs/i3WM.gif) |
 
 
 <!-- reviewing themes -->
