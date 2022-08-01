@@ -1,0 +1,290 @@
+#
+# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# LICENSE © GNU-GPL3
+#
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/bna]
+type = custom/text
+
+content = " NA"
+content-prefix = 
+content-prefix-font = 2
+content-prefix-foreground = ${color.RED}
+content-padding = 0
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/backlight]
+type = internal/xbacklight
+
+card = intel_backlight
+
+format = <ramp><label>
+
+label = %percentage%%
+label-foreground = #7DC5A0
+label-background = #353B45
+
+ramp-0 = " "
+ramp-1 = " "
+ramp-2 = " "
+ramp-3 = " "
+ramp-4 = " "
+ramp-5 = " "
+ramp-6 = " "
+ramp-7 = " "
+ramp-8 = " "
+ramp-9 = " "
+ramp-font = 2
+ramp-foreground = #7DC5A0
+ramp-background = #353B45
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/brightness]
+type = internal/backlight
+
+card = ${system.graphics_card}
+
+enable-scroll = true
+
+format = <ramp> <label>
+
+label = %percentage%%
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-5 = 
+ramp-6 = 
+ramp-7 = 
+ramp-8 = 
+ramp-9 = 
+ramp-font = 2
+ramp-foreground = ${color.MAGENTA}
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = true
+inline-mode = false
+enable-click = true
+enable-scroll = true
+reverse-scroll = true
+fuzzy-match = true
+
+; ws-icon-[0-9]+ = label;icon
+; Note that the label needs to correspond with the bspwm workspace name
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI;
+ws-icon-6 = VII;
+ws-icon-7 = VIII;
+ws-icon-default = 
+
+format = <label-state>
+format-font = 2
+
+label-monitor = %name%
+
+label-focused = %name%
+label-focused-foreground = #7DC5A0
+label-focused-background = #353B45
+label-focused-underline = #7DC5A0
+label-focused-padding = 0
+
+label-occupied = %name%
+label-occupied-foreground = #E06C75
+label-occupied-background = #353B45
+label-occupied-padding = 0
+
+label-urgent = %name%
+label-urgent-foreground = #E5C07B
+label-urgent-background = #353B45
+label-urgent-underline = #E5C07B
+label-urgent-padding = 0
+
+label-empty = %name%
+label-empty-foreground = #60ADED
+label-empty-background = #353B45
+label-empty-padding = 0
+
+; Separator in between workspaces
+label-separator = "  "
+label-separator-padding = 0
+label-separator-foreground = ${color.ALTBLACK}
+label-separator-background = #353B45
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/mod]
+type = internal/bspwm
+
+format = <label-mode>
+format-background = #7DC5A0
+format-foreground = ${color.BACKGROUND}
+format-padding = 1
+format-font = 4
+
+label-monocle = "Monocle"
+label-tiled = "Tiled"
+
+label-floating = " | Float"
+label-pseudotiled = " | Pseudo"
+label-fullscreen = " | Full"
+
+label-locked = " | Locked"
+label-sticky = " | Sticky"
+label-private = " | Private"
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/date]
+type = internal/date
+
+interval = 1.0
+
+time = %a, %I:%M %p
+time-alt = %A, %d %B %Y
+
+format = <label>
+format-prefix = " "
+format-prefix-font = 3
+format-prefix-foreground = ${color.BACKGROUND}
+format-prefix-background = #4b70bd
+
+label = " %time%"
+label-font = 4
+label-foreground = ${color.BACKGROUND}
+label-background = #7AA2F7
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+; If you use both a wired and a wireless network, add both modules in config.
+[module/ethernet]
+type = internal/network
+interface = ${system.network_interface}
+
+interval = 1.0
+accumulate-stats = true
+unknown-as-up = true
+
+format-connected = <label-connected>
+format-connected-prefix = "  "
+format-connected-prefix-font = 3
+format-connected-prefix-foreground = #3B414D
+format-connected-prefix-background = #7AA2F7
+
+format-disconnected = <label-disconnected>
+format-disconnected-prefix = "  "
+format-disconnected-prefix-font = 3
+format-disconnected-prefix-foreground = #3B414D
+format-disconnected-prefix-background = #7AA2F7
+
+label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
+label-connected-background = #353B45
+label-connected-foreground = #7EC7A2
+
+label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} Offline %{A}"
+label-disconnected-background = #353B45
+label-disconnected-foreground = #7EC7A2
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/network]
+type = internal/network
+interface = ${system.network_interface}
+
+interval = 1.0
+
+;;ping-interval = 3
+;;udspeed-minwidth = 5
+
+accumulate-stats = true
+unknown-as-up = true
+
+format-connected = <ramp-signal><label-connected>
+
+format-disconnected = <label-disconnected>
+format-disconnected-prefix = "  "
+format-disconnected-prefix-font = 3
+format-disconnected-prefix-foreground = #3B414D
+format-disconnected-prefix-background = #7AA2F7
+
+label-connected = "%{A1:nmd &:} %essid% %{A}"
+label-connected-foreground = #7AA2F7
+label-connected-background = #353B45
+
+label-disconnected = "%{A1:nmd &:} Disconnected %{A}"
+label-disconnected-foreground = #7AA2F7
+label-disconnected-background = #353B45
+
+ramp-signal-0 = "  "
+ramp-signal-1 = "  "
+ramp-signal-2 = "  "
+ramp-signal-3 = "  "
+ramp-signal-4 = "  "
+ramp-signal-font = 3
+ramp-signal-foreground = #3B414D
+ramp-signal-background = #7AA2F7
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+label-layout = %layout%
+label-layout-foreground = #61AFEF
+label-layout-background = #353B45
+label-layout-font = 4
+
+label-indicator-padding = 
+label-indicator-margin =
+label-indicator-font = 4
+label-indicator-foreground = #61AFEF
+label-indicator-background = #353B45
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/weather]
+type = custom/script
+exec = ~/.config/bspwm/polybar/scripts/openweathermap-fullfeatured.sh
+interval = 600
+format-foreground = ${color.BACKGROUND}
+format-background = ${color.YELLOW}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/notification-github]
+type = custom/script
+exec = ~/.config/bspwm/polybar/scripts/notification-github.sh
+interval = 60
+click-left = google-chrome-stable --newtab https://github.com/notifications
+format-foreground = #7DC5A0
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/themes]
+type = custom/text
+
+; content = ""
+content = "  "
+content-font = 5
+content-foreground = #353B45 
+content-background = #7DC5A0
+content-padding = 0
+
+click-left = ~/.config/bspwm/rofi/bin/themes
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

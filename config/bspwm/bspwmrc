@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
 #
-# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 # LICENSE © GNU-GPL3
 #
 
 # Environtment path
 export PATH="${PATH}:$HOME/.config/bspwm/bin"
-
 # Get colors from .Xresources 
 xrdb ~/.Xresources
 getcolors() {
@@ -25,10 +24,6 @@ getcolors() {
 getcolors
 
 # ------------ Configurations ------------ #
-
-# -------------------- set En & Ar for keyboard --------------------
-setxkbmap -layout us,ar # change 'us,ar' for your own uses #
-setxkbmap -option 'grp:alt_shift_toggle'
 
 # Solve java apps issues (e.g. JetBrains IDEs like PyCharm, CLion, etc).
 export _JAVA_AWT_WM_NONREPARENTING=1 
@@ -55,7 +50,9 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 workspaces() {
 	name=1
 	for monitor in `bspc query -M`; do
-		bspc monitor ${monitor} -n "$name" -d '' '' '' ' ' '' '' '' ''
+		bspc monitor ${monitor} -n "$name" -d '' '' '' ' ' '' '' '' ''
+                # bspc monitor ${monitor} -n "$name" -d '' '' '' ' ' '' '' '' ''
+
 		let name++
 	done
 }
@@ -118,7 +115,7 @@ bspc rule -a Protonvpn desktop='^2' state=floating follow=on focus=on
 
 # ------------ apps open in files workspaces
 
-declare -a files=(Pcmanfm Thunar qBittorrent)
+declare -a files=(Pcmanfm Thunar Caja dolphin)
 for i in ${files[@]}; do
    bspc rule -a $i desktop='^3' follow=on focus=on; done
 
@@ -245,7 +242,7 @@ xsetroot -cursor_name left_ptr
 bash $HOME/.fehbg
 
 # enable num lock
-# numlockx &
+numlockx &
 
 # Start mpd
 exec mpd &

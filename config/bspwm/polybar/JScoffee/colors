@@ -1,0 +1,53 @@
+[color]
+
+FOREGROUND = #a9b1d6
+BACKGROUND = #1a1b26
+BLACK = #32344a
+RED = #f7768e
+GREEN = #9ece6a
+YELLOW = #e0af68
+BLUE = #7aa2f7
+MAGENTA = #ad8ee6
+CYAN = #449dab
+WHITE = #787c99
+ALTBLACK = #444b6a
+ALTRED = #ff7a93
+ALTGREEN = #b9f27c
+ALTYELLOW = #ff9e64
+ALTBLUE = #7da6ff
+ALTMAGENTA = #bb9af7
+ALTCYAN = #0db9d7
+ALTWHITE = #acb0d0
+
+BG = #1e222a
+BGL = #2c3038
+FG = #c8ccd4
+FGA = #808080
+
+BLACK2 = #000000
+WHITE2 = #FFFFFF
+RED2 = #e06c75
+GREEN2 = #98c379
+YELLOW2 = #e5c07b
+BLUE2 = #61afef
+PURPLE2 = #c678dd
+CYAN2 = #56b6c2
+
+color0 = ${xrdb:color0}
+color1 = ${xrdb:color1}
+color2 = ${xrdb:color2}
+color3 = ${xrdb:color3}
+color4 = ${xrdb:color4}
+color5 = ${xrdb:color5}
+color6 = ${xrdb:color6}
+color7 = ${xrdb:color7}
+color8 = ${xrdb:color8}
+color9 = ${xrdb:color9}
+color10 = ${xrdb:color10}
+color11 = ${xrdb:color11}
+color12 = ${xrdb:color12}
+color13 = ${xrdb:color13}
+color14 = ${xrdb:color14}
+color15 = ${xrdb:color15}
+dark-light = #272A2B 
+active-light = #313435

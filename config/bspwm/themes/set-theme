@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #
-# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 # LICENSE © GNU-GPL3
 #
 
@@ -33,28 +33,18 @@ set_style () {
 		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$5/g" ${CFG}/gtk-3.0/settings.ini
 	fi
 	zz
+	
 	# ---------------------------- Apply RGB Colors For Keyboard ----------------------------
 	
-	# removed this config as it;s only for Acer Predator Helios Laptops
+	## removed this config as it;s only for Acer Predator Helios Laptops ##
+	
 		
-	# ---------------------------- Apply RGB Colors For Keyboard ----------------------------
-
-
 	# ---------------------------- launch a custom Polybar if it exists ----------------------------
 
-	if [[ "$7" == "" ]]
-	then
-		echo "defaultBar">~/.config/bspwm/selectedThemeName
-
-	else 
 		echo "$7">~/.config/bspwm/selectedThemeName
-	fi
-
-	# ---------------------------- launch a custom Polybar if it exists ----------------------------
 
 	# ---------------------------- set background for i3look based on the selected theme ---------------------------- #
 	echo "$1">~/.config/bspwm/i3lockBackground
-	# ---------------------------- set background for i3look based on the selected theme ---------------------------- #
 
 	
 	# ----- reload config ----- #

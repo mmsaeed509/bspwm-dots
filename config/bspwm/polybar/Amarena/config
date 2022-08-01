@@ -77,7 +77,7 @@ font-4 = "Iosevka Nerd Font:size=18;4"
 
 modules-left = space LD menu RD space space LD date RD space space LD mod RD space cpuTemp space space info-cava space space mpd 
 modules-center = LD bspwm RD
-modules-right = LD network spaceB volume spaceB backlight spaceB battery RD space space space LD sysmenu RD space
+modules-right = LD themes RD space space LD network spaceB volume spaceB backlight spaceB battery RD space space LD sysmenu RD space
 
 separator =
 spacing = 0

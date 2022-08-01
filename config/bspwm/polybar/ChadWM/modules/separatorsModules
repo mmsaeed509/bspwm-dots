@@ -1,0 +1,202 @@
+#
+# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# LICENSE © GNU-GPL3
+#
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/dots]
+type = custom/text
+content = "  "
+
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.RED}
+content-padding = 0
+content-font = 5
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/pip]
+type = custom/text
+content = |
+
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.RED}
+content-padding = 1
+content-font = 5
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/Lpip]
+type = custom/text
+content = "<|"
+
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.RED}
+content-padding = 1
+content-font = 5
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/Rpip]
+type = custom/text
+content = "|>"
+
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.RED}
+content-padding = 1
+content-font = 5
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/space]
+type = custom/text
+content = " "
+content-background = ${color.background}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/spaceD]
+type = custom/text
+content = " "
+content-background = #353B45
+content-foreground = #353B45
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/sep]
+type = custom/text
+;content = ◆
+content = 
+
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.GREEN}
+content-padding = 2
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+##########################
+#       LD modules       #
+##########################
+
+[module/LDB]
+type = custom/text
+content = "%{T5}%{T-}"
+content-background = ${color.background}
+content-foreground = ${color.MAGENTA}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+[module/LDD]
+type = custom/text
+content = "%{T5}█%{T-}"
+content-background = ${color.background}
+content-foreground = #353B45
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/LDmpd]
+type = custom/text
+
+;content = "%{T5}(|%{T-}"
+content = "%{T5}(%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.YELLOW}
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/LDcava]
+type = custom/text
+
+content = "%{T5}█%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground =  ${color.MAGENTA}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+##########################
+#       RD modules       #
+##########################
+
+[module/RD]
+type = custom/text
+content = "%{T5}%{T-}"
+content-background = ${color.background}
+content-foreground = ${color.MAGENTA}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+[module/RDB]
+type = custom/text
+content = "%{T5}%{T-}"
+content-background = ${color.background}
+content-foreground = ${color.ALTGREEN}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RDD]
+type = custom/text
+
+content = "%{T5}█%{T-}"
+; content = "%{T5}%{T-}"
+
+content-background = ${color.background}
+content-foreground = #56B6C2
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RDmpd]
+type = custom/text
+
+content = "%{T5})%{T-}"
+;content = "%{T5}|)%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.YELLOW}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RDmod]
+type = custom/text
+content = "%{T5}%{T-}"
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.YELLOW}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+##########################
+#       PL modules       #
+##########################
+
+[module/PLD]
+type = custom/text
+
+content = "%{T5}█%{T-}"
+;content = "%{T5}%{T-}"
+
+content-font = 3
+content-background = ${color.background}
+content-foreground = #7AA2F7
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/PLDD]
+type = custom/text
+
+content = "%{T5}█%{T-}"
+;content = "%{T5}%{T-}"
+
+content-font = 3
+content-background = ${color.background}
+content-foreground = #4b70bd
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

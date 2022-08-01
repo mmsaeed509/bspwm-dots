@@ -145,7 +145,7 @@ label-background = ${color.mb}
 
 [module/cpuTemp]
 type = custom/script
-exec = ~/.config/bspwm/polybar/scripts/heatSensors
+exec = ~/.config/bspwm/polybar/Emilia/modules/heatSensors
 interval = 0.5
 click-left = xsensors
 format-foreground = ${color.cyan}

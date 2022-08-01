@@ -72,7 +72,7 @@ font-9 = "Iosevka:style=bold:size=15;4"
 
 modules-left   = mod  pip  bspwm  pip  info-cava  pip  notification-github pip xkeyboard pip
 modules-center =  space mpd space   
-modules-right  =  pip cpu Dspace cpuTemp pip volume  space network space backlight space memory pip battery space date space
+modules-right  = pip themes pip cpu Dspace cpuTemp pip volume  space network space backlight space memory pip battery space date space
 
 separator =
 spacing = 0

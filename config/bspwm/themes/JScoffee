@@ -1,0 +1,64 @@
+! -----------------------------------------------------------------------------
+! 
+! Copyright (C) Mahmoud Mohamed (Ozil) <https://github.com/mmsaeed509>
+! LICENSE © GNU-GPL3
+! 
+! JScoffee color scheme
+! -----------------------------------------------------------------------------
+
+
+*background: #101419
+*foreground: #b6beca
+
+*color0:  #1c252c
+*color8:  #384148
+
+*color1:  #e05f65
+*color9:  #fc7b81
+
+*color2:  #78dba9
+*color10: #94f7c5
+
+*color3:  #f1cf8a
+*color11: #ffeba6
+
+*color4:  #70a5eb
+*color12: #8cc1ff
+
+*color5:  #c68aee
+*color13: #e2a6ff
+
+*color6:  #74bee9
+*color14: #90daff
+
+*color7:  #dee1e6
+*color15: #fafdff
+
+/* 
+*background: #101419
+*foreground: #b6beca
+
+*color0:  #1c252c
+*color8:  #e05f65
+
+*color1:  #78dba9
+*color9:  #f1cf8a
+
+*color2:  #70a5eb
+*color10: #c68aee
+
+*color3:  #74bee9
+*color11: #dee1e6
+
+*color4:  #384148
+*color12: #fc7b81
+
+*color5:  #94f7c5
+*color13: #ffeba6
+
+*color6:  #8cc1ff
+*color14: #e2a6ff
+
+*color7:  #90daff
+*color15: #fafdff 
+*/

@@ -7,5 +7,5 @@ rofi -dmenu\
      -password\
      -i\
      -no-fixed-num-lines\
-     -p "User Password: "\
+     -p "Your Password: "\
      -theme ~/.config/bspwm/rofi/themes/askpass.rasi

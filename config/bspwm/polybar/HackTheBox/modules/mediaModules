@@ -8,24 +8,18 @@
 [module/volume]
 type = internal/pulseaudio
 
-; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
-; If not, uses default sink
 sink = alsa_output.pci-0000_12_00.3.analog-stereo
 
-; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
-; Default: true
 use-ui-max = false
 
-; Interval for volume increase/decrease (in percent points)
-; Default: 5
-interval = 1
+interval = 5
 
 format-volume = <ramp-volume> <label-volume>
 
 format-muted = <label-muted>
 format-muted-prefix = 婢
 format-muted-prefix-font = 2
-format-muted-prefix-foreground = ${color.RED}
+format-muted-prefix-foreground = #757575
 
 label-volume = %percentage%%
 label-muted = " Mute"
@@ -101,7 +95,7 @@ exec =  ~/.config/bspwm/polybar/scripts/cava -f 24 -c average -e 000000
 format = <label>
 label = %output%
 format-foreground = ${color.BACKGROUND}
-format-background = ${color.YELLOW}
+format-background = ${color.FOREGROUND}
 tail = true
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

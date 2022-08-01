@@ -11,20 +11,20 @@
 margin-bottom = 0
 margin-top = 0
 
-include-file = ~/.config/bspwm/polybar/default/system
+include-file = ~/.config/bspwm/polybar/rick/system
 include-file = ~/.config/bspwm/polybar/colors
 
 # contains brightness, workspaces, Date, etc.... #
-include-file = ~/.config/bspwm/polybar/default/modules/modules
+include-file = ~/.config/bspwm/polybar/rick/modules/modules
 
 # contains Music, microphone, etc.... #
-include-file = ~/.config/bspwm/polybar/default/modules/mediaModules
+include-file = ~/.config/bspwm/polybar/rick/modules/mediaModules
 
 # contains CPU, Temperature, etc.... #
-include-file = ~/.config/bspwm/polybar/default/modules/monitoringModules
+include-file = ~/.config/bspwm/polybar/rick/modules/monitoringModules
 
 # contains the separators (e.g  , | , <| ,  ,etc..) #
-include-file = ~/.config/bspwm/polybar/default/modules/separatorsModules
+include-file = ~/.config/bspwm/polybar/rick/modules/separatorsModules
 
 
 [bar/main]
@@ -75,9 +75,9 @@ font-4 = "Iosevka Nerd Font:size=18;4"
 
 
 
-modules-left = LDmod mod RDmod sep xkeyboard pip bspwm dots LDmod info-cava RDmod
+modules-left = LDmpd  LDmod mod RDmod  RDmpd space bspwm space LDmpd  LDmod info-cava RDmod  RDmpd space LDmpd  LDmod themes RDmod  RDmpd sep xkeyboard
 modules-center = LDmpd space mpd space RDmpd  
-modules-right = cpu sep cpuTemp sep network sep volume sep backlight dots LDB battery date RDD
+modules-right = cpu sep cpuTemp sep network sep volume sep backlight space LDmpd2 LDB battery date RDD  RDmpd2
 
 separator =
 spacing = 0

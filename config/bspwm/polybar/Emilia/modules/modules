@@ -177,17 +177,24 @@ accumulate-stats = true
 unknown-as-up = true
 
 format-connected = <label-connected>
-format-connected-prefix = " "
-format-connected-prefix-font = 7
-format-connected-prefix-foreground = ${color.CYAN}
+format-connected-prefix = "  "
+format-connected-prefix-font = 3
+format-connected-prefix-foreground = #3B414D
+format-connected-prefix-background = #7AA2F7
 
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = " "
-format-disconnected-prefix-font = 7
-format-disconnected-prefix-foreground = ${color.RED}
+format-disconnected-prefix = "  "
+format-disconnected-prefix-font = 3
+format-disconnected-prefix-foreground = #3B414D
+format-disconnected-prefix-background = #7AA2F7
 
-label-connected = "%{A1:networkmanager_dmenu &:}%downspeed% | %upspeed%%{A}"
-label-disconnected = "%{A1:networkmanager_dmenu &:}Offline%{A}"
+label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
+label-connected-background = #353B45
+label-connected-foreground = #7EC7A2
+
+label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} Offline %{A}"
+label-disconnected-background = #353B45
+label-disconnected-foreground = #7EC7A2
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -254,5 +261,18 @@ content-foreground = ${color.blue-arch}
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/launcher
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/themes]
+type = custom/text
+
+; content = ""
+content = ""
+content-font = 5
+content-foreground = #FF0677
+content-padding = 0
+
+click-left = ~/.config/bspwm/rofi/bin/themes
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

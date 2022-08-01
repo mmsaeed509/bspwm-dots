@@ -64,7 +64,7 @@ font-8 = "MesloLGS NF:style=Regular:size=15;4"
 
 modules-left   = menu sep LD cpu RD space LD memory RD space LD battery RD space LD cpuTemp RD space LD mpd RD
 modules-center = LD bspwm RD
-modules-right  = BL song BR sep LD network RD space LD volume RD space LD backlight RD space LD date RD
+modules-right  = BL song BR sep LD network RD space LD volume RD space LD backlight RD space LD date RD sep themes
  
 spacing = 0
 separator =

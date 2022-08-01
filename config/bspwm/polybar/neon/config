@@ -75,9 +75,9 @@ font-4 = "Iosevka Nerd Font:size=18;4"
 
 
 
-modules-left = LDmod mod RDmod space LDmod xkeyboard RDmod space space bspwm space space LDmod info-cava RDmod
+modules-left = LDmod mod RDmod space LDmod xkeyboard RDmod space space bspwm space space LDmod info-cava RDmod space LDmod themes RDmod
 modules-center = LDmpd space mpd space RDmpd  
-modules-right = LDB updates-pacman cpu cpuTemp RDD space network sep backlight sep volume space LDB battery date RDD
+modules-right = LDB updates-pacman cpu cpuTemp RDD space network sep backlight sep volume space LDB2 battery date RDD2
 
 separator =
 spacing = 0

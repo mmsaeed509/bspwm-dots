@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #
-# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 # LICENSE © GNU-GPL3
 #
 
@@ -13,17 +13,16 @@ rofi_command="rofi -theme $DIR/rofi/themes/themes.rasi"
 
 theme_1=" Red Jungles"
 theme_2=" Emilia"
-theme_3=" Gruvbox"
+theme_3=" ChadWM"
 theme_4=" Hack"
 theme_5=" Black And Red"
 theme_6=" Rick"
 theme_7=" Hack The Box"
 theme_8=" BlackArch"
 theme_9=" Neon"
-theme_10=" AXYL style"
+theme_10=" JScoffee"
 theme_11=" Amarena"
 theme_12=" Japanese City"
-
 
 # pass available themes to rofi 
 availableThemes="$theme_1\n$theme_2\n$theme_3\n$theme_4\
@@ -32,45 +31,45 @@ availableThemes="$theme_1\n$theme_2\n$theme_3\n$theme_4\
 
 chosen="$(echo -e "$availableThemes" | $rofi_command -p "Available themes : (12)" -dmenu -selected-row 0)"
 #
-# the 1st var -> background, the 2th var -> color file name, the 3th var -> the theme name, 
-# the 4th var -> icons name, the 5th var -> the cursor name, the 6th var -> RGB mood for keyboard
+# the 1st var -> background, the 2th var -> color scheme name, the 3th var -> the theme name, 
+# the 4th var -> icons name, the 5th var -> the cursor name, the 6th var -> RGB mood for keyboard ( only for Acer Predator Laptops )
 # the 7th var ( if it exists )-> for customized polybar
 #
 case $chosen in
     $theme_1)
-        bash ${BSP}/set-theme  'BloodJungles.jpg' 'Jungles' 'Blade2' 'Red-Icons' 'LyraS' 'Blade' 'Jungles'
+        bash ${BSP}/set-theme  'BloodJungles.jpg' 'Jungles' 'Blade2' 'Red-Icons' 'LyraS' 'RedJungles' 'Jungles'
         ;;
     $theme_2)
-        bash ${BSP}/set-theme  'amilia.jpg' 'Emilia' 'Dracula' 'Elena-dark-icons' 'Sweet' 'Dracula' 'Emilia'
+        bash ${BSP}/set-theme  'amilia.jpg' 'Emilia' 'Dracula' 'Elena-dark-icons' 'Sweet' 'Emilia' 'Emilia'
         ;;
     $theme_3)
-        bash ${BSP}/set-theme  'gruvbox.jpg' 'gruvbox' 'Gruvbox' 'Luna-Dark' 'Future-dark' 'Gruvbox'
+        bash ${BSP}/set-theme  'chad.png' 'ChadWM' 'Qogir-dark' 'Qogir-dark' 'Hack-C' 'ChadWM' 'ChadWM'
         ;;
     $theme_4)
-        bash ${BSP}/set-theme  'hack.jpg' 'hack' 'Hack' 'Hack' 'LyraB' 'Hack' 'HackBar'
+        bash ${BSP}/set-theme  'hack.jpg' 'hack' 'Hack' 'Hack' 'LyraB' 'Hack' 'hack'
         ;;
     $theme_5)
-        bash ${BSP}/set-theme  'Arch-red.png' 'black-red' 'SIth Empire' 'Red-Black' 'Black-and-red' 'Blade' 'BlackRedBAr'
+        bash ${BSP}/set-theme  'Arch-red.png' 'black-red' 'SIth Empire' 'Red-Black' 'Black-and-red' 'BlackRed' 'black-red'
         ;;
     $theme_6)
-        bash ${BSP}/set-theme  'rick.jpg' 'rick' 'Rick' 'Zafiro' 'Vimix-dark' 'Rick'
+        bash ${BSP}/set-theme  'rick.jpg' 'rick' 'Rick' 'Zafiro' 'Vimix-dark' 'Rick' 'rick'
         ;;
     $theme_7)
-        bash ${BSP}/set-theme  'hackthebox.jpg' 'HackTheBox' 'Green' 'Green-Color-Icons' 'Hack-C' 'HackTheBox'
+        bash ${BSP}/set-theme  'hackthebox.jpg' 'HackTheBox' 'Tokyonight-Dark-BL' 'Green-Icons' 'Hack-C' 'HackTheBox' 'HackTheBox'
         ;;
     $theme_8)
-        bash ${BSP}/set-theme  'hacktheplanet.png' 'BlackArch' 'BlackArch-theme' 'BlackArch-icons' 'BlackArch-cursor' 'BlackArch' 'BlackArch'
+        bash ${BSP}/set-theme  'hacktheplanet.png' 'BlackArch' 'BlackArch-theme' 'Blue-Icons' 'BlackArch-cursor' 'BlackArch' 'BlackArch'
         ;;
     $theme_9)
-        bash ${BSP}/set-theme  'neon4.jpg' 'neon' 'neon-theme' 'neon-icon' 'neon-cursor2' 'Neon' 'neon'
+        bash ${BSP}/set-theme  'women.jpg' 'neon' 'Tokyonight-Dark-BL' 'neon-icon' 'WineTrix' 'Neon' 'neon'
         ;;
     $theme_10)
-        bash ${BSP}/set-theme  'axyl.jpg' 'axyl' 'Qogir-dark' 'Qogir-dark' 'phinger-cursors' 'AXYL' 'axylBar'
+        bash ${BSP}/set-theme  'JScoffee.jpg' 'JScoffee' 'everblush' 'oomox-Everblush-icons' 'Hack-C' 'ChadWM' 'JScoffee'
         ;;
     $theme_11)
         bash ${BSP}/set-theme  'amarena.jpg' 'Amarena' 'amarena' 'Elena-dark-icons' 'neon-cursor2' 'Amarena' 'Amarena'
         ;;
     $theme_12)
-        bash ${BSP}/set-theme  'tokyo-night31.png' 'JapaneseCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'phinger-cursors' 'JapaneseCity' 'JapaneseCityBar'
+        bash ${BSP}/set-theme  'tokyo-night31.png' 'JapaneseCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'phinger-cursors' 'JapaneseCity' 'JapaneseCity'
         ;;
 esac

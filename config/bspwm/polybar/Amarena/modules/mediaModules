@@ -9,16 +9,10 @@
 
 type = internal/pulseaudio
 
-; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
-; If not, uses default sink
 sink = alsa_output.pci-0000_12_00.3.analog-stereo
 
-; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
-; Default: true
 use-ui-max = false
 
-; Interval for volume increase/decrease (in percent points)
-; Default: 5
 interval = 5
 
 
@@ -29,14 +23,14 @@ format-muted = <label-muted>
 format-muted-background = ${color.BACKGROUND}
 format-muted-prefix = 婢
 format-muted-prefix-font = 3
-format-muted-prefix-foreground = ${color.RED}
+format-muted-prefix-foreground = #E40D0D
 
 label-volume = %percentage%%
 label-volume-font = 4
 label-volume-foreground = #aa94CF95
 label-muted = " Mute"
 muted-label-font = 5
-label-muted-foreground = #aa94CF95
+label-muted-foreground = #E40D0D
 
 ramp-volume-0 = 奄
 ramp-volume-1 = 奄
