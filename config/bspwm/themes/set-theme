@@ -35,8 +35,9 @@ set_style () {
 	zz
 	
 	# ---------------------------- Apply RGB Colors For Keyboard ----------------------------
-	
-	## removed this config as it;s only for Acer Predator Helios Laptops ##
+	KeyProfileColor -$6
+	echo "#!/bin/bash
+          KeyProfileColor -$6" > ~/.config/predator/keyColorProfileForStartup
 	
 		
 	# ---------------------------- launch a custom Polybar if it exists ----------------------------
