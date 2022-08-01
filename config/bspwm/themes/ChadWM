@@ -1,0 +1,104 @@
+! -----------------------------------------------------------------------------
+! 
+! Copyright (C) Mahmoud Mohamed (Ozil) <https://github.com/mmsaeed509>
+! LICENSE © GNU-GPL3
+! 
+! ChadWM color scheme
+! -----------------------------------------------------------------------------
+
+
+
+*background: #1E222A
+*foreground: #ABB2BF
+
+*color0:  #4d5361
+*color8:  #4d5361
+
+*color1:  #E06C75
+*color9:  #E06C75
+
+*color2:  #98C379
+*color10: #98C379
+
+*color3:  #E5C07B
+*color11: #E5C07B
+
+*color4:  #61AFEF
+*color12: #61AFEF
+
+*color5:  #C678DD
+*color13: #C678DD
+
+*color6:  #56B6C2
+*color14: #56B6C2
+
+*color7:  #ABB2BF
+*color15: #ABB2BF
+
+
+
+
+/* 
+
+*background: #101419
+*foreground: #b6beca
+
+*color0:  #384148
+*color8:  #1c252c
+
+*color1:  #fc7b81
+*color9:  #e05f65
+
+*color2:  #94f7c5
+*color10: #78dba9
+
+*color3:  #ffeba6
+*color11: #f1cf8a
+
+*color4:  #8cc1ff
+*color12: #70a5eb
+
+*color5:  #e2a6ff
+*color13: #c68aee
+
+*color6:  #90daff
+*color14: #74bee9
+
+*color7:  #fafdff
+*color15: #dee1e6
+
+*/
+
+
+/* EFO */
+
+/* 
+
+*background: #1E222A
+*foreground: #ABB2BF
+
+*color0:  #282C34
+*color8:  #16181c
+
+*color1:  #E06C75
+*color9:  #853a40
+
+*color2:  #98C379
+*color10: #3f592d
+
+*color3:  #E5C07B
+*color11: #78643e
+
+*color4:  #61AFEF
+*color12: #3b6c94
+
+*color5:  #C678DD
+*color13: #5f376b
+
+*color6:  #56B6C2
+*color14: #2d646b
+
+*color7:  #ABB2BF
+*color15: #70757d 
+
+*/

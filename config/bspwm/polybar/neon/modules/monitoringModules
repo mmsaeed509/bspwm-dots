@@ -25,15 +25,15 @@ format-full = <label-full>
 format-full-prefix = " "
 format-full-prefix-font = 5
 format-full-prefix-foreground = ${color.BACKGROUND}
-format-full-prefix-background = ${color.MAGENTA}
+format-full-prefix-background = #ED005F
 
 label-charging = "%percentage%% | "
 label-discharging = "%percentage%% | "
 label-full = "%percentage%% | "
 
-label-charging-background = ${color.MAGENTA}
-label-discharging-background = ${color.MAGENTA}
-label-full-background = ${color.MAGENTA}
+label-charging-background = #ED005F
+label-discharging-background = #ED005F
+label-full-background = #ED005F
 
 label-charging-foreground = ${color.BACKGROUND}
 label-discharging-foreground = ${color.BACKGROUND}
@@ -52,7 +52,7 @@ ramp-capacity-4 = " "
 ramp-capacity-font = 5
 
 ramp-capacity-foreground = ${color.BACKGROUND}
-ramp-capacity-background = ${color.MAGENTA}
+ramp-capacity-background = #ED005F
 
 animation-charging-0 = " "
 animation-charging-1 = " "
@@ -63,7 +63,7 @@ animation-charging-4 = " "
 animation-charging-font = 5
 
 animation-charging-foreground = ${color.BACKGROUND}
-animation-charging-background = ${color.MAGENTA}
+animation-charging-background = #ED005F
 animation-charging-framerate = 750
 
 
@@ -79,7 +79,7 @@ format = <label>
 format-prefix =  
 format-font = 5
 format-foreground = #000B1E
-format-background = #00B4FF
+format-background = #DD2BF7
 
 label = "%{A1:stacer &:} %percentage%% | %{A}"
 label-font = 3
@@ -118,9 +118,7 @@ exec = ~/.config/bspwm/polybar/neon/modules/heatSensors
 interval = 0.5
 click-left = xsensors
 format-foreground = ${color.BLUE}
-format-background = #00B4FF
-; format-font = 5 
-; #000B1E
+format-background = #DD2BF7
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -135,6 +133,6 @@ label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e
 
 format-font = 4
 label-foreground = #000B1E
-label-background = #00B4FF
+label-background = #DD2BF7
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

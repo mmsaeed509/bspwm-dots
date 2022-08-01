@@ -25,14 +25,11 @@ format-volume-foreground = ${color.teal}
 format-muted = <label-muted>
 format-muted-background = ${color.mb}
 format-muted-prefix = 婢
-; format-muted-prefix-font = 3
 format-muted-prefix-foreground = ${color.red}
 
 label-volume = %percentage%%
-; label-volume-font = 4
 label-muted = " Mute"
-; muted-label-font = 5
-label-muted-foreground = #757575
+label-muted-foreground = ${color.red}
 
 ramp-volume-0 = 奄
 ramp-volume-1 = 奄
@@ -44,7 +41,6 @@ ramp-volume-6 = 墳
 ramp-volume-7 = 墳
 ramp-volume-8 = 墳
 ramp-volume-9 = 墳
-; ramp-volume-font = 3
 ramp-volume-foreground = ${color.BLUE}
 
 ramp-headphones-0 = 

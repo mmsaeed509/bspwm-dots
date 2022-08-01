@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
-## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
-# added Thunar/removed Pcmanfm by Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-# 
+#
+# Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# LICENSE © GNU-GPL3
+#
 
 
 DIR="$HOME/.config/bspwm"
@@ -11,15 +11,16 @@ DIR="$HOME/.config/bspwm"
 rofi_command="rofi -theme $DIR/rofi/themes/asroot.rasi"
 
 # Apps
-terminal=" Alacritty"
-files=" Thunar"
-editor=" Geany"
-clifm=" Ranger"
-lpad=" Leafpad"
-vim=" Vim"
+terminal=" Alacritty"
+files=" Thunar"
+editor=" Geany"
+clifm=" Ranger"
+lpad=" Leafpad"
+vim=" Vim"
+caja=" Caja"
 
 # Variable passed to rofi
-options="$terminal\n$files\n$editor\n$clifm\n$lpad\n$vim"
+options="$terminal\n$files\n$editor\n$clifm\n$lpad\n$vim\n$caja"
 
 # Functions
 
@@ -43,6 +44,8 @@ case $chosen in
     $vim)
         apps_as_root 'alacritty --class alacritty-float,alacritty-float --config-file /root/.config/bspwm/alacritty/alacritty.yml -e vim'
         ;;
+    $caja)
+        apps_as_root caja
+        ;;
+
 esac
-
-

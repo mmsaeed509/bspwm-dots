@@ -1,0 +1,115 @@
+#
+# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# LICENSE © GNU-GPL3
+#
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+;; Global WM Settings
+
+
+[global/wm]
+margin-bottom = 0
+margin-top = 0
+
+include-file = ~/.config/bspwm/polybar/JScoffee/system
+include-file = ~/.config/bspwm/polybar/colors
+
+# contains brightness, workspaces, Date, etc.... #
+include-file = ~/.config/bspwm/polybar/JScoffee/modules/modules
+
+# contains Music, microphone, etc.... #
+include-file = ~/.config/bspwm/polybar/JScoffee/modules/mediaModules
+
+# contains CPU, Temperature, etc.... #
+include-file = ~/.config/bspwm/polybar/JScoffee/modules/monitoringModules
+
+# contains the separators (e.g  , | , <| ,  ,etc..) #
+include-file = ~/.config/bspwm/polybar/JScoffee/modules/separatorsModules
+
+[bar/main]
+monitor = 
+monitor-strict = false
+override-redirect = false
+
+bottom = true
+fixed-center = true
+
+width = 96%
+height = 30
+
+offset-x = 2%
+offset-y = 5
+
+background = ${color.BACKGROUND}
+foreground = ${color.FOREGROUND}
+
+radius-top    = 2
+radius-bottom = 2
+
+line-size = 2
+line-color = ${color.BLUE}
+
+border-size = 5
+border-color = ${color.BACKGROUND}
+
+padding = 0
+module-margin-left = 0
+module-margin-right = 0
+
+
+font-0 = "Iosevka Nerd Font:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "google\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
+
+modules-left   = space menu sep mod pipL bspwm pipR notification-github sep updates-pacman 
+modules-center = mpd
+modules-right  = themes Dspace xkeyboard space battery space cpu cpuTemp space volume backlight space network space date
+ 
+separator =
+spacing = 0
+
+dim-value = 1.0
+
+wm-name = bspwm
+locale = 
+
+tray-position = right
+tray-detached = false
+tray-maxsize = 16
+tray-transparent = false
+tray-background = ${color.BACKGROUND}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+tray-scale = 1.0
+
+wm-restack = bspwm
+
+enable-ipc = true
+
+; bspwm
+scroll-up = bspc desktop -f prev.local
+scroll-down = bspc desktop -f next.local
+
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+
+screenchange-reload = false
+
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

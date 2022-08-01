@@ -77,10 +77,19 @@ content-padding = 2
 type = custom/text
 content = "%{T5}%{T-}"
 content-background = ${color.background}
-content-foreground = ${color.MAGENTA}
+content-foreground = #DD2BF7
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+[module/LDB2]
+type = custom/text
+
+content = "%{T5}%{T-}"
+
+content-background = ${color.background}
+content-foreground = #ED005F
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/LDD]
 type = custom/text
@@ -144,7 +153,18 @@ type = custom/text
 content = "%{T5}%{T-}"
 
 content-background = ${color.background}
-content-foreground = ${color.MAGENTA}
+content-foreground = #DD2BF7
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RDD2]
+type = custom/text
+
+;content = "%{T5}█%{T-}"
+content = "%{T5}%{T-}"
+
+content-background = ${color.background}
+content-foreground = #ED005F
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

@@ -60,57 +60,8 @@ launch_bar() {
 		
 	if [[ ! `pidof polybar` ]]; then
 		
-		if [[ $Bar == "axylBar" ]]
-			then
-				pkill polybar
-				polybar -q bar -c "$DIR"/AXYL/config &
-		
-		elif [[ $Bar == "JapaneseCityBar" ]]
-			then 
-				pkill polybar
-				polybar -q main -c "$DIR"/JapaneseCity/config &          
-								
-		elif [[ $Bar == "BlackRedBAr" ]]
-			then 
-				pkill polybar
-				polybar -q main -c "$DIR"/black-red/config &
-
-		elif [[ $Bar == "defaultBar" ]]
-			then
-				pkill polybar
-				polybar -q main -c "$DIR"/default/config &
-
-		elif [[ $Bar == "Amarena" ]]
-			then
-				pkill polybar
-				polybar -q main -c "$DIR"/Amarena/config &
-
-		elif [[ $Bar == "Emilia" ]]
-			then
-				pkill polybar
-				polybar -q main -c "$DIR"/Emilia/config &
-
-		elif [[ $Bar == "BlackArch" ]]
-			then
-				pkill polybar
-				polybar -q main -c "$DIR"/BlackArch/config &
-
-		elif [[ $Bar == "Jungles" ]]
-			then
-				pkill polybar
-				polybar -q main -c "$DIR"/Jungles/config &
-
-		elif [[ $Bar == "neon" ]]
-			then
-				pkill polybar
-				polybar -q main -c "$DIR"/neon/config &
-
-		elif [[ $Bar == "HackBar" ]]
-			then
-				pkill polybar
-				polybar -q main -c "$DIR"/hack/config &
-		fi
-	
+			pkill polybar
+			polybar -q main -c "$DIR"/"$Bar"/config &
 
 	else
 		polybar-msg cmd restart

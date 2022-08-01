@@ -5,6 +5,43 @@
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+[module/volume]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+use-ui-max = false
+
+interval = 5
+
+format-volume = <ramp-volume> <label-volume>
+
+format-muted = <label-muted>
+format-muted-prefix = 婢
+format-muted-prefix-font = 2
+format-muted-prefix-foreground = #757575
+
+label-volume = %percentage%%
+label-muted = " Mute"
+label-muted-foreground = #757575
+
+ramp-volume-0 = 奄
+ramp-volume-1 = 奄
+ramp-volume-2 = 奄
+ramp-volume-3 = 奔
+ramp-volume-4 = 奔
+ramp-volume-5 = 奔
+ramp-volume-6 = 墳
+ramp-volume-7 = 墳
+ramp-volume-8 = 墳
+ramp-volume-9 = 墳
+ramp-volume-font = 2
+ramp-volume-foreground = ${color.BLUE}
+
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 [module/mpd]
 type = internal/mpd
 

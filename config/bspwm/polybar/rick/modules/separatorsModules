@@ -102,6 +102,17 @@ content-foreground = ${color.YELLOW}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+[module/LDmpd2]
+type = custom/text
+
+;content = "%{T5}(|%{T-}"
+content = "%{T5}(%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground = #57C5D1
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 [module/LDmod]
 type = custom/text
 
@@ -156,6 +167,17 @@ content = "%{T5})%{T-}"
 
 content-background = ${color.BACKGROUND}
 content-foreground = ${color.YELLOW}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RDmpd2]
+type = custom/text
+
+content = "%{T5})%{T-}"
+;content = "%{T5}|)%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground = #57C5D1
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

@@ -1,0 +1,161 @@
+#!/bin/bash
+
+#
+# Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# LICENSE © GNU-GPL3
+#
+
+# ---------------------------- No. 1 -- > Red Jungles Theme ----------------------------
+
+if [[ "$1" == "-RedJungles" ]]
+then
+	
+	facer_rgb.py -m 0 -z 1 -cR 255 -cB 0 -cG 0 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 2 -cR 255 -cB 0 -cG 0 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 3 -cR 255 -cB 0 -cG 0 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 4 -cR 255 -cB 0 -cG 0 -b 100
+	
+# ---------------------------- No. 2 -- > Emilia Theme ----------------------------
+
+elif [[ "$1" == "-Emilia" ]]
+then
+	
+	facer_rgb.py -m 0 -z 1 -cR 175 -cB 255 -cG 0 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 2 -cR 175 -cB 255 -cG 0 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 3 -cR 175 -cB 255 -cG 0 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 4 -cR 175 -cB 255 -cG 0 -b 100
+	
+	
+# ---------------------------- No. 3 -- > ChadWM Theme ----------------------------
+
+elif [[ "$1" == "-ChadWM" ]]
+then
+	
+	facer_rgb.py -m 0 -z 1 -cR 19 -cB 129 -cG 255 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 2 -cR 19 -cB 129 -cG 255 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 3 -cR 19 -cB 129 -cG 255 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 4 -cR 19 -cB 129 -cG 255 -b 100
+	
+# ---------------------------- No. 4 -- > Hack Theme ----------------------------
+
+elif [[ "$1" == "-Hack" ]]
+then
+	
+	facer_rgb.py -m 0 -z 1 -cR 4 -cB 181 -cG 172 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 2 -cR 4 -cB 181 -cG 172 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 3 -cR 4 -cB 181 -cG 172 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 4 -cR 4 -cB 181 -cG 172 -b 100
+
+# ---------------------------- No. 5 -- > BlackRed Theme ----------------------------
+
+elif [[ "$1" == "-BlackRed" ]]
+then
+	
+	facer_rgb.py -m 0 -z 1 -cR 255 -cB 0 -cG 0 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 2 -cR 255 -cB 0 -cG 0 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 3 -cR 255 -cB 0 -cG 0 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 4 -cR 255 -cB 0 -cG 0 -b 100
+
+# ---------------------------- No. 6 -- > Rick Theme ----------------------------
+
+elif [[ "$1" == "-Rick" ]]
+then
+	
+	facer_rgb.py -m 0 -z 1 -cR 77 -cB 200 -cG 247 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 2 -cR 77 -cB 200 -cG 247 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 3 -cR 77 -cB 200 -cG 247 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 4 -cR 77 -cB 200 -cG 247 -b 100
+
+# ---------------------------- No. 7 -- > Hack The Box Theme ----------------------------
+
+elif [[ "$1" == "-HackTheBox" ]]
+then
+	
+	facer_rgb.py -m 0 -z 1 -cR 0 -cB 0 -cG 255 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 2 -cR 0 -cB 0 -cG 255 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 3 -cR 0 -cB 0 -cG 255 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 4 -cR 0 -cB 0 -cG 255 -b 100
+
+# ---------------------------- No. 8 -- > BlackArch Theme ----------------------------
+
+elif [[ "$1" == "-BlackArch" ]]
+then
+	
+	facer_rgb.py -m 0 -z 1 -cR 0 -cB 255 -cG 0 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 2 -cR 0 -cB 255 -cG 0 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 3 -cR 0 -cB 255 -cG 0 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 4 -cR 0 -cB 255 -cG 0 -b 100
+
+# ---------------------------- No. 9 -- > Neon Theme ----------------------------
+
+elif [[ "$1" == "-Neon" ]]
+then
+
+	sleep 0.3
+	facer_rgb.py -m 2 -b 100 -s 9
+
+# ---------------------------- No. 10 -- > AXYL Theme ----------------------------
+
+elif [[ "$1" == "-AXYL" ]]
+then
+
+	facer_rgb.py -m 0 -z 1 -cR 0 -cB 255 -cG 0 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 2 -cR 0 -cB 127 -cG 0 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 3 -cR 255 -cB 127 -cG 93 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 4 -cR 255 -cB 127 -cG 93 -b 100
+	
+# ---------------------------- No. 11 -- > Amarena Theme ----------------------------
+
+elif [[ "$1" == "-Amarena" ]]
+then
+	
+	facer_rgb.py -m 0 -z 1 -cR 148 -cB 149 -cG 207 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 2 -cR 148 -cB 149 -cG 207 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 3 -cR 148 -cB 149 -cG 207 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 4 -cR 148 -cB 149 -cG 207 -b 100
+
+# ---------------------------- No. 12 -- > JapaneseCity Theme ----------------------------
+
+elif [[ "$1" == "-JapaneseCity" ]]
+then
+	
+	facer_rgb.py -m 0 -z 1 -cR 175 -cB 255 -cG 0 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 2 -cR 175 -cB 255 -cG 0 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 3 -cR 175 -cB 255 -cG 0 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 4 -cR 175 -cB 255 -cG 0 -b 100
+	
+fi
+# ------------------------------------------------------------------------------- #
