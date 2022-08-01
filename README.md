@@ -57,11 +57,11 @@
 
   <h3 align="center"> NEW rice :rice: :hot_pepper: 🔥 </h3> 
   
-https://user-images.githubusercontent.com/62524855/182076512-28721e71-e772-4342-bbdb-2804a1587076.mp4
+  https://user-images.githubusercontent.com/62524855/182076512-28721e71-e772-4342-bbdb-2804a1587076.mp4
   
   <h3 align="center"> OLD rice :rice: :hot_pepper: 🔥 </h3> 
   
-  https://user-images.githubusercontent.com/62524855/182076512-28721e71-e772-4342-bbdb-2804a1587076.mp4
+  https://user-images.githubusercontent.com/62524855/179009506-b9ca5188-0409-45db-8f98-e4b1e67bfbc8.mp4
   
   <h3 align="center"> OLDEST rice :rice: :hot_pepper: 🔥 </h3> 
   
