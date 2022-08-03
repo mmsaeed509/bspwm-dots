@@ -205,9 +205,9 @@ rm -rf exodia-themes
 
 <h2 align="center">Available Themes Previews</h2>
 
-|Red Jungles|Emilia|Gruvbox|
+|Red Jungles|Emilia|Chad WM|
 |--|--|--|
-| ![](GIFs/RedJungles.gif) | ![](GIFs/Emilia.gif) | ![](GIFs/Gruvbox.gif) |
+| ![](GIFs/RedJungles.gif) | ![](GIFs/Emilia.gif) | ![](GIFs/ChadWM.gif) |
 
 |Hack|Red and Black|Rick|
 |--|--|--|
@@ -217,9 +217,13 @@ rm -rf exodia-themes
 |--|--|--|
 | ![](GIFs/HackTheBox.gif) | ![](GIFs/BlackArch.gif) | ![](GIFs/Neon.gif) |
 
-|AXYL|Amarena|JapaneseCity|
-|--|--|--|
-| ![](GIFs/AXYL.gif) | ![](GIFs/Amarena.gif) | ![](GIFs/JapaneseCity.gif) |
+|JS coffee|Amarena|
+|--|--|
+| ![](GIFs/JScoffee.gif) | ![](GIFs/Amarena.gif) |
+
+|JapaneseCity|VALORANT|
+|--|--|
+| ![](GIFs/JapaneseCity.gif) | ![](GIFs/VALORANT.gif) |
 
 <!-- Available Themes Previews -->
 
