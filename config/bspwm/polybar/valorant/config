@@ -7,44 +7,45 @@
 
 ;; Global WM Settings
 
+
 [global/wm]
 margin-bottom = 0
 margin-top = 0
 
-include-file = ~/.config/bspwm/polybar/neon/system
-include-file = ~/.config/bspwm/polybar/colors
+include-file = ~/.config/bspwm/polybar/valorant/system
+include-file = ~/.config/bspwm/polybar/valorant/colors
 
 # contains brightness, workspaces, Date, etc.... #
-include-file = ~/.config/bspwm/polybar/neon/modules/modules
+include-file = ~/.config/bspwm/polybar/valorant/modules/modules
 
 # contains Music, microphone, etc.... #
-include-file = ~/.config/bspwm/polybar/neon/modules/mediaModules
+include-file = ~/.config/bspwm/polybar/valorant/modules/mediaModules
 
 # contains CPU, Temperature, etc.... #
-include-file = ~/.config/bspwm/polybar/neon/modules/monitoringModules
+include-file = ~/.config/bspwm/polybar/valorant/modules/monitoringModules
 
 # contains the separators (e.g  , | , <| ,  ,etc..) #
-include-file = ~/.config/bspwm/polybar/neon/modules/separatorsModules
-
+include-file = ~/.config/bspwm/polybar/valorant/modules/separatorsModules
 
 [bar/main]
 monitor = 
 monitor-strict = false
 override-redirect = false
 
-bottom = false
+bottom = true
 fixed-center = true
 
 width = 99%
 height = 27
+
 offset-x = 0.5%
 offset-y = 0.5%
 
 background = ${color.BACKGROUND}
 foreground = ${color.FOREGROUND}
 
-radius-top = 5
-radius-bottom = 5
+radius-top    = 2
+radius-bottom = 2
 
 line-size = 2
 line-color = ${color.BLUE}
@@ -60,15 +61,18 @@ module-margin-right = 0
 font-0 = "Iosevka Nerd Font:size=10;3"
 font-1 = "Iosevka Nerd Font:size=12;3"
 font-2 = "google\-mdi:size=12;3"
-font-3 = "Iosevka:style=bold:"size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
 
-
-
-modules-left = LDmod mod RDmod space LDmod xkeyboard RDmod space space bspwm space space LDmod info-cava RDmod space LDmod themes RDmod
-modules-center = LDmpd space mpd space RDmpd  
-modules-right = LDB updates-pacman cpu cpuTemp RDD space network sep backlight sep volume space LDB2 battery date RDD2
-
+modules-left   = space menu Dspace LD2 mpd RD2 space LD2 mod RD2 space LD5 updates-pacman notification-github RD5 space LD3 network RD3 space sep space xkeyboard
+modules-center = LD5 bspwm RD5
+modules-right  = themes space LD3 battery RD3 space LD cpu cpuTemp LD4 info-cava RD4 volume backlight RD space LD3 date RD3 space sysmenu space
+ 
 separator =
 spacing = 0
 
