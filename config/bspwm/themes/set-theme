@@ -23,6 +23,7 @@ set_style () {
 		sed -i -e "s|Net/ThemeName .*|Net/ThemeName \"$3\"|g" ${HOME}/.xsettingsd
 		sed -i -e "s|Net/IconThemeName .*|Net/IconThemeName \"$4\"|g" ${HOME}/.xsettingsd
 		sed -i -e "s|Gtk/CursorThemeName .*|Gtk/CursorThemeName \"$5\"|g" ${HOME}/.xsettingsd
+		sed -i -e "s|Inherits=.*|Inherits=$5|g" ${HOME}/.icons/default/index.theme
 	else
 		sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=\"$3\"/g" ${HOME}/.gtkrc-2.0
 		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=\"$4\"/g" ${HOME}/.gtkrc-2.0
@@ -36,8 +37,8 @@ set_style () {
 	
 	# ---------------------------- Apply RGB Colors For Keyboard ----------------------------
 	
-	## removed this config as it;s only for Acer Predator Helios Laptops ##
-	
+		## removed this config as it;s only for Acer Predator Helios Laptops ##
+
 		
 	# ---------------------------- launch a custom Polybar if it exists ----------------------------
 

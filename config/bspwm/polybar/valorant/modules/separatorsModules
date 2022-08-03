@@ -1,0 +1,136 @@
+#
+# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# LICENSE © GNU-GPL3
+#
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/space]
+type = custom/text
+content = " "
+content-background = ${color.background}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/Dspace]
+type = custom/text
+content = "  "
+content-background = ${color.background}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/sep]
+type = custom/text
+;content = ◆
+content = 
+
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.YELLOW}
+content-padding = 1
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+##########################
+#       LD modules       #
+##########################
+
+[module/LD]
+type = custom/text
+content = "%{T5}%{T-}"
+content-background = ${color.background}
+content-foreground = #202020
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/LD2]
+type = custom/text
+
+content = "%{T5}%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground = #F06576
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/LD3]
+type = custom/text
+
+content = "%{T5}%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground = #FC4652
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/LD4]
+type = custom/text
+
+content = "%{T5}%{T-}"
+
+content-background = #202020
+content-foreground = #313131
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/LD5]
+type = custom/text
+
+content = "%{T5}%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground = #313131
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+##########################
+#       RD modules       #
+##########################
+
+[module/RD]
+type = custom/text
+
+;content = "%{T5}█%{T-}"
+content = "%{T5}%{T-}"
+
+content-background = ${color.background}
+content-foreground = #202020
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RD2]
+type = custom/text
+
+content = "%{T5}%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground = #F06576
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RD3]
+type = custom/text
+
+content = "%{T5}%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground = #FC4652
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RD4]
+type = custom/text
+
+content = "%{T5}%{T-}"
+
+content-background = #202020
+content-foreground = #313131
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RD5]
+type = custom/text
+
+content = "%{T5}%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground = #313131
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

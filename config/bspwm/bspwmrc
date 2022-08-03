@@ -25,6 +25,10 @@ getcolors
 
 # ------------ Configurations ------------ #
 
+# -------------------- set En & Ar for keyboard --------------------
+# setxkbmap -layout us,ar # change 'us,ar' for your own uses #
+# setxkbmap -option 'grp:alt_shift_toggle'
+
 # Solve java apps issues (e.g. JetBrains IDEs like PyCharm, CLion, etc).
 export _JAVA_AWT_WM_NONREPARENTING=1 
 
