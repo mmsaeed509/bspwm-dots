@@ -73,7 +73,7 @@
 
 |:shamrock: BSPWM|:shamrock: i3WM|
 |--|--|
-| [![](GIFs/view.gif)](https://drive.google.com/file/d/17AhFlv3E8t-pNak883Eoda97DicuXHw6/view?usp=sharing) | ![](GIFs/i3WM.gif) |
+| [![](GIFs/themes.gif)](https://drive.google.com/file/d/17AhFlv3E8t-pNak883Eoda97DicuXHw6/view?usp=sharing) | ![](GIFs/i3WM.gif) |
 
 
 <!-- reviewing themes -->
@@ -226,9 +226,9 @@ sudo ./install_service.sh
 
 <h2 align="center">Available Themes Previews</h2>
 
-|Red Jungles|Emilia|Gruvbox|
+|Red Jungles|Emilia|Chad WM|
 |--|--|--|
-| ![](GIFs/RedJungles.gif) | ![](GIFs/Emilia.gif) | ![](GIFs/Gruvbox.gif) |
+| ![](GIFs/RedJungles.gif) | ![](GIFs/Emilia.gif) | ![](GIFs/ChadWM.gif) |
 
 |Hack|Red and Black|Rick|
 |--|--|--|
@@ -238,9 +238,13 @@ sudo ./install_service.sh
 |--|--|--|
 | ![](GIFs/HackTheBox.gif) | ![](GIFs/BlackArch.gif) | ![](GIFs/Neon.gif) |
 
-|AXYL|Amarena|JapaneseCity|
-|--|--|--|
-| ![](GIFs/AXYL.gif) | ![](GIFs/Amarena.gif) | ![](GIFs/JapaneseCity.gif) |
+|JS coffee|Amarena|
+|--|--|
+| ![](GIFs/JScoffee.gif) | ![](GIFs/Amarena.gif) |
+
+|JapaneseCity|VALORANT|
+|--|--|
+| ![](GIFs/JapaneseCity.gif) | ![](GIFs/VALORANT.gif) |
 
 <!-- Available Themes Previews -->
 
