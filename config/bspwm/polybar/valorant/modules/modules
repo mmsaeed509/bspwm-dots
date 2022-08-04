@@ -27,7 +27,7 @@ format = <ramp><label>
 label-foreground = #FD4756
 label-background = #202020
 
-label = " %percentage%% "
+label = " %percentage%%"
 
 ramp-0 = " "
 ramp-1 = " "
