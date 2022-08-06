@@ -44,8 +44,8 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # 		  # use arandr or xrandr to set monitors config
 # 		  # in my case, i use laptop monitor (eDP1) as Primary display 
 # 		  # and the second monitor (HDMI-1-0) as external display (extended to right)
-# 		  # add your config to this directory  ~/.screenlayout/   ||  If it doesn't exist, create one
-# 		  bash ~/.screenlayout/mainLeftExRight.sh
+# 		  # add your config to this directory  ~/.config/bspwm/bin   ||  If it doesn't exist, create one
+# 		  mainLeftExternalRight
 # fi
 
 # ------------ Dual monitor setup ------------

@@ -36,9 +36,8 @@ set_style () {
 	zz
 	
 	# ---------------------------- Apply RGB Colors For Keyboard ----------------------------
+	## Removed, as It's for Acer Predator Laptops ONLY! ##
 	
-		## removed this config as it;s only for Acer Predator Helios Laptops ##
-
 		
 	# ---------------------------- launch a custom Polybar if it exists ----------------------------
 
