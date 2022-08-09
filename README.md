@@ -162,6 +162,13 @@ chmod +x install_arch_predator_packages
 # install needed packages #
 sudo ./install_arch_predator_packages
 
+# install Predator Sense To control RGB, Fan Speed
+
+wget https://raw.githubusercontent.com/Exodia-OS/exodia-repo/master/x86_64/Predator-Sense-systemd-git-1.0-2-any.pkg.tar.zst
+
+sudo pacman -U Predator-Sense-systemd-git-1.0-2-any.pkg.tar.zst
+
+
 # Copy misc to home #
 cp misc/* ~/
 
