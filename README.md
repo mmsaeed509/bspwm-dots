@@ -40,7 +40,7 @@
  - OS: [**`Exodia OS`**](https://github.com/Exodia-OS)
  - WM: [**`bspwm`**](https://github.com/baskerville/bspwm) , [**`i3WM`**](https://i3wm.org/)
  - Bar: [**`Polybar`**](https://github.com/polybar/polybar)
- - Bar: [**`Widget`**](https://github.com/elkowar/eww)
+ - Widget: [**`EWW`**](https://github.com/elkowar/eww)
  - Compositor: [**`picom`**](https://github.com/yshui/picom)
  - terminal: [**`alacritty`**](https://github.com/alacritty/alacritty)
  - Aapp Launcher: [**`rofi`**](https://github.com/davatorium/rofi)
