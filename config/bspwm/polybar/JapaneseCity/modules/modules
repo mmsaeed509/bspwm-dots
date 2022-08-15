@@ -66,7 +66,6 @@ ramp-9 = 
 ramp-font = 7
 ramp-foreground = ${color.MAGENTA}
 
-
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/bspwm]
@@ -167,7 +166,6 @@ label-font = 4
 label-foreground = ${color.CYAN2}
 label-background = ${color.BGL}
 
-
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 ; If you use both a wired and a wireless network, add both modules in config.
@@ -206,15 +204,10 @@ type = internal/network
 interface = ${system.network_interface}
 
 interval = 1.0
-
-;;ping-interval = 3
-;;udspeed-minwidth = 5
-
 accumulate-stats = true
 unknown-as-up = true
 
 format-connected = <ramp-signal> <label-connected>
-;format-connected = <ramp-signal>
 
 format-disconnected = <label-disconnected>
 format-disconnected-prefix = " "
@@ -231,7 +224,6 @@ ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-font = 3
 ramp-signal-foreground = ${color.CYAN}
-
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

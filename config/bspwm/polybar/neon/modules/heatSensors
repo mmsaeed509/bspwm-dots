@@ -22,7 +22,7 @@ elif [[ "$heatSensors" -le 60 ]]
 # from 60°C to 85°C print -> 
 elif [[ "$heatSensors" -le 85 ]]
 	then
-		echo " %{F#000B1E}%{T4} $heatSensors°C"
+		echo "%{F#000B1E}%{T4} $heatSensors°C"
 
 # from 85°C to +... print ->  
 elif [[ "$heatSensors" -gt 85 ]] 

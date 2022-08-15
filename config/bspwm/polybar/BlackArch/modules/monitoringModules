@@ -82,7 +82,7 @@ format-background = #6FA4F0
 format-foreground = #000000
 
 ; label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e htop &:} %percentage%%%{A}"
-label = "%{A1:stacer &:} %percentage%% | %{A}"
+label = "%{A1:stacer &:} %percentage%% %{A}"
 label-font = 3
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

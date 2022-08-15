@@ -82,7 +82,7 @@ label-song =  "%title% "
 label-song-maxlen = 40
 label-song-ellipsis = true
 
-icon-play = ""
+icon-play = "  "
 icon-play-font = 2
 icon-play-foreground = ${color.GREEN}
 icon-play-background = #353B45
