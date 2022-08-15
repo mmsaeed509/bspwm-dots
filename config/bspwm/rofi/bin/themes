@@ -38,42 +38,42 @@ chosen="$(echo -e "$availableThemes" | $rofi_command -p "Available themes : (13)
 #
 case $chosen in
     $theme_1)
-        bash ${BSP}/set-theme  'BloodJungles.jpg' 'Jungles' 'Blade2' 'Red-Icons' 'ScarleTrix' 'RedJungles' 'Jungles'
+        bash apply-theme  'BloodJungles.jpg' 'Jungles' 'Blade2' 'Red-Icons' 'ScarleTrix' 'RedJungles' 'Jungles'
         ;;
     $theme_2)
-        bash ${BSP}/set-theme  'amilia.jpg' 'Emilia' 'Dracula' 'Elena-dark-icons' 'Rage-Purple-Cursor' 'Emilia' 'Emilia'
+        bash apply-theme  'amilia.jpg' 'Emilia' 'Dracula' 'Elena-dark-icons' 'Rage-Purple-Cursor' 'Emilia' 'Emilia'
         ;;
     $theme_3)
-        bash ${BSP}/set-theme  'chad.png' 'ChadWM' 'Qogir-dark' 'Qogir-dark' 'ManjaTrix' 'ChadWM' 'ChadWM'
+        bash apply-theme  'chad.png' 'ChadWM' 'Qogir-dark' 'Qogir-dark' 'ManjaTrix' 'ChadWM' 'ChadWM'
         ;;
     $theme_4)
-        bash ${BSP}/set-theme  'hack.jpg' 'hack' 'Hack' 'Hack' 'ArchTrix' 'Hack' 'hack'
+        bash apply-theme  'hack.jpg' 'hack' 'Hack' 'Hack' 'ArchTrix' 'Hack' 'hack'
         ;;
     $theme_5)
-        bash ${BSP}/set-theme  'Arch-red.png' 'black-red' 'SIth Empire' 'Red-Black' 'lightSaber-dark' 'BlackRed' 'black-red'
+        bash apply-theme  'Arch-red.png' 'black-red' 'SIth Empire' 'Red-Black' 'lightSaber-dark' 'BlackRed' 'black-red'
         ;;
     $theme_6)
-        bash ${BSP}/set-theme  'rick.jpg' 'rick' 'Rick' 'Zafiro' 'lightSaber' 'Rick' 'rick'
+        bash apply-theme  'rick.jpg' 'rick' 'Rick' 'Zafiro' 'lightSaber' 'Rick' 'rick'
         ;;
     $theme_7)
-        bash ${BSP}/set-theme  'hackthebox.jpg' 'HackTheBox' 'Tokyonight-Dark-BL' 'Green-Icons' 'broodwar' 'HackTheBox' 'HackTheBox'
+        bash apply-theme  'hackthebox.jpg' 'HackTheBox' 'Tokyonight-Dark-BL' 'Green-Icons' 'broodwar' 'HackTheBox' 'HackTheBox'
         ;;
     $theme_8)
-        bash ${BSP}/set-theme  'hacktheplanet.png' 'BlackArch' 'BlackArch-theme' 'Blue-Icons' 'Azenis' 'BlackArch' 'BlackArch'
+        bash apply-theme  'hacktheplanet.png' 'BlackArch' 'BlackArch-theme' 'Blue-Icons' 'Azenis' 'BlackArch' 'BlackArch'
         ;;
     $theme_9)
-        bash ${BSP}/set-theme  'women.jpg' 'neon' 'Tokyonight-Dark-BL' 'neon-icon' 'WineTrix' 'Neon' 'neon'
+        bash apply-theme  'women.jpg' 'neon' 'Tokyonight-Dark-BL' 'neon-icon' 'WineTrix' 'Neon' 'neon'
         ;;
     $theme_10)
-        bash ${BSP}/set-theme  'JScoffee.jpg' 'JScoffee' 'everblush' 'oomox-Everblush-icons' 'ManjaTrix' 'ChadWM' 'JScoffee'
+        bash apply-theme  'JScoffee.jpg' 'JScoffee' 'everblush' 'oomox-Everblush-icons' 'ManjaTrix' 'ChadWM' 'JScoffee'
         ;;
     $theme_11)
-        bash ${BSP}/set-theme  'amarena.jpg' 'Amarena' 'amarena' 'Elena-dark-icons' 'lightSaber' 'Amarena' 'Amarena'
+        bash apply-theme  'amarena.jpg' 'Amarena' 'amarena' 'Elena-dark-icons' 'lightSaber' 'Amarena' 'Amarena'
         ;;
     $theme_12)
-        bash ${BSP}/set-theme  'tokyo-night31.png' 'JapaneseCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'JapaneseCity'
+        bash apply-theme  'tokyo-night31.png' 'JapaneseCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'JapaneseCity'
         ;;
     $theme_13)
-        bash ${BSP}/set-theme  'valorant.jpg' 'valorant' 'Tokyonight-Dark-B' 'Red-Black' 'Rage-Gothic' 'RedJungles' 'valorant'
+        bash apply-theme  'valorant.jpg' 'valorant' 'Tokyonight-Dark-B' 'Red-Black' 'Rage-Gothic' 'RedJungles' 'valorant'
         ;;
 esac

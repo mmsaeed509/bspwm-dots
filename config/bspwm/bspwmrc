@@ -7,6 +7,7 @@
 
 # Environtment path
 export PATH="${PATH}:$HOME/.config/bspwm/bin"
+
 # Get colors from .Xresources 
 xrdb ~/.Xresources
 getcolors() {
@@ -24,6 +25,7 @@ getcolors() {
 getcolors
 
 # ------------ Configurations ------------ #
+
 
 # -------------------- set En & Ar for keyboard --------------------
 # setxkbmap -layout us,ar # change 'us,ar' for your own uses #
@@ -44,8 +46,13 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # 		  # use arandr or xrandr to set monitors config
 # 		  # in my case, i use laptop monitor (eDP1) as Primary display 
 # 		  # and the second monitor (HDMI-1-0) as external display (extended to right)
-# 		  # add your config to this directory  ~/.config/bspwm/bin   ||  If it doesn't exist, create one
+# 		  # add your config to this directory `~/.config/bspwm/bin/` , If it doesn't exist, create one
+		  
+		  
 # 		  mainLeftExternalRight
+# 		  # mainDownExternaUp
+
+		  
 # fi
 
 # ------------ Dual monitor setup ------------
@@ -212,14 +219,7 @@ bspc rule -a gwenview state=floating follow=on focus=on
 # ------------ Autostart
 
 # Kill if already running
-killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager
-
-# Lauch notification daemon
-dunst \
--geom "280x50-10+42" -frame_width "1" -font "Iosevka Custom 9" \
--lb "$BACKGROUND" -lf "$FOREGROUND" -lfr "$BLUE" \
--nb "$BACKGROUND" -nf "$FOREGROUND" -nfr "$BLUE" \
--cb "$BACKGROUND" -cf "$RED" -cfr "$RED" &
+killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager bspc
 
 # Lauch xsettingsd daemon
 xsettingsd &
@@ -257,3 +257,5 @@ bspcomp
 bspbar
 bspfloat &
 
+# Lauch notification daemon
+dunst &

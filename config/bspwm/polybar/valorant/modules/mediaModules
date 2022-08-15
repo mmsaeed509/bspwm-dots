@@ -49,10 +49,6 @@ ramp-headphones-1 = 
 [module/mpd]
 type = internal/mpd
 
-;;host = 127.0.0.1
-;;port = 6600
-;;password = mysecretpassword
-
 interval = 2
 
 format-online = <label-song> <icon-prev> <toggle> <icon-next>
@@ -92,7 +88,6 @@ icon-prev-foreground = ${color.BACKGROUND}
 icon-next = "怜"
 icon-next-font = 2
 icon-next-foreground = ${color.BACKGROUND}
-
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

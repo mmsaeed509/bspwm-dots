@@ -36,8 +36,8 @@ set_style () {
 	zz
 	
 	# ---------------------------- Apply RGB Colors For Keyboard ----------------------------
-	## Removed, as It's for Acer Predator Laptops ONLY! ##
 	
+	## Removed, as It's for Acer Predator Laptops ONLY! ##
 		
 	# ---------------------------- launch a custom Polybar if it exists ----------------------------
 
