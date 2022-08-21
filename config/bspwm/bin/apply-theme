@@ -1,9 +1,22 @@
 #!/usr/bin/env bash
 
-#
-# Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-# LICENSE © GNU-GPL3
-#
+##########################################################################################################
+#																										 
+#    Copyright © 2022 To Cyb3rTh1eveZ																	 
+#																										 
+#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+#																										 
+#																										 
+#																										 
+#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+#    LICENSE © GNU-GPL3																					 
+#																										 
+##########################################################################################################
 
 ## paths
 CFG="$HOME/.config"
@@ -12,6 +25,14 @@ XRES="$HOME/.Xresources.d"
 
 ## Set Style
 set_style () {
+
+	# ---------------------------- launch a custom Polybar if it exists ----------------------------
+
+	echo "$7">~/.config/bspwm/selectedThemeName
+
+	# notify 
+	bash ~/.config/bspwm/notify/notify
+
 	# apply wallpaper
 	feh --bg-fill /usr/share/backgrounds/${1}
 	
@@ -39,11 +60,6 @@ set_style () {
 	KeyProfileColor -$6
 	echo "#!/bin/bash
           KeyProfileColor -$6" > "$BSP"/bin/keyColorProfileForStartup
-	
-		
-	# ---------------------------- launch a custom Polybar if it exists ----------------------------
-
-		echo "$7">~/.config/bspwm/selectedThemeName
 
 	# ---------------------------- set background for i3look based on the selected theme ---------------------------- #
 	echo "$1">~/.config/bspwm/i3lockBackground

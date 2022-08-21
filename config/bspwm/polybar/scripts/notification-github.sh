@@ -1,6 +1,6 @@
 #!/bin/sh
 
-USER="userName"
+USER="mmsaeed509"
 # You can get your Personal access tokens from here : https://github.com/settings/tokens #
 TOKEN="personalAccessTokens"
 

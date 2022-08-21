@@ -1,4 +1,18 @@
-/* reconfigured Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509> <> */
+/* 
+
+    Copyright © 2022 To Cyb3rTh1eveZ																	 
+
+     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+
+    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+    LICENSE © GNU-GPL3
+
+ */
 
 configuration {
     location: 						0;
@@ -54,7 +68,7 @@ entry {
     horizontal-align:               0;
     background-color:             	@selected;
     text-color: 					@background;
-    placeholder-color:              @FG;
+    placeholder-color:              @background;
     placeholder:                    " Search... ";
     padding:    					6px ;
     border: 						2px ;
