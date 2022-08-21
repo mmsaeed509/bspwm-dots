@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+
+##########################################################################################################
+#																										 
+#    Copyright © 2022 To Cyb3rTh1eveZ																	 
+#																										 
+#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+#																										 
+#																										 
+#																										 
+#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+#    LICENSE © GNU-GPL3																					 
+#																										 
+##########################################################################################################
+
+# get theme name #
+PICTURE_NAME=$(head ~/.config/bspwm/selectedThemeName)
+
+# PATH
+PICTURE="$HOME/.config/bspwm/notify"
+
+THEME_NAME=$PICTURE_NAME
+
+if [ "$PICTURE_NAME" == "Jungles" ]
+    then
+        THEME_NAME="Red Jungles"
+
+elif [ "$PICTURE_NAME" == "ChadWM" ]
+     then
+         THEME_NAME="Chad WM"
+
+elif [ "$PICTURE_NAME" == "hack" ]
+     then
+         THEME_NAME="Hack"
+
+elif [ "$PICTURE_NAME" == "black-red" ]
+     then
+         THEME_NAME="Black And Red"
+
+elif [ "$PICTURE_NAME" == "rick" ]
+     then
+         THEME_NAME="Rick"
+
+elif [ "$PICTURE_NAME" == "HackTheBox" ]
+     then
+         THEME_NAME="Hack The Box"
+
+elif [ "$PICTURE_NAME" == "neon" ]
+     then
+         THEME_NAME="Neon"
+
+elif [ "$PICTURE_NAME" == "JScoffee" ]
+     then
+         THEME_NAME="JS coffee"
+
+elif [ "$PICTURE_NAME" == "JapaneseCity" ]
+     then
+         THEME_NAME="Japanese City"
+
+elif [ "$PICTURE_NAME" == "valorant" ]
+     then
+         THEME_NAME="VALORANT"
+
+fi
+
+dunstify -u low --replace=69 -i "$PICTURE/$PICTURE_NAME.png" "Applying $THEME_NAME Theme... "

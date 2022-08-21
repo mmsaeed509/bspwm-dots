@@ -1,9 +1,22 @@
 #!/usr/bin/env bash
 
-#
-# Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-# LICENSE © GNU-GPL3
-#
+##########################################################################################################
+#																										 
+#    Copyright © 2022 To Cyb3rTh1eveZ																	 
+#																										 
+#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+#																										 
+#																										 
+#																										 
+#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+#    LICENSE © GNU-GPL3																					 
+#																										 
+##########################################################################################################
 
 # Environtment path
 export PATH="${PATH}:$HOME/.config/bspwm/bin"
@@ -26,10 +39,9 @@ getcolors
 
 # ------------ Configurations ------------ #
 
-
 # -------------------- set En & Ar for keyboard --------------------
-# setxkbmap -layout us,ar # change 'us,ar' for your own uses #
-# setxkbmap -option 'grp:alt_shift_toggle'
+setxkbmap -layout us,ar # change 'us,ar' for your own uses #
+setxkbmap -option 'grp:alt_shift_toggle'
 
 # Solve java apps issues (e.g. JetBrains IDEs like PyCharm, CLion, etc).
 export _JAVA_AWT_WM_NONREPARENTING=1 
@@ -61,7 +73,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 workspaces() {
 	name=1
 	for monitor in `bspc query -M`; do
-		bspc monitor ${monitor} -n "$name" -d '' '' '' ' ' '' '' '' ''
+		bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '' '' ''
                 # bspc monitor ${monitor} -n "$name" -d '' '' '' ' ' '' '' '' ''
 
 		let name++
