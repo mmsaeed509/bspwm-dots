@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 ##########################################################################################################
 #																										 
 #    Copyright © 2022 To Cyb3rTh1eveZ																	 
@@ -18,58 +16,28 @@
 #																										 
 ##########################################################################################################
 
-# get theme name #
-PICTURE_NAME=$(head ~/.config/bspwm/selectedThemeName)
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;;
+;; System Variables (Edit according to your system)
+;;
+;; Warning : DO NOT DELETE THIS FILE
+;;
+;; Run `ls -1 /sys/class/power_supply/` to list list batteries and adapters.
+;;
+;; Run `ls -1 /sys/class/backlight/` to list available graphics cards.
+;;
+;; Run `ip link | awk '/state UP/ {print $2}' | tr -d :` to get active network interface.
+;;
+;; Polybar Variables For Modules :
+;; card = ${system.graphics_card}
+;; battery = BAT0
+;; adapter = AC
+;; interface = ${system.network_interface}
 
-# PATH
-PICTURE="$HOME/.config/bspwm/notify"
+[system]
+adapter = AC
+battery = BAT0
+graphics_card = intel_backlight
+network_interface = wlan0
 
-THEME_NAME=$PICTURE_NAME
-
-if [ "$PICTURE_NAME" == "Jungles" ]
-    then
-        THEME_NAME="Red Jungles"
-
-elif [ "$PICTURE_NAME" == "ChadWM" ]
-     then
-         THEME_NAME="Chad WM"
-
-elif [ "$PICTURE_NAME" == "hack" ]
-     then
-         THEME_NAME="Hack"
-
-elif [ "$PICTURE_NAME" == "black-red" ]
-     then
-         THEME_NAME="Black And Red"
-
-elif [ "$PICTURE_NAME" == "rick" ]
-     then
-         THEME_NAME="Rick"
-
-elif [ "$PICTURE_NAME" == "HackTheBox" ]
-     then
-         THEME_NAME="Hack The Box"
-
-elif [ "$PICTURE_NAME" == "neon" ]
-     then
-         THEME_NAME="Neon"
-
-elif [ "$PICTURE_NAME" == "JScoffee" ]
-     then
-         THEME_NAME="JS coffee"
-
-elif [ "$PICTURE_NAME" == "JapaneseCity" ]
-     then
-         THEME_NAME="Japanese City"
-
-elif [ "$PICTURE_NAME" == "tokyo" ]
-     then
-         THEME_NAME="Tokoy City"
-
-elif [ "$PICTURE_NAME" == "valorant" ]
-     then
-         THEME_NAME="VALORANT"
-
-fi
-
-dunstify -i "$PICTURE/$PICTURE_NAME.png" "Applying $THEME_NAME Theme... "
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
