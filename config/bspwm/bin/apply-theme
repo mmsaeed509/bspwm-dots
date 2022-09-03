@@ -56,10 +56,6 @@ set_style () {
 	fi
 	zz
 	
-	# ---------------------------- Apply RGB Colors For Keyboard ----------------------------
-	KeyProfileColor -$6
-	echo "#!/bin/bash
-          KeyProfileColor -$6" > "$BSP"/bin/keyColorProfileForStartup
 
 	# ---------------------------- set background for i3look based on the selected theme ---------------------------- #
 	echo "$1">~/.config/bspwm/i3lockBackground

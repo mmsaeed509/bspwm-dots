@@ -40,8 +40,8 @@ getcolors
 # ------------ Configurations ------------ #
 
 # -------------------- set En & Ar for keyboard --------------------
-setxkbmap -layout us,ar # change 'us,ar' for your own uses #
-setxkbmap -option 'grp:alt_shift_toggle'
+# setxkbmap -layout us,ar # change 'us,ar' for your own uses #
+# setxkbmap -option 'grp:alt_shift_toggle'
 
 # Solve java apps issues (e.g. JetBrains IDEs like PyCharm, CLion, etc).
 export _JAVA_AWT_WM_NONREPARENTING=1 
@@ -59,11 +59,8 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # 		  # in my case, i use laptop monitor (eDP1) as Primary display 
 # 		  # and the second monitor (HDMI-1-0) as external display (extended to right)
 # 		  # add your config to this directory `~/.config/bspwm/bin/` , If it doesn't exist, create one
-		  
-		  
+		  		  
 # 		  mainLeftExternalRight
-# 		  # mainDownExternaUp
-
 		  
 # fi
 
@@ -73,10 +70,10 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 workspaces() {
 	name=1
 	for monitor in `bspc query -M`; do
-		bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '' '' ''
-                # bspc monitor ${monitor} -n "$name" -d '' '' '' ' ' '' '' '' ''
-
+		
+    bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '' '' ''       
 		let name++
+
 	done
 }
 

@@ -1,5 +1,7 @@
-## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
-## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+#########################################################################
+# Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509> #
+# LICENSE © GNU-GPL3                                                    #
+#########################################################################
 
 [global]
 monitor = 0
@@ -42,18 +44,19 @@ context = ctrl+shift+period
 
 [urgency_low]
 timeout = 2
-background = "#282C33"
-foreground = "#D8D8D8"
-frame_color = "#30343B"
+background  = "#1A1B26"
+foreground  = "#D4BFFF"
+frame_color = "#73A3DE"
 
 [urgency_normal]
 timeout = 5
-background = "#282C33"
-foreground = "#D8D8D8"
-frame_color = "#30343B"
+background  = "#1A1B26"
+foreground  = "#D4BFFF"
+frame_color = "#73A3DE"
 
 [urgency_critical]
 timeout = 0
-background = "#282C33"
-foreground = "#E06B74"
-frame_color = "#30343B"
+background  = "#1A1B26"
+foreground  = "#D4BFFF"
+frame_color = "#73A3DE"
+

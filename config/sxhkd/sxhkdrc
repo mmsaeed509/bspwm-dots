@@ -1,9 +1,3 @@
-#
-# Copyright (C) 29-April 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
-# Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
-#
-
-
 ##---------- Keybindings for bspwm ----------##
 
 # Terminal (alacritty)
@@ -12,11 +6,11 @@ super + Return
 
 # Terminal (floating)
 super + shift + Return
-	bspterm -f
+	bspterm -float
 
 # Terminal (fullscreen)
 super + t
-	bspterm -s	
+	bspterm -fullscreen
 
 ##---------- Rofi Launcher & Menus ----------##
 
@@ -44,7 +38,7 @@ super + d
 
 
 # Inkdrop ( Markdown Editor)
-super + shift + m
+super + shift + alt + i
 	cd /bin/inkdrop/ && ./inkdrop
 
 # Launch Apps
@@ -62,6 +56,14 @@ super + p
 # Lockscreen
 ctrl + alt + l
     bsplock
+
+# music art
+super + shift + m
+	music --albumArtCover
+
+# udeler
+super + u
+	cd ~/Public/udemy-downloader-gui && npm start
 
 ##---------- System Keys ----------##
 

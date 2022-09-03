@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 ##########################################################################################################
 #																										 
@@ -18,58 +18,28 @@
 #																										 
 ##########################################################################################################
 
-# get theme name #
-PICTURE_NAME=$(head ~/.config/bspwm/selectedThemeName)
+heatSensors=$(sensors | grep -m 1 id | awk '{print substr($4, 2, length($4)-5)}')
 
-# PATH
-PICTURE="$HOME/.config/bspwm/notify"
+# from  0°C to 40°C print ->  
+if [[ "$heatSensors" -le 40 ]] 
+	then
+		# the ' %{T3} ' -> pass font type to polybar config file 
+		# the selected font type is number 3, which is (font-3 = "Iosevka:style=bold:"size=12;3" )
+		echo "%{T4} %{F#D4BFFF}$heatSensors°C"
 
-THEME_NAME=$PICTURE_NAME
+# from 40°C to 60°C print -> 
+elif [[ "$heatSensors" -le 60 ]] 
+	then
+		echo "%{T4} %{F#D4BFFF}$heatSensors°C"
 
-if [ "$PICTURE_NAME" == "Jungles" ]
-    then
-        THEME_NAME="Red Jungles"
+# from 60°C to 85°C print -> 
+elif [[ "$heatSensors" -le 85 ]]
+	then
+		echo "%{T4} %{F#D4BFFF}$heatSensors°C"
 
-elif [ "$PICTURE_NAME" == "ChadWM" ]
-     then
-         THEME_NAME="Chad WM"
-
-elif [ "$PICTURE_NAME" == "hack" ]
-     then
-         THEME_NAME="Hack"
-
-elif [ "$PICTURE_NAME" == "black-red" ]
-     then
-         THEME_NAME="Black And Red"
-
-elif [ "$PICTURE_NAME" == "rick" ]
-     then
-         THEME_NAME="Rick"
-
-elif [ "$PICTURE_NAME" == "HackTheBox" ]
-     then
-         THEME_NAME="Hack The Box"
-
-elif [ "$PICTURE_NAME" == "neon" ]
-     then
-         THEME_NAME="Neon"
-
-elif [ "$PICTURE_NAME" == "JScoffee" ]
-     then
-         THEME_NAME="JS coffee"
-
-elif [ "$PICTURE_NAME" == "JapaneseCity" ]
-     then
-         THEME_NAME="Japanese City"
-
-elif [ "$PICTURE_NAME" == "tokyo" ]
-     then
-         THEME_NAME="Tokoy City"
-
-elif [ "$PICTURE_NAME" == "valorant" ]
-     then
-         THEME_NAME="VALORANT"
-
+# from 85°C to +... print ->  
+elif [[ "$heatSensors" -gt 85 ]] 
+	then
+		# the  ' -n "%{F#FF0008}"  ' -> red font as 85°C to +... is the default warn temperature
+		echo -n "%{T4}%{F#FF0008} %{F#FF0008}$heatSensors°C"
 fi
-
-dunstify -i "$PICTURE/$PICTURE_NAME.png" "Applying $THEME_NAME Theme... "
