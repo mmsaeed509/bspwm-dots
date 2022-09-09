@@ -70,7 +70,7 @@ case $chosen in
         bash apply-theme  'rick.jpg' 'rick' 'Rick' 'Zafiro' 'lightSaber' 'Rick' 'rick'
         ;;
     $theme_7)
-        bash apply-theme  'hackthebox.jpg' 'HackTheBox' 'Tokyonight-Dark-BL' 'Green-Icons' 'broodwar' 'HackTheBox' 'HackTheBox'
+        bash apply-theme  'hackthebox4.jpg' 'HackTheBox' 'Tokyonight-Dark-BL' 'Green-Icons' 'broodwar' 'HackTheBox' 'HackTheBox'
         ;;
     $theme_8)
         bash apply-theme  'hacktheplanet.png' 'BlackArch' 'BlackArch-theme' 'Blue-Icons' 'Azenis' 'BlackArch' 'BlackArch'

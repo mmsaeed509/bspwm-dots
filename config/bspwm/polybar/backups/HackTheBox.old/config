@@ -25,7 +25,7 @@ margin-bottom = 0
 margin-top = 0
 
 include-file = ~/.config/bspwm/polybar/HackTheBox/system
-include-file = ~/.config/bspwm/polybar/HackTheBox/colors
+include-file = ~/.config/bspwm/polybar/colors
 
 # contains brightness, workspaces, Date, etc.... #
 include-file = ~/.config/bspwm/polybar/HackTheBox/modules/modules
@@ -48,17 +48,26 @@ override-redirect = false
 bottom = false
 fixed-center = true
 
-width = 100%
+width = 99%
 height = 27
-offset-x = 0
-offset-y = 0
+offset-x = 0.5%
+offset-y = 0.5%
+
+# width = 100%
+# height = 24
+# offset-x = 0
+# offset-y = 0
+
 
 
 background = ${color.BACKGROUND}
 foreground = ${color.FOREGROUND}
 
-radius-top = 0.0
-cradius-bottom = 0.0
+radius-top = 5
+radius-bottom = 5
+
+# radius-top = 0.0
+# radius-bottom = 0.0
 
 line-size = 2
 line-color = ${color.BLUE}
@@ -74,12 +83,14 @@ module-margin-right = 0
 font-0 = "Iosevka Nerd Font:size=10;3"
 font-1 = "Iosevka Nerd Font:size=12;3"
 font-2 = "google\-mdi:size=12;3"
-font-3 = "Iosevka:style=bold:size=12;3"
+font-3 = "Iosevka:style=bold:"size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
 
-modules-left   = menu space LD bspwm RD space  terminal space PowerShell
-modules-center =  date mpd
-modules-right  = xkeyboard sep cpu cpuTemp network volume backlight battery space mod
+
+
+modules-left = LDmpd LDmod mod RDmod  RDmpd space bspwm space LDmpd  LDmod info-cava RDmod  RDmpd space LDmpd  LDmod themes RDmod  RDmpd sep xkeyboard
+modules-center = LDmpd space mpd space RDmpd  
+modules-right = cpu sep cpuTemp sep network sep volume sep backlight space LDmpd2 LDB battery date RDD RDmpd2
 
 separator =
 spacing = 0

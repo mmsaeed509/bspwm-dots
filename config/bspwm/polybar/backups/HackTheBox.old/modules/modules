@@ -24,7 +24,7 @@ type = custom/text
 content = " NA"
 content-prefix = 
 content-prefix-font = 2
-content-prefix-foreground = ${color.GREEN}
+content-prefix-foreground = ${color.RED}
 content-padding = 0
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -34,11 +34,9 @@ type = internal/xbacklight
 
 card = intel_backlight
 
-format = <ramp><label>
+format = <ramp> <label>
 
-label = " %percentage%%"
-label-foreground = #1947E0
-label-background = #111927
+label = %percentage%%
 
 ramp-0 = 
 ramp-1 = 
@@ -51,8 +49,7 @@ ramp-7 = 
 ramp-8 = 
 ramp-9 = 
 ramp-font = 2
-ramp-foreground = ${color.GREEN}
-ramp-background = #111927
+ramp-foreground = ${color.MAGENTA}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -63,11 +60,9 @@ card = ${system.graphics_card}
 
 enable-scroll = true
 
-format = <ramp><label>
+format = <ramp> <label>
 
-label = " %percentage%%"
-label-foreground = #1947E0
-label-background = #111927
+label = %percentage%%
 
 ramp-0 = 
 ramp-1 = 
@@ -80,8 +75,7 @@ ramp-7 = 
 ramp-8 = 
 ramp-9 = 
 ramp-font = 2
-ramp-foreground = ${color.GREEN}
-ramp-background = #111927
+ramp-foreground = ${color.MAGENTA}
 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -115,32 +109,30 @@ label-monitor = %name%
 
 label-focused = %name%
 label-focused-foreground = ${color.BLUE}
-label-focused-background = #111927
+label-focused-background = ${color.BACKGROUND}
 label-focused-underline = ${color.BLUE}
 label-focused-padding = 0
 
 label-occupied = %name%
 label-occupied-foreground = ${color.GREEN}
-label-occupied-background = #111927
+label-occupied-background = ${color.BACKGROUND}
 ;label-occupied-underline = ${color.GREEN}
 label-occupied-padding = 0
 
 label-urgent = %name%
 label-urgent-foreground = ${color.RED}
-label-urgent-background = #111927
+label-urgent-background = ${color.BACKGROUND}
 label-urgent-underline = ${color.RED}
 label-urgent-padding = 0
 
 label-empty = %name%
 label-empty-foreground = ${color.FOREGROUND}
-label-empty-background = #111927
 label-empty-padding = 0
 
 ; Separator in between workspaces
-label-separator = "  "
+label-separator = " ∙ "
 label-separator-padding = 0
 label-separator-foreground = ${color.ALTBLACK}
-label-separator-background = #111927
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -177,13 +169,13 @@ time-alt = %A, %d %B %Y
 format = <label>
 format-prefix = " "
 format-prefix-font = 3
-format-prefix-foreground = #9FEF00
-; format-prefix-background = #111927
+format-prefix-foreground = ${color.BACKGROUND}
+format-prefix-background = ${color.MAGENTA}
 
-label = " %time% | "
+label = %time%
 label-font = 4
-label-foreground = #9FEF00
-; label-background = #111927
+label-foreground = ${color.BACKGROUND}
+label-background = ${color.MAGENTA}
 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -231,27 +223,24 @@ interval = 1.0
 accumulate-stats = true
 unknown-as-up = true
 
-format-connected = <ramp-signal><label-connected>
+format-connected = <ramp-signal> <label-connected>
 
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = "  "
+format-disconnected-prefix = " "
 format-disconnected-prefix-font = 3
 format-disconnected-prefix-foreground = ${color.RED}
-format-disconnected-prefix-background = #111927
 
-label-connected = "%{A1:nmd &:} %essid%%{A}"
-label-connected-background = #111927
+label-connected = "%{A1:nmd &:}%essid%%{A}"
 label-disconnected = "%{A1:nmd &:}Disconnected%{A}"
-label-disconnected-background = #111927
 
-ramp-signal-0 = " "
-ramp-signal-1 = " "
-ramp-signal-2 = " "
-ramp-signal-3 = " "
-ramp-signal-4 = " "
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
 ramp-signal-font = 3
 ramp-signal-foreground = ${color.CYAN}
-ramp-signal-background = #111927
+
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -298,43 +287,5 @@ content-background = ${color.FOREGROUND}
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/themes
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/menu]
-type = custom/text
-
-;content = ""
-content = ""
-content-font = 5
-;content-font = 3
-content-foreground = #9FEF00
-content-padding = 0
-
-click-left = ~/.config/bspwm/rofi/bin/launcher
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/terminal]
-type = custom/text
-
-content = ""
-content-font = 5
-content-foreground = #9FEF00
-content-padding = 0
-
-click-left = alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/PowerShell]
-type = custom/text
-
-content = ""
-content-font = 5
-content-foreground = #5BB1FD
-content-padding = 0
-
-click-left = alacritty -e pwsh-preview
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
