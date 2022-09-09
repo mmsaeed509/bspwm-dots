@@ -41,37 +41,7 @@ content-padding = 2
 #       LD modules       #
 ##########################
 
-[module/LDB]
-type = custom/text
-content = "%{T5}%{T-}"
-content-background = ${color.background}
-content-foreground = ${color.MAGENTA}
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/LDmpd]
-type = custom/text
-
-;content = "%{T5}(|%{T-}"
-content = "%{T5}(%{T-}"
-
-content-background = ${color.BACKGROUND}
-content-foreground = ${color.FOREGROUND}
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/LDmpd2]
-type = custom/text
-
-;content = "%{T5}(|%{T-}"
-content = "%{T5}(%{T-}"
-
-content-background = ${color.BACKGROUND}
-content-foreground = #9CF542
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/LDmod]
+[module/LD]
 type = custom/text
 
 content = "%{T5}%{T-}"
@@ -80,52 +50,39 @@ content = "%{T5}%{T-}"
 ;content = "%{T5}█%{T-}"
 
 content-background = ${color.BACKGROUND}
-content-foreground =  ${color.FOREGROUND}
+content-foreground =  #111927
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+[module/LD2]
+type = custom/text
+
+content = "%{T5}%{T-}"
+
+;content = "%{T5}%{T-}"
+;content = "%{T5}█%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground =  #1947E0
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 ##########################
 #       RD modules       #
 ##########################
 
-[module/RDD]
-type = custom/text
-
-;content = "%{T5}█%{T-}"
-content = "%{T5}%{T-}"
-
-content-background = ${color.background}
-content-foreground = ${color.MAGENTA}
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/RDmpd]
-type = custom/text
-
-content = "%{T5})%{T-}"
-;content = "%{T5}|)%{T-}"
-
-content-background = ${color.BACKGROUND}
-content-foreground = ${color.FOREGROUND}
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/RDmpd2]
-type = custom/text
-
-content = "%{T5})%{T-}"
-;content = "%{T5}|)%{T-}"
-
-content-background = ${color.BACKGROUND}
-content-foreground = #9CF542
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/RDmod]
+[module/RD]
 type = custom/text
 content = "%{T5}%{T-}"
 content-background = ${color.BACKGROUND}
-content-foreground = ${color.FOREGROUND}
+content-foreground = #111927
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RD2]
+type = custom/text
+content = "%{T5}%{T-}"
+content-background = ${color.BACKGROUND}
+content-foreground = #1947E0
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

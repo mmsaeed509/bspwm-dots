@@ -35,49 +35,50 @@ format-charging-prefix =
 format-discharging = <ramp-capacity><label-discharging>
 
 format-full = <label-full>
-format-full-prefix = "  "
-format-full-prefix-font = 3
-format-full-prefix-foreground = ${color.GREEN}
-format-full-prefix-background = #111927
+format-full-prefix = " "
+format-full-prefix-font = 5
+format-full-prefix-foreground = ${color.BACKGROUND}
+format-full-prefix-background = ${color.MAGENTA}
 
-label-charging = "%percentage%% "
-label-discharging = "%percentage%% "
-label-full = "%percentage%% "
+label-charging = "%percentage%% | "
+label-discharging = "%percentage%% | "
+label-full = "%percentage%% | "
 
-label-charging-background = #111927
-label-discharging-background = #111927
-label-full-background = #111927
+label-charging-background = ${color.MAGENTA}
+label-discharging-background = ${color.MAGENTA}
+label-full-background = ${color.MAGENTA}
 
-; label-charging-foreground = ${color.RED}
-; label-discharging-foreground = ${color.RED}
-; label-full-foreground = ${color.RED}
+label-charging-foreground = ${color.BACKGROUND}
+label-discharging-foreground = ${color.BACKGROUND}
+label-full-foreground = ${color.BACKGROUND}
 
-label-charging-font = 3
-label-discharging-font = 3
-label-full-font = 3
+label-charging-font = 4
+label-discharging-font = 4
+label-full-font = 4
 
-ramp-capacity-0 = "  "
-ramp-capacity-1 = "  "
-ramp-capacity-2 = "  "
-ramp-capacity-3 = "  "
-ramp-capacity-4 = "  "
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
 
-ramp-capacity-font = 3
+ramp-capacity-font = 5
 
-ramp-capacity-foreground = ${color.GREEN}
-ramp-capacity-background = #111927
+ramp-capacity-foreground = ${color.BACKGROUND}
+ramp-capacity-background = ${color.MAGENTA}
 
-animation-charging-0 = "  "
-animation-charging-1 = "  "
-animation-charging-2 = "  "
-animation-charging-3 = "  "
-animation-charging-4 = "  "
+animation-charging-0 = " "
+animation-charging-1 = " "
+animation-charging-2 = " "
+animation-charging-3 = " "
+animation-charging-4 = " "
 
-animation-charging-font = 3
+animation-charging-font = 5
 
-animation-charging-foreground = ${color.GREEN}
-animation-charging-background = #111927
+animation-charging-foreground = ${color.BACKGROUND}
+animation-charging-background = ${color.MAGENTA}
 animation-charging-framerate = 750
+
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -88,15 +89,24 @@ type = internal/cpu
 interval = 0.5
 
 format = <label>
-format-prefix = " "
-format-prefix-font = 4
+;format-prefix = 
+;format-prefix =
+format-prefix =  
+format-prefix-font = 3
 format-prefix-foreground = ${color.YELLOW}
-format-prefix-background = #111927
 
 ; label = "%{A1:alacritty -e stacer &:} %percentage%%%{A}"
-label = "%{A1:stacer &:} %percentage%% %{A}"
+label = "%{A1:stacer &:} %percentage%%%{A}"
 label-font = 3
-label-background = #111927
+
+; Spacing between individual per-core ramps
+;;ramp-coreload-spacing = 1
+;;ramp-coreload-0 = 
+;;ramp-coreload-1 = 
+;;ramp-coreload-2 = 
+;;ramp-coreload-3 = 
+;;ramp-coreload-4 = 
+
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -132,6 +142,5 @@ exec = ~/.config/bspwm/polybar/scripts/heatSensors
 interval = 0.5
 click-left = xsensors
 format-foreground = ${color.BLUE}
-format-background = #111927
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

@@ -17,107 +17,27 @@
 ##########################################################################################################
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+;;
+;; System Variables (Edit according to your system)
+;;
+;; Warning : DO NOT DELETE THIS FILE
+;;
+;; Run `ls -1 /sys/class/power_supply/` to list list batteries and adapters.
+;;
+;; Run `ls -1 /sys/class/backlight/` to list available graphics cards.
+;;
+;; Run `ip link | awk '/state UP/ {print $2}' | tr -d :` to get active network interface.
+;;
+;; Polybar Variables For Modules :
+;; card = ${system.graphics_card}
+;; battery = BAT0
+;; adapter = AC
+;; interface = ${system.network_interface}
 
-;; Global WM Settings
-
-[global/wm]
-margin-bottom = 0
-margin-top = 0
-
-include-file = ~/.config/bspwm/polybar/HackTheBox/system
-include-file = ~/.config/bspwm/polybar/HackTheBox/colors
-
-# contains brightness, workspaces, Date, etc.... #
-include-file = ~/.config/bspwm/polybar/HackTheBox/modules/modules
-
-# contains Music, microphone, etc.... #
-include-file = ~/.config/bspwm/polybar/HackTheBox/modules/mediaModules
-
-# contains CPU, Temperature, etc.... #
-include-file = ~/.config/bspwm/polybar/HackTheBox/modules/monitoringModules
-
-# contains the separators (e.g  , | , <| ,  ,etc..) #
-include-file = ~/.config/bspwm/polybar/HackTheBox/modules/separatorsModules
-
-
-[bar/main]
-monitor = 
-monitor-strict = false
-override-redirect = false
-
-bottom = false
-fixed-center = true
-
-width = 100%
-height = 27
-offset-x = 0
-offset-y = 0
-
-
-background = ${color.BACKGROUND}
-foreground = ${color.FOREGROUND}
-
-radius-top = 0.0
-cradius-bottom = 0.0
-
-line-size = 2
-line-color = ${color.BLUE}
-
-border-size = 5
-border-color = ${color.BACKGROUND}
-
-padding = 0
-module-margin-left = 0
-module-margin-right = 0
-
-
-font-0 = "Iosevka Nerd Font:size=10;3"
-font-1 = "Iosevka Nerd Font:size=12;3"
-font-2 = "google\-mdi:size=12;3"
-font-3 = "Iosevka:style=bold:size=12;3"
-font-4 = "Iosevka Nerd Font:size=18;4"
-
-modules-left   = menu space LD bspwm RD space  terminal space PowerShell
-modules-center =  date mpd
-modules-right  = xkeyboard sep cpu cpuTemp network volume backlight battery space mod
-
-separator =
-spacing = 0
-
-dim-value = 1.0
-
-wm-name = bspwm
-locale = 
-
-tray-position = right
-tray-detached = false
-tray-maxsize = 16
-tray-transparent = false
-tray-background = ${color.BACKGROUND}
-tray-offset-x = 0
-tray-offset-y = 0
-tray-padding = 0
-tray-scale = 1.0
-
-wm-restack = bspwm
-
-enable-ipc = true
-
-; bspwm
-scroll-up = bspc desktop -f prev.local
-scroll-down = bspc desktop -f next.local
-
-[settings]
-throttle-output = 5
-throttle-output-for = 10
-throttle-input-for = 30
-
-screenchange-reload = false
-
-compositing-background = source
-compositing-foreground = over
-compositing-overline = over
-compositing-underline = over
-compositing-border = over
+[system]
+adapter = AC
+battery = BAT0
+graphics_card = intel_backlight
+network_interface = wlan0
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
