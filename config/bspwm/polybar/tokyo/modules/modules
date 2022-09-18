@@ -135,7 +135,7 @@ label-empty-background = ${color.BGL}
 label-empty-padding = 0
 
 ; Separator in between workspaces
-label-separator = " ◆ "
+label-separator = "  "
 label-separator-padding = 0
 label-separator-foreground = ${color.ALTBLACK}
 label-separator-background = ${color.BGL}
@@ -152,14 +152,14 @@ format-padding = 1
 format-font = 4
 
 label-monocle = "Monocle"
-label-tiled = "Tiled"
+label-tiled   = "Tiled"
 
-label-floating = " | Float"
+label-floating    = " | Float"
 label-pseudotiled = " | Pseudo"
-label-fullscreen = " | Full"
+label-fullscreen  = " | Full"
 
-label-locked = " | Locked"
-label-sticky = " | Sticky"
+label-locked  = " | Locked"
+label-sticky  = " | Sticky"
 label-private = " | Private"
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -173,7 +173,7 @@ time = %I:%M %p
 time-alt = %A, %d %B %Y
 
 format = <label>
-format-prefix = " "
+format-prefix = "  "
 format-prefix-font = 3
 format-prefix-foreground = ${color.CYAN2}
 format-prefix-background = ${color.BGL}
@@ -195,16 +195,16 @@ accumulate-stats = true
 unknown-as-up = true
 
 
-label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%%{A}"
+label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%%{A}"
 ; label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
 
 label-connected-background = ${color.BGL}
-label-connected-foreground = #49B9AE
+label-connected-foreground = #56B6C2
 label-connected-font = 4
 
 label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} Offline %{A}"
 label-disconnected-background = ${color.BGL}
-label-disconnected-foreground = #49B9AE
+label-disconnected-foreground = #56B6C2
 label-disconnected-font = 4
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -217,14 +217,14 @@ interval = 1.0
 accumulate-stats = true
 unknown-as-up = true
 
-label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %upspeed%%{A}"
+label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %upspeed% %{A}"
 
-; label-connected-background = #2C3038
+;label-connected-background = #2C3038
 label-connected-foreground = #56B6C2
 label-connected-font = 4
 
 label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} Offline %{A}"
-; label-disconnected-background = #2C3038
+;label-disconnected-background = #2C3038
 label-disconnected-foreground = #56B6C2
 label-disconnected-font = 4
 
@@ -262,14 +262,15 @@ ramp-signal-foreground = ${color.CYAN}
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-label-layout = %layout%
+label-layout = " %layout% "
 label-layout-foreground = #F6768F
 label-layout-font = 4
+label-layout-background = ${color.BGL}
 
-label-indicator-padding = 2
-label-indicator-margin = 1
+label-indicator-padding = 1
+label-indicator-margin = 0
 label-indicator-foreground = #F6768F
-label-indicator-background = ${colors.secondary}
+label-indicator-background = ${color.BGL}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -308,7 +309,8 @@ content = ""
 content-font = 5
 
 ;content-font = 3
-content-foreground = #F6768F
+;content-foreground = #F6768F
+content-foreground = #D06FE8
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/launcher

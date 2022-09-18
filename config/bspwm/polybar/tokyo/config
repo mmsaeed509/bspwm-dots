@@ -87,12 +87,9 @@ font-7 = "Material Design Icons:style=Bold:size=9;3"
 font-8 = "unifont:fontformat=truetype:size=9;3"
 font-9 = "Iosevka:style=bold:size=15;4"
 
-# LD info-cava RD
-
-
-modules-left   = menu space LD mod RD space LD bspwm RD space LD updates-pacman notification-github netDownSpeed RD sep xkeyboard 
+modules-left   = menu space  mod  space LD bspwm RD space LD updates-pacman notification-github netDownSpeed RD space xkeyboard space themes
 modules-center = LD mpd RD  
-modules-right  = themes space LD cpu cpuTemp RD space battery volume space network  LD date LD2 info-cava RD2 backlight RD space sysmenu
+modules-right  = volume space battery network LD cpu cpuTemp date LD2 info-cava RD2 backlight RD space sysmenu
  
 separator =
 spacing = 0

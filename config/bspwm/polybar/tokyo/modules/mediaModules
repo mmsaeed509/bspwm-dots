@@ -38,14 +38,14 @@ format-volume = <ramp-volume> <label-volume>
 
 format-muted = <label-muted>
 format-muted-prefix = 婢
-format-muted-prefix-font = 3
+format-muted-prefix-font = 4
 format-muted-prefix-foreground = ${color.RED}
 
 label-volume = %percentage%%
 label-volume-font = 4
 label-muted = " Mute"
-muted-label-font = 5
-label-muted-foreground = #757575
+muted-label-font = 4
+label-muted-foreground = ${color.RED}
 
 ramp-volume-0 = 奄
 ramp-volume-1 = 奄
@@ -57,11 +57,31 @@ ramp-volume-6 = 墳
 ramp-volume-7 = 墳
 ramp-volume-8 = 墳
 ramp-volume-9 = 墳
-ramp-volume-font = 3
+ramp-volume-font = 4
 ramp-volume-foreground = ${color.BLUE}
 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
+
+; Only applies if <bar-volume> is used
+bar-volume-width = 10
+bar-volume-gradient = false
+
+bar-volume-indicator = 󰮯
+bar-volume-indicator-font = 5
+bar-volume-indicator-foreground = ${color.BLUE}
+
+bar-volume-fill = ━
+bar-volume-fill-font = 4
+bar-volume-foreground-0 = ${color.BLUE}
+bar-volume-foreground-1 = ${color.BLUE}
+bar-volume-foreground-2 = ${color.BLUE}
+bar-volume-foreground-3 = ${color.BLUE}
+bar-volume-foreground-4 = ${color.BLUE}
+
+bar-volume-empty = 
+bar-volume-empty-font = 4
+bar-volume-empty-foreground = ${color.BGL}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -122,8 +142,8 @@ exec =  ~/.config/bspwm/polybar/scripts/cava
 
 format = <label>
 label = "%output%"
-format-background = #121421
-format-foreground = ${color.CYAN2}
+format-background = ${color.CYAN2}
+format-foreground = #2C3038
 tail = true
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

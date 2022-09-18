@@ -104,8 +104,8 @@ content-foreground = ${color.BGL}
 [module/LD2]
 type = custom/text
 content = "%{T5} %{T-}"
-content-background = ${color.BGL}
-content-foreground = #121421
+content-background = #2C3038
+content-foreground = #56B6C2
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -139,9 +139,8 @@ content-foreground = ${color.BGL}
 type = custom/text
 
 content = "%{T5}%{T-}"
-; content-background = ${color.BACKGROUND}
-content-background = ${color.BGL}
-content-foreground = #121421
+content-background = #2C3038
+content-foreground = #56B6C2
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

@@ -87,12 +87,12 @@ format = <label>
 
 ; format-prefix = " "
 format-prefix-font = 4
-format-prefix-foreground = #5EDEA3
+format-prefix-foreground = #56B6C2
 format-prefix-background = ${color.BGL}
 label = "%{A1:stacer &:} %percentage%%%{A} "
 label-font = 4
 label-background = ${color.BGL}
-label-foreground = #5EDEA3
+label-foreground = #56B6C2
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/filesystem]
