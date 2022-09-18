@@ -25,17 +25,17 @@ if [[ "$heatSensors" -le 40 ]]
 	then
 		# the ' %{T3} ' -> pass font type to polybar config file 
 		# the selected font type is number 3, which is (font-3 = "Iosevka:style=bold:"size=12;3" )
-		echo "%{T4} %{F#D4BFFF}$heatSensors°C"
+		echo "%{T4}%{F#56B6C2} $heatSensors°C"
 
 # from 40°C to 60°C print -> 
 elif [[ "$heatSensors" -le 60 ]] 
 	then
-		echo "%{T4} %{F#D4BFFF}$heatSensors°C"
+		echo "%{T4}%{F#56B6C2} $heatSensors°C"
 
 # from 60°C to 85°C print -> 
 elif [[ "$heatSensors" -le 85 ]]
 	then
-		echo "%{T4} %{F#D4BFFF}$heatSensors°C"
+		echo "%{T4}%{F#56B6C2} $heatSensors°C"
 
 # from 85°C to +... print ->  
 elif [[ "$heatSensors" -gt 85 ]] 
