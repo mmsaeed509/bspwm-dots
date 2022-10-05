@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+## Cover art script for ncmpcpp
+
 # SETTINGS
 music_library="$HOME/Music"
 padding_top=3

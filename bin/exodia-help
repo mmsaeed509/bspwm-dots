@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+##########################################################################################################
+#																										 
+#    Copyright © 2022 To Cyb3rTh1eveZ																	 
+#																										 
+#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+#																										 
+#																										 
+#																										 
+#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+#    LICENSE © GNU-GPL3																					 
+#																										 
+##########################################################################################################
+
+# Help App for Exodia OS #
+
+# Data
+_dir='/usr/share/exodia/help'
+# _dir='/home/ozil/Public/Temp/exodia-help/files/help'
+_plug="$RANDOM"
+_dialog_cmd="--html --disable-search --browser --print-uri --uri-handler='firefox --new-tab %s'"
+_uri1="file://${_dir}/about.html"
+_uri2="file://${_dir}/bspwm.html"
+_uri3="file://${_dir}/team.html"
+
+
+# About Dialog #
+yad --plug="$_plug" --tabnum=1 ${_dialog_cmd} \
+	--uri="${_uri1}" &> /tmp/res1 &
+
+# Bspwm Dialog #
+yad --plug="$_plug" --tabnum=2 ${_dialog_cmd} \
+	--uri="${_uri2}" &> /tmp/res2 &
+
+# Team Dialog #
+yad --plug="$_plug" --tabnum=3 ${_dialog_cmd} \
+	--uri="${_uri3}" &> /tmp/res3 &
+
+# Launch Main Window #
+yad --width='1150' --height='695' --borders=0 --center \
+	--title='Exodia Help' \
+	--window-icon=exodia \
+	--no-buttons --no-escape \
+	--notebook --key="$_plug" \
+	--tab="About" --tab="BSPWM" --tab="Developers" \
+	--tab-pos=top --tab-borders=0 --active-tab=1 \
+	--expand --stack

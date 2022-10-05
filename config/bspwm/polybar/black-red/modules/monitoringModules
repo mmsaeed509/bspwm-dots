@@ -1,0 +1,168 @@
+##########################################################################################################
+#																										 
+#    Copyright © 2022 To Cyb3rTh1eveZ																	 
+#																										 
+#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+#																										 
+#																										 
+#																										 
+#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+#    LICENSE © GNU-GPL3																					 
+#																										 
+##########################################################################################################
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+[module/battery]
+type = internal/battery
+
+full-at = 99
+
+battery = ${system.battery}
+adapter = ${system.adapter}
+
+format-charging = <animation-charging><label-charging>
+label-charging = %percentage%%
+format-charging-foreground = #BA0000
+format-charging-background = ${colors.background}
+format-charging-font = 
+
+format-discharging = <ramp-capacity><label-discharging>
+label-discharging = %percentage%%
+format-discharging-foreground = #BA0000
+format-discharging-background = ${colors.background}
+format-discharging-font = 
+
+format-full-prefix = " "
+format-full-prefix-foreground = #BA0000
+format-foreground = #BA0000
+format-background = ${colors.background}
+format-full-prefix-font = 
+label-full = %percentage%%
+label-full-font = 
+
+label-discharging-foreground =#BA0000
+label-discharging-font = 
+
+ramp-capacity-foreground =  #BA0000
+label-charging-foreground = #BA0000
+label-charging-font = 
+
+label-padding = 1
+
+ramp-capacity-0 = " " 
+ramp-capacity-1 = " " 
+ramp-capacity-2 = " " 
+ramp-capacity-3 = " " 
+ramp-capacity-4 = " "
+
+
+animation-charging-0 = " " 
+animation-charging-1 = " " 
+animation-charging-2 = " " 
+animation-charging-3 = " " 
+animation-charging-4 = " "
+
+
+animation-charging-foreground = #BA0000
+animation-charging-framerate = 750
+animation-charging-font = 4
+
+format-charging-padding = 1
+format-discharging-padding = 1
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/cpu]
+type = internal/cpu
+
+interval = 1
+
+format = <label>
+
+format-prefix = " "
+format-prefix-font = 5
+format-prefix-foreground = #BA0000
+format-prefix-background = ${color.BGL}
+label = "%{A1:stacer &:}CPU %percentage%%%{A}"
+label-font = 
+label-background = ${color.BGL}
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/filesystem]
+type = internal/fs
+
+mount-0 = /
+interval = 30
+fixed-values = true
+
+format-mounted = <label-mounted>
+format-mounted-prefix = " "
+format-mounted-prefix-foreground = ${color.background}
+format-mounted-prefix-background = ${color.cyan}
+
+format-unmounted = <label-unmounted>
+format-unmounted-prefix = " "
+format-unmounted-prefix-foreground = ${color.background}
+format-unmounted-prefix-background = ${color.cyan}
+
+label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e duf &:} %free%%{A}"
+label-unmounted = " %mountpoint%: NA"
+label-mounted-foreground = ${color.background}
+
+label-mounted-background = ${color.cyan}
+label-unmounted-background = ${color.cyan}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/cpuTemp]
+type = custom/script
+exec = ~/.config/bspwm/polybar/black-red/modules/heatSensors
+interval = 1
+click-left = xsensors
+format-foreground = #BA0000
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/memory]
+type = custom/script
+exec = free -g | sed -n 's/^Mem:\s\+[0-9]\+\s\+\([0-9]\+\)\s.\+/\1/p'
+format = <label>
+format-prefix = "" 
+format-prefix-font = 
+
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e htop &:}%output%GB%{A}"
+label-padding = 1
+label-font = 
+format-prefix-foreground =#BA0000
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/updates-pacman]
+type = custom/script
+exec = ~/.config/bspwm/polybar/scripts/updates-pacman.sh
+interval = 180
+format = <label>
+
+;label = %output% Updates
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e sudo pacman -Syyu &:} %output% Updates%{A}"
+
+format-font = 4
+label-foreground = #e92ef0
+;label-foreground = #BF616A
+label-background = ${color.BGL}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/time]
+type = custom/script
+exec = date '+%I:%M:%S%P'
+interval = 1.0
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

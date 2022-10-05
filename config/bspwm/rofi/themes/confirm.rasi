@@ -1,0 +1,40 @@
+/* 
+
+    Copyright © 2022 To Cyb3rTh1eveZ																	 
+
+     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+
+    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+    LICENSE © GNU-GPL3
+
+ */
+
+@import "colors.rasi"
+
+* {
+    background-color:       @background;
+    text-color:             @foreground;
+	font:				 	"Iosevka 10";
+}
+
+window {
+    width:      			200px;
+    padding:    			20px;
+    border:					2px;
+    border-radius:          10px;
+    border-color:           @selected;
+    location:               center;
+    x-offset:               0;
+    y-offset:               -4%;
+}
+
+entry {
+    expand: 				true;
+    width: 					150px;
+    text-color:				@selected;
+}

@@ -1,0 +1,128 @@
+##########################################################################################################
+#																										 
+#    Copyright © 2022 To Cyb3rTh1eveZ																	 
+#																										 
+#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+#																										 
+#																										 
+#																										 
+#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+#    LICENSE © GNU-GPL3																					 
+#																										 
+##########################################################################################################
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/volume]
+
+type = internal/pulseaudio
+
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+
+
+use-ui-max = false
+
+interval = 5
+
+format-volume = <ramp-volume> <label-volume>
+
+format-muted = <label-muted>
+format-muted-prefix = 婢
+format-muted-prefix-font = 
+format-muted-prefix-foreground = #BA0000
+
+label-volume = %percentage%%
+label-volume-font = 
+label-muted = " Mute"
+muted-label-font = 
+label-muted-foreground = #BA0000
+
+ramp-volume-0 = 奄
+ramp-volume-1 = 奄
+ramp-volume-2 = 奄
+ramp-volume-3 = 奔
+ramp-volume-4 = 奔
+ramp-volume-5 = 奔
+ramp-volume-6 = 墳
+ramp-volume-7 = 墳
+ramp-volume-8 = 墳
+ramp-volume-9 = 墳
+ramp-volume-font = 3
+ramp-volume-foreground = #BA0000
+
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/mpd]
+type = internal/mpd
+
+;;host = 127.0.0.1
+;;port = 6600
+;;password = mysecretpassword
+
+interval = 2
+
+format-online = <label-song> <icon-prev> <toggle> <icon-next>
+format-online-prefix = " "
+format-online-prefix-foreground = #BA0000
+
+format-playing = ${self.format-online}
+format-paused = <label-song> <toggle>
+
+format-offline = <label-offline>
+format-offline-prefix = " "
+format-offline-prefix-foreground = #BA0000
+label-offline = "Offline"
+
+label-song =  "%title% | %artist%"
+; label-song =  "%title% "
+label-song-maxlen = 40
+label-song-ellipsis = true
+
+icon-play = 
+icon-play-font = 2
+icon-play-foreground = #BA0000
+icon-pause = 
+icon-pause-font = 2
+icon-pause-foreground = #BA0000
+icon-stop = 
+icon-stop-foreground = #BA0000
+icon-prev = 玲
+icon-prev-font = 2
+icon-prev-foreground = #BA0000
+icon-next = 怜
+icon-next-font = 2
+icon-next-foreground = #BA0000
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/info-cava]
+type = custom/script
+exec =  ~/.config/bspwm/polybar/scripts/cava
+
+format = <label>
+label = %output%
+format-foreground = #BA0000
+format-background = ${color.BGL}
+tail = true
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+; pipewire-microphone
+[module/pip-mic]
+type = custom/script
+exec = ~/.config/bspwm/polybar/scripts/pipewire-microphone.sh
+tail = true
+click-left = ~/.config/bspwm/polybar/scripts/pipewire-microphone.sh --toggle &
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

@@ -1,0 +1,96 @@
+#!/usr/bin/env bash
+
+##########################################################################################################
+#																										 
+#    Copyright © 2022 To Cyb3rTh1eveZ																	 
+#																										 
+#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+#																										 
+#																										 
+#																										 
+#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								
+#    LICENSE © GNU-GPL3																					 
+#																										 
+##########################################################################################################
+
+DIR="$HOME/.config/bspwm"
+BSP="$HOME/.config/bspwm/themes"
+rofi_command="rofi -theme $DIR/rofi/themes/themes.rasi"
+
+# Available Themes
+
+theme_1=" Red Jungles"
+theme_2=" Emilia"
+theme_3=" Chad WM"
+theme_4=" Hack"
+theme_5=" Black And Red"
+theme_6=" Rick"
+theme_7=" Hack The Box"
+theme_8=" BlackArch"
+theme_9=" Neon"
+theme_10=" JS coffee"
+theme_11=" Amarena"
+theme_12=" Japanese City"
+theme_13=" Tokyo City"
+theme_14=" VALORANT"
+
+# pass available themes to rofi 
+availableThemes="$theme_1\n$theme_2\n$theme_3\n$theme_4\
+\n$theme_5\n$theme_6\n$theme_7\n$theme_8\
+\n$theme_9\n$theme_10\n$theme_11\n$theme_12\n$theme_13\n$theme_14"
+
+chosen="$(echo -e "$availableThemes" | $rofi_command -p "Available themes : (14)" -dmenu -selected-row 0)"
+#
+# the 1st var -> background, the 2th var -> color scheme name, the 3th var -> the theme name, 
+# the 4th var -> icons name, the 5th var -> the cursor name, the 6th var -> RGB mood for keyboard
+# the 7th var ( if it exists )-> for customized polybar
+#
+case $chosen in
+    $theme_1)
+        bash apply-theme  'BloodJungles.jpg' 'Jungles' 'Blade2' 'Red-Icons' 'ScarleTrix' 'RedJungles' 'Jungles'
+        ;;
+    $theme_2)
+        bash apply-theme  'amilia.jpg' 'Emilia' 'Dracula' 'Elena-dark-icons' 'Rage-Purple-Cursor' 'Emilia' 'Emilia'
+        ;;
+    $theme_3)
+        bash apply-theme  'chad.png' 'ChadWM' 'Qogir-dark' 'Qogir-dark' 'ManjaTrix' 'ChadWM' 'ChadWM'
+        ;;
+    $theme_4)
+        bash apply-theme  'hack.jpg' 'hack' 'Hack' 'Hack' 'ArchTrix' 'Hack' 'hack'
+        ;;
+    $theme_5)
+        bash apply-theme  'Arch-red.png' 'black-red' 'SIth Empire' 'Red-Black' 'lightSaber-dark' 'BlackRed' 'black-red'
+        ;;
+    $theme_6)
+        bash apply-theme  'rick.jpg' 'rick' 'Rick' 'Zafiro' 'lightSaber' 'Rick' 'rick'
+        ;;
+    $theme_7)
+        bash apply-theme  'hackthebox4.jpg' 'HackTheBox' 'Tokyonight-Dark-BL' 'Green-Icons' 'broodwar' 'HackTheBox' 'HackTheBox'
+        ;;
+    $theme_8)
+        bash apply-theme  'hacktheplanet.png' 'BlackArch' 'BlackArch-theme' 'Blue-Icons' 'Azenis' 'BlackArch' 'BlackArch'
+        ;;
+    $theme_9)
+        bash apply-theme  'women.jpg' 'neon' 'Tokyonight-Dark-BL' 'neon-icon' 'WineTrix' 'Neon' 'neon'
+        ;;
+    $theme_10)
+        bash apply-theme  'JScoffee.jpg' 'JScoffee' 'everblush' 'oomox-Everblush-icons' 'ManjaTrix' 'ChadWM' 'JScoffee'
+        ;;
+    $theme_11)
+        bash apply-theme  'amarena.jpg' 'Amarena' 'amarena' 'Elena-dark-icons' 'lightSaber' 'Amarena' 'Amarena'
+        ;;
+    $theme_12)
+        bash apply-theme  'tokyo-night31.png' 'JapaneseCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'JapaneseCity'
+        ;;
+    $theme_13)
+        bash apply-theme  'tokyo.png' 'TokyoCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'tokyo'
+        ;;
+    $theme_14)
+        bash apply-theme  'valorant.jpg' 'valorant' 'Tokyonight-Dark-B' 'Red-Black' 'Rage-Gothic' 'RedJungles' 'valorant'
+        ;;
+esac

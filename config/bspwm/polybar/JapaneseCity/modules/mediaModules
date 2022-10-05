@@ -1,0 +1,131 @@
+##########################################################################################################
+#																										 
+#    Copyright © 2022 To Cyb3rTh1eveZ																	 
+#																										 
+#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+#																										 
+#																										 
+#																										 
+#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+#    LICENSE © GNU-GPL3																					 
+#																										 
+##########################################################################################################
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/volume]
+
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = false
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
+
+format-volume = <ramp-volume> <label-volume>
+
+format-muted = <label-muted>
+format-muted-prefix = 婢
+format-muted-prefix-font = 3
+format-muted-prefix-foreground = ${color.RED}
+
+label-volume = %percentage%%
+label-volume-font = 4
+label-muted = " Mute"
+muted-label-font = 5
+label-muted-foreground = #757575
+
+ramp-volume-0 = 奄
+ramp-volume-1 = 奄
+ramp-volume-2 = 奄
+ramp-volume-3 = 奔
+ramp-volume-4 = 奔
+ramp-volume-5 = 奔
+ramp-volume-6 = 墳
+ramp-volume-7 = 墳
+ramp-volume-8 = 墳
+ramp-volume-9 = 墳
+ramp-volume-font = 3
+ramp-volume-foreground = ${color.BLUE}
+
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/mpd]
+type = internal/mpd
+
+;;host = 127.0.0.1
+;;port = 6600
+;;password = mysecretpassword
+
+interval = 2
+
+format-online = <label-song> <icon-prev> <toggle> <icon-next>
+format-online-prefix = " "
+format-online-prefix-foreground = ${color.GREEN}
+
+format-playing = ${self.format-online}
+format-paused = <label-song> <toggle>
+
+format-offline = <label-offline>
+format-offline-prefix = " "
+format-offline-prefix-foreground = ${color.RED}
+label-offline = "Offline"
+
+; label-song =  "%title% | %artist%"
+label-song =  "%title% "
+label-song-maxlen = 40
+label-song-ellipsis = true
+
+icon-play = 
+icon-play-font = 2
+icon-play-foreground = ${color.GREEN}
+icon-pause = 
+icon-pause-font = 2
+icon-pause-foreground = #989cff
+icon-stop = 
+icon-stop-foreground = ${color.RED}
+icon-prev = 玲
+icon-prev-font = 2
+icon-prev-foreground = ${color.CYAN}
+icon-next = 怜
+icon-next-font = 2
+icon-next-foreground = ${color.CYAN}
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/info-cava]
+type = custom/script
+exec =  ~/.config/bspwm/polybar/scripts/cava
+
+format = <label>
+label = %output%
+format-foreground = #9d00ff
+format-background = ${color.BGL}
+tail = true
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+; pipewire-microphone
+[module/pip-mic]
+type = custom/script
+exec = ~/.config/bspwm/polybar/scripts/pipewire-microphone.sh
+tail = true
+click-left = ~/.config/bspwm/polybar/scripts/pipewire-microphone.sh --toggle &
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

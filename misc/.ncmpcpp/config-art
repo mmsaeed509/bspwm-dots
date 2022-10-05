@@ -1,4 +1,3 @@
-
 ### Directories ###
 ncmpcpp_directory 	= ~/.ncmpcpp
 lyrics_directory  	= ~/.ncmpcpp/lyrics
@@ -62,7 +61,7 @@ current_item_prefix 				= "$(blue)$r"
 current_item_suffix 				= "$/r$(end)"
 current_item_inactive_column_prefix = red
 current_item_inactive_column_suffix = red
-now_playing_prefix = "$4 "
+now_playing_prefix = "$4 "
 selected_item_prefix = "* "
 
 color1 = "white"

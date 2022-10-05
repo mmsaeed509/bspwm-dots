@@ -22,7 +22,7 @@ export ZSH=$HOME/.oh-my-zsh
 # ZSH_THEME="spaceship"
 # ZSH_THEME="agnoster"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-
+# ZSH_THEME="archcraft"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME="spaceship"
@@ -85,9 +85,11 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git
-zsh-autosuggestions
-)
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -170,26 +172,22 @@ alias autoremove="sudo pacman -Rns"
 
 # ------------ Pacman -------------------------
 
-# ----------------------- Predator alias -----------------------
-
-alias RE-Pur="red-purple.sh"
-alias totem="totem.sh"
-alias garuda="garuda.sh"
-alias wave="wave.sh"
-alias red="red.sh"
-alias purple="purple.sh"
-alias neon="neon.sh"
-alias predator="predator.sh"
-alias Redshift="Redshift.sh"
-# change module dir #
-alias updatePredator="cd ~/Public/Acer/acer-predator-turbo-and-rgb-keyboard-linux-module && git pull && sudo ./install_service.sh"
-
-# ----------------------- Predator alias -----------------------
-
-alias eDEX="cd ~/Public/packages && ./eDEX-UI-Linux-x86_64.AppImage"
-
 alias M="ncmpcpp"
 alias MA="cd ~/.ncmpcpp/scripts/ && ./ncmpcpp-art"
+alias youtube="ytfzf -t"
+alias eDEX-UI="eDEX-UI-Linux-x86_64.AppImage"
+
+
+
+echo "
+ ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗
+██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝
+██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝ 
+██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝  
+╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗
+ ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝
+ "
+# exodiafetch
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
