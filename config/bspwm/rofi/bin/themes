@@ -88,7 +88,7 @@ case $chosen in
         bash apply-theme  'tokyo-night31.png' 'JapaneseCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'JapaneseCity'
         ;;
     $theme_13)
-        bash apply-theme  'tokyo-night23.png' 'TokyoCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'tokyo'
+        bash apply-theme  'tokyo.png' 'TokyoCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'tokyo'
         ;;
     $theme_14)
         bash apply-theme  'valorant.jpg' 'valorant' 'Tokyonight-Dark-B' 'Red-Black' 'Rage-Gothic' 'RedJungles' 'valorant'

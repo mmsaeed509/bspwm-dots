@@ -4,7 +4,6 @@
 ## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
 ## reconfigured Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 
-## Script To Manage Brightness For Archcraft.
 
 # Graphics card
 CARD=`ls /sys/class/backlight | head -n 1`

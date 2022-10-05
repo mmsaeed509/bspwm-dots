@@ -4,8 +4,6 @@
 ## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
 ## reconfigured Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
 
-## Script To Manage Speaker Volume For Archcraft.
-
 # Get Volume
 get_volume() {
 	volume=`amixer get Master | tail -n1 | awk -F ' ' '{print $5}' | tr -d '[]'`

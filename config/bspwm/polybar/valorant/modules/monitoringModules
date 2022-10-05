@@ -127,7 +127,7 @@ label-unmounted-background = ${color.cyan}
 [module/cpuTemp]
 type = custom/script
 exec = ~/.config/bspwm/polybar/valorant/modules/heatSensors
-interval = 0.5
+interval = 1
 click-left = xsensors
 format-foreground = #FD4756
 format-background = #202020

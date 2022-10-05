@@ -6,19 +6,27 @@
 ## Script to take screenshots with maim
 
 time=`date +%Y-%m-%d-%H-%M-%S`
-geometry=`xrandr | head -n1 | cut -d',' -f2 | tr -d '[:blank:],current'`
+geometry=`xrandr | grep 'current' | head -n1 | cut -d',' -f2 | tr -d '[:blank:],current'`
 dir="`xdg-user-dir PICTURES`/Screenshots"
 file="Screenshot_${time}_${geometry}.png"
 
+# Commands
+notify_cmd_shot="dunstify -u low --replace=699 -i /usr/share/archcraft/icons/dunst/picture.png"
+
 # notify and view screenshot
 notify_view () {
-	dunstify -u low --replace=699 -i /usr/share/archcraft/icons/dunst/picture.png "Copied to clipboard."
+	${notify_cmd_shot} "Copied to clipboard."
 	viewnior ${dir}/"$file"
 	if [[ -e "$dir/$file" ]]; then
-		dunstify -u low --replace=699 -i /usr/share/archcraft/icons/dunst/picture.png "Screenshot Saved."
+		${notify_cmd_shot} "Screenshot Saved."
 	else
-		dunstify -u low --replace=699 -i /usr/share/archcraft/icons/dunst/picture.png "Screenshot Deleted."
+		${notify_cmd_shot} "Screenshot Deleted."
 	fi
+}
+
+# Copy screenshot to clipboard
+copy_shot () {
+	tee "$file" | xclip -selection clipboard -t image/png
 }
 
 # countdown
@@ -31,29 +39,29 @@ countdown () {
 
 # take shots
 shotnow () {
-	cd ${dir} && maim -u -f png | tee "$file" | xclip -selection clipboard -t image/png
+	cd ${dir} && maim -u -f png | copy_shot
 	notify_view
 }
 
 shot5 () {
 	countdown '5'
-	sleep 1 && cd ${dir} && maim -u -f png | tee "$file" | xclip -selection clipboard -t image/png
+	sleep 1 && cd ${dir} && maim -u -f png | copy_shot
 	notify_view
 }
 
 shot10 () {
 	countdown '10'
-	sleep 1 && cd ${dir} && maim -u -f png | tee "$file" | xclip -selection clipboard -t image/png
+	sleep 1 && cd ${dir} && maim -u -f png | copy_shot
 	notify_view
 }
 
 shotwin () {
-	cd ${dir} && maim -u -f png -i `xdotool getactivewindow` | tee "$file" | xclip -selection clipboard -t image/png
+	cd ${dir} && maim -u -f png -i `xdotool getactivewindow` | copy_shot
 	notify_view
 }
 
 shotarea () {
-	cd ${dir} && maim -u -f png -s -b 2 -c 0.35,0.55,0.85,0.25 -l | tee "$file" | xclip -selection clipboard -t image/png
+	cd ${dir} && maim -u -f png -s -b 2 -c 0.35,0.55,0.85,0.25 -l | copy_shot
 	notify_view
 }
 

@@ -125,7 +125,7 @@ icon-repeat-foreground = #FF0677
 
 [module/info-cava]
 type = custom/script
-exec =  ~/.config/bspwm/polybar/scripts/cava
+exec =  ~/.config/bspwm/polybar/Emilia/modules/cava
 
 format = <label>
 label = %output%

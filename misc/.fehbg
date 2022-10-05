@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '/usr/share/backgrounds/JapaneseCity.png' 
+feh --no-fehbg --bg-fill '/usr/share/backgrounds/tokyo.png' 

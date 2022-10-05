@@ -21,7 +21,7 @@
 [module/bna]
 type = custom/text
 
-content = " NA"
+content = " NON"
 content-prefix = 
 content-prefix-font = 2
 content-prefix-foreground = #06CCD7
@@ -50,7 +50,7 @@ ramp-6 = 
 ramp-7 = 
 ramp-8 = 
 ramp-9 = 
-ramp-font = 
+ramp-font = 2
 ramp-foreground = #06CCD7
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -65,7 +65,7 @@ enable-scroll = true
 format = <ramp> <label>
 
 label = %percentage%%
-label-font = 7
+; label-font = 7
 
 ramp-0 = 
 ramp-1 = 
@@ -101,6 +101,7 @@ ws-icon-4 = V;
 ws-icon-5 = VI;
 ws-icon-6 = VII;
 ws-icon-7 = VIII;
+ws-icon-8 = IX;
 ws-icon-default = 
 
 format = <label-state>
@@ -134,7 +135,7 @@ label-empty-background = ${color.BGL}
 label-empty-padding = 0
 
 ; Separator in between workspaces ???????????????????????
-label-separator = " "
+label-separator = "  "
 label-separator-padding = 0
 label-separator-foreground = #06CCD7
 label-separator-background = ${color.BGL}
@@ -196,24 +197,19 @@ accumulate-stats = true
 unknown-as-up = true
 
 format-connected = <label-connected>
-format-connected-prefix = "  "
+format-connected-prefix = " "
 format-connected-prefix-font = 3
-format-connected-prefix-foreground = #3B414D
-format-connected-prefix-background = #7AA2F7
+format-connected-prefix-foreground = #06CCD7
 
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = "  "
+format-disconnected-prefix = " "
 format-disconnected-prefix-font = 3
-format-disconnected-prefix-foreground = #3B414D
-format-disconnected-prefix-background = #7AA2F7
+format-disconnected-prefix-foreground = #06CCD7
 
-label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
-label-connected-background = #353B45
-label-connected-foreground = #7EC7A2
+; label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed%%{A}"
+label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %downspeed% ◆  %upspeed%%{A}"
 
-label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} Offline %{A}"
-label-disconnected-background = #353B45
-label-disconnected-foreground = #7EC7A2
+label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}Offline%{A}"
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

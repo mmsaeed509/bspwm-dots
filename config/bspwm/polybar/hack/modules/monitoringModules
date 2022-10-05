@@ -91,7 +91,7 @@ format-prefix-font = 5
 format-prefix-foreground = #06CCD7
 format-prefix-background = ${color.BGL}
 label = "%{A1:stacer &:}CPU %percentage%%%{A}"
-label-font = 
+label-font = 3
 label-background = ${color.BGL}
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -124,7 +124,7 @@ label-unmounted-background = ${color.cyan}
 [module/cpuTemp]
 type = custom/script
 exec = ~/.config/bspwm/polybar/hack/modules/heatSensors
-interval = 0.5
+interval = 1
 click-left = xsensors
 format-foreground = #06CCD7
 

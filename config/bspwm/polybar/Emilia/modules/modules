@@ -21,10 +21,13 @@
 [module/bna]
 type = custom/text
 
-content = " NA"
+content = " NON"
+content-foreground = ${color.blue-arch}
+content-background = ${color.mb}
+
 content-prefix = 
-content-prefix-font = 2
-content-prefix-foreground = ${color.RED}
+content-prefix-font = 7
+content-prefix-foreground = ${color.MAGENTA}
 content-padding = 0
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -62,11 +65,12 @@ type = internal/backlight
 card = ${system.graphics_card}
 
 enable-scroll = true
-
 format = <ramp> <label>
+format-background = ${color.mb}
+format-foreground = ${color.blue-arch}
 
 label = %percentage%%
-label-font = 7
+; label-font = 4
 
 ramp-0 = 
 ramp-1 = 
@@ -80,8 +84,6 @@ ramp-8 = 
 ramp-9 = 
 ramp-font = 7
 ramp-foreground = ${color.MAGENTA}
-
-
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/bspwm]
@@ -102,6 +104,7 @@ ws-icon-4 = V;
 ws-icon-5 = VI;
 ws-icon-6 = VII;
 ws-icon-7 = VIII;
+ws-icon-8 = IX;
 ws-icon-default = 
 
 format = <label-state>
@@ -163,21 +166,24 @@ label-private = " | Private"
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/date]
+type = internal/date
 
-type = custom/script
-exec = date +'%I:%M:%p'
-interval = 1
+interval = 1.0
+
+time = %I:%M %p
+time-alt = %A, %d %B %Y
+
 format = <label>
+format-prefix = ""
+; format-prefix = "祥"
+format-prefix-font = 3
+format-prefix-foreground = #e92ef0
+format-prefix-background = ${color.mb}
 
-label = "祥 %output%"
-; label = "%{A1: &:}祥 %output%%{A}"
-
-format-font = 4
+label = " %time%"
+label-font = 4
 label-foreground = #e92ef0
 label-background = ${color.mb}
-
-
-
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 ; If you use both a wired and a wireless network, add both modules in config.
@@ -190,38 +196,65 @@ accumulate-stats = true
 unknown-as-up = true
 
 format-connected = <label-connected>
-format-connected-prefix = "  "
+format-connected-prefix = " "
 format-connected-prefix-font = 3
-format-connected-prefix-foreground = #3B414D
-format-connected-prefix-background = #7AA2F7
+format-connected-prefix-foreground =  ${color.green}
+format-connected-prefix-background = ${color.mb}
 
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = "  "
+format-disconnected-prefix = " "
 format-disconnected-prefix-font = 3
-format-disconnected-prefix-foreground = #3B414D
-format-disconnected-prefix-background = #7AA2F7
+format-disconnected-prefix-foreground = ${color.green}
+format-disconnected-prefix-background = ${color.mb}
 
-label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
-label-connected-background = #353B45
-label-connected-foreground = #7EC7A2
+; label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed%%{A}"
+label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %downspeed% ◆  %upspeed%%{A}"
+label-connected-background = ${color.mb}
+label-connected-foreground = ${color.green}
 
-label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} Offline %{A}"
-label-disconnected-background = #353B45
-label-disconnected-foreground = #7EC7A2
+label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}Offline%{A}"
+label-disconnected-background = ${color.mb}
+label-disconnected-foreground = ${color.green}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/network]
-type = custom/script
-exec = ~/.config/bspwm/polybar/scripts/wifi
+type = internal/network
+interface = ${system.network_interface}
 
-interval = 1
+interval = 1.0
 
-label = "%{A1:nmd &:}%output%%{A}"
+;;ping-interval = 3
+;;udspeed-minwidth = 5
 
-; format-font = 4
-label-foreground = ${color.green}
-label-background = ${color.mb}
+accumulate-stats = true
+unknown-as-up = true
+
+format-connected = <ramp-signal><label-connected>
+format-connected-background = ${color.mb}
+
+format-disconnected = <label-disconnected>
+format-disconnected-background = ${color.mb}
+format-disconnected-prefix = " "
+format-disconnected-prefix-font = 7
+format-disconnected-prefix-foreground =  ${color.green}
+
+label-connected = "%{A1:nmd &:} %essid%%{A}"
+label-connected-foreground =  ${color.green}
+label-connected-background = ${color.mb}
+
+label-disconnected = "%{A1:nmd &:} dis%{A}"
+label-disconnected-foreground =  ${color.green}
+label-disconnected-background = ${color.mb}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-font = 3
+ramp-signal-foreground =  ${color.green}
+ramp-signal-background = ${color.mb}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

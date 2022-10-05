@@ -21,10 +21,11 @@
 [module/bna]
 type = custom/text
 
-content = " NA"
+content = " NON"
+content-foreground = #00B4FF
 content-prefix = 
 content-prefix-font = 2
-content-prefix-foreground = ${color.RED}
+content-prefix-foreground = #00B4FF
 content-padding = 0
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -63,6 +64,8 @@ card = ${system.graphics_card}
 enable-scroll = true
 
 format = <ramp> <label>
+format-foreground = #00B4FF
+format-font = 2
 
 label = %percentage%%
 
@@ -76,9 +79,8 @@ ramp-6 = 
 ramp-7 = 
 ramp-8 = 
 ramp-9 = 
-ramp-font = 2
-ramp-foreground = ${color.MAGENTA}
-
+; ramp-font = 2
+; ramp-foreground = ${color.MAGENTA}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -102,6 +104,7 @@ ws-icon-4 = V;
 ws-icon-5 = VI;
 ws-icon-6 = VII;
 ws-icon-7 = VIII;
+ws-icon-8 = IX;
 ws-icon-default = 
 
 format = <label-state>
@@ -194,22 +197,20 @@ unknown-as-up = true
 format-connected = <label-connected>
 format-connected-prefix = "  "
 format-connected-prefix-font = 3
-format-connected-prefix-foreground = #3B414D
-format-connected-prefix-background = #7AA2F7
+format-connected-prefix-foreground = #ED005F
 
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = "  "
+format-disconnected-prefix = ""
 format-disconnected-prefix-font = 3
-format-disconnected-prefix-foreground = #3B414D
-format-disconnected-prefix-background = #7AA2F7
+format-disconnected-prefix-foreground = #ED005F
 
-label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
-label-connected-background = #353B45
-label-connected-foreground = #7EC7A2
 
-label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} Offline %{A}"
-label-disconnected-background = #353B45
-label-disconnected-foreground = #7EC7A2
+;label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
+label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %downspeed% ◆  %upspeed% %{A}"
+label-connected-foreground = #ED005F
+
+label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} Offline%{A}"
+label-disconnected-foreground = #ED005F
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/network]

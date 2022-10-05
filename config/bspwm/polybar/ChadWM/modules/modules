@@ -21,10 +21,15 @@
 [module/bna]
 type = custom/text
 
-content = " NA"
+content = " NON"
+content-foreground = #7DC5A0
+content-background = #353B45
+
 content-prefix = 
 content-prefix-font = 2
-content-prefix-foreground = ${color.RED}
+content-prefix-foreground = #7DC5A0
+content-prefix-background = #353B45
+
 content-padding = 0
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -63,23 +68,25 @@ card = ${system.graphics_card}
 
 enable-scroll = true
 
-format = <ramp> <label>
+format = <ramp><label>
 
 label = %percentage%%
+label-foreground = #7DC5A0
+label-background = #353B45
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
-ramp-4 = 
-ramp-5 = 
-ramp-6 = 
-ramp-7 = 
-ramp-8 = 
-ramp-9 = 
+ramp-0 = " "
+ramp-1 = " "
+ramp-2 = " "
+ramp-3 = " "
+ramp-4 = " "
+ramp-5 = " "
+ramp-6 = " "
+ramp-7 = " "
+ramp-8 = " "
+ramp-9 = " "
 ramp-font = 2
-ramp-foreground = ${color.MAGENTA}
-
+ramp-foreground = #7DC5A0
+ramp-background = #353B45
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -103,6 +110,7 @@ ws-icon-4 = V;
 ws-icon-5 = VI;
 ws-icon-6 = VII;
 ws-icon-7 = VIII;
+ws-icon-8 = IX;
 ws-icon-default = 
 
 format = <label-state>

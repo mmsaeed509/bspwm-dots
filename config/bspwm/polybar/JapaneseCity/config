@@ -16,16 +16,13 @@
 #																										 
 ##########################################################################################################
 
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-;; Global WM Settings
-
+;; Global WM Settings ;;
 
 [global/wm]
 margin-bottom = 0
 margin-top = 0
 
-include-file = ~/.config/bspwm/polybar/JapaneseCity/system
+include-file = ~/.config/bspwm/polybar/system
 include-file = ~/.config/bspwm/polybar/JapaneseCity/colors
 
 # contains brightness, workspaces, Date, etc.... #
@@ -83,7 +80,7 @@ font-9 = "Iosevka:style=bold:size=15;4"
 
 modules-left   = menu sep LD mod RD space LD bspwm RD space LD info-cava RD space LD notification-github RD sep xkeyboard 
 modules-center = LDmpd space mpd space RDmpd  
-modules-right  = themes space LD cpu RD space LD updates-pacman RD space battery volume space cpuTemp space network  backlight space LD date RD space sysmenu
+modules-right  = themes space LD cpu RD space LD updates-pacman RD space battery volume space cpuTemp space network backlight space LD date RD space sysmenu
  
 separator =
 spacing = 0

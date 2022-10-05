@@ -22,7 +22,7 @@
 [module/bna]
 type = custom/text
 
-content = " NA"
+content = " NON"
 content-prefix = 
 content-prefix-font = 2
 content-prefix-foreground = #BA0000
@@ -51,7 +51,7 @@ ramp-6 = 
 ramp-7 = 
 ramp-8 = 
 ramp-9 = 
-ramp-font = 
+ramp-font = 2 
 ramp-foreground = #BA0000
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -66,7 +66,7 @@ enable-scroll = true
 format = <ramp> <label>
 
 label = %percentage%%
-label-font = 7
+; label-font = 7
 
 ramp-0 = 
 ramp-1 = 
@@ -78,7 +78,7 @@ ramp-6 = 
 ramp-7 = 
 ramp-8 = 
 ramp-9 = 
-ramp-font = 7
+ramp-font = 2
 ramp-foreground = #BA0000
 
 
@@ -94,15 +94,16 @@ enable-scroll = true
 reverse-scroll = true
 fuzzy-match = true
 
-ws-icon-0 = I;
-ws-icon-1 = II;
-ws-icon-2 = III;碌
-ws-icon-3 = IV;
-ws-icon-4 = V;
-ws-icon-5 = VI;
-ws-icon-6 = VII;
-ws-icon-7 = VIII
-ws-icon-default = 
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI;
+ws-icon-6 = VII;
+ws-icon-7 = VIII;
+ws-icon-8 = IX;
+ws-icon-default = 
 
 format = <label-state>
 format-font = 2
@@ -196,24 +197,19 @@ accumulate-stats = true
 unknown-as-up = true
 
 format-connected = <label-connected>
-format-connected-prefix = "  "
+format-connected-prefix = " "
 format-connected-prefix-font = 3
-format-connected-prefix-foreground = #3B414D
-format-connected-prefix-background = #7AA2F7
+format-connected-prefix-foreground = #BA0000
 
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = "  "
+format-disconnected-prefix = " "
 format-disconnected-prefix-font = 3
-format-disconnected-prefix-foreground = #3B414D
-format-disconnected-prefix-background = #7AA2F7
+format-disconnected-prefix-foreground = #BA0000
 
-label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
-label-connected-background = #353B45
-label-connected-foreground = #7EC7A2
+; label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
+label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %downspeed% ◆  %upspeed%%{A}"
 
-label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} Offline %{A}"
-label-disconnected-background = #353B45
-label-disconnected-foreground = #7EC7A2
+label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}Offline%{A}"
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -235,7 +231,7 @@ format-disconnected-prefix-font =
 format-disconnected-prefix-foreground =  #BA0000
 
 label-connected = "%{A1:nmd &:}%essid%%{A}"
-label-disconnected = "%{A1:nmd &:} %{A}"
+label-disconnected = "%{A1:nmd &:}disconnected%{A}"
 
 ramp-signal-0 = 
 ramp-signal-1 = 

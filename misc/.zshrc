@@ -8,6 +8,8 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Path to guiscrcpy
+export XDG_DESKTOP_DIR="~/.config/guiscrcpy/"
 export EDITOR=nvim
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -20,7 +22,7 @@ export ZSH=$HOME/.oh-my-zsh
 # ZSH_THEME="spaceship"
 # ZSH_THEME="agnoster"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-
+# ZSH_THEME="archcraft"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME="spaceship"
@@ -83,9 +85,11 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git
-zsh-autosuggestions
-)
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -168,11 +172,22 @@ alias autoremove="sudo pacman -Rns"
 
 # ------------ Pacman -------------------------
 
-
-alias eDEX="cd ~/Public/packages && ./eDEX-UI-Linux-x86_64.AppImage"
-
 alias M="ncmpcpp"
 alias MA="cd ~/.ncmpcpp/scripts/ && ./ncmpcpp-art"
+alias youtube="ytfzf -t"
+alias eDEX-UI="eDEX-UI-Linux-x86_64.AppImage"
+
+
+
+echo "
+ ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗
+██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝
+██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝ 
+██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝  
+╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗
+ ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝
+ "
+# exodiafetch
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

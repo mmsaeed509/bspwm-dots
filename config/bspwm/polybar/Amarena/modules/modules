@@ -22,7 +22,7 @@
 [module/bna]
 type = custom/text
 
-content = " NA"
+content = " NON"
 content-background = ${color.BACKGROUND}
 content-prefix = 
 content-prefix-font = 2
@@ -64,11 +64,11 @@ card = ${system.graphics_card}
 
 enable-scroll = true
 
-format = <ramp> <label>
+format = <ramp><label>
 format-background = ${color.BACKGROUND}
-
 label = %percentage%%
-label-font = 7
+label-font = 4
+label-foreground = #CD84C8
 
 ramp-0 = " "
 ramp-1 = " "
@@ -82,7 +82,6 @@ ramp-8 = " "
 ramp-9 = " "
 ramp-font = 7
 ramp-foreground = ${color.ALTCYAN}
-
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -104,6 +103,7 @@ ws-icon-4 = V;
 ws-icon-5 = VI;
 ws-icon-6 = VII;
 ws-icon-7 = VIII;
+ws-icon-8 = IX;
 ws-icon-default = 
 
 format = <label-state>
@@ -196,24 +196,26 @@ accumulate-stats = true
 unknown-as-up = true
 
 format-connected = <label-connected>
-format-connected-prefix = "  "
+format-connected-prefix = " "
 format-connected-prefix-font = 3
-format-connected-prefix-foreground = #3B414D
-format-connected-prefix-background = #7AA2F7
+format-connected-prefix-foreground = #C269BC
+format-connected-prefix-background = ${color.BACKGROUND}
 
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = "  "
+format-disconnected-prefix = " "
 format-disconnected-prefix-font = 3
-format-disconnected-prefix-foreground = #3B414D
-format-disconnected-prefix-background = #7AA2F7
+format-disconnected-prefix-foreground = #C269BC
+format-disconnected-prefix-background = ${color.BACKGROUND}
 
-label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
-label-connected-background = #353B45
-label-connected-foreground = #7EC7A2
+; label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed%%{A}"
+label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %downspeed% ◆  %upspeed%%{A}"
 
-label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} Offline %{A}"
-label-disconnected-background = #353B45
-label-disconnected-foreground = #7EC7A2
+label-connected-background = ${color.BACKGROUND}
+label-connected-foreground =  #FB6396
+
+label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}Offline%{A}"
+label-disconnected-background = ${color.BACKGROUND}
+label-disconnected-foreground =  #FB6396
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -243,7 +245,7 @@ label-connected = "%{A1:nmd &:} %essid%%{A}"
 label-connected-foreground = #FB6396
 label-connected-background = ${color.BACKGROUND}
 
-label-disconnected = "%{A1:nmd &:} dis%{A}"
+label-disconnected = "%{A1:nmd &:}dis%{A}"
 label-disconnected-foreground = #FB6396
 label-disconnected-background = ${color.BACKGROUND}
 

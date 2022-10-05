@@ -32,7 +32,7 @@ window:
 
 ## Background opacity
 # background_opacity: 1.0
-window.opacity: 1.0
+window.opacity: 0.95
 
 ## Cursor
 cursor:

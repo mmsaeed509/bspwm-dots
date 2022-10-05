@@ -16,11 +16,14 @@
 #																										 
 ##########################################################################################################
 
+;; Global WM Settings ;;
+
 [global/wm]
 
 margin-bottom = 0
 margin-top = 0
 
+include-file = ~/.config/bspwm/polybar/system
 include-file = ~/.config/bspwm/polybar/Emilia/colors
 include-file = ~/.config/bspwm/polybar/Emilia/modules/mediaModules
 include-file = ~/.config/bspwm/polybar/Emilia/modules/modules
@@ -75,9 +78,9 @@ font-6 = "Font Awesome 6 Free Solid:size=10;3"
 font-7 = "Material Design Icons Desktop:size=12;3"
 font-8 = "MesloLGS NF:style=Regular:size=15;4"
 
-modules-left   = menu sep LD cpu RD space LD memory RD space LD battery RD space LD cpuTemp RD space LD mpd RD
+modules-left   = menu sep LD cpu RD space LD memory RD space LD battery RD space LD cpuTemp RD space LD ethernet RD
 modules-center = LD bspwm RD
-modules-right  = BL song BR sep LD network RD space LD volume RD space LD backlight RD space LD date RD sep themes
+modules-right  = BL song BR sep LD mpd RD space LD volume RD space LD backlight RD space LD date RD sep themes
  
 spacing = 0
 separator =

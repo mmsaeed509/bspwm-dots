@@ -16,16 +16,13 @@
 #																										 
 ##########################################################################################################
 
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-;; Global WM Settings
-
+;; Global WM Settings ;;
 
 [global/wm]
 margin-bottom = 0
 margin-top = 0
 
-include-file = ~/.config/bspwm/polybar/valorant/system
+include-file = ~/.config/bspwm/polybar/system
 include-file = ~/.config/bspwm/polybar/valorant/colors
 
 # contains brightness, workspaces, Date, etc.... #
@@ -45,7 +42,7 @@ monitor =
 monitor-strict = false
 override-redirect = false
 
-bottom = true 
+bottom = true
 fixed-center = true
 
 width = 99%

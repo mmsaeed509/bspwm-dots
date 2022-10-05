@@ -21,10 +21,13 @@
 [module/bna]
 type = custom/text
 
-content = " NA"
-content-prefix = 
+content = " NON "
+content-background = ${color.GREEN}
+content-foreground = ${color.BACKGROUND}
+content-prefix = " "
 content-prefix-font = 2
-content-prefix-foreground = ${color.RED}
+content-prefix-foreground = ${color.BACKGROUND}
+content-prefix-background = ${color.GREEN}
 content-padding = 0
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -64,25 +67,27 @@ type = internal/backlight
 card = ${system.graphics_card}
 
 enable-scroll = true
+format = <ramp><label>
 
-format = <ramp> <label>
 
-label = %percentage%%
-label-font = 7
+label-foreground = ${color.BACKGROUND}
+label-background = ${color.GREEN}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
-ramp-4 = 
-ramp-5 = 
-ramp-6 = 
-ramp-7 = 
-ramp-8 = 
-ramp-9 = 
-ramp-font = 7
-ramp-foreground = ${color.MAGENTA}
+label = " %percentage%% "
 
+ramp-0 = " "
+ramp-1 = " "
+ramp-2 = " "
+ramp-3 = " "
+ramp-4 = " "
+ramp-5 = " "
+ramp-6 = " "
+ramp-7 = " "
+ramp-8 = " "
+ramp-9 = " "
+ramp-font = 3
+ramp-foreground = ${color.BACKGROUND}
+ramp-background = ${color.GREEN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -104,6 +109,7 @@ ws-icon-4 = V;
 ws-icon-5 = VI;
 ws-icon-6 = VII;
 ws-icon-7 = VIII;
+ws-icon-8 = IX;
 ws-icon-default = 
 
 format = <label-state>
@@ -198,22 +204,23 @@ unknown-as-up = true
 format-connected = <label-connected>
 format-connected-prefix = "  "
 format-connected-prefix-font = 3
-format-connected-prefix-foreground = #3B414D
-format-connected-prefix-background = #7AA2F7
+format-connected-prefix-foreground = ${color.BACKGROUND}
+format-connected-prefix-background = ${color.GREEN}
 
 format-disconnected = <label-disconnected>
 format-disconnected-prefix = "  "
 format-disconnected-prefix-font = 3
-format-disconnected-prefix-foreground = #3B414D
-format-disconnected-prefix-background = #7AA2F7
+format-disconnected-prefix-foreground = ${color.BACKGROUND}
+format-disconnected-prefix-background = ${color.GREEN}
 
-label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
-label-connected-background = #353B45
-label-connected-foreground = #7EC7A2
+; label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
+label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %downspeed% ◆  %upspeed% %{A}"
+label-connected-background = ${color.GREEN}
+label-connected-foreground = ${color.BACKGROUND}
 
-label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} Offline %{A}"
-label-disconnected-background = #353B45
-label-disconnected-foreground = #7EC7A2
+label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}Offline %{A}"
+label-disconnected-background = ${color.GREEN}
+label-disconnected-foreground = ${color.BACKGROUND}
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/network]

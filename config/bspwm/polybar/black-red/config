@@ -16,17 +16,13 @@
 #																										 
 ##########################################################################################################
 
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-;; Global WM Settings
-
+;; Global WM Settings ;;
 
 [global/wm]
 margin-bottom = 0
 margin-top = 0
 
-include-file = ~/.config/bspwm/polybar/black-red/system
+include-file = ~/.config/bspwm/polybar/system
 include-file = ~/.config/bspwm/polybar/black-red/colors
 
 # contains brightness, workspaces, Date, etc.... #
@@ -86,7 +82,7 @@ font-9 = "Iosevka:style=bold:size=15;4"
 
 modules-left   = mod  pip  bspwm  pip  info-cava  pip  notification-github pip xkeyboard pip
 modules-center =  space mpd space   
-modules-right  = pip themes pip cpu Dspace cpuTemp pip volume  space network space backlight space memory pip battery space date space
+modules-right  = pip themes pip cpu Dspace cpuTemp pip volume space network space backlight space memory pip battery space date space
 
 separator =
 spacing = 0

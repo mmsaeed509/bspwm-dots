@@ -16,16 +16,13 @@
 #																										 
 ##########################################################################################################
 
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-;; Global WM Settings
-
+;; Global WM Settings ;;
 
 [global/wm]
 margin-bottom = 0
 margin-top = 0
 
-include-file = ~/.config/bspwm/polybar/tokyo/system
+include-file = ~/.config/bspwm/polybar/system
 include-file = ~/.config/bspwm/polybar/tokyo/colors
 
 # contains brightness, workspaces, Date, etc.... #
@@ -83,7 +80,7 @@ font-3 = "Iosevka:style=bold:size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
 font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
 font-6 = "JetBrainsMono Nerd Font:size=13;4"
-font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-7 = "Material Design Icons:style=Bold:size18;4"
 font-8 = "unifont:fontformat=truetype:size=9;3"
 font-9 = "Iosevka:style=bold:size=15;4"
 

@@ -18,28 +18,27 @@
 #																										 
 ##########################################################################################################
 
-## paths
+# paths #
 CFG="$HOME/.config"
 BSP="$HOME/.config/bspwm"
 XRES="$HOME/.Xresources.d"
 
-## Set Style
+# Set Style #
 set_style () {
 
-	# ---------------------------- launch a custom Polybar if it exists ----------------------------
-
+	# ----- launch a custom Polybar if it exists ----- #
 	echo "$7">~/.config/bspwm/selectedThemeName
+	
+	# ----- apply color-scheme ----- #
+	cat "$BSP"/themes/${2} > "$XRES"/colors
 
-	# notify 
+	# ----- notify ----- #
 	bash ~/.config/bspwm/notify/notify
 
-	# apply wallpaper
+	# ----- apply wallpaper ----- #
 	feh --bg-fill /usr/share/backgrounds/${1}
 	
-	# apply color-scheme
-	cat "$BSP"/themes/${2} > "$XRES"/colors
-	
-	# set gtk theme, icons and cursor
+	# ----- set gtk theme, icons and cursor ----- #
 	if [[ `pidof xsettingsd` ]]; then
 		sed -i -e "s|Net/ThemeName .*|Net/ThemeName \"$3\"|g" ${HOME}/.xsettingsd
 		sed -i -e "s|Net/IconThemeName .*|Net/IconThemeName \"$4\"|g" ${HOME}/.xsettingsd
@@ -56,10 +55,9 @@ set_style () {
 	fi
 	zz
 
-	# ---------------------------- set background for i3look based on the selected theme ---------------------------- #
+	# ----- set background for i3look based on the selected theme ----- #
 	echo "$1">~/.config/bspwm/i3lockBackground
 
-	
 	# ----- reload config ----- #
 	pkill polybar
 	bspc wm -r
