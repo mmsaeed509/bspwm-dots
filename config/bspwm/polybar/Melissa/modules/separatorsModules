@@ -16,29 +16,62 @@
 #																										 
 ##########################################################################################################
 
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/space]
+type = custom/text
+content = " "
+content-background = ${color.background}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-;;
-;; System Variables (Edit according to your system)
-;;
-;; Warning : DO NOT DELETE THIS FILE
-;;
-;; Run `ls -1 /sys/class/power_supply/` to list list batteries and adapters.
-;;
-;; Run `ls -1 /sys/class/backlight/` to list available graphics cards.
-;;
-;; Run `ip link | awk '/state UP/ {print $2}' | tr -d :` to get active network interface.
-;;
-;; Polybar Variables For Modules :
-;; card = ${system.graphics_card}
-;; battery = BAT0
-;; adapter = AC
-;; interface = ${system.network_interface}
 
-[system]
-adapter = AC
-battery = BAT0
-graphics_card = intel_backlight
-network_interface = wlan0
+[module/Dspace]
+type = custom/text
+content = "  "
+content-background = ${color.background}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+##########################
+#       LD modules       #
+##########################
+
+[module/LD]
+type = custom/text
+content = "%{T10}%{T-}"
+content-background = ${color.BACKGROUND}
+content-foreground = #3B4252
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/LD2]
+type = custom/text
+content = "%{T10}%{T-}"
+content-background = #3B4252
+content-foreground = ${color.BACKGROUND}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+##########################
+#       RD modules       #
+##########################
+
+[module/RD]
+type = custom/text
+
+;content = "%{T5}█%{T-}"
+content = "%{T10}%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground = #3B4252
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RD2]
+type = custom/text
+
+content = "%{T10}%{T-}"
+content-background = #3B4252
+content-foreground = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

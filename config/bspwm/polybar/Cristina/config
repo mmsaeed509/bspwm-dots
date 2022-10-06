@@ -16,28 +16,102 @@
 #																										 
 ##########################################################################################################
 
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-;;
-;; System Variables (Edit according to your system)
-;;
-;; Warning : DO NOT DELETE THIS FILE
-;;
-;; Run `ls -1 /sys/class/power_supply/` to list list batteries and adapters.
-;;
-;; Run `ls -1 /sys/class/backlight/` to list available graphics cards.
-;;
-;; Run `ip link | awk '/state UP/ {print $2}' | tr -d :` to get active network interface.
-;;
-;; Polybar Variables For Modules :
-;; card = ${system.graphics_card}
-;; battery = BAT0
-;; adapter = AC
-;; interface = ${system.network_interface}
+;; Global WM Settings ;;
 
-[system]
-adapter = AC
-battery = BAT0
-graphics_card = intel_backlight
-network_interface = wlan0
+[global/wm]
 
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+margin-bottom = 0
+margin-top = 0
+
+include-file = ~/.config/bspwm/polybar/system
+include-file = ~/.config/bspwm/polybar/Cristina/colors
+include-file = ~/.config/bspwm/polybar/Cristina/modules/mediaModules
+include-file = ~/.config/bspwm/polybar/Cristina/modules/modules
+include-file = ~/.config/bspwm/polybar/Cristina/modules/monitoringModules
+include-file = ~/.config/bspwm/polybar/Cristina/modules/separatorsModules
+
+;; Bar Settings
+
+[bar/main]
+
+monitor = 
+monitor-fallback =false
+monitor-strict = false
+
+override-redirect = false
+
+bottom = true
+fixed-center = true
+
+width = 95%
+height = 25
+
+offset-x = 3%
+offset-y = 6
+
+background = ${color.bg}
+foreground = ${color.fg}
+
+radius = 4.0
+
+line-size = 2
+line-color = ${color.ac}
+
+border-size = 8px
+border-color = ${color.bg}
+
+padding = 1
+
+module-margin-left = 0
+module-margin-right = 0
+
+### Fonts Icons & Glyphs
+
+font-0 = "Iosevka Nerd Font:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "google\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
+
+font-5 = "Banana:style=Regular:antialilas=true;size=6;2"
+font-6 = "Font Awesome 6 Free Solid:size=10;3"
+font-7 = "Material Design Icons Desktop:size=12;3"
+font-8 = "MesloLGS NF:style=Regular:size=15;4"
+
+modules-left   = menu dots bspwm dots mod  
+modules-center = L song L2
+modules-right  = RD battery RD2 cpuTemp RD network RD2 cpu RD mpd RD2 info-cava RD volume RD2 backlight RD date RD2
+ 
+spacing = 0
+separator =
+dim-value = 1.0
+
+tray-position = right
+tray-detached = false
+tray-maxsize = 16
+tray-background = ${color.bg}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+tray-scale = 1.0
+
+wm-restack = bspwm
+enable-ipc = true
+
+cursor-click = pointer 
+cursor-scroll = ns-resize
+
+[settings]
+
+throttle-output = 5
+throttle-output-for = 10
+
+screenchange-reload = false
+
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+pseudo-transparency = false

@@ -22,7 +22,7 @@ DIR="$HOME/.config/bspwm"
 BSP="$HOME/.config/bspwm/themes"
 rofi_command="rofi -theme $DIR/rofi/themes/themes.rasi"
 
-# Available Themes
+# Available Themes #
 
 theme_1=" Red Jungles"
 theme_2=" Emilia"
@@ -38,13 +38,16 @@ theme_11=" Amarena"
 theme_12=" Japanese City"
 theme_13=" Tokyo City"
 theme_14=" VALORANT"
+theme_15=" Melissa"
+theme_16=" Cristina"
 
-# pass available themes to rofi 
+
+# pass available themes to rofi #
 availableThemes="$theme_1\n$theme_2\n$theme_3\n$theme_4\
 \n$theme_5\n$theme_6\n$theme_7\n$theme_8\
-\n$theme_9\n$theme_10\n$theme_11\n$theme_12\n$theme_13\n$theme_14"
+\n$theme_9\n$theme_10\n$theme_11\n$theme_12\n$theme_13\n$theme_14\n$theme_15\n$theme_16"
 
-chosen="$(echo -e "$availableThemes" | $rofi_command -p "Available themes : (14)" -dmenu -selected-row 0)"
+chosen="$(echo -e "$availableThemes" | $rofi_command -p "Exodia OS themes : [16]" -dmenu -selected-row 0)"
 #
 # the 1st var -> background, the 2th var -> color scheme name, the 3th var -> the theme name, 
 # the 4th var -> icons name, the 5th var -> the cursor name, the 6th var -> RGB mood for keyboard
@@ -92,5 +95,11 @@ case $chosen in
         ;;
     $theme_14)
         bash apply-theme  'valorant.jpg' 'valorant' 'Tokyonight-Dark-B' 'Red-Black' 'Rage-Gothic' 'RedJungles' 'valorant'
+        ;;
+    $theme_15)
+        bash apply-theme  'Melissa.png' 'Melissa' 'Arc-Dark' 'Arc-Circle' 'Qogirr' 'Melissa' 'Melissa'
+        ;;
+    $theme_16)
+        bash apply-theme  'Cristina.png' 'Cristina' 'Dracula' 'Elena-dark-icons' 'Rage-Purple-Cursor' 'Emilia' 'Cristina'
         ;;
 esac

@@ -1,0 +1,324 @@
+##########################################################################################################
+#																										 
+#    Copyright © 2022 To Cyb3rTh1eveZ																	 
+#																										 
+#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+#																										 
+#																										 
+#																										 
+#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+#    LICENSE © GNU-GPL3																					 
+#																										 
+##########################################################################################################
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/bna]
+type = custom/text
+
+content = " NON"
+content-foreground = ${color.blue-arch}
+content-background = ${color.bg}
+
+content-prefix = 
+content-prefix-font = 7
+content-prefix-foreground = ${color.MAGENTA}
+content-padding = 0
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/backlight]
+type = internal/xbacklight
+
+card = intel_backlight
+
+format = <ramp> <label>
+format-background = ${color.bg}
+format-foreground = ${color.blue-arch}
+
+label = %percentage%%
+; label-font = 4
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-5 = 
+ramp-6 = 
+ramp-7 = 
+ramp-8 = 
+ramp-9 = 
+ramp-font = 7
+ramp-foreground = ${color.MAGENTA}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/brightness]
+type = internal/backlight
+
+card = ${system.graphics_card}
+
+enable-scroll = true
+format = <ramp> <label>
+format-background = ${color.bg}
+format-foreground = ${color.blue-arch}
+
+label = %percentage%%
+; label-font = 4
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-5 = 
+ramp-6 = 
+ramp-7 = 
+ramp-8 = 
+ramp-9 = 
+ramp-font = 7
+ramp-foreground = ${color.MAGENTA}
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = true
+inline-mode = false
+enable-click = true
+enable-scroll = true
+reverse-scroll = true
+fuzzy-match = true
+
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI;
+ws-icon-6 = VII;
+ws-icon-7 = VIII;
+ws-icon-8 = IX;
+ws-icon-default = 
+
+format = <label-state>
+format-font = 2
+
+label-monitor = %name%
+
+label-focused = %name%
+label-focused-foreground = ${color.green}
+; label-focused-background = ${color.mb}
+label-focused-underline = ${color.green}
+label-focused-padding = 0
+
+label-occupied = %name%
+label-occupied-foreground = ${color.red}
+; label-occupied-background = ${color.mb}
+label-occupied-underline = ${color.red}
+label-occupied-padding = 0
+
+label-urgent = %name%
+label-urgent-foreground = #FE0027
+; label-urgent-background = ${color.mb}
+label-urgent-underline = #FE0027
+label-urgent-padding = 0
+
+label-empty = %name%
+label-empty-foreground = ${color.cyan}
+; label-empty-background = ${color.mb}
+label-empty-padding = 0
+
+; Separator in between workspaces
+label-separator = " "
+label-separator-padding = 0
+label-separator-foreground = ${color.pink}
+; label-separator-background = ${color.mb}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/mod]
+type = internal/bspwm
+
+format = <label-mode>
+; format-background = ${color.mb}
+format-foreground = #AD8EE6
+format-padding = 0
+format-font = 4
+
+label-monocle = "缾 Monocle"
+label-tiled = "缾 Tiled"
+
+label-floating = " | Float"
+label-pseudotiled = " | Pseudo"
+label-fullscreen = " | Full"
+
+label-locked = " | Locked"
+label-sticky = " | Sticky"
+label-private = " | Private"
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/date]
+type = internal/date
+
+interval = 1.0
+
+time = %I:%M %p
+time-alt = %A, %d %B %Y
+
+format = <label>
+format-prefix = ""
+; format-prefix = "祥"
+format-prefix-font = 3
+format-prefix-foreground = #e92ef0
+format-prefix-background = ${color.mb}
+
+label = " %time%"
+label-font = 4
+label-foreground = #e92ef0
+label-background = ${color.mb}
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+; If you use both a wired and a wireless network, add both modules in config.
+[module/ethernet]
+type = internal/network
+interface = ${system.network_interface}
+
+interval = 1.0
+accumulate-stats = true
+unknown-as-up = true
+
+format-connected = <label-connected>
+format-connected-prefix = " "
+format-connected-prefix-font = 3
+format-connected-prefix-foreground =  ${color.green}
+format-connected-prefix-background = ${color.mb}
+
+format-disconnected = <label-disconnected>
+format-disconnected-prefix = " "
+format-disconnected-prefix-font = 3
+format-disconnected-prefix-foreground = ${color.green}
+format-disconnected-prefix-background = ${color.mb}
+
+; label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed%%{A}"
+label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %downspeed% ◆  %upspeed%%{A}"
+label-connected-background = ${color.mb}
+label-connected-foreground = ${color.green}
+
+label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}Offline%{A}"
+label-disconnected-background = ${color.mb}
+label-disconnected-foreground = ${color.green}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/network]
+type = internal/network
+interface = ${system.network_interface}
+
+interval = 1.0
+
+;;ping-interval = 3
+;;udspeed-minwidth = 5
+
+accumulate-stats = true
+unknown-as-up = true
+
+format-connected = <ramp-signal><label-connected>
+format-connected-background = ${color.mb}
+
+format-disconnected = <label-disconnected>
+format-disconnected-background = ${color.mb}
+format-disconnected-prefix = " "
+format-disconnected-prefix-font = 7
+format-disconnected-prefix-foreground =  ${color.green}
+
+label-connected = "%{A1:nmd &:} %essid%%{A}"
+label-connected-foreground =  ${color.green}
+label-connected-background = ${color.mb}
+
+label-disconnected = "%{A1:nmd &:} dis%{A}"
+label-disconnected-foreground =  ${color.green}
+label-disconnected-background = ${color.mb}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-font = 3
+ramp-signal-foreground =  ${color.green}
+ramp-signal-background = ${color.mb}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+label-layout = %layout%
+label-layout-foreground = ${colors.primary}
+label-layout-font = 4
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-foreground = ${colors.background}
+label-indicator-background = ${colors.secondary}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/sysmenu]
+type = custom/text
+
+content = ""
+content-font = 7
+content-foreground = ${color.RED}
+;content-background = ${color.BGL}
+content-padding = 0
+
+click-left = ~/.config/bspwm/rofi/bin/powermenu
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/notification-github]
+type = custom/script
+exec = ~/.config/bspwm/polybar/scripts/notification-github.sh
+interval = 60
+label-background = ${color.BGL}
+click-left = google-chrome-stable --newtab https://github.com/notifications
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/menu]
+type = custom/text
+
+; content = ""
+; content = ""
+content = ""
+content-font = 3
+
+;content-font = 3
+content-foreground = ${color.blue-arch}
+content-padding = 0
+
+click-left = ~/.config/bspwm/rofi/bin/launcher
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/themes]
+type = custom/text
+
+; content = ""
+content = ""
+content-font = 5
+content-foreground = #FF0677
+content-padding = 0
+
+click-left = ~/.config/bspwm/rofi/bin/themes
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

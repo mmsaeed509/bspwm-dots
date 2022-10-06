@@ -55,10 +55,10 @@ export _JAVA_AWT_WM_NONREPARENTING=1
  
 # if [[ $(xrandr -q | grep 'HDMI-1-0 connected') ]]; then
 
-# # 		  # use arandr or xrandr to set monitors config
-# # 		  # in my case, i use laptop monitor (eDP1) as Primary display 
-# # 		  # and the second monitor (HDMI-1-0) as external display (extended to right)
-# # 		  # add your config to this directory `~/.config/bspwm/bin/` , If it doesn't exist, create one
+# # # 		  # use arandr or xrandr to set monitors config
+# # # 		  # in my case, i use laptop monitor (eDP1) as Primary display 
+# # # 		  # and the second monitor (HDMI-1-0) as external display (extended to right)
+# # # 		  # add your config to this directory `~/.config/bspwm/bin/` , If it doesn't exist, create one
 		  		  
 # 		  mainLeftExternalRight
 		  

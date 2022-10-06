@@ -72,9 +72,17 @@ launch_bar() {
 	fi
 	
 	if [[ ! `pidof polybar` ]]; then
-		
-			pkill polybar
-			polybar -q main -c "$DIR"/"$Bar"/config &
+	
+			if [[ "$Bar" == "Melissa" ]]; then
+				
+				pkill polybar
+				polybar -q main -c "$DIR"/"$Bar"/config &
+				polybar -q sec -c "$DIR"/"$Bar"/config &
+
+			else
+				pkill polybar
+				polybar -q main -c "$DIR"/"$Bar"/config &
+			fi
 
 	else
 		polybar-msg cmd restart
