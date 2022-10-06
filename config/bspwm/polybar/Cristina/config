@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 ##########################################################################################################
 #																										 
 #    Copyright © 2022 To Cyb3rTh1eveZ																	 
@@ -18,81 +16,102 @@
 #																										 
 ##########################################################################################################
 
+;; Global WM Settings ;;
 
-# launch a custom Polybar if it exists  #
-Bar=$(head ~/.config/bspwm/selectedThemeName)
-# launch a custom Polybar if it exists  #
+[global/wm]
 
-# Files and Directories #
-DIR="$HOME/.config/bspwm/polybar"
-SFILE="$DIR/system"
+margin-bottom = 0
+margin-top = 0
 
-# Get system variable values for various modules #
-get_values() {
+include-file = ~/.config/bspwm/polybar/system
+include-file = ~/.config/bspwm/polybar/Cristina/colors
+include-file = ~/.config/bspwm/polybar/Cristina/modules/mediaModules
+include-file = ~/.config/bspwm/polybar/Cristina/modules/modules
+include-file = ~/.config/bspwm/polybar/Cristina/modules/monitoringModules
+include-file = ~/.config/bspwm/polybar/Cristina/modules/separatorsModules
 
-	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
-	BATTERY=$(upower -i `upower -e | grep 'BAT'` | grep 'native-path' | cut -d':' -f2 | tr -d '[:blank:]')
-	ADAPTER=$(upower -i `upower -e | grep 'AC'` | grep 'native-path' | cut -d':' -f2 | tr -d '[:blank:]')
-	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
+;; Bar Settings
 
-}
+[bar/main]
 
-# Write values to `system` file #
-set_values() {
+monitor = 
+monitor-fallback =false
+monitor-strict = false
 
-	if [[ "$ADAPTER" ]]; then
-		sed -i -e "s/adapter = .*/adapter = $ADAPTER/g" 						${SFILE}
-	fi
-	if [[ "$BATTERY" ]]; then
-		sed -i -e "s/battery = .*/battery = $BATTERY/g" 						${SFILE}
-	fi
-	if [[ "$CARD" ]]; then
-		sed -i -e "s/graphics_card = .*/graphics_card = $CARD/g" 				${SFILE}
-	fi
-	if [[ "$INTERFACE" ]]; then
-		sed -i -e "s/network_interface = .*/network_interface = $INTERFACE/g" 	${SFILE}
-	fi
+override-redirect = false
 
-}
+bottom = true
+fixed-center = true
 
-# Launch Polybar with selected style #
-launch_bar() {
-	
-	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
-	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
+width = 95%
+height = 25
 
-	if [[ -z "$CARD" ]]; then
-		sed -i -e 's/backlight/bna/g' "$DIR"/"$Bar"/config
-	elif [[ "$CARD" != *"intel_"* ]]; then
-		sed -i -e 's/backlight/brightness/g' "$DIR"/"$Bar"/config
-	fi
+offset-x = 3%
+offset-y = 6
 
-	if [[ "$INTERFACE" == e* ]]; then
-		sed -i -e 's/network/ethernet/g' "$DIR"/"$Bar"/config
-	fi
-	
-	if [[ ! `pidof polybar` ]]; then
-	
-			if [[ "$Bar" == "Melissa" ]]; then
-				
-				pkill polybar
-				polybar -q main -c "$DIR"/"$Bar"/config &
-				polybar -q sec -c "$DIR"/"$Bar"/config &
+background = ${color.bg}
+foreground = ${color.fg}
 
-			else
-				pkill polybar
-				polybar -q main -c "$DIR"/"$Bar"/config &
-			fi
+radius = 4.0
 
-	else
-		polybar-msg cmd restart
-	fi
-	
-}
+line-size = 2
+line-color = ${color.ac}
 
-# Execute functions #
-get_values
-set_values
+border-size = 8px
+border-color = ${color.bg}
 
-# launch polybar #
-launch_bar
+padding = 1
+
+module-margin-left = 0
+module-margin-right = 0
+
+### Fonts Icons & Glyphs
+
+font-0 = "Iosevka Nerd Font:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "google\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
+
+font-5 = "Banana:style=Regular:antialilas=true;size=6;2"
+font-6 = "Font Awesome 6 Free Solid:size=10;3"
+font-7 = "Material Design Icons Desktop:size=12;3"
+font-8 = "MesloLGS NF:style=Regular:size=15;4"
+
+modules-left   = menu dots bspwm dots mod  
+modules-center = L song L2
+modules-right  = RD battery RD2 cpuTemp RD network RD2 cpu RD mpd RD2 info-cava RD volume RD2 backlight RD date RD2
+ 
+spacing = 0
+separator =
+dim-value = 1.0
+
+tray-position = right
+tray-detached = false
+tray-maxsize = 16
+tray-background = ${color.bg}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+tray-scale = 1.0
+
+wm-restack = bspwm
+enable-ipc = true
+
+cursor-click = pointer 
+cursor-scroll = ns-resize
+
+[settings]
+
+throttle-output = 5
+throttle-output-for = 10
+
+screenchange-reload = false
+
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+pseudo-transparency = false

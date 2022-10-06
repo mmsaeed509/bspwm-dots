@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 ##########################################################################################################
 #																										 
@@ -18,81 +18,58 @@
 #																										 
 ##########################################################################################################
 
+# Select the right temperature file. # 
+for temp_dir in /sys/class/hwmon/*; do
+    [[ "$(< "${temp_dir}/name")" =~ (coretemp|fam15h_power|k10temp) ]] && {
 
-# launch a custom Polybar if it exists  #
-Bar=$(head ~/.config/bspwm/selectedThemeName)
-# launch a custom Polybar if it exists  #
+		temp_dirs=("$temp_dir"/temp*_input)
+        temp_dir=${temp_dirs[0]}
+        break
 
-# Files and Directories #
-DIR="$HOME/.config/bspwm/polybar"
-SFILE="$DIR/system"
+	}
 
-# Get system variable values for various modules #
-get_values() {
+done
 
-	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
-	BATTERY=$(upower -i `upower -e | grep 'BAT'` | grep 'native-path' | cut -d':' -f2 | tr -d '[:blank:]')
-	ADAPTER=$(upower -i `upower -e | grep 'AC'` | grep 'native-path' | cut -d':' -f2 | tr -d '[:blank:]')
-	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
 
-}
+# Get CPU temp. #
+[[ -f "$temp_dir" ]] && deg="$(($(< "$temp_dir") * 100 / 10000))"
 
-# Write values to `system` file #
-set_values() {
+# Add CPU temp to the output. #
+if [[ "$cpu_temp" != "off" && "$deg" ]]; then
+    deg="${deg//.}"
+    
+    # Convert to Fahrenheit if enabled
+    [[ "$cpu_temp" == "F" ]] && deg="$((deg * 90 / 50 + 320))"
+    
+	deg_no_format="${deg/${deg: -1}}"
 
-	if [[ "$ADAPTER" ]]; then
-		sed -i -e "s/adapter = .*/adapter = $ADAPTER/g" 						${SFILE}
-	fi
-	if [[ "$BATTERY" ]]; then
-		sed -i -e "s/battery = .*/battery = $BATTERY/g" 						${SFILE}
-	fi
-	if [[ "$CARD" ]]; then
-		sed -i -e "s/graphics_card = .*/graphics_card = $CARD/g" 				${SFILE}
-	fi
-	if [[ "$INTERFACE" ]]; then
-		sed -i -e "s/network_interface = .*/network_interface = $INTERFACE/g" 	${SFILE}
-	fi
+    # Format the output
+    deg="${deg/${deg: -1}}°${cpu_temp:-C}"
 
-}
 
-# Launch Polybar with selected style #
-launch_bar() {
-	
-	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
-	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
+fi
 
-	if [[ -z "$CARD" ]]; then
-		sed -i -e 's/backlight/bna/g' "$DIR"/"$Bar"/config
-	elif [[ "$CARD" != *"intel_"* ]]; then
-		sed -i -e 's/backlight/brightness/g' "$DIR"/"$Bar"/config
-	fi
+# from  0°C to 40°C print ->  
+if [[ "$deg_no_format" -le 40 ]] 
+	then
+		# the ' %{T3} ' -> pass font type to polybar config file 
+		# the selected font type is number 3, which is (font-3 = "Iosevka:style=bold:"size=12;3" )
+		echo "%{T3} %{F#D4BFFF}$deg"
 
-	if [[ "$INTERFACE" == e* ]]; then
-		sed -i -e 's/network/ethernet/g' "$DIR"/"$Bar"/config
-	fi
-	
-	if [[ ! `pidof polybar` ]]; then
-	
-			if [[ "$Bar" == "Melissa" ]]; then
-				
-				pkill polybar
-				polybar -q main -c "$DIR"/"$Bar"/config &
-				polybar -q sec -c "$DIR"/"$Bar"/config &
+# from 40°C to 60°C print -> 
+elif [[ "$deg_no_format" -le 60 ]] 
+	then
+		echo "%{T3} %{F#D4BFFF}$deg"
 
-			else
-				pkill polybar
-				polybar -q main -c "$DIR"/"$Bar"/config &
-			fi
 
-	else
-		polybar-msg cmd restart
-	fi
-	
-}
+# from 60°C to 85°C print -> 
+elif [[ "$deg_no_format" -le 85 ]]
+	then
+		echo "%{T3} %{F#D4BFFF}$deg"
 
-# Execute functions #
-get_values
-set_values
-
-# launch polybar #
-launch_bar
+# from 85°C to +... print ->  
+elif [[ "$deg_no_format" -gt 85 ]] 
+	then
+		# the  ' -n "%{F#FF0008}"  ' -> red font as 85°C to +... is the default warn temperature
+		echo -n "%{T3}%{F#FF0008} %{F#FF0008}$deg"
+fi

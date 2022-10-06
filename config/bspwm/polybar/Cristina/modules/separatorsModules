@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 ##########################################################################################################
 #																										 
 #    Copyright © 2022 To Cyb3rTh1eveZ																	 
@@ -18,81 +16,121 @@
 #																										 
 ##########################################################################################################
 
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-# launch a custom Polybar if it exists  #
-Bar=$(head ~/.config/bspwm/selectedThemeName)
-# launch a custom Polybar if it exists  #
+[module/dots]
+type = custom/text
+content = "  "
 
-# Files and Directories #
-DIR="$HOME/.config/bspwm/polybar"
-SFILE="$DIR/system"
+content-background = ${color.BACKGROUND}
+content-foreground = #E92EF0
+content-padding = 0
+content-font = 5
 
-# Get system variable values for various modules #
-get_values() {
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
-	BATTERY=$(upower -i `upower -e | grep 'BAT'` | grep 'native-path' | cut -d':' -f2 | tr -d '[:blank:]')
-	ADAPTER=$(upower -i `upower -e | grep 'AC'` | grep 'native-path' | cut -d':' -f2 | tr -d '[:blank:]')
-	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
+[module/space]
+type = custom/text
+content = " "
+content-foreground = ${color.bg}
+; content-background = ${color.mb}
 
-}
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-# Write values to `system` file #
-set_values() {
+[module/sep]
+type = custom/text
+;content = ◆
+content = 
+content-font = 6
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.blue-gray}
+content-padding = 2
 
-	if [[ "$ADAPTER" ]]; then
-		sed -i -e "s/adapter = .*/adapter = $ADAPTER/g" 						${SFILE}
-	fi
-	if [[ "$BATTERY" ]]; then
-		sed -i -e "s/battery = .*/battery = $BATTERY/g" 						${SFILE}
-	fi
-	if [[ "$CARD" ]]; then
-		sed -i -e "s/graphics_card = .*/graphics_card = $CARD/g" 				${SFILE}
-	fi
-	if [[ "$INTERFACE" ]]; then
-		sed -i -e "s/network_interface = .*/network_interface = $INTERFACE/g" 	${SFILE}
-	fi
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-}
+##########################
+#       RD modules       #
+##########################
 
-# Launch Polybar with selected style #
-launch_bar() {
-	
-	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
-	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
+[module/RD]
+type = custom/text
 
-	if [[ -z "$CARD" ]]; then
-		sed -i -e 's/backlight/bna/g' "$DIR"/"$Bar"/config
-	elif [[ "$CARD" != *"intel_"* ]]; then
-		sed -i -e 's/backlight/brightness/g' "$DIR"/"$Bar"/config
-	fi
+content = "%{T5}%{T-}"
 
-	if [[ "$INTERFACE" == e* ]]; then
-		sed -i -e 's/network/ethernet/g' "$DIR"/"$Bar"/config
-	fi
-	
-	if [[ ! `pidof polybar` ]]; then
-	
-			if [[ "$Bar" == "Melissa" ]]; then
-				
-				pkill polybar
-				polybar -q main -c "$DIR"/"$Bar"/config &
-				polybar -q sec -c "$DIR"/"$Bar"/config &
+content-foreground = ${color.mb}
+content-background = ${color.bg}
 
-			else
-				pkill polybar
-				polybar -q main -c "$DIR"/"$Bar"/config &
-			fi
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-	else
-		polybar-msg cmd restart
-	fi
-	
-}
 
-# Execute functions #
-get_values
-set_values
+[module/RD2]
+type = custom/text
 
-# launch polybar #
-launch_bar
+content = "%{T5}%{T-}"
+
+content-foreground = ${color.bg}
+content-background = ${color.mb}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+##########################
+#       LD modules       #
+##########################
+
+[module/LD]
+type = custom/text
+
+content = "%{T5}%{T-}"
+
+content-foreground = ${color.mb}
+content-background = ${color.bg}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RLD]
+type = custom/text
+
+content = "%{T5} %{T-}"
+
+content-foreground = ${color.bg}
+content-background = ${color.mb}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/LD2]
+type = custom/text
+
+content = "%{T5}%{T-}"
+
+content-foreground = ${color.mb}
+content-background = ${color.bg}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RLD2]
+type = custom/text
+
+content = "%{T5} %{T-}"
+
+content-foreground = ${color.bg}
+content-background = ${color.mb}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/L]
+type = custom/text
+
+content = "%{T5}[%{T-}"
+
+content-foreground = #FF0677
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/L2]
+type = custom/text
+
+content = "%{T5}]%{T-}"
+
+content-foreground = #FF0677
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

@@ -170,5 +170,18 @@ then
 	sleep 0.3
 	facer_rgb.py -m 0 -z 4 -cR 175 -cB 255 -cG 0 -b 100
 	
+# ---------------------------- No. 15 -- > Melissa Theme ----------------------------
+
+elif [[ "$1" == "-Melissa" ]]
+then
+	
+	facer_rgb.py -m 0 -z 1 -cR 255 -cB 255 -cG 255 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 2 -cR 255 -cB 255 -cG 255 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 3 -cR 255 -cB 255 -cG 255 -b 100
+	sleep 0.3
+	facer_rgb.py -m 0 -z 4 -cR 255 -cB 255 -cG 255 -b 100
+	
 fi
 # ------------------------------------------------------------------------------- #

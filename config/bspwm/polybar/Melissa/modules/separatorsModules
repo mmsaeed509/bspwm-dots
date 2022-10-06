@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 ##########################################################################################################
 #																										 
 #    Copyright © 2022 To Cyb3rTh1eveZ																	 
@@ -18,81 +16,62 @@
 #																										 
 ##########################################################################################################
 
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-# launch a custom Polybar if it exists  #
-Bar=$(head ~/.config/bspwm/selectedThemeName)
-# launch a custom Polybar if it exists  #
+[module/space]
+type = custom/text
+content = " "
+content-background = ${color.background}
 
-# Files and Directories #
-DIR="$HOME/.config/bspwm/polybar"
-SFILE="$DIR/system"
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-# Get system variable values for various modules #
-get_values() {
+[module/Dspace]
+type = custom/text
+content = "  "
+content-background = ${color.background}
 
-	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
-	BATTERY=$(upower -i `upower -e | grep 'BAT'` | grep 'native-path' | cut -d':' -f2 | tr -d '[:blank:]')
-	ADAPTER=$(upower -i `upower -e | grep 'AC'` | grep 'native-path' | cut -d':' -f2 | tr -d '[:blank:]')
-	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-}
+##########################
+#       LD modules       #
+##########################
 
-# Write values to `system` file #
-set_values() {
+[module/LD]
+type = custom/text
+content = "%{T10}%{T-}"
+content-background = ${color.BACKGROUND}
+content-foreground = #3B4252
 
-	if [[ "$ADAPTER" ]]; then
-		sed -i -e "s/adapter = .*/adapter = $ADAPTER/g" 						${SFILE}
-	fi
-	if [[ "$BATTERY" ]]; then
-		sed -i -e "s/battery = .*/battery = $BATTERY/g" 						${SFILE}
-	fi
-	if [[ "$CARD" ]]; then
-		sed -i -e "s/graphics_card = .*/graphics_card = $CARD/g" 				${SFILE}
-	fi
-	if [[ "$INTERFACE" ]]; then
-		sed -i -e "s/network_interface = .*/network_interface = $INTERFACE/g" 	${SFILE}
-	fi
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-}
+[module/LD2]
+type = custom/text
+content = "%{T10}%{T-}"
+content-background = #3B4252
+content-foreground = ${color.BACKGROUND}
 
-# Launch Polybar with selected style #
-launch_bar() {
-	
-	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
-	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-	if [[ -z "$CARD" ]]; then
-		sed -i -e 's/backlight/bna/g' "$DIR"/"$Bar"/config
-	elif [[ "$CARD" != *"intel_"* ]]; then
-		sed -i -e 's/backlight/brightness/g' "$DIR"/"$Bar"/config
-	fi
+##########################
+#       RD modules       #
+##########################
 
-	if [[ "$INTERFACE" == e* ]]; then
-		sed -i -e 's/network/ethernet/g' "$DIR"/"$Bar"/config
-	fi
-	
-	if [[ ! `pidof polybar` ]]; then
-	
-			if [[ "$Bar" == "Melissa" ]]; then
-				
-				pkill polybar
-				polybar -q main -c "$DIR"/"$Bar"/config &
-				polybar -q sec -c "$DIR"/"$Bar"/config &
+[module/RD]
+type = custom/text
 
-			else
-				pkill polybar
-				polybar -q main -c "$DIR"/"$Bar"/config &
-			fi
+;content = "%{T5}█%{T-}"
+content = "%{T10}%{T-}"
 
-	else
-		polybar-msg cmd restart
-	fi
-	
-}
+content-background = ${color.BACKGROUND}
+content-foreground = #3B4252
 
-# Execute functions #
-get_values
-set_values
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-# launch polybar #
-launch_bar
+[module/RD2]
+type = custom/text
+
+content = "%{T10}%{T-}"
+content-background = #3B4252
+content-foreground = ${color.BACKGROUND}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
