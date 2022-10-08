@@ -79,6 +79,26 @@ launch_bar() {
 				polybar -q main -c "$DIR"/"$Bar"/config &
 				polybar -q sec -c "$DIR"/"$Bar"/config &
 
+			elif [[ "$Bar" == "Pamela" ]]; then
+
+				pkill polybar
+				polybar -q pam1 -c "$DIR"/"$Bar"/config &
+				polybar -q pam2 -c "$DIR"/"$Bar"/config &
+				polybar -q pam3 -c "$DIR"/"$Bar"/config &
+				polybar -q pam4 -c "$DIR"/"$Bar"/config &
+				polybar -q pam5 -c "$DIR"/"$Bar"/config &
+				polybar -q pam6 -c "$DIR"/"$Bar"/config &
+			
+			elif [[ "$Bar" == "CyberPunk" ]]; then
+
+				pkill polybar
+				polybar -q pam1 -c "$DIR"/"$Bar"/config &
+				polybar -q pam2 -c "$DIR"/"$Bar"/config &
+				polybar -q pam3 -c "$DIR"/"$Bar"/config &
+				polybar -q pam4 -c "$DIR"/"$Bar"/config &
+				polybar -q pam5 -c "$DIR"/"$Bar"/config &
+				polybar -q pam6 -c "$DIR"/"$Bar"/config &
+
 			else
 				pkill polybar
 				polybar -q main -c "$DIR"/"$Bar"/config &
