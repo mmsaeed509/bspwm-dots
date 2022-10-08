@@ -19,7 +19,8 @@
 ##########################################################################################################
 
 # Environtment path
-export PATH="${PATH}:$HOME/.config/bspwm/bin"
+export PATH="${PATH}:$HOME/.config/bspwm/bin:$HOME/.config/bspwm/rofi/bin"
+
 
 # Get colors from .Xresources #
 xrdb ~/.Xresources
@@ -53,6 +54,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # in my case eDP1 , HDMI-1-0
 # change 'HDMI-1-0' to your output
  
+
 # if [[ $(xrandr -q | grep 'HDMI-1-0 connected') ]]; then
 
 # # # 		  # use arandr or xrandr to set monitors config
@@ -213,7 +215,7 @@ bspc rule -a gwenview state=floating follow=on focus=on
 ##  ------------------------- Autostart Apps -------------------------  ##
 
 # ----- Kill if already running ----- #
-killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager bspc
+killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager bspc picom
 
 # set system colors #
 bspcolors
@@ -228,6 +230,10 @@ fi
 
 # ----- Lauch keybindings daemon ----- #
 sxhkd &
+
+# ----- start compositor ----- #
+while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
+picom -b --experimental-backends --config $HOME/.config/bspwm/picom.conf &
 
 # ----- Enable Super Keys For Menu ----- #
 ksuperkey -e 'Super_L=Alt_L|F1' &

@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 ##########################################################################################################
 #																										 
 #    Copyright © 2022 To Cyb3rTh1eveZ																	 
@@ -18,52 +16,69 @@
 #																										 
 ##########################################################################################################
 
-# paths #
-CFG="$HOME/.config"
-BSP="$HOME/.config/bspwm"
-XRES="$HOME/.Xresources.d"
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-# Set Style #
-set_style () {
+[module/space]
+type = custom/text
+content = " "
+content-background = ${color.background}
 
-	# ----- launch a custom Polybar if it exists ----- #
-	echo "$7">~/.config/bspwm/selectedThemeName
-	
-	# ----- apply color-scheme ----- #
-	cat "$BSP"/themes/${2} > "$XRES"/colors
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-	# ----- notify ----- #
-	bash ~/.config/bspwm/notify/notify
+[module/Blankspace]
+type = custom/text
+content = " "
+content-background = #0C1018
 
-	# ----- apply wallpaper ----- #
-	feh --bg-fill /usr/share/backgrounds/${1}
-	
-	# ----- set gtk theme, icons and cursor ----- #
-	if [[ `pidof xsettingsd` ]]; then
-		sed -i -e "s|Net/ThemeName .*|Net/ThemeName \"$3\"|g" ${HOME}/.xsettingsd
-		sed -i -e "s|Net/IconThemeName .*|Net/IconThemeName \"$4\"|g" ${HOME}/.xsettingsd
-		sed -i -e "s|Gtk/CursorThemeName .*|Gtk/CursorThemeName \"$5\"|g" ${HOME}/.xsettingsd
-		sed -i -e "s|Inherits=.*|Inherits=$5|g" ${HOME}/.icons/default/index.theme
-	else
-		sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=\"$3\"/g" ${HOME}/.gtkrc-2.0
-		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=\"$4\"/g" ${HOME}/.gtkrc-2.0
-		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=\"$5\"/g" ${HOME}/.gtkrc-2.0
-		
-		sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=$3/g" ${CFG}/gtk-3.0/settings.ini
-		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=$4/g" ${CFG}/gtk-3.0/settings.ini
-		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$5/g" ${CFG}/gtk-3.0/settings.ini
-	fi
-	zz
-	
-	# ----- Apply RGB Colors For Keyboard ----- #
-	### ONLY For Predator Laptos ###
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-	# ----- set background for i3look based on the selected theme ----- #
-	echo "$1">~/.config/bspwm/i3lockBackground
+[module/spaceB]
+type = custom/text
+content = " "
+content-background = ${color.BACKGROUND}
 
-	# ----- reload config ----- #
-	pkill polybar
-	bspc wm -r
-}
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-set_style "${1}" "${2}" "${3}" "${4}" "${5}" "${6}" "${7}"
+
+##########################
+#       LD modules       #
+##########################
+
+[module/LD]
+type = custom/text
+content = "%{T5}█%{T-}"
+
+content-foreground = #0C1018
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/LT]
+type = custom/text
+
+content = "%{T6}%{T5}█%{T-}"
+
+content-foreground = #0C1018
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+##########################
+#       RD modules       #
+##########################
+
+[module/RD]
+type = custom/text
+
+content = "%{T5}█%{T-}"
+
+content-foreground = #0C1018
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RT]
+type = custom/text
+
+content = "%{T5}█%{T-}"
+
+content-foreground = #0C1018
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

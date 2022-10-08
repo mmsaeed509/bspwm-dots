@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 ##########################################################################################################
 #																										 
@@ -18,52 +18,59 @@
 #																										 
 ##########################################################################################################
 
-# paths #
-CFG="$HOME/.config"
-BSP="$HOME/.config/bspwm"
-XRES="$HOME/.Xresources.d"
+# Select the right temperature file. # 
+for temp_dir in /sys/class/hwmon/*; do
+    [[ "$(< "${temp_dir}/name")" =~ (coretemp|fam15h_power|k10temp) ]] && {
 
-# Set Style #
-set_style () {
+		temp_dirs=("$temp_dir"/temp*_input)
+        temp_dir=${temp_dirs[0]}
+        break
 
-	# ----- launch a custom Polybar if it exists ----- #
-	echo "$7">~/.config/bspwm/selectedThemeName
-	
-	# ----- apply color-scheme ----- #
-	cat "$BSP"/themes/${2} > "$XRES"/colors
+	}
 
-	# ----- notify ----- #
-	bash ~/.config/bspwm/notify/notify
+done
 
-	# ----- apply wallpaper ----- #
-	feh --bg-fill /usr/share/backgrounds/${1}
-	
-	# ----- set gtk theme, icons and cursor ----- #
-	if [[ `pidof xsettingsd` ]]; then
-		sed -i -e "s|Net/ThemeName .*|Net/ThemeName \"$3\"|g" ${HOME}/.xsettingsd
-		sed -i -e "s|Net/IconThemeName .*|Net/IconThemeName \"$4\"|g" ${HOME}/.xsettingsd
-		sed -i -e "s|Gtk/CursorThemeName .*|Gtk/CursorThemeName \"$5\"|g" ${HOME}/.xsettingsd
-		sed -i -e "s|Inherits=.*|Inherits=$5|g" ${HOME}/.icons/default/index.theme
-	else
-		sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=\"$3\"/g" ${HOME}/.gtkrc-2.0
-		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=\"$4\"/g" ${HOME}/.gtkrc-2.0
-		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=\"$5\"/g" ${HOME}/.gtkrc-2.0
-		
-		sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=$3/g" ${CFG}/gtk-3.0/settings.ini
-		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=$4/g" ${CFG}/gtk-3.0/settings.ini
-		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$5/g" ${CFG}/gtk-3.0/settings.ini
-	fi
-	zz
-	
-	# ----- Apply RGB Colors For Keyboard ----- #
-	### ONLY For Predator Laptos ###
 
-	# ----- set background for i3look based on the selected theme ----- #
-	echo "$1">~/.config/bspwm/i3lockBackground
+# Get CPU temp. #
+[[ -f "$temp_dir" ]] && deg="$(($(< "$temp_dir") * 100 / 10000))"
 
-	# ----- reload config ----- #
-	pkill polybar
-	bspc wm -r
-}
+# Add CPU temp to the output. #
+if [[ "$cpu_temp" != "off" && "$deg" ]]; then
+    deg="${deg//.}"
+    
+    # Convert to Fahrenheit if enabled
+    [[ "$cpu_temp" == "F" ]] && deg="$((deg * 90 / 50 + 320))"
+    
+	deg_no_format="${deg/${deg: -1}}"
 
-set_style "${1}" "${2}" "${3}" "${4}" "${5}" "${6}" "${7}"
+    # Format the output
+    deg="${deg/${deg: -1}}°${cpu_temp:-C}"
+
+
+fi
+
+# from  0°C to 40°C print ->  
+if [[ "$deg_no_format" -le 40 ]] 
+	then
+		# the ' %{T3} ' -> pass font type to polybar config file 
+		# the selected font type is number 3, which is (font-3 = "Iosevka:style=bold:"size=12;3" )
+		echo "%{T3} %{F#79E6F3}$deg"
+
+# from 40°C to 60°C print -> 
+elif [[ "$deg_no_format" -le 60 ]] 
+	then
+		echo "%{T3} %{F#79E6F3}$deg"
+
+
+# from 60°C to 85°C print -> 
+elif [[ "$deg_no_format" -le 85 ]]
+	then
+		echo "%{T3} %{F#79E6F3}$deg"
+
+# from 85°C to +... print ->  
+elif [[ "$deg_no_format" -gt 85 ]] 
+	then
+		# the  ' -n "%{F#FF0008}"  ' -> red font as 85°C to +... is the default warn temperature
+		echo -n "%{T3}%{F#FF0008} %{F#FF0008}$deg"
+fi
+
