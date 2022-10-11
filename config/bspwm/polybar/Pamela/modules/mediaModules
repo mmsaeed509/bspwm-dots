@@ -35,7 +35,10 @@ use-ui-max = false
 interval = 5
 
 
-format-volume = <ramp-volume> <label-volume>
+; format-volume = <ramp-volume> <label-volume>
+format-volume =  <bar-volume> <label-volume>
+
+format-volume-foreground = ${color.green}
 
 format-muted = <label-muted>
 format-muted-prefix = 婢
@@ -64,6 +67,27 @@ ramp-volume-foreground = ${color.green}
 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
+
+
+; Only applies if <bar-volume> is used
+bar-volume-width = 10
+bar-volume-gradient = false
+
+bar-volume-indicator = 󰮯
+bar-volume-indicator-font = 7
+bar-volume-indicator-foreground = ${color.green}
+
+bar-volume-fill = ━
+bar-volume-fill-font = 7
+bar-volume-foreground-0 = ${color.green}
+bar-volume-foreground-1 = ${color.green}
+bar-volume-foreground-2 = ${color.green}
+bar-volume-foreground-3 = ${color.green}
+bar-volume-foreground-4 = ${color.green}
+
+bar-volume-empty = ━
+bar-volume-empty-font = 7
+bar-volume-empty-foreground = ${color.green}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

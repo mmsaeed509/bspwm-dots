@@ -84,11 +84,11 @@ interval = 1
 
 format = <label>
 
-format-prefix = " "
-format-prefix-font = 5
+format-prefix = ""
+format-prefix-font = 4
 format-prefix-foreground = ${color.red}
-label = "%{A1:stacer &:}CPU %percentage%%%{A}"
-label-font = 10
+label = "%{A1:stacer &:} %percentage%%%{A}"
+label-font = 4
 label-foreground = ${color.red}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -135,7 +135,7 @@ interval = 180
 format = <label>
 
 ;label = %output% Updates
-label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e sudo pacman -Syyu &:} %output% Updates%{A}"
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e sudo pacman -Syyu &:} %output%%{A}"
 
 format-font = 4
 label-foreground = #e92ef0

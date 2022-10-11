@@ -342,6 +342,6 @@ content-font = 5
 content-foreground = #5BB1FD
 content-padding = 0
 
-click-left = alacritty -e pwsh-preview
+click-left = bsp-powershell
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
