@@ -36,6 +36,8 @@ include-file = ~/.config/bspwm/polybar/Pamela/modules/monitoringModules
 # contains the separators (e.g  , | , <| ,  ,etc..) #
 include-file = ~/.config/bspwm/polybar/Pamela/modules/separatorsModules
 
+## ----------------------------------  [bar/pam1] ---------------------------------- ##
+
 [bar/pam1]
 
 monitor = 
@@ -89,6 +91,8 @@ enable-ipc = true
 cursor-click = pointer 
 cursor-scroll = ns-resize
 
+## ----------------------------------  [bar/pam2] ---------------------------------- ##
+
 [bar/pam2]
 
 monitor = 
@@ -117,7 +121,7 @@ line-color = ${color.blue}
 border-size = 2
 border-color = ${color.bg}
 
-padding = 2
+padding = 1
 
 module-margin-left = 0
 module-margin-right = 0
@@ -141,6 +145,8 @@ enable-ipc = true
 
 cursor-click = pointer 
 cursor-scroll = ns-resize
+
+## ----------------------------------  [bar/pam3] ---------------------------------- ##
 
 [bar/pam3]
 
@@ -170,7 +176,7 @@ line-color = ${color.blue}
 border-size = 2
 border-color = ${color.bg}
 
-padding = 2
+padding = 1
 
 module-margin-left = 0
 module-margin-right = 0
@@ -181,12 +187,12 @@ font-2 = "google\-mdi:size=12;3"
 font-3 = "Iosevka:style=bold:size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
 font-5 = "Iosevka:style=bold:size=18;4"
+font-6 = "Material Design Icons:style=Bold:size18;4"
 
 
-
-modules-left   = cpu space cpuTemp 
-modules-center = updates-pacman 
-modules-right  = battery space volume
+modules-left   = volume space cpu space cpuTemp space updates-pacman space notification-github space battery
+modules-center =  
+modules-right  = 
 
 separator =
 dim-value = 1.0
@@ -196,6 +202,8 @@ enable-ipc = true
 
 cursor-click = pointer 
 cursor-scroll = ns-resize
+
+## ----------------------------------  [bar/pam4] ---------------------------------- ##
 
 [bar/pam4]
 
@@ -225,7 +233,7 @@ line-color = ${color.blue}
 border-size = 2
 border-color = ${color.bg}
 
-padding = 3
+padding = 1
 
 module-margin-left = 0
 module-margin-right = 0
@@ -249,6 +257,8 @@ enable-ipc = true
 
 cursor-click = pointer 
 cursor-scroll = ns-resize
+
+## ----------------------------------  [bar/pam5] ---------------------------------- ##
 
 [bar/pam5]
 
@@ -278,7 +288,7 @@ line-color = ${color.blue}
 border-size = 2
 border-color = ${color.bg}
 
-padding = 3
+padding = 1
 
 module-margin-left = 0
 module-margin-right = 0
@@ -311,6 +321,8 @@ enable-ipc = true
 
 cursor-click = pointer 
 cursor-scroll = ns-resize
+
+## ----------------------------------  [bar/pam6] ---------------------------------- ##
 
 [bar/pam6]
 
