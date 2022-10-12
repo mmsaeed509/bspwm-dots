@@ -41,6 +41,9 @@ Set-Alias M "ncmpcpp"
 Set-Alias MA "~/.ncmpcpp/scripts/ncmpcpp-art"
 Set-Alias typer "termtyper"
 
+# ls #
+Set-Alias ls "lsd"
+
 # Alias with arguments (must be a function in case of arguments) #
 function youtube { ytfzf -t }
 
@@ -64,3 +67,11 @@ function ga {git add}
 function gc {git commit -m}
 function gp {git push origin master}
 function cb {git checkout}
+
+# ls #
+function l {lsd -lh}
+function ll {lsd -lah}
+function la {lsd -A}
+function lm {lsd -m}
+function lr {lsd -R}
+function lg {lsd -l --group-directories-first}
