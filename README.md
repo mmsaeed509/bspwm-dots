@@ -37,7 +37,7 @@
 
 </br>
 
- - OS: [**`Exodia OS`**](https://github.com/Exodia-OS)
+ - OS: [**`Exodia OS`**](https://exodia-os.github.io/exodia-website/)
  - WM: [**`bspwm`**](https://github.com/baskerville/bspwm) , [**`i3WM`**](https://i3wm.org/)
  - Bar: [**`Polybar`**](https://github.com/polybar/polybar)
  - Widget: [**`EWW`**](https://github.com/elkowar/eww)
