@@ -145,9 +145,9 @@ element selected {
 
 element.active,
 element.selected.urgent {
-  background-color: @on;
+  background-color: @active;
   text-color: @background;
-  border-color: @on;
+  border-color: @active;
 }
 
 element.selected.urgent {

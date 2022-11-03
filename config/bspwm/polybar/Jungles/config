@@ -75,7 +75,7 @@ font-4 = "Iosevka Nerd Font:size=18;4"
 font-5 = "Iosevka:style=bold:size=18;4"
 
 
-modules-left = LD menu RT LT date RT LT mod RT space cpuTemp space space info-cava space space mpd 
+modules-left = LD xdomenu RT LT date RT LT mod RT space cpuTemp space space info-cava space space mpd 
 modules-center = LT bspwm RT
 modules-right = LT themes RT LT xkeyboard RT LT network Blankspace volume Blankspace backlight Blankspace battery RT LT sysmenu RD
 

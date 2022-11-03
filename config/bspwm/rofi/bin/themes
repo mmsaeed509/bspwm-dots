@@ -49,7 +49,7 @@ availableThemes="$theme_1\n$theme_2\n$theme_3\n$theme_4\
 \n$theme_5\n$theme_6\n$theme_7\n$theme_8\
 \n$theme_9\n$theme_10\n$theme_11\n$theme_12\n$theme_13\n$theme_14\n$theme_15\n$theme_16\n$theme_17\n$theme_18"
 
-chosen="$(echo -e "$availableThemes" | $rofi_command -p "Exodia OS themes : [18]" -dmenu -selected-row 0)"
+chosen="$(echo -e "$availableThemes" | $rofi_command -dmenu -selected-row 0)"
 #
 # the 1st var -> background, the 2th var -> color scheme name, the 3th var -> the theme name, 
 # the 4th var -> icons name, the 5th var -> the cursor name, the 6th var -> RGB mood for keyboard
@@ -93,7 +93,7 @@ case $chosen in
         bash apply-theme  'tokyo-night31.png' 'JapaneseCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'JapaneseCity'
         ;;
     $theme_13)
-        bash apply-theme  'tokyo.png' 'TokyoCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'tokyo'
+        bash apply-theme  'tokyo-night03.png' 'TokyoCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'tokyo'
         ;;
     $theme_14)
         bash apply-theme  'valorant.jpg' 'valorant' 'Tokyonight-Dark-B' 'Red-Black' 'Rage-Gothic' 'RedJungles' 'valorant'

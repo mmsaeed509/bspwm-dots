@@ -84,7 +84,7 @@ font-9 = "Iosevka Nerd Font:size=20;4"
 
 modules-left   =
 modules-center =
-modules-right  = volume space battery RD RD2 network RD cpu RD2 cpuTemp RD date RD2 info-cava RD backlight RD2 sysmenu RD
+modules-right  = volume space RD RD2 info-cava RD netUpSpeed RD2 network RD cpu RD2 cpuTemp RD date RD2 battery RD backlight RD2 sysmenu RD
  
 separator =
 spacing = 0
@@ -156,7 +156,7 @@ font-7 = "Material Design Icons:style=Bold:size18;4"
 font-8 = "unifont:fontformat=truetype:size=9;3"
 font-9 = "Iosevka Nerd Font:size=20;4"
 
-modules-left   = LD menu LD2 mod LD bspwm LD2 updates-pacman notification-github netDownSpeed LD xkeyboard LD2 mpd LD space themes 
+modules-left   = LD xdomenu LD2 mod LD bspwm LD2 updates-pacman notification-github netDownSpeed LD xkeyboard LD2 mpd LD space themes RD RD2 menu
 modules-center =
 modules-right  =
 

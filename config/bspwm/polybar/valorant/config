@@ -42,7 +42,7 @@ monitor =
 monitor-strict = false
 override-redirect = false
 
-bottom = true
+bottom = false
 fixed-center = true
 
 width = 99%
@@ -79,7 +79,7 @@ font-7 = "Material Design Icons:style=Bold:size=9;3"
 font-8 = "unifont:fontformat=truetype:size=9;3"
 font-9 = "Iosevka:style=bold:size=15;4"
 
-modules-left   = space menu Dspace LD2 mpd RD2 space LD2 mod RD2 space LD5 updates-pacman notification-github RD5 space LD3 network RD3 space sep space xkeyboard
+modules-left   = space xdomenu Dspace LD2 mpd RD2 space LD2 mod RD2 space LD5 updates-pacman notification-github RD5 space LD3 network RD3 space sep space xkeyboard
 modules-center = LD5 bspwm RD5
 modules-right  = themes space LD3 battery RD3 space LD cpu cpuTemp LD4 info-cava RD4 volume backlight RD space LD3 date RD3 space sysmenu space
  

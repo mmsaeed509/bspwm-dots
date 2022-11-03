@@ -46,8 +46,14 @@ override-redirect = false
 bottom = false
 fixed-center = true
 
-width = 99s%
-height = 27
+; width = 99s%
+; height = 27
+
+; offset-x = 0.5%
+; offset-y = 0.5%
+
+width = 99%
+height = 35
 
 offset-x = 0.5%
 offset-y = 0.5%
@@ -80,9 +86,9 @@ font-7 = Material Design Icons:style=Bold:size=9;3
 font-8 = unifont:fontformat=truetype:size=9;3
 font-9 = "Iosevka:style=bold:size=15;4"
 
-modules-left   = mod  pip  bspwm  pip  info-cava  pip  notification-github pip xkeyboard pip
+modules-left   = xdomenu pip  bspwm  pip  info-cava  pip  notification-github pip mod pip
 modules-center = space mpd space   
-modules-right  = pip themes pip cpu Dspace cpuTemp pip volume space network space backlight space memory pip battery space date space
+modules-right  = pip xkeyboard pip cpu Dspace cpuTemp pip volume space network space backlight space memory pip battery space date space
 
 separator =
 spacing = 0

@@ -1,3 +1,27 @@
+##########################################################################################################
+#																										 
+#    Copyright © 2022 To Cyb3rTh1eveZ																	 
+#																										 
+#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+#																										 
+#																										 
+#																										 
+#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+#    LICENSE © GNU-GPL3																					 
+#																										 
+##########################################################################################################
+
+##---------- Toggle right click context menu. ----------##
+
+# Toggle right click context menu.
+~button3
+  xqp 0 $(xdo id -N Bspwm -n root) && jgmenu_run
+
 ##---------- Keybindings for bspwm ----------##
 
 # Terminal (alacritty)
@@ -46,8 +70,8 @@ super + shift + {g,e}
 	{google-chrome-stable,geany}
 
 # Terminal Apps
-ctrl + alt + {r,h,b,n}
-	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {ranger,htop,bashtop,nvim}
+ctrl + alt + {r,h,b,n,v}
+	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {ranger,htop,bashtop,nvim,vim}
 
 # Color Picker
 super + p
