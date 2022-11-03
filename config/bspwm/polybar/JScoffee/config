@@ -79,7 +79,7 @@ font-7 = "Material Design Icons:style=Bold:size=9;3"
 font-8 = "unifont:fontformat=truetype:size=9;3"
 font-9 = "Iosevka:style=bold:size=15;4"
 
-modules-left   = space menu sep mod pipL bspwm pipR notification-github sep updates-pacman 
+modules-left   = space xdomenu sep mod pipL bspwm pipR notification-github sep updates-pacman 
 modules-center = mpd
 modules-right  = themes Dspace xkeyboard space battery space cpu cpuTemp space volume backlight space network space date Dspace sysmenu
  

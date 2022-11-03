@@ -28,6 +28,9 @@ set_style () {
 
 	# ----- launch a custom Polybar if it exists ----- #
 	echo "$7">~/.config/bspwm/selectedThemeName
+
+    # ----- icons for jgmenus ----- #
+    echo "$4">~/.config/bspwm/icons
 	
 	# ----- apply color-scheme ----- #
 	cat "$BSP"/themes/${2} > "$XRES"/colors
@@ -53,7 +56,6 @@ set_style () {
 		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=$4/g" ${CFG}/gtk-3.0/settings.ini
 		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$5/g" ${CFG}/gtk-3.0/settings.ini
 	fi
-	zz
 	
 	# ----- Apply RGB Colors For Keyboard ----- #
 	KeyProfileColor -$6

@@ -97,6 +97,7 @@ format-offline-prefix = ""
 format-offline-prefix-foreground = ${color.RED}
 format-offline-prefix-background = #3B4252
 label-offline = " Offline"
+label-offline-background = #3B4252
 
 ; label-song =  "%title% | %artist%"
 label-song =  " %title% "

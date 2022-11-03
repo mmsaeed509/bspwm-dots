@@ -23,7 +23,7 @@ margin-bottom = 0
 margin-top = 0
 
 include-file = ~/.config/bspwm/polybar/system
-include-file = ~/.config/bspwm/polybar/colors
+include-file = ~/.config/bspwm/polybar/ChadWM/colors
 
 # contains brightness, workspaces, Date, etc.... #
 include-file = ~/.config/bspwm/polybar/ChadWM/modules/modules
@@ -81,7 +81,7 @@ font-4 = "Iosevka Nerd Font:size=18;4"
 
 
 
-modules-left   = mod space LDD bspwm LDD space ethernet space themes space LDD xkeyboard LDD space notification-github space space info-cava
+modules-left   = xdomenu space LDD bspwm LDD space ethernet space mod space LDD xkeyboard LDD space notification-github space space info-cava
 modules-center = LDD mpd LDD
 modules-right  = updates-pacman space LDD volume spaceD backlight LDD space RDD battery space cpu space cpuTemp space network space PLDD date PLD
 

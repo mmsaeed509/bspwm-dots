@@ -18,7 +18,7 @@
 #																										 
 ##########################################################################################################
 
-# Environtment path
+# Environtment path #
 export PATH="${PATH}:$HOME/.config/bspwm/bin:$HOME/.config/bspwm/rofi/bin"
 
 
@@ -57,15 +57,15 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # in my case eDP1 , HDMI-1-0
 # change 'HDMI-1-0' to your output
  
-
 # if [[ $(xrandr -q | grep 'HDMI-1-0 connected') ]]; then
 
-# # # 		  # use arandr or xrandr to set monitors config
-# # # 		  # in my case, i use laptop monitor (eDP1) as Primary display 
-# # # 		  # and the second monitor (HDMI-1-0) as external display (extended to right)
-# # # 		  # add your config to this directory `~/.config/bspwm/bin/` , If it doesn't exist, create one
-		  		  
-# 		  mainLeftExternalRight
+#  		# use arandr or xrandr to set monitors config
+#  		# in my case, i use laptop monitor (eDP1) as Primary display 
+#  		# and the second monitor (HDMI-1-0) as external display (extended to right)
+# 		# add your config to this directory `~/.config/bspwm/bin/` , If it doesn't exist, create one
+# 		mainLeftExternalRight
+# 		# mainDownExternaUp
+# 		#   mainDownExternaMAINUp
 		  
 # fi
 
@@ -74,7 +74,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # ----- workspaces config ----- #
 workspaces() {
 	name=1
-	for monitor in `bspc query -M`; do
+	for monitor in `bspc query -M --names`; do
 		
     bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '' ''      
 		let name++
@@ -186,10 +186,11 @@ for i in ${comm[@]}; do
 
 # ----- apps open in media workspaces ----- #
 
-declare -a media=(Audacity Music MPlayer Lxmusic Inkscape Gimp-2.10 obs vlc)
+declare -a media=(Audacity Music MPlayer Lxmusic Inkscape Gimp-2.10 obs vlc Spotify)
 for i in ${media[@]}; do
    bspc rule -a $i desktop='^7' state=floating follow=on focus=on; done
 
+# bspc rule -a Spotify desktop ='^7' state=floating follow=on focus=on
 
 # ----- apps open in settings workspaces ----- #
 

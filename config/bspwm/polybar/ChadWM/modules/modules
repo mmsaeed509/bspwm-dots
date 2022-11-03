@@ -309,3 +309,15 @@ content-padding = 0
 click-left = ~/.config/bspwm/rofi/bin/themes
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/xdomenu]
+type = custom/text
+interval = 1
+content = ""
+content-font = 5
+content-foreground = #353B45 
+content-background = #7DC5A0
+content-padding = 1
+click-left = jgmenu_run
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

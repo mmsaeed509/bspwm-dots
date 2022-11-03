@@ -313,6 +313,17 @@ click-left = ~/.config/bspwm/rofi/bin/launcher
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+[module/xdomenu]
+type = custom/text
+interval = 1
+
+content = ""
+content-font = 5
+content-foreground = ${color.GREEN}
+content-padding = 0
+click-left = jgmenu_run
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 [module/themes]
 type = custom/text
 

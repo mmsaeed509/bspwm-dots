@@ -78,9 +78,9 @@ font-6 = "Font Awesome 6 Free Solid:size=10;3"
 font-7 = "Material Design Icons Desktop:size=12;3"
 font-8 = "MesloLGS NF:style=Regular:size=15;4"
 
-modules-left   = menu dots bspwm dots mod  
-modules-center = L song L2
-modules-right  = RD battery RD2 cpuTemp RD network RD2 cpu RD mpd RD2 info-cava RD volume RD2 backlight RD date RD2
+modules-left   = xdomenu dots bspwm dots mod  
+modules-center =
+modules-right  = L song L2 RD battery RD2 cpuTemp RD network RD2 cpu RD mpd RD2 info-cava RD volume RD2 backlight RD date RD2
  
 spacing = 0
 separator =

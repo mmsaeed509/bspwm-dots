@@ -227,12 +227,12 @@ unknown-as-up = true
 
 label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %upspeed% %{A}"
 
-;label-connected-background = #2C3038
+label-connected-background = #3B4252
 label-connected-foreground = #56B6C2
 label-connected-font = 4
 
 label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} Offline %{A}"
-;label-disconnected-background = #2C3038
+label-disconnected-background = #3B4252
 label-disconnected-foreground = #56B6C2
 label-disconnected-font = 4
 
@@ -348,6 +348,20 @@ content-background = ${color.BACKGROUND}
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/launcher
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+[module/xdomenu]
+type = custom/text
+interval = 1
+
+content = ""
+content-font = 5
+content-foreground = #D06FE8
+content-background = ${color.BACKGROUND}
+content-padding = 0
+click-left = jgmenu_run
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

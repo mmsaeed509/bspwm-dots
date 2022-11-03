@@ -26,3 +26,7 @@ if [[ "$ssid" == "" ]]; then
 else
   echo "直 $ssid"
 fi
+
+ssid=$(iwgetid -r)
+printf "󰤨  $ssid " ;;
+

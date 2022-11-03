@@ -82,7 +82,7 @@ format-offline-prefix = "  "
 format-offline-prefix-foreground = ${color.BACKGROUND}
 format-offline-prefix-background = #94F9C2
 
-label-offline = "Offline"
+label-offline = "Offline "
 format-offline-background = #94F9C2
 format-offline-foreground = ${color.BACKGROUND}
 

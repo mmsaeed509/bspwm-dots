@@ -351,6 +351,20 @@ click-left = ~/.config/bspwm/rofi/bin/launcher
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+[module/xdomenu]
+type = custom/text
+interval = 1
+
+; arch ;
+; content = "" 
+content = ""
+content-font = 5
+content-foreground = #D06FE8
+content-padding = 0
+click-left = jgmenu_run
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 [module/themes]
 type = custom/text
 
@@ -362,5 +376,19 @@ content-foreground = #D06FE8
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/themes
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/polywins]
+type = custom/script
+exec = ~/.config/bspwm/polybar/scripts/polywins.sh 2>/dev/null
+format = <label>
+format-foreground = ${color.BACKGROUND}
+format-background = ${color.FOREGROUND}
+label = %output%
+label-foreground = ${color.BACKGROUND}
+label-background = ${color.FOREGROUND}
+label-padding = 1
+tail = true
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

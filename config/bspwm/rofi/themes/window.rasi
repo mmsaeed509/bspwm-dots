@@ -54,7 +54,7 @@ textbox-prompt-colon {
 	expand: 						false;
 	str: 							"";
     border-radius:                  5px;
-    background-color:               @highlight;
+    background-color:               @selected;
     text-color:                     @background;
     padding:    					6px 10px 6px 10px;
 	font:							"Iosevka Nerd Font 10";
@@ -146,9 +146,9 @@ element selected {
 
 element.active,
 element.selected.urgent {
-  background-color: @on;
+  background-color: @active;
   text-color: @background;
-  border-color: @on;
+  border-color: @active;
 }
 
 element.selected.urgent {

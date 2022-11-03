@@ -27,8 +27,8 @@ use-ui-max = false
 interval = 5
 
 ; format-volume = <ramp-volume> <label-volume>
-format-volume =  <bar-volume> <label-volume>
-format-volume-font = 4
+format-volume = <bar-volume> <label-volume>
+format-volume-font = 8
 format-volume-foreground = ${color.BLUE}
 
 format-muted = <label-muted>
@@ -97,6 +97,7 @@ format-offline-prefix = ""
 format-offline-prefix-foreground = ${color.RED}
 format-offline-prefix-background = #2C3038
 label-offline = " Offline"
+label-offline-background = #2C3038
 
 ; label-song =  "%title% | %artist%"
 label-song =  " %title% "

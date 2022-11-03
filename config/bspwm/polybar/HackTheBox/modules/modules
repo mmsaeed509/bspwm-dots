@@ -181,7 +181,7 @@ time = %I:%M %p
 time-alt = %A, %d %B %Y
 
 format = <label>
-format-prefix = " "
+format-prefix = ""
 format-prefix-font = 3
 format-prefix-foreground = #9FEF00
 ; format-prefix-background = #111927
@@ -266,14 +266,15 @@ ramp-signal-background = #111927
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-label-layout = %layout%
-label-layout-foreground = ${colors.primary}
+label-layout = " %layout% "
+label-layout-foreground = ${color.BACKGROUND}
+label-layout-background = ${color.FOREGROUND}
 label-layout-font = 4
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-foreground = ${colors.background}
-label-indicator-background = ${colors.secondary}
+label-indicator-foreground = ${color.BACKGROUND}
+label-indicator-background = ${color.FOREGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -319,6 +320,18 @@ content-foreground = #9FEF00
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/launcher
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/xdomenu]
+type = custom/text
+interval = 1
+
+content = ""
+content-font = 5
+content-foreground = #9FEF00
+content-padding = 0
+click-left = jgmenu_run
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

@@ -79,7 +79,7 @@ font-4 = "Iosevka Nerd Font:size=18;4"
 font-5 = "Iosevka:style=bold:size=18;4"
 
 modules-left = 
-modules-center = menu
+modules-center = xdomenu
 modules-right = 
 
 separator =
