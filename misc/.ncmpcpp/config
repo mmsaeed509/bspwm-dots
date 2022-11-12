@@ -38,7 +38,7 @@ header_visibility 		 = "no"
 titles_visibility 		 = "no"
 
 ### Progress bar ###
-progressbar_look 			= "▂▂▂"
+progressbar_look 			= "- "
 progressbar_color 			= "black"
 progressbar_elapsed_color   = "yellow"
 

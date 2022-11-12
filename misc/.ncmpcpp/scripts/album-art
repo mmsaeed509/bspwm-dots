@@ -69,7 +69,7 @@ find_cover_image() {
 
     # If we still failed to find a cover image, we use the fallback
     if [ -z "$cover_path" ]; then
-        cover_path="$HOME/.ncmpcpp/scripts/music.jpg"
+        cover_path="$HOME/.ncmpcpp/scripts/cover3.jpg"
     fi
 }
 

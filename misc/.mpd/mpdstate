@@ -1,53 +1,23 @@
 sw_volume: 100
 audio_device_state:1:pulse audio
 audio_device_state:1:my_fifo
-state: play
-current: 0
-time: 120.269000
+state: pause
+current: 3
+time: 91.509000
 random: 0
 repeat: 1
-single: 0
+single: 1
 consume: 0
 crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Alexandra Stan - Mr Saxo Beat.mp3
-1:Dua Lipa - Don't Start Now .mp3
-2:Empire Of The Sun - Alive.mp3
-3:Euro 2016 Montage - Magic In The Air.mp3
-4:Eye of the Tiger - Theme from Rocky 3.mp3
-5:Gloria Gaynor - I Will Survive.mp3
-6:Hans Zimmer - S.T.A.Y.mp3
-7:Imagine Dragons - Believer .mp3
-8:INNA  Yalla.mp3
-9:INNA x Sean Paul - Up.mp3
-10:JeffreyBezos.mp3
-11:John Newman - Love Me Again.mp3
-12:Love Tonight.mp3
-13:M.I.A. - Paper Planes.mp3
-14:Madonna - La Isla Bonita.mp3
-15:Major Lazer - Watch Out For This.mp3
-16:Maneskin_Beggin.mp3
-17:Marie Wegener - Countdown.mp3
-18:Mark Marku - Da si htjela .mp3
-19:Masked Wolf  - Astronaut in the Ocean .mp3
-20:MGK - Invincible .mp3
-21:Nathalie Cardone  Hasta siempre.mp3
-22:Olivia Addams - I'm Lost.mp3
-23:Olympic ayres magic .mp3
-24:Phosphorescent - Song for Zula .mp3
-25:Post Malone - rockstar.mp3
-26:Shakira - Rabiosa.mp3
-27:Shakira & Rihanna - Can't Remember to Forget You.mp3
-28:Stern des Sudens _ FC Bayern.mp3
-29:The Final Countdown - Europe.mp3
-30:YouAreMyLove_My Life.mp3
-31:NEFFEX - Grateful .mp3
-32:Cartoon - On & On (feat. Daniel Levi) [NCS Release].mp3
-33:Culture Code - Make Me Move (feat. Karra) [NCS Release].mp3
-34:Janji - Heroes Tonight (feat. Johnning) [NCS Release].mp3
-35:N3WPORT - Power .mp3
-36:Solo - RiveR  .mp3
-37:Unstoppable - Sia.mp3
+0:Eye of the Tiger.mp3
+1:Haaland Ha Ha Ha.mp3
+2:INNA x Sean Paul - Up.mp3
+3:Niko Pandetta- Pistole Nella Fendi.mp3
+4:Solo - RiveR  .mp3
+5:Stern des Sudens _ FC Bayern.mp3
+6:Unstoppable - Sia.mp3
+7:Janji - Heroes Tonight (feat. Johnning) [NCS Release].mp3
 playlist_end
