@@ -11,7 +11,7 @@
 #																										 
 #																										 
 #																										 
-#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
 #    LICENSE © GNU-GPL3																					 
 #																										 
 ##########################################################################################################

@@ -13,7 +13,7 @@
 #																										 
 #																										 
 #																										 
-#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								
+#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								
 #    LICENSE © GNU-GPL3																					 
 #																										 
 ##########################################################################################################
@@ -93,7 +93,7 @@ case $chosen in
         bash apply-theme  'tokyo-night31.png' 'JapaneseCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'JapaneseCity'
         ;;
     $theme_13)
-        bash apply-theme  'tokyo-night03.png' 'TokyoCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'tokyo'
+        bash apply-theme  'tokyo-night29.png' 'TokyoCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'tokyo'
         ;;
     $theme_14)
         bash apply-theme  'valorant.jpg' 'valorant' 'Tokyonight-Dark-B' 'Red-Black' 'Rage-Gothic' 'RedJungles' 'valorant'

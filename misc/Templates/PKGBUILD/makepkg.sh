@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>
+# Copyright (C) 2022 Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>
 # LICENSE © GNU-GPL3
 #
 
@@ -21,7 +21,7 @@ trap exit_on_signal_SIGTERM SIGTERM
 # Build packages (create a binary package -> pkg.pkg.tar.zst)
 BUILDPKG () {
 
-    echo -e "\nRemoving olda PKGs \n"
+    echo -e "\nRemoving old PKGs \n"
     rm ./*.pkg.tar.zst
 	echo -e "\nBuilding Package...... \n"
 	makepkg -s -f

@@ -11,7 +11,7 @@
 #    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
 #     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
 #
-#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
 #    LICENSE © GNU-GPL3
 #
 #
@@ -42,8 +42,8 @@ no=''
 # Rofi CMD
 rofi_cmd() {
 	rofi -dmenu \
-		-p " $USER@$host" \
-		-mesg "祥 Uptime: $uptime" \
+		-p " Goodbye Mr. 00xWolf" \
+		-mesg " Uptime: $uptime" \
 		-theme ${dir}/${theme}.rasi
 }
 

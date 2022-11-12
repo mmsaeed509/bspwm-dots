@@ -60,11 +60,6 @@ super + {w,m,x,r,s,i}
 super + d
 	sh ~/.config/eww/dashboard/launch_dashboard
 
-
-# Inkdrop ( Markdown Editor)
-super + shift + alt + i
-	cd /bin/inkdrop/ && ./inkdrop
-
 # Launch Apps
 super + shift + {g,e}
 	{google-chrome-stable,geany}

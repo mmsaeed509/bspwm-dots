@@ -13,7 +13,7 @@
 #																										 
 #																										 
 #																										 
-#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
 #    LICENSE © GNU-GPL3																					 
 #																										 
 ##########################################################################################################
@@ -187,7 +187,7 @@ ${c5} ┃        ${c2} |      |]  ${c5}        ┃ ${c5}碌 ${c4}Init    ${c5}-�
 ${c5} ┃        ${c2} \      /   ${c5}        ┃ ${c5}  ${c4}pkgs    ${c5}- ${c4} $pkgs
 ${c5} ┃        ${c2}  '____'    ${c5}        ┃ ${c5}  ${c4}uptime  ${c5}- ${c4} $(get_uptime)
 ${c5} ┃                            ┃ ${c5}  ${c4}CPU     ${c5}- ${c4} $(get_cpu)
-${c5} ┃  ${c4} Developed by :${c2} Ozoz  ${c5}   ┃ ${c5}󰢮  ${c4}GPU     ${c5}- ${c4}$(get_gpu)
+${c5} ┃  ${c4} Developed by :${c2} 00xWolf ${c5} ┃ ${c5}󰢮  ${c4}GPU     ${c5}- ${c4}$(get_gpu)
 ${c5} ┃  ${c2} GitHub : mmsaeed509 ${c5}    ┃ ${c5}  ${c4}memory  ${c5}- ${c4} $mem_used $(echo / ) $mem_total
 ${c5} ┃ 﫥${c1} Cyb3rTh1eveZ Team   ${c5}    ┃ 
 ${c5} ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛ ${c0}   ${c1}   ${c2}   ${c3}   ${c4} 󰮯  ${c5}    ${c6}   ${c7}  
