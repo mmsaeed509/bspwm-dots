@@ -1,4 +1,0 @@
-version = "4.64.*"
-
-[tool.stubtest]
-extras = ["slack", "telegram"]

@@ -1,3 +1,0 @@
-from typing import Any
-
-def ad_unlock_account(connection, user_dn, controls: Any | None = ...): ...
