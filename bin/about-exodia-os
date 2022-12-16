@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+##########################################################################################################
+#																										 
+#    Copyright © 2022 To Cyb3rTh1eveZ																	 
+#																										 
+#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+#																										 
+#																										 
+#																										 
+#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
+#    LICENSE © GNU-GPL3																					 
+#																										 
+##########################################################################################################
+
+# About Exodia OS #
+
+if [[ -e '/version' ]]; then
+	version="v`cat /version | cut -d'.' -f1`.`cat /version | cut -d '.' -f2`"
+else
+	version='rolling'
+fi
+
+yad --title='About Exodia OS' --window-icon='exodia' \
+	--about \
+	--pname='Exodia OS' \
+	--pversion="$version" \
+	--image='exodia' \
+	--comments="Linux distro based on Arch Linux For All Cybersecurity Tracks, and it comes with other special editions as well." \
+	--copyright="Cyb3rTh1eveZ Team  﫥  Copyrights 2022-`date +'%Y'`, Mahmoud Mohamed   : mmsaeed509" \
+	--license='GPL3' \
+	--website='https://exodia-os.github.io/exodia-website/' \
+	--website-label='visit Exodia OS' \
+	--authors="Mahmoud Mohamed <https://github.com/mmsaeed509>  﫥  Cyb3rTh1eveZ Team"

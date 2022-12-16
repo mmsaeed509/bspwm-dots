@@ -27,21 +27,26 @@ XRES="$HOME/.Xresources.d"
 set_style () {
 
 	# ----- launch a custom Polybar if it exists ----- #
+	
+	pkill polybar
+
 	echo "$7">~/.config/bspwm/selectedThemeName
 
     # ----- icons for jgmenus ----- #
+	dunstify -i "" "[*] Updating jgmenus icons"
     echo "$4">~/.config/bspwm/icons
 	
 	# ----- apply color-scheme ----- #
+	dunstify -i "" "[*] Updating color-scheme"
 	cat "$BSP"/themes/${2} > "$XRES"/colors
 
-	# ----- notify ----- #
-	bash ~/.config/bspwm/notify/notify
-
 	# ----- apply wallpaper ----- #
+	dunstify -i "" "[*] Setting Desktop Background"
 	feh --bg-fill /usr/share/backgrounds/${1}
 	
 	# ----- set gtk theme, icons and cursor ----- #
+	dunstify -i "" "[*] Setting gtk theme, icons and cursor"
+
 	if [[ `pidof xsettingsd` ]]; then
 		sed -i -e "s|Net/ThemeName .*|Net/ThemeName \"$3\"|g" ${HOME}/.xsettingsd
 		sed -i -e "s|Net/IconThemeName .*|Net/IconThemeName \"$4\"|g" ${HOME}/.xsettingsd
@@ -56,13 +61,17 @@ set_style () {
 		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=$4/g" ${CFG}/gtk-3.0/settings.ini
 		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$5/g" ${CFG}/gtk-3.0/settings.ini
 	fi
-
-	# ----- set background for i3look based on the selected theme ----- #
-	echo "$1">~/.config/bspwm/i3lockBackground
+	
+	# ----- set background for betterlockscreen based on the selected theme ----- #
+	# dunstify -i "" "[*] Updating betterlockscreen Background"
+	# betterlockscreen -u /usr/share/backgrounds/${1}
 
 	# ----- reload config ----- #
-	pkill polybar
 	bspc wm -r
+
+	# ----- notify ----- #
+	bash ~/.config/bspwm/notify/notify
+
 }
 
 set_style "${1}" "${2}" "${3}" "${4}" "${5}" "${6}" "${7}"

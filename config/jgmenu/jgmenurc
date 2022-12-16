@@ -1,0 +1,55 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;;    Copyright © 2022 To Cyb3rTh1eveZ																	 
+;;																										 
+;;     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+;;    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+;;    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+;;    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+;;    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+;;     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+;;																										 
+;;																										 
+;;																										 
+;;    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
+;;    LICENSE © GNU-GPL3
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+at_pointer           = 1
+stay_alive           = 1
+csv_cmd              = pmenu
+csv_no_dirs          = 0
+tint2_look           = 0
+terminal_exec        = bspterm -float &
+terminal_args        = 
+menu_width           = 300
+menu_padding_top     = 42
+menu_padding_right   = 5
+menu_padding_bottom  = 5
+menu_padding_left    = 5
+menu_radius          = 15
+menu_border          = 2
+menu_halign          = left
+sub_hover_action     = 1
+item_margin_y        = 3
+item_height          = 38
+item_padding_x       = 10
+item_radius          = 7
+item_border          = 0
+sep_height           = 5
+font                 = JetBrainsMono Nerd Font 15px
+icon_size            = 16
+icon_theme           = Elena-dark-icons
+arrow_string         = 
+
+;; colors ;;
+color_menu_bg        = #1A1B26 100
+color_menu_border    = #D4BFFF
+color_norm_bg        = #1A1B26 0
+color_norm_fg        = #D4BFFF 100
+color_sel_bg         = #D4BFFF 50
+color_sel_fg         = #D4BFFF 100
+color_sep_fg         = #D4BFFF 40       
+
+

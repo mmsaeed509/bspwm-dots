@@ -13,7 +13,7 @@
 #																										 
 #																										 
 #																										 
-#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
 #    LICENSE © GNU-GPL3																					 
 #																										 
 ##########################################################################################################
@@ -22,12 +22,12 @@
 
 # Data
 _dir='/usr/share/exodia/help'
-# _dir='/home/ozil/Public/Temp/exodia-help/files/help'
+# _dir='/home/ozil/GitHub/Exodia-Repos/exodia-packages/exodia-help/files/help'
 _plug="$RANDOM"
 _dialog_cmd="--html --disable-search --browser --print-uri --uri-handler='firefox --new-tab %s'"
 _uri1="file://${_dir}/about.html"
 _uri2="file://${_dir}/bspwm.html"
-_uri3="file://${_dir}/team.html"
+_uri3="file://${_dir}/team/index.html"
 
 
 # About Dialog #

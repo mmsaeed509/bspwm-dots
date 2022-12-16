@@ -78,7 +78,8 @@ Credit : [Aditya Shakya](https://github.com/adi1090x/widgets)
 | 🦋 | 🦋 Ozoz EWW | 🦋 |
 |--|--|--|
 | ![](img/EWW.png) | ![](img/ozozEWW.png) | ![](img/eww.png) |
-
+| ![](img/view-1.png) | ![](img/view-2.png) | ![](img/view-3.png) |
+| ![](img/view-4.png) | ![](img/view-5.png) | ![](img/view-6.png) |
 
 <!-- EWW -->
 

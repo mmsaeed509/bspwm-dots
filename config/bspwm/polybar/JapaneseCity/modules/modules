@@ -37,7 +37,7 @@ card = intel_backlight
 format = <ramp> <label>
 
 label = %percentage%%
-label-font = 7
+label-font = 4
 
 ramp-0 = 
 ramp-1 = 
@@ -49,7 +49,7 @@ ramp-6 = 
 ramp-7 = 
 ramp-8 = 
 ramp-9 = 
-ramp-font = 7
+ramp-font = 4
 ramp-foreground = ${color.MAGENTA}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -108,7 +108,7 @@ format-font = 2
 label-monitor = %name%
 
 
-label-focused = [%name%]
+label-focused = %name%
 label-focused-foreground = ${color.BLUE}
 label-focused-background = ${color.BGL}
 label-focused-underline = ${color.BLUE}
@@ -210,6 +210,29 @@ label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} Offline %{A}"
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+[module/netDownSpeed]
+type = internal/network
+interface = ${system.network_interface}
+
+interval = 1.0
+accumulate-stats = true
+unknown-as-up = true
+
+
+label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %downspeed%%{A}"
+; label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
+
+label-connected-background = ${color.BGL}
+label-connected-foreground = #e92ef0
+label-connected-font = 4
+
+label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} Offline %{A}"
+label-disconnected-background = ${color.BGL}
+label-disconnected-foreground = #e92ef0
+label-disconnected-font = 4
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 [module/network]
 type = internal/network
 interface = ${system.network_interface}
@@ -259,7 +282,7 @@ type = custom/text
 ; content = ""
 content = ""
 content-font = 5
-content-foreground = ${color.RED}
+content-foreground = #AD8EE6
 ;content-background = ${color.BGL}
 content-padding = 0
 
@@ -310,7 +333,7 @@ type = custom/text
 ; content = ""
 content = ""
 content-font = 5
-content-foreground = ${color.RED}
+content-foreground = #AD8EE6
 ;content-background = ${color.BGL}
 content-padding = 0
 
