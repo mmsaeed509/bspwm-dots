@@ -1,6 +1,0 @@
-from typing import Any
-
-NS_REGEX: Any
-
-def localname(node): ...
-def whitespace(node) -> None: ...

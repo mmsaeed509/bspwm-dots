@@ -1,3 +1,0 @@
-from typing import Any
-
-def get_batch(batch_cls, options: Any | None = ...): ...

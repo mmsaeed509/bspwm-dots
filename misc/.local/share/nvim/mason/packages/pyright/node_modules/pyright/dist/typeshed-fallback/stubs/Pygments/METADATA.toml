@@ -1,2 +1,0 @@
-version = "2.13.*"
-requires = ["types-docutils", "types-setuptools"]

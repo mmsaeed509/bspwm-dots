@@ -1,9 +1,0 @@
-from typing import Any
-
-PERCENT_REGEX: Any
-TIME_REGEX: Any
-NUMBER_REGEX: Any
-
-def cast_numeric(value): ...
-def cast_percentage(value): ...
-def cast_time(value): ...
