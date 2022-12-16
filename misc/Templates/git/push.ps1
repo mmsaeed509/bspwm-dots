@@ -10,28 +10,21 @@
 
 # a simple PowerShell script to push your commits to GitHub #
 
-Write-Host "#############################"
-Write-Host "#      Git Push Script      #"
-Write-Host "#############################"
+Write-Host "#############################" -ForegroundColor Cyan
+Write-Host "#      Git Push Script      #" -ForegroundColor Cyan
+Write-Host "#############################" -ForegroundColor Cyan
 
 
 # get branch name (e.g master, main, etc... ) #
 $Branch = git branch --show-current
 
-
+Write-Host "`n[*] Your Current Branch : $Branch" -ForegroundColor Red
 
 # get new updates if it founded #
-Write-Host ""
-Write-Host "#################"
-Write-Host "# Updating Repo #"
-Write-Host "#################"
+Write-Host "`n[+] Updating Repo... `n" -ForegroundColor Magenta
 git pull 
 
-
-Write-Host ""
-Write-Host "##################################"
-Write-Host "# Adding new changes to the repo #"
-Write-Host "##################################"
+Write-Host "`n[+] Adding new changes to the repo... `n" -ForegroundColor Magenta
 git add --all .
 
 $M = "-m"
@@ -44,8 +37,8 @@ if ( "$($args[0])" -eq $M ) {
 
 }else {
     
-    Write-Host "##################################"
-    Write-Host "# Write your commit comment! :-  #"
+    Write-Host "##################################" -ForegroundColor Magenta
+    Write-Host "# Write your commit comment! :-  #" -ForegroundColor Magenta
 
     $COMMIT = Read-Host
 
@@ -59,8 +52,6 @@ if ( "$($args[0])" -eq $M ) {
 Write-Host ""
 git push -u origin $Branch
 
-Write-Host ""
-Write-Host "#####################"
-Write-Host "#      D O N E      #"
-Write-Host "#####################"
+# D O N E! #
+Write-Host "`n[✔] D O N E `n" -ForegroundColor Green
 

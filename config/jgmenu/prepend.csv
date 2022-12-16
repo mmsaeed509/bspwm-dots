@@ -1,0 +1,27 @@
+@icon,,18,17,16,16,0,left,top,#7AA2F7,#7AA2F7,/usr/share/exodia/jgmenu/MenuIcons/search.png
+@search,,42,15,150,20,2,left,top,#c0caf5,#7aa2f7,search ...
+
+Terminal,bspterm -float,/usr/share/exodia/jgmenu/MenuIcons/terminal.png
+
+PowerShell,bsp-powershell,/usr/share/exodia/jgmenu/MenuIcons/PowerShell.png
+
+Web Browser,google-chrome-stable,/usr/share/exodia/jgmenu/MenuIcons/web-browser.png
+
+File manager,thunar,/usr/share/exodia/jgmenu/MenuIcons/file-manager.png
+
+Text Editor,alacritty -e nvim,/usr/share/exodia/jgmenu/MenuIcons/edit-note.png
+
+Music Player,music --albumArtCover,/usr/share/exodia/jgmenu/MenuIcons/music.png
+
+^sep()
+Applications,^checkout(lx-apps),/usr/share/exodia/jgmenu/MenuIcons/applications.png
+
+Exit,powermenu,/usr/share/exodia/jgmenu/MenuIcons/exit.png
+
+BSPWM,^checkout(bspwm),/usr/share/exodia/jgmenu/MenuIcons/bspwm.png
+^tag(bspwm)
+Edit Config, alacritty -e nvim ~/.config/bspwm/bspwmrc, /usr/share/exodia/jgmenu/MenuIcons/edit-note.png
+Restart, bspc wm -r, /usr/share/exodia/jgmenu/MenuIcons/restart.png
+Exit, bspc quit, /usr/share/exodia/jgmenu/MenuIcons/exit.png
+
+^tag(lx-apps)

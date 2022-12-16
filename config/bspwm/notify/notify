@@ -72,4 +72,4 @@ elif [ "$PICTURE_NAME" == "valorant" ]
 
 fi
 
-dunstify -i "$PICTURE/$PICTURE_NAME.png" "Applying $THEME_NAME Theme... "
+dunstify -i "$PICTURE/$PICTURE_NAME.png" "$THEME_NAME Changed Successfully"

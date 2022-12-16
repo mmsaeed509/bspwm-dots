@@ -27,7 +27,7 @@ use-ui-max = false
 interval = 5
 
 ; format-volume = <ramp-volume> <label-volume>
-format-volume =  <bar-volume> <label-volume>
+format-volume = <bar-volume> <label-volume>
 format-volume-font = 4
 format-volume-foreground = ${color.BLUE}
 

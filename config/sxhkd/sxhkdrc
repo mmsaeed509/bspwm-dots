@@ -11,7 +11,7 @@
 #																										 
 #																										 
 #																										 
-#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
 #    LICENSE © GNU-GPL3																					 
 #																										 
 ##########################################################################################################
@@ -74,15 +74,11 @@ super + p
 
 # Lockscreen
 ctrl + alt + l
-    bsplock
+    betterlockscreen --lock
 
 # music art
 super + shift + m
 	music --albumArtCover
-
-# udeler
-super + u
-	cd ~/Public/udemy-downloader-gui && npm start
 
 ##---------- System Keys ----------##
 

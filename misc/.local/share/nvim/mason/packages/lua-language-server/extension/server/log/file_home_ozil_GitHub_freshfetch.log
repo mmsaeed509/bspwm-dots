@@ -1,0 +1,139 @@
+[02:26:08.445][info] [#0:/home/ozil/.local/share/nvim/mason/packages/lua-language-server/extension/server/main.lua:65]: Lua Lsp startup, root: 	/home/ozil/.local/share/nvim/mason/packages/lua-language-server/extension/server
+[02:26:08.445][info] [#0:/home/ozil/.local/share/nvim/mason/packages/lua-language-server/extension/server/main.lua:66]: ROOT:	/home/ozil/.local/share/nvim/mason/packages/lua-language-server/extension/server
+[02:26:08.445][info] [#0:/home/ozil/.local/share/nvim/mason/packages/lua-language-server/extension/server/main.lua:67]: LOGPATH:	/home/ozil/.local/share/nvim/mason/packages/lua-language-server/extension/server/log
+[02:26:08.445][info] [#0:/home/ozil/.local/share/nvim/mason/packages/lua-language-server/extension/server/main.lua:68]: METAPATH:	/home/ozil/.local/share/nvim/mason/packages/lua-language-server/extension/server/meta
+[02:26:08.445][info] [#0:/home/ozil/.local/share/nvim/mason/packages/lua-language-server/extension/server/main.lua:69]: VERSION:	3.5.6
+[02:26:08.463][info] [#0:script/service/service.lua:141]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 1.490 MB
+        # 00 : 1.490 MB
+        # 01 : 0.000 MB
+        # 02 : 0.000 MB
+        # 03 : 0.000 MB
+        # 04 : 0.000 MB
+    --------------- Coroutine ---------------
+        Total:     0
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      0
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    ---------------  RPC  ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[02:26:08.467][info] [#0:script/language.lua:137]: VSC language: nil
+[02:26:08.467][info] [#0:script/language.lua:138]: LS  language: en-us
+[02:26:08.467][info] [#0:script/workspace/workspace.lua:38]: Workspace init root: 	file:///home/ozil/GitHub/freshfetch
+[02:26:08.467][info] [#0:script/workspace/workspace.lua:42]: Log path: 	/home/ozil/.local/share/nvim/mason/packages/lua-language-server/extension/server/log/file_home_ozil_GitHub_freshfetch.log
+[02:26:08.467][info] [#0:script/workspace/workspace.lua:51]: Workspace create: 	file:///home/ozil/GitHub/freshfetch
+[02:26:08.570][info] [#0:script/provider/provider.lua:41]: Load config from client	file:///home/ozil/GitHub/freshfetch
+[02:26:08.570][info] [#0:script/provider/provider.lua:42]: {
+  Lua = {
+    diagnostics = {
+      globals = { "vim" }
+    },
+    telemetry = {
+      enable = false
+    },
+    workspace = {
+      library = {
+        ["/usr/share/nvim/runtime/lua"] = true,
+        ["/usr/share/nvim/runtime/lua/vim/lsp"] = true
+      },
+      maxPreload = 100000,
+      preloadFileSize = 10000
+    }
+  }
+}
+[02:26:08.571][info] [#0:script/provider/provider.lua:41]: Load config from client	file:///home/ozil/GitHub/freshfetch
+[02:26:08.571][info] [#0:script/provider/provider.lua:42]: {
+  Lua = {
+    diagnostics = {
+      globals = { "vim" }
+    },
+    telemetry = {
+      enable = false
+    },
+    workspace = {
+      library = {
+        ["/usr/share/nvim/runtime/lua"] = true,
+        ["/usr/share/nvim/runtime/lua/vim/lsp"] = true
+      },
+      maxPreload = 100000,
+      preloadFileSize = 10000
+    }
+  }
+}
+[02:26:08.572][info] [#0:script/provider/provider.lua:56]: Load config from client	fallback
+[02:26:08.572][info] [#0:script/provider/provider.lua:57]: {
+  Lua = {
+    diagnostics = {
+      globals = { "vim" }
+    },
+    telemetry = {
+      enable = false
+    },
+    workspace = {
+      library = {
+        ["/usr/share/nvim/runtime/lua"] = true,
+        ["/usr/share/nvim/runtime/lua/vim/lsp"] = true
+      },
+      maxPreload = 100000,
+      preloadFileSize = 10000
+    }
+  }
+}
+[02:26:08.573][info] [#0:script/library.lua:207]: Init builtin library at:	file:///home/ozil/GitHub/freshfetch
+[02:26:08.611][info] [#0:script/plugin.lua:86]: plugin path:	/home/ozil/GitHub/freshfetch
+[02:26:08.611][warn] [#0:script/plugin.lua:101]: plugin not found:	/home/ozil/GitHub/freshfetch
+[02:26:08.611][info] [#0:script/library.lua:207]: Init builtin library at:	nil
+[02:26:08.626][info] [#0:script/provider/provider.lua:56]: Load config from client	fallback
+[02:26:08.626][info] [#0:script/provider/provider.lua:57]: {
+  Lua = {
+    diagnostics = {
+      globals = { "vim" }
+    },
+    telemetry = {
+      enable = false
+    },
+    workspace = {
+      library = {
+        ["/usr/share/nvim/runtime/lua"] = true,
+        ["/usr/share/nvim/runtime/lua/vim/lsp"] = true
+      },
+      maxPreload = 100000,
+      preloadFileSize = 10000
+    }
+  }
+}
+[02:26:08.626][info] [#0:script/workspace/workspace.lua:305]: Preload start:	file:///home/ozil/GitHub/freshfetch
+[02:26:08.627][info] [#0:script/workspace/workspace.lua:311]: Scan files at:	file:///home/ozil/GitHub/freshfetch
+[02:26:08.627][info] [#0:script/workspace/workspace.lua:305]: Preload start:	<fallback>
+[02:26:08.628][info] [#0:script/workspace/workspace.lua:328]: Scan library at:	file:///home/ozil/.local/share/nvim/mason/packages/lua-language-server/extension/server/meta/Lua%205.4%20en-us%20utf8
+[02:26:08.630][info] [#0:script/workspace/workspace.lua:328]: Scan library at:	file:///usr/share/nvim/runtime/lua
+[02:26:08.636][info] [#0:script/workspace/workspace.lua:328]: Scan library at:	file:///usr/share/nvim/runtime/lua/vim/lsp
+[02:26:08.655][info] [#0:script/workspace/workspace.lua:328]: Scan library at:	file:///home/ozil/.local/share/nvim/mason/packages/lua-language-server/extension/server/meta/Lua%205.4%20en-us%20utf8
+[02:26:08.656][info] [#0:script/workspace/workspace.lua:328]: Scan library at:	file:///usr/share/nvim/runtime/lua
+[02:26:08.658][info] [#0:script/workspace/workspace.lua:328]: Scan library at:	file:///usr/share/nvim/runtime/lua/vim/lsp
+[02:26:10.467][info] [#0:script/workspace/workspace.lua:348]: Found 57 files at:	<fallback>
+[02:26:10.468][info] [#0:script/workspace/loading.lua:153]: Load files from disk:	<fallback>
+[02:26:10.468][info] [#0:script/workspace/workspace.lua:348]: Found 66 files at:	file:///home/ozil/GitHub/freshfetch
+[02:26:10.468][info] [#0:script/workspace/loading.lua:153]: Load files from disk:	file:///home/ozil/GitHub/freshfetch
+[02:26:10.767][info] [#0:script/workspace/loading.lua:165]: Loaded files takes [0.316] sec: <fallback>
+[02:26:10.767][info] [#0:script/workspace/loading.lua:174]: Compile files takes [0.000] sec: <fallback>
+[02:26:10.767][info] [#0:script/workspace/loading.lua:175]: Loaded finish:	<fallback>
+[02:26:10.767][info] [#0:script/workspace/workspace.lua:350]: Preload finish at:	<fallback>
+[02:26:10.780][warn] [#0:script/proto/proto.lua:122]: Response of [workspace/diagnostic/refresh] error [-32601]: MethodNotFound
+[02:26:10.780][info] [#0:script/workspace/loading.lua:165]: Loaded files takes [0.329] sec: file:///home/ozil/GitHub/freshfetch
+[02:26:10.780][info] [#0:script/workspace/loading.lua:174]: Compile files takes [0.000] sec: file:///home/ozil/GitHub/freshfetch
+[02:26:10.780][info] [#0:script/workspace/loading.lua:175]: Loaded finish:	file:///home/ozil/GitHub/freshfetch
+[02:26:10.780][info] [#0:script/workspace/workspace.lua:350]: Preload finish at:	file:///home/ozil/GitHub/freshfetch
+[02:26:10.808][info] [#0:script/provider/diagnostic.lua:486]: Diagnostics scope [<fallback>], files count:[54]
+[02:26:10.808][info] [#0:script/provider/diagnostic.lua:486]: Diagnostics scope [file:///home/ozil/GitHub/freshfetch], files count:[54]
+[02:26:10.809][warn] [#0:script/proto/proto.lua:122]: Response of [workspace/diagnostic/refresh] error [-32601]: MethodNotFound
+[02:26:10.966][info] [#0:script/provider/diagnostic.lua:503]: Diagnostics scope [<fallback>] finished, takes [0.158] sec.
+[02:26:10.967][info] [#0:script/provider/diagnostic.lua:503]: Diagnostics scope [file:///home/ozil/GitHub/freshfetch] finished, takes [0.158] sec.
