@@ -63,7 +63,7 @@ set_style () {
 	fi
 	
 	# ----- Apply RGB Colors For Keyboard ----- #
-	# dunstify -i "" "[*] Changing RGB colors For the Keyboard"
+	dunstify -i "" "[*] Changing RGB colors For the Keyboard"
 	# KeyProfileColor -$6
 	
 	echo "#!/bin/bash

@@ -18,36 +18,22 @@
 #																										 
 ##########################################################################################################
 
-# Help App for Exodia OS #
+# About Exodia OS #
 
-# Data
-_dir='/usr/share/exodia/help'
-# _dir='/home/ozil/GitHub/Exodia-Repos/exodia-packages/exodia-help/files/help'
-_plug="$RANDOM"
-_dialog_cmd="--html --disable-search --browser --print-uri --uri-handler='firefox --new-tab %s'"
-_uri1="file://${_dir}/about.html"
-_uri2="file://${_dir}/bspwm.html"
-_uri3="file://${_dir}/team/index.html"
+if [[ -e '/version' ]]; then
+	version="v`cat /version | cut -d'.' -f1`.`cat /version | cut -d '.' -f2`"
+else
+	version='rolling'
+fi
 
-
-# About Dialog #
-yad --plug="$_plug" --tabnum=1 ${_dialog_cmd} \
-	--uri="${_uri1}" &> /tmp/res1 &
-
-# Bspwm Dialog #
-yad --plug="$_plug" --tabnum=2 ${_dialog_cmd} \
-	--uri="${_uri2}" &> /tmp/res2 &
-
-# Team Dialog #
-yad --plug="$_plug" --tabnum=3 ${_dialog_cmd} \
-	--uri="${_uri3}" &> /tmp/res3 &
-
-# Launch Main Window #
-yad --width='1150' --height='695' --borders=0 --center \
-	--title='Exodia Help' \
-	--window-icon=exodia \
-	--no-buttons --no-escape \
-	--notebook --key="$_plug" \
-	--tab="About" --tab="BSPWM" --tab="Developers" \
-	--tab-pos=top --tab-borders=0 --active-tab=1 \
-	--expand --stack
+yad --title='About Exodia OS' --window-icon='exodia' \
+	--about \
+	--pname='Exodia OS' \
+	--pversion="$version" \
+	--image='exodia' \
+	--comments="Linux distro based on Arch Linux For All Cybersecurity Tracks, and it comes with other special editions as well." \
+	--copyright="Cyb3rTh1eveZ Team  﫥  Copyrights 2022-`date +'%Y'`, Mahmoud Mohamed   : mmsaeed509" \
+	--license='GPL3' \
+	--website='https://exodia-os.github.io/exodia-website/' \
+	--website-label='visit Exodia OS' \
+	--authors="Mahmoud Mohamed <https://github.com/mmsaeed509>  﫥  Cyb3rTh1eveZ Team"
