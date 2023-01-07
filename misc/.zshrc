@@ -213,19 +213,40 @@ On_IBlack='\033[0;100m' On_IRed='\033[0;101m' On_IGreen='\033[0;102m' On_IYellow
 On_IBlue='\033[0;104m' On_IPurple='\033[0;105m' On_ICyan='\033[0;106m' On_IWhite='\033[0;107m'
 
 ## ------------ COLORS ------------ ##
-
-echo -e ${Purple} "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┓"
-echo -e ${Purple} "┃                                                                             ┃ ${Cyan}  ${BBlue}Exodia Fetch ${Purple}┃  ${BGreen}  ${BYellow}  ${BRed}  ${Purple}┃"${RESET_COLOR}
-echo -e ${Purple} "┃  ██╗ ██╗      ██████╗  ██████╗ ██╗  ██╗██╗    ██╗ ██████╗ ██╗     ███████╗  ┣━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━┫"${RESET_COLOR}
-echo -e ${Purple} "┃ ████████╗    ██╔═████╗██╔═████╗╚██╗██╔╝██║    ██║██╔═══██╗██║     ██╔════╝  ┃                             ┃"${RESET_COLOR}
-echo -e ${Purple} "┃ ╚██╔═██╔╝    ██║██╔██║██║██╔██║ ╚███╔╝ ██║ █╗ ██║██║   ██║██║     █████╗    ┃                             ┃"${RESET_COLOR}
-echo -e ${Purple} "┃ ████████╗    ████╔╝██║████╔╝██║ ██╔██╗ ██║███╗██║██║   ██║██║     ██╔══╝    ┃ ${Cyan}  ${Blue}Developed by : ${BIGreen}00xWolf   ${Purple}┃"${RESET_COLOR}
-echo -e ${Purple} "┃ ╚██╔═██╔╝    ╚██████╔╝╚██████╔╝██╔╝ ██╗╚███╔███╔╝╚██████╔╝███████╗██║       ┃ ${Cyan}  ${Blue}GitHub : ${BIGreen}@mmsaeed509     ${Purple}┃"${RESET_COLOR}
-echo -e ${Purple} "┃  ╚═╝ ╚═╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚══╝╚══╝  ╚═════╝ ╚══════╝╚═╝       ┃ ${Cyan}﫥 ${BIGreen}Cyb3rTh1eveZ Team        ${Purple}┃"${RESET_COLOR}
-echo -e ${Purple} "┃                                                                             ┃                             ┃"${RESET_COLOR}
-echo -e ${Purple} "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"${RESET_COLOR}
+                                   
+echo -e ${Purple} "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┓"
+echo -e ${Purple} "┃                                                                                ┃ ${Cyan}  ${BBlue}Exodia Fetch ${Purple}┃  ${BGreen}  ${BYellow}  ${BRed}  ${Purple}┃"${RESET_COLOR}
+echo -e ${Purple} "┃  ██╗ ██╗     ███████╗██╗  ██╗ ██████╗ ██████╗ ██╗ █████╗      ██████╗ ███████╗ ┣━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━┫"${RESET_COLOR}
+echo -e ${Purple} "┃ ████████╗    ██╔════╝╚██╗██╔╝██╔═══██╗██╔══██╗██║██╔══██╗    ██╔═══██╗██╔════╝ ┃                             ┃"${RESET_COLOR}
+echo -e ${Purple} "┃ ╚██╔═██╔╝    █████╗   ╚███╔╝ ██║   ██║██║  ██║██║███████║    ██║   ██║███████╗ ┃                             ┃"${RESET_COLOR}
+echo -e ${Purple} "┃ ████████╗    ██╔══╝   ██╔██╗ ██║   ██║██║  ██║██║██╔══██║    ██║   ██║╚════██║ ┃ ${Cyan}  ${Blue}Developed by : ${BIGreen}00xWolf   ${Purple}┃"${RESET_COLOR}
+echo -e ${Purple} "┃ ╚██╔═██╔╝    ███████╗██╔╝ ██╗╚██████╔╝██████╔╝██║██║  ██║    ╚██████╔╝███████║ ┃ ${Cyan}  ${Blue}GitHub : ${BIGreen}@mmsaeed509     ${Purple}┃"${RESET_COLOR}
+echo -e ${Purple} "┃  ╚═╝ ╚═╝     ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝╚═╝  ╚═╝     ╚═════╝ ╚══════╝ ┃ ${Cyan}﫥 ${BIGreen}Cyb3rTh1eveZ Team        ${Purple}┃"${RESET_COLOR}
+echo -e ${Purple} "┃                                                                                ┃                             ┃"${RESET_COLOR}
+echo -e ${Purple} "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"${RESET_COLOR}
 echo -e ""
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+# 
+# echo -e ${Purple} "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┓"
+# echo -e ${Purple} "┃                                                                             ┃ ${Cyan}  ${BBlue}Exodia Fetch ${Purple}┃  ${BGreen}  ${BYellow}  ${BRed}  ${Purple}┃"${RESET_COLOR}
+# echo -e ${Purple} "┃  ██╗ ██╗      ██████╗  ██████╗ ██╗  ██╗██╗    ██╗ ██████╗ ██╗     ███████╗  ┣━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━┫"${RESET_COLOR}
+# echo -e ${Purple} "┃ ████████╗    ██╔═████╗██╔═████╗╚██╗██╔╝██║    ██║██╔═══██╗██║     ██╔════╝  ┃                             ┃"${RESET_COLOR}
+# echo -e ${Purple} "┃ ╚██╔═██╔╝    ██║██╔██║██║██╔██║ ╚███╔╝ ██║ █╗ ██║██║   ██║██║     █████╗    ┃                             ┃"${RESET_COLOR}
+# echo -e ${Purple} "┃ ████████╗    ████╔╝██║████╔╝██║ ██╔██╗ ██║███╗██║██║   ██║██║     ██╔══╝    ┃ ${Cyan}  ${Blue}Developed by : ${BIGreen}00xWolf   ${Purple}┃"${RESET_COLOR}
+# echo -e ${Purple} "┃ ╚██╔═██╔╝    ╚██████╔╝╚██████╔╝██╔╝ ██╗╚███╔███╔╝╚██████╔╝███████╗██║       ┃ ${Cyan}  ${Blue}GitHub : ${BIGreen}@mmsaeed509     ${Purple}┃"${RESET_COLOR}
+# echo -e ${Purple} "┃  ╚═╝ ╚═╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚══╝╚══╝  ╚═════╝ ╚══════╝╚═╝       ┃ ${Cyan}﫥 ${BIGreen}Cyb3rTh1eveZ Team        ${Purple}┃"${RESET_COLOR}
+# echo -e ${Purple} "┃                                                                             ┃                             ┃"${RESET_COLOR}
+# echo -e ${Purple} "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"${RESET_COLOR}
+# echo -e ""
+# 
+# 
 # cat <<'EOF'
 # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 # ┃  ██╗ ██╗      ██████╗  ██████╗ ██╗  ██╗██╗    ██╗ ██████╗ ██╗     ███████╗  ┃                             ┃
@@ -239,9 +260,3 @@ echo -e ""
 # EOF
 
 # exodiafetch
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
