@@ -11,7 +11,7 @@
 #																										 
 #																										 
 #																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
+#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
 #    LICENSE © GNU-GPL3																					 
 #																										 
 ##########################################################################################################
@@ -20,17 +20,25 @@
 clear
 
 # Print Cyb3rTh1eveZ #
-Write-Host " ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗" -ForegroundColor DarkCyan
+Write-Host "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┓" -ForegroundColor DarkCyan
 Start-Sleep -Seconds 0.3
-Write-Host "██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝" -ForegroundColor DarkCyan
+Write-Host "┃                                                                             ┃   Exodia Fetch ┃        ┃" -ForegroundColor DarkCyan
 Start-Sleep -Seconds 0.3
-Write-Host "██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝"  -ForegroundColor DarkCyan
+Write-Host "┃  ██╗ ██╗      ██████╗  ██████╗ ██╗  ██╗██╗    ██╗ ██████╗ ██╗     ███████╗  ┃━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━┃"  -ForegroundColor DarkCyan
 Start-Sleep -Seconds 0.3
-Write-Host "██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝"   -ForegroundColor DarkCyan
+Write-Host "┃ ████████╗    ██╔═████╗██╔═████╗╚██╗██╔╝██║    ██║██╔═══██╗██║     ██╔════╝  ┃                             ┃"   -ForegroundColor DarkCyan
 Start-Sleep -Seconds 0.3
-Write-Host "╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗" -ForegroundColor DarkCyan
+Write-Host "┃ ╚██╔═██╔╝    ██║██╔██║██║██╔██║ ╚███╔╝ ██║ █╗ ██║██║   ██║██║     █████╗    ┃                             ┃" -ForegroundColor DarkCyan
 Start-Sleep -Seconds 0.3
-Write-Host " ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝" -ForegroundColor DarkCyan
+Write-Host "┃ ████████╗    ████╔╝██║████╔╝██║ ██╔██╗ ██║███╗██║██║   ██║██║     ██╔══╝    ┃   Developed by : 00xWolf   ┃" -ForegroundColor DarkCyan
+Start-Sleep -Seconds 0.3
+Write-Host "┃ ╚██╔═██╔╝    ╚██████╔╝╚██████╔╝██╔╝ ██╗╚███╔███╔╝╚██████╔╝███████╗██║       ┃   GitHub : @mmsaeed509     ┃" -ForegroundColor DarkCyan
+Start-Sleep -Seconds 0.3
+Write-Host "┃  ╚═╝ ╚═╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚══╝╚══╝  ╚═════╝ ╚══════╝╚═╝       ┃ 﫥 Cyb3rTh1eveZ Team        ┃" -ForegroundColor DarkCyan
+Start-Sleep -Seconds 0.3
+Write-Host "┃                                                                             ┃                             ┃" -ForegroundColor DarkCyan
+Start-Sleep -Seconds 0.3
+Write-Host "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛" -ForegroundColor DarkCyan
 
 # set theme #
 oh-my-posh init pwsh --config ~/.poshthemes/atomic.omp.json | Invoke-Expression
