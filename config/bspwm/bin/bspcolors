@@ -26,9 +26,13 @@ DUNST_DIR="$HOME/.config/dunst"
 JGMENU_DIR="$HOME/.config/jgmenu"
 
 # get icons for jgmenus #
-ICONS=$(head ~/.config/bspwm/icons)
+ICONS=$(head $DIR/VALUES/icons)
+
+# get the theme name to launch its bar #
+IMG=$(head $DIR/VALUES/theme)
 
 getcolors () {
+
 	FOREGROUND="$(xrdb -query | grep 'foreground:'| awk '{print $NF}')"
 	BACKGROUND="$(xrdb -query | grep 'background:'| awk '{print $NF}')"
 	CURSOR="$(xrdb -query | grep 'cursorColor:'| awk '{print $NF}')"
@@ -48,9 +52,11 @@ getcolors () {
 	ALTMAGENTA="$(xrdb -query | grep 'color13:'| awk '{print $NF}')"
 	ALTCYAN="$(xrdb -query | grep 'color14:'| awk '{print $NF}')"
 	ALTWHITE="$(xrdb -query | grep 'color15:'| awk '{print $NF}')"
+	
 }
 
 bspbar () {
+
 	cat > $DIR/polybar/colors <<- EOF	
 	[color]
 
@@ -73,9 +79,11 @@ bspbar () {
 	ALTCYAN = ${ALTCYAN}
 	ALTWHITE = ${ALTWHITE}
 	EOF
+
 }
 
 bspterm () {
+
 	cat > "$DIR"/alacritty/colors.yml <<- _EOF_
 		## Colors configuration
 		colors:
@@ -106,9 +114,11 @@ bspterm () {
 		    cyan:    '${ALTCYAN}'
 		    white:   '${ALTWHITE}'
 	_EOF_
+
 }
 
 bsprofi () {
+
 	cat > $DIR/rofi/themes/colors.rasi <<- EOF	
 	* {
 		background:			${BACKGROUND};
@@ -120,9 +130,11 @@ bsprofi () {
 		off:				${RED};
 	}
 	EOF
+
 }
 
 bspdunst () {
+
 	cat > $DUNST_DIR/dunstrc <<- EOF	
 ############################################################################
 # Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509> #
@@ -187,9 +199,11 @@ foreground  = "${FOREGROUND}"
 frame_color = "${BLUE}"
 
 	EOF
+
 }
 
 bspjgmenu () {
+
 	cat > $JGMENU_DIR/jgmenurc <<- EOF	
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
@@ -247,15 +261,194 @@ color_sep_fg         = ${FOREGROUND} 40
 
 
 	EOF
+
+}
+
+bsp_rofi_themes_menu () {
+
+	cat > $DIR/rofi/themes/themes.rasi <<- EOF	
+	/* 
+
+    Copyright © 2022 To Cyb3rTh1eveZ																	 
+
+     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+
+    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
+    LICENSE © GNU-GPL3
+
+ */
+
+configuration {
+    show-icons:                 false;
+	drun-display-format:        "{name}";
+	disable-history:                true;
+	sidebar-mode: 					false;
+}
+
+/*****----- Global Properties -----*****/
+@import "colors.rasi"
+
+* {
+    font:                        "JetBrainsMono Nerd Font Bold 10";
+}
+
+/*****----- Main Window -----*****/
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       680px;
+    height:                      42%;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    border-radius:               8px;
+    cursor:                      "default";
+    background-color:            @background;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listbox" ];
+}
+
+listbox {
+    spacing:                     7px;
+    padding:                     35px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "message", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     40px 40px 45px;
+    background-color:            transparent;
+    background-image:            url("~/.config/bspwm/rofi/imgs/theme-menu-imgs/${IMG}.png", width);
+    text-color:                  @foreground;
+    orientation:                 horizontal;
+    children:                    [ "textbox-prompt-colon", "entry" ];
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      true;
+    str:                         " [20] Bspwm Themes Are Available In Exodia OS \n   Have fun with your favorite theme ";
+    padding:                     12px 15px;
+    border-radius:               8px;
+    background-color:            @background-alt;
+    text-color:                  @background;
+}
+entry {
+    enabled:                     true;
+    expand:                      false;
+    padding:                     12px 16px;
+    border-radius:               8px;
+    background-color:            @background-alt;
+    text-color:                  @background;
+    cursor:                      text;
+    placeholder:                 " Search \n     ";
+    placeholder-color:           inherit;
+}
+dummy {
+    expand:                      true;
+    background-color:            transparent;
+}
+
+
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     4;
+    lines:                       4;
+    cycle:                       false;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     15px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     8px;
+    border-radius:               4px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+element normal.normal {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+element selected.normal {
+    background-image: linear-gradient(${FOREGROUND}, ${FOREGROUND}, ${BACKGROUND});
+    text-color:                  @background;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+/*****----- Message -----*****/
+message {
+    background-color:            transparent;
+}
+textbox {
+    padding:                     12px;
+    border-radius:               5px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+error-message {
+    padding:                     12px;
+    border-radius:               5px;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+
+	EOF
+
 }
 
 main () {
+
 	getcolors
 	bspbar
 	bspterm
 	bsprofi
 	bspdunst
 	bspjgmenu
+	bsp_rofi_themes_menu
+	
 }
 
 main

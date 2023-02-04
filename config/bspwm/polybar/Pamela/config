@@ -40,7 +40,7 @@ include-file = ~/.config/bspwm/polybar/Pamela/modules/separatorsModules
 
 [bar/pam1]
 
-monitor = 
+monitor = ${env:MONITOR:}
 monitor-fallback =
 monitor-strict = false
 
@@ -95,7 +95,7 @@ cursor-scroll = ns-resize
 
 [bar/pam2]
 
-monitor = 
+monitor = ${env:MONITOR:}
 monitor-fallback =
 monitor-strict = false
 
@@ -150,7 +150,7 @@ cursor-scroll = ns-resize
 
 [bar/pam3]
 
-monitor = 
+monitor = ${env:MONITOR:}
 monitor-fallback =
 monitor-strict = false
 
@@ -207,7 +207,7 @@ cursor-scroll = ns-resize
 
 [bar/pam4]
 
-monitor = 
+monitor = ${env:MONITOR:}
 monitor-fallback =
 monitor-strict = false
 
@@ -262,7 +262,7 @@ cursor-scroll = ns-resize
 
 [bar/pam5]
 
-monitor = 
+monitor = ${env:MONITOR:}
 monitor-fallback =
 monitor-strict = false
 
@@ -326,7 +326,7 @@ cursor-scroll = ns-resize
 
 [bar/pam6]
 
-monitor = 
+monitor = ${env:MONITOR:}
 monitor-fallback =
 monitor-strict = false
 

@@ -18,11 +18,12 @@
 #																										 
 ##########################################################################################################
 
-# get theme name #
-PICTURE_NAME=$(head ~/.config/bspwm/selectedThemeName)
+# PATH #
+DIR="$HOME/.config/bspwm"
+PICTURE="$DIR/notify"
 
-# PATH
-PICTURE="$HOME/.config/bspwm/notify"
+# get theme name #
+PICTURE_NAME=$(head $DIR/VALUES/theme)
 
 THEME_NAME=$PICTURE_NAME
 
@@ -70,6 +71,14 @@ elif [ "$PICTURE_NAME" == "valorant" ]
      then
          THEME_NAME="VALORANT"
 
+elif [ "$PICTURE_NAME" == "Hacker" ]
+     then
+         THEME_NAME="A Hacker Den"
+
+elif [ "$PICTURE_NAME" == "exodia" ]
+     then
+         THEME_NAME="Exodia"
+
 fi
 
-dunstify -i "$PICTURE/$PICTURE_NAME.png" "$THEME_NAME Changed Successfully"
+dunstify -i "$PICTURE/$PICTURE_NAME.png" "[✔] $THEME_NAME Theme Applied Successfully!"

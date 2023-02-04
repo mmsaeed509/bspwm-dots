@@ -34,7 +34,7 @@ theme_7=" Hack The Box"
 theme_8=" BlackArch"
 theme_9=" Neon"
 theme_10=" JS Coffee"
-theme_11=" Amarena"
+theme_11=" Exodia"
 theme_12=" Japanese City"
 theme_13=" Tokyo City"
 theme_14=" VALORANT"
@@ -42,12 +42,15 @@ theme_15=" Melissa"
 theme_16=" Cristina"
 theme_17=" Pamela"
 theme_18=" CyberPunk"
-
+theme_19=" A Hacker Den"
+theme_20=" Amarena"
 
 # pass available themes to rofi #
 availableThemes="$theme_1\n$theme_2\n$theme_3\n$theme_4\
-\n$theme_5\n$theme_6\n$theme_7\n$theme_8\
-\n$theme_9\n$theme_10\n$theme_11\n$theme_12\n$theme_13\n$theme_14\n$theme_15\n$theme_16\n$theme_17\n$theme_18"
+\n$theme_5\n$theme_6\n$theme_7\n$theme_8\n$theme_9\
+\n$theme_10\n$theme_11\n$theme_12\n$theme_13\n$theme_14\
+\n$theme_15\n$theme_16\n$theme_17\n$theme_18\n$theme_19\
+\n$theme_20"
 
 chosen="$(echo -e "$availableThemes" | $rofi_command -dmenu -selected-row 0)"
 #
@@ -84,10 +87,10 @@ case $chosen in
         bash apply-theme  'women.jpg' 'neon' 'Tokyonight-Dark-BL' 'neon-icon' 'WineTrix' 'Neon' 'neon'
         ;;
     $theme_10)
-        bash apply-theme  'JScoffee.jpg' 'JScoffee' 'everblush' 'oomox-Everblush-icons' 'ManjaTrix' 'ChadWM' 'JScoffee'
+        bash apply-theme  'JScoffee.jpg' 'JScoffee' 'everblush' 'Zafiro' 'ManjaTrix' 'ChadWM' 'JScoffee'
         ;;
     $theme_11)
-        bash apply-theme  'amarena.jpg' 'Amarena' 'amarena' 'Elena-dark-icons' 'lightSaber' 'Amarena' 'Amarena'
+        bash apply-theme  'wolf.jpeg' 'exodia' 'Dracula' 'Green-Icons' 'Rage-Purple-Cursor' 'Emilia' 'exodia'
         ;;
     $theme_12)
         bash apply-theme  'dark.jpg' 'JapaneseCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'JapaneseCity'
@@ -99,7 +102,7 @@ case $chosen in
         bash apply-theme  'valorant.jpg' 'valorant' 'Tokyonight-Dark-B' 'Red-Black' 'Rage-Gothic' 'RedJungles' 'valorant'
         ;;
     $theme_15)
-        bash apply-theme  'Melissa.png' 'Melissa' 'Arc-Dark' 'Arc-Circle' 'Qogirr' 'Melissa' 'Melissa'
+        bash apply-theme  'Melissa.png' 'Melissa' 'Arc-Dark' 'Arc-Circle' 'ArchTrix' 'Melissa' 'Melissa'
         ;;
     $theme_16)
         bash apply-theme  'Cristina.png' 'Cristina' 'Dracula' 'Elena-dark-icons' 'Rage-Purple-Cursor' 'Emilia' 'Cristina'
@@ -109,5 +112,11 @@ case $chosen in
         ;;
     $theme_18)
         bash apply-theme  'CyberPunk.png' 'CyberPunk' 'Tokyonight-Dark-B' 'candy-icons' 'Rage-Purple-Cursor' 'Emilia' 'CyberPunk'
+        ;;
+    $theme_19)
+        bash apply-theme  'hacker.jpeg' 'Hacker' 'HackTheBox' 'Green-Icons' 'ManjaTrix' 'HackTheBox' 'Hacker'
+        ;;
+    $theme_20)
+        bash apply-theme  'amarena.jpg' 'Amarena' 'amarena' 'Elena-dark-icons' 'lightSaber' 'Amarena' 'Amarena'
         ;;
 esac

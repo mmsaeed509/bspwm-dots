@@ -42,7 +42,7 @@ no=''
 # Rofi CMD
 rofi_cmd() {
 	rofi -dmenu \
-		-p "Goodbye  Mr. 00xWolf" \
+		-p "Goodbye  Mr. $USER" \
 		-mesg " Uptime: $uptime" \
 		-theme ${dir}/${theme}.rasi
 }

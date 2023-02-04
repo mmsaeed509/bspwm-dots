@@ -40,7 +40,7 @@ include-file = ~/.config/bspwm/polybar/BlackArch/modules/separatorsModules
 
 
 [bar/main]
-monitor = 
+monitor = ${env:MONITOR:}
 monitor-strict = false
 override-redirect = false
 

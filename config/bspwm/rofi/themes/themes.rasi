@@ -82,7 +82,7 @@ inputbar {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      true;
-    str:                         " [18] Bspwm Themes Are Available In Exodia OS \n   Have fun with your favorite theme ";
+    str:                         " [20] Bspwm Themes Are Available In Exodia OS \n   Have fun with your favorite theme ";
     padding:                     12px 15px;
     border-radius:               8px;
     background-color:            @background-alt;

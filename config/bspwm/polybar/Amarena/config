@@ -40,7 +40,7 @@ include-file = ~/.config/bspwm/polybar/Amarena/modules/monitoringModules
 include-file = ~/.config/bspwm/polybar/Amarena/modules/separatorsModules
 
 [bar/main]
-monitor = 
+monitor = ${env:MONITOR:}
 monitor-strict = false
 override-redirect = false
 

@@ -39,7 +39,7 @@ include-file = ~/.config/bspwm/polybar/HackTheBox/modules/separatorsModules
 
 
 [bar/main]
-monitor = 
+monitor = ${env:MONITOR:}
 monitor-strict = false
 override-redirect = false
 

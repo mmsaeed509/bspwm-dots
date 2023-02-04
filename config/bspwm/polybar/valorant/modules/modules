@@ -119,7 +119,7 @@ format-font = 2
 label-monitor = %name%
 
 
-label-focused = (%name%)
+label-focused = %name%
 label-focused-foreground = #EB7BF2
 label-focused-background = #313131
 label-focused-underline = #EB7BF2

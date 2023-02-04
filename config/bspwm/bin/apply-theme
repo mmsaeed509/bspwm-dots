@@ -30,29 +30,29 @@ set_style () {
 	
 	pkill polybar
 
-	echo "$7">~/.config/bspwm/selectedThemeName
+	echo "$7" > "$BSP"/VALUES/theme
 
     # ----- icons for jgmenus ----- #
 	dunstify -i "" "[*] Updating jgmenus icons"
-    echo "$4">~/.config/bspwm/icons
+    echo "$4" > "$BSP"/VALUES/icons
 	
 	# ----- apply color-scheme ----- #
-	dunstify -i "" "[*] Updating color-scheme"
-	cat "$BSP"/themes/${2} > "$XRES"/colors
+	dunstify -i "" "[+] Updating Color Schemes"
+	cat "$BSP"/colorSchemes/${2} > "$XRES"/colors
 
 	# ----- apply wallpaper ----- #
-	dunstify -i "" "[*] Setting Desktop Background"
+	dunstify -i "" "[+] Setting Desktop Background"
 	feh --bg-fill /usr/share/backgrounds/${1}
 	
 	# ----- set gtk theme, icons and cursor ----- #
-	dunstify -i "" "[*] Setting gtk theme, icons and cursor"
+	dunstify -i "" "[+] Setting gtk theme, icons and cursor"
 
 	if [[ `pidof xsettingsd` ]]; then
 		sed -i -e "s|Net/ThemeName .*|Net/ThemeName \"$3\"|g" ${HOME}/.xsettingsd
 		sed -i -e "s|Net/IconThemeName .*|Net/IconThemeName \"$4\"|g" ${HOME}/.xsettingsd
 		sed -i -e "s|Gtk/CursorThemeName .*|Gtk/CursorThemeName \"$5\"|g" ${HOME}/.xsettingsd
 		sed -i -e "s|Inherits=.*|Inherits=$5|g" ${HOME}/.icons/default/index.theme
-	else
+	
 		sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=\"$3\"/g" ${HOME}/.gtkrc-2.0
 		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=\"$4\"/g" ${HOME}/.gtkrc-2.0
 		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=\"$5\"/g" ${HOME}/.gtkrc-2.0
@@ -60,21 +60,22 @@ set_style () {
 		sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=$3/g" ${CFG}/gtk-3.0/settings.ini
 		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=$4/g" ${CFG}/gtk-3.0/settings.ini
 		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$5/g" ${CFG}/gtk-3.0/settings.ini
+		sed -i -e "s/cursor_theme_name=.*/cursor_theme_name=$5/g" ${CFG}/gtk-3.0/settings.ini
 	fi
 	
 	# ----- Apply RGB Colors For Keyboard ----- #
-	dunstify -i "" "[*] Changing RGB colors For the Keyboard"
+	dunstify -i "" "[+] Changing RGB colors For the Keyboard"
 	# KeyProfileColor -$6
 	
 	echo "#!/bin/bash
 KeyProfileColor -$6" > "$BSP"/bin/keyColorProfileForStartup
 
 	# ----- set background for betterlockscreen based on the selected theme ----- #
-	# dunstify -i "" "[*] Updating betterlockscreen Background"
+	# dunstify -i "" "[+] Updating betterlockscreen Background"
 	# betterlockscreen -u /usr/share/backgrounds/${1}
 
 	# ----- reload config ----- #
-	bspc wm -r
+	bspc wm --restart
 
 	# ----- notify ----- #
 	bash ~/.config/bspwm/notify/notify

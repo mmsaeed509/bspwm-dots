@@ -44,8 +44,8 @@ getcolors
 bash ~/.config/bspwm/bin/keyColorProfileForStartup
 
 # ----- set En & Ar for keyboard ----- #
-setxkbmap -layout us,ar # change 'us,ar' for your own uses #
-setxkbmap -option 'grp:alt_shift_toggle'
+# setxkbmap -layout us,ar # change 'us,ar' for your own uses #
+# setxkbmap -option 'grp:alt_shift_toggle'
 
 # Solve java apps issues (e.g. JetBrains IDEs like PyCharm, CLion, etc). #
 export _JAVA_AWT_WM_NONREPARENTING=1 
@@ -56,24 +56,22 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # in my case eDP1 , HDMI-1-0
 # change 'HDMI-1-0' to your output
  
-if [[ $(xrandr -q | grep 'HDMI-1-0 connected') ]]; then
+# if [[ $(xrandr -q | grep 'HDMI-1-0 connected') ]]; then
 
- 		# use arandr or xrandr to set monitors config
- 		# in my case, i use laptop monitor (eDP1) as Primary display 
- 		# and the second monitor (HDMI-1-0) as external display (extended to right)
-		# add your config to this directory `~/.config/bspwm/bin/` , If it doesn't exist, create one
-		mainLeftExternalRight
-		# mainDownExternaUp
-		#   mainDownExternaMAINUp
+#  		# use arandr or xrandr to set monitors config, in my case, i use laptop monitor (eDP1) as Primary display
+#  		# and the second monitor (HDMI-1-0) as external display (extended to right)
+# 		# add your config to this directory `~/.config/bspwm/bin/` , If it doesn't exist, create one
+# 		mainLeftExternalRight
+
 		  
-fi
+# fi
 
 
 
 # ----- workspaces config ----- #
 workspaces() {
 	name=1
-	for monitor in `bspc query -M --names`; do
+	for monitor in `bspc query -M`; do
 		
     bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '' ''      
 		let name++
@@ -83,7 +81,7 @@ workspaces() {
 
 workspaces
 
-bspc config border_width 1
+bspc config border_width 2
 bspc config window_gap 10
 bspc config split_ratio 0.50
 
@@ -153,9 +151,9 @@ bspc rule -a Leafpad desktop ='^4' follow=on focus=on
 bspc rule -a github-desktop desktop ='^4' state=floating follow=on focus=on
 
 #  jetBrains IDEs  #
-# bspc rule -a jetbrains-clion desktop ='^4' state=floating follow=on focus=on
-# bspc rule -a jetbrains-idea desktop ='^4' state=floating follow=on focus=on
-# bspc rule -a jetbrains-pycharm desktop ='^4' state=floating follow=on focus=on
+bspc rule -a jetbrains-clion desktop ='^4' state=floating follow=on focus=on
+bspc rule -a jetbrains-idea desktop ='^4' state=floating follow=on focus=on
+bspc rule -a jetbrains-pycharm desktop ='^4' state=floating follow=on focus=on
 
 #  Markdown editors  #
 bspc rule -a inkdrop desktop ='^4' state=floating follow=on focus=on
@@ -265,3 +263,5 @@ bspfloat &
 
 # ----- Lauch notification daemon ----- #
 dunst &
+
+exodia-welcome &

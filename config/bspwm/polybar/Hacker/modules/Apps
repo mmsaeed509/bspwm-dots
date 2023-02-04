@@ -1,0 +1,123 @@
+##########################################################################################################
+#																										 
+#    Copyright © 2022 To Cyb3rTh1eveZ																	 
+#																										 
+#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+#																										 
+#																										 
+#																										 
+#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
+#    LICENSE © GNU-GPL3																					 
+#																										 
+##########################################################################################################
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/chrome]
+
+type = custom/text
+
+content = ""
+content-font = 5
+content-foreground = #00FA5C
+content-padding = 0
+
+click-left = google-chrome-stable
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/whatsapp]
+
+type = custom/text
+
+content = ""
+content-font = 5
+content-foreground = #00FA5C
+content-padding = 0
+
+click-left = google-chrome-stable https://web.whatsapp.com/
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/VirtualBox]
+
+type = custom/text
+
+content = ""
+content-font = 5
+content-foreground = #00FA5C
+content-padding = 0
+
+click-left = VirtualBox %U
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/discord]
+
+type = custom/text
+
+content = "ﭮ"
+content-font = 5
+content-foreground = #00FA5C
+content-padding = 0
+
+click-left = discord
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/music]
+
+type = custom/text
+
+content = ""
+content-font = 5
+content-foreground = #00FA5C
+content-padding = 0
+
+click-left = music --albumArtCover
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/nvim]
+
+type = custom/text
+
+content = ""
+content-font = 5
+content-foreground = #00FA5C
+content-padding = 0
+
+click-left = alacritty -e nvim
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/PowerShell]
+
+type = custom/text
+
+content = ""
+content-font = 5
+content-foreground = #00FA5C
+content-padding = 0
+
+click-left = bspterm -float
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/MS_VisualStudioCode]
+
+type = custom/text
+
+content = ""
+content-font = 5
+content-foreground = #00FA5C
+content-padding = 0
+
+click-left = code
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

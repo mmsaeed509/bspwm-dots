@@ -38,11 +38,11 @@ include-file = ~/.config/bspwm/polybar/valorant/modules/monitoringModules
 include-file = ~/.config/bspwm/polybar/valorant/modules/separatorsModules
 
 [bar/main]
-monitor = 
+monitor = ${env:MONITOR:}
 monitor-strict = false
 override-redirect = false
 
-bottom = false
+bottom = true
 fixed-center = true
 
 width = 99%
