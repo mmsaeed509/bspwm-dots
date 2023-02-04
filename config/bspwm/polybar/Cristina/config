@@ -34,7 +34,7 @@ include-file = ~/.config/bspwm/polybar/Cristina/modules/separatorsModules
 
 [bar/main]
 
-monitor = 
+monitor = ${env:MONITOR:}
 monitor-fallback =false
 monitor-strict = false
 
@@ -79,8 +79,8 @@ font-7 = "Material Design Icons Desktop:size=12;3"
 font-8 = "MesloLGS NF:style=Regular:size=15;4"
 
 modules-left   = xdomenu dots bspwm dots mod  
-modules-center =
-modules-right  = L song L2 RD battery RD2 cpuTemp RD network RD2 cpu RD mpd RD2 info-cava RD volume RD2 backlight RD date RD2
+modules-center = L song L2 
+modules-right  = RD battery RD2 cpuTemp RD network RD2 cpu RD mpd RD2 notification-github RD volume RD2 backlight RD date RD2
  
 spacing = 0
 separator =

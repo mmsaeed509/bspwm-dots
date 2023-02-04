@@ -1,0 +1,155 @@
+##########################################################################################################
+#																										 
+#    Copyright © 2022 To Cyb3rTh1eveZ																	 
+#																										 
+#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
+#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
+#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
+#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
+#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
+#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
+#																										 
+#																										 
+#																										 
+#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
+#    LICENSE © GNU-GPL3																					 
+#																										 
+##########################################################################################################
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/empty]
+type = custom/text
+content = " "
+
+content-background = #8B60E5
+content-foreground = ${color.BACKGROUND}
+content-padding = 0
+content-font = 5
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/dots]
+type = custom/text
+content = "  "
+
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.RED}
+content-padding = 0
+content-font = 5
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/pip]
+type = custom/text
+content = "|"
+
+; content-background = #67C976
+content-foreground = #67C976
+content-padding = 0
+content-font = 5
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/pipL]
+type = custom/text
+content = "["
+
+; content-background = ${color.BACKGROUND}
+content-foreground = #67C976
+content-padding = 0
+content-font = 5
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/pipR]
+type = custom/text
+content = "]"
+
+; content-background = ${color.BACKGROUND}
+content-foreground = #67C976
+content-padding = 0
+content-font = 5
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/space]
+type = custom/text
+content = " "
+content-background = ${color.background}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/Dspace]
+type = custom/text
+content = "  "
+content-background = ${color.background}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/spaceCava]
+type = custom/text
+content = " "
+content-background = ${color.GREEN}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/sep]
+type = custom/text
+;content = ◆
+content = 
+
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.YELLOW}
+content-padding = 1
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+##########################
+#       LD modules       #
+##########################
+
+[module/LD]
+type = custom/text
+content = "%{T5}%{T-}"
+content-background = ${color.background}
+content-foreground = ${color.BGL}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/LDmpd]
+type = custom/text
+
+;content = "%{T5}(|%{T-}"
+content = "%{T5}(%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground = #989cff
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+##########################
+#       RD modules       #
+##########################
+
+[module/RD]
+type = custom/text
+
+;content = "%{T5}█%{T-}"
+content = "%{T5}%{T-}"
+
+content-background = ${color.background}
+content-foreground = ${color.BGL}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/RDmpd]
+type = custom/text
+
+content = "%{T5})%{T-}"
+;content = "%{T5}|)%{T-}"
+
+content-background = ${color.BACKGROUND}
+content-foreground = #989cff
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

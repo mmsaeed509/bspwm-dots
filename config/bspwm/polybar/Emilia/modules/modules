@@ -112,7 +112,7 @@ format-font = 2
 
 label-monitor = %name%
 
-label-focused = (%name%)
+label-focused = %name%
 label-focused-foreground = ${color.green}
 label-focused-background = ${color.mb}
 label-focused-underline = ${color.green}
@@ -289,7 +289,7 @@ click-left = ~/.config/bspwm/rofi/bin/powermenu
 type = custom/script
 exec = ~/.config/bspwm/polybar/scripts/notification-github.sh
 interval = 60
-label-background = ${color.BGL}
+label-background = ${color.mb}
 click-left = google-chrome-stable --newtab https://github.com/notifications
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

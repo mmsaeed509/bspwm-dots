@@ -38,7 +38,7 @@ include-file = ~/.config/bspwm/polybar/tokyo/modules/monitoringModules
 include-file = ~/.config/bspwm/polybar/tokyo/modules/separatorsModules
 
 [bar/main]
-monitor = 
+monitor = ${env:MONITOR:}
 monitor-strict = false
 override-redirect = false
 

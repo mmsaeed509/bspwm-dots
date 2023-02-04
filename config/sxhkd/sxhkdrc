@@ -61,8 +61,8 @@ super + d
 	sh ~/.config/eww/dashboard/launch_dashboard
 
 # Launch Apps
-super + shift + {g,e}
-	{google-chrome-stable,geany}
+super + shift + {w,g,e,f}
+	{firefox,google-chrome-stable,geany,thunar}
 
 # Terminal Apps
 ctrl + alt + {r,h,b,n,v}

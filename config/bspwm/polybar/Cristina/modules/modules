@@ -136,7 +136,7 @@ label-empty-foreground = ${color.cyan}
 label-empty-padding = 0
 
 ; Separator in between workspaces
-label-separator = " "
+label-separator = "  "
 label-separator-padding = 0
 label-separator-foreground = ${color.pink}
 ; label-separator-background = ${color.mb}
