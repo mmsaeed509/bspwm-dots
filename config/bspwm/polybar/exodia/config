@@ -49,7 +49,7 @@ bottom = true
 fixed-center = true
 
 width = 65.3%
-height = 40
+height = 35
 
 offset-x = 17.4%
 offset-y = 5
@@ -312,7 +312,7 @@ fixed-center = true
 width = 10%
 height = 30
 
-offset-x = 88%
+offset-x = 89.5%
 offset-y = 5
 
 background = #1F1927

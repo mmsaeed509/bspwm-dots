@@ -27,7 +27,6 @@ content-foreground = #8B60E5
 content-padding = 0
 content-font = 4
 
-
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/bna]

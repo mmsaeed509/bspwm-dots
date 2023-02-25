@@ -18,6 +18,18 @@
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+
+[module/sysTray]
+type = custom/text
+
+content = " SysTray : "
+; content-background = #8B60E5
+content-foreground = #00FA5C
+content-padding = 0
+content-font = 4
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 [module/bna]
 type = custom/text
 
