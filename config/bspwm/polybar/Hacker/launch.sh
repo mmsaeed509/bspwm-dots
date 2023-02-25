@@ -78,6 +78,7 @@ launch_bar() {
 	polybar -q sec -c "$DIR"/config &
 	polybar -q third -c "$DIR"/config &
 	polybar -q fourth -c "$DIR"/config &
+	polybar -q fifth -c "$DIR"/config &
 	
 }
 
