@@ -54,7 +54,7 @@ height = 35
 offset-x = 17.4%
 offset-y = 5
 
-background = #2A2132
+background = #00
 foreground = ${color.FOREGROUND}
 
 radius-top    = 2
@@ -118,7 +118,7 @@ height = 30
 offset-x = 0.5%
 offset-y = 5
 
-background = #2A2132
+background = #00
 foreground = ${color.FOREGROUND}
 
 radius-top    = 2
@@ -179,7 +179,7 @@ height = 30
 offset-x = 45.5%
 offset-y = 5
 
-background = #2A2132
+background = #00
 foreground = ${color.FOREGROUND}
 
 radius-top    = 2
@@ -241,7 +241,7 @@ height = 30
 offset-x = 17.5%
 offset-y = 5
 
-background = #2A2132
+background = #00
 foreground = ${color.FOREGROUND}
 
 radius-top    = 2
@@ -315,7 +315,7 @@ height = 30
 offset-x = 89.5%
 offset-y = 5
 
-background = #1F1927
+background = #00
 foreground = ${color.FOREGROUND}
 
 radius-top    = 2
@@ -360,7 +360,7 @@ tray-position = right
 tray-detached = false
 tray-maxsize = 16
 tray-transparent = false
-tray-background = #1F1927
+tray-background = #00
 tray-offset-x = 0
 tray-offset-y = 0
 tray-padding = 0

@@ -240,22 +240,23 @@ format-connected = <label-connected>
 format-connected-prefix = "  "
 format-connected-prefix-font = 3
 format-connected-prefix-foreground = #8B60E5
-format-connected-prefix-background = #2A2132
+format-connected-prefix-background = #00
 
 format-disconnected = <label-disconnected>
 format-disconnected-prefix = "  "
 format-disconnected-prefix-font = 3
 format-disconnected-prefix-foreground = #8B60E5
-format-disconnected-prefix-background = #2A2132
+format-disconnected-prefix-background = #00
 
 ; label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
 label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %downspeed% ◆  %upspeed% %{A}"
-label-connected-background = #2A2132
+label-connected-background = #00
 label-connected-foreground = #8B60E5
 
 label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}Offline %{A}"
-label-disconnected-background = #2A2132
+label-disconnected-background = #00
 label-disconnected-foreground = #8B60E5
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/network]
