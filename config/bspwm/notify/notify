@@ -1,84 +1,75 @@
 #!/usr/bin/env bash
 
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
 
 # PATH #
 DIR="$HOME/.config/bspwm"
 PICTURE="$DIR/notify"
 
 # get theme name #
-PICTURE_NAME=$(head $DIR/VALUES/theme)
+PICTURE_NAME=$(grep -oP 'polybar = \K.*' "${DIR}/exodia.conf")
 
-THEME_NAME=$PICTURE_NAME
+THEME_NAME=${PICTURE_NAME}
 
-if [ "$PICTURE_NAME" == "Jungles" ]
+if [ "${PICTURE_NAME}" == "Jungles" ]
     then
         THEME_NAME="Red Jungles"
 
-elif [ "$PICTURE_NAME" == "ChadWM" ]
+elif [ "${PICTURE_NAME}" == "ChadWM" ]
      then
          THEME_NAME="Chad WM"
 
-elif [ "$PICTURE_NAME" == "hack" ]
+elif [ "${PICTURE_NAME}" == "hack" ]
      then
          THEME_NAME="Hack"
 
-elif [ "$PICTURE_NAME" == "black-red" ]
+elif [ "${PICTURE_NAME}" == "black-red" ]
      then
          THEME_NAME="Black And Red"
 
-elif [ "$PICTURE_NAME" == "rick" ]
+elif [ "${PICTURE_NAME}" == "rick" ]
      then
          THEME_NAME="Rick"
 
-elif [ "$PICTURE_NAME" == "HackTheBox" ]
+elif [ "${PICTURE_NAME}" == "HackTheBox" ]
      then
          THEME_NAME="Hack The Box"
 
-elif [ "$PICTURE_NAME" == "neon" ]
+elif [ "${PICTURE_NAME}" == "neon" ]
      then
          THEME_NAME="Neon"
 
-elif [ "$PICTURE_NAME" == "JScoffee" ]
+elif [ "${PICTURE_NAME}" == "JScoffee" ]
      then
          THEME_NAME="JS coffee"
 
-elif [ "$PICTURE_NAME" == "JapaneseCity" ]
+elif [ "${PICTURE_NAME}" == "JapaneseCity" ]
      then
          THEME_NAME="Japanese City"
 
-elif [ "$PICTURE_NAME" == "tokyo" ]
+elif [ "${PICTURE_NAME}" == "tokyo" ]
      then
          THEME_NAME="Tokoy City"
 
-elif [ "$PICTURE_NAME" == "valorant" ]
+elif [ "${PICTURE_NAME}" == "valorant" ]
      then
          THEME_NAME="VALORANT"
 
-elif [ "$PICTURE_NAME" == "Hacker" ]
+elif [ "${PICTURE_NAME}" == "Hacker" ]
      then
          THEME_NAME="A Hacker Den"
 
-elif [ "$PICTURE_NAME" == "exodia" ]
+elif [ "${PICTURE_NAME}" == "exodia" ]
      then
          THEME_NAME="Exodia"
 
 fi
 
-dunstify -i "$PICTURE/$PICTURE_NAME.png" "[✔] $THEME_NAME Theme Applied Successfully!"
+dunstify -i "${PICTURE}/${PICTURE_NAME}.png" "[✔] ${THEME_NAME} Theme Applied Successfully!"

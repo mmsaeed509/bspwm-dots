@@ -1,20 +1,11 @@
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
 
 ;; Global WM Settings ;;
 
@@ -22,21 +13,21 @@
 margin-bottom = 0
 margin-top = 0
 
-include-file = ~/.config/bspwm/polybar/system
-include-file = ~/.config/bspwm/polybar/colors
+# load files #
+include-file = ../system
+include-file = ../colors
 
 # contains brightness, workspaces, Date, etc.... #
-include-file = ~/.config/bspwm/polybar/rick/modules/modules
+include-file = ./modules/modules
 
 # contains Music, microphone, etc.... #
-include-file = ~/.config/bspwm/polybar/rick/modules/mediaModules
+include-file = ./modules/mediaModules
 
 # contains CPU, Temperature, etc.... #
-include-file = ~/.config/bspwm/polybar/rick/modules/monitoringModules
+include-file = ./modules/monitoringModules
 
 # contains the separators (e.g  , | , <| ,  ,etc..) #
-include-file = ~/.config/bspwm/polybar/rick/modules/separatorsModules
-
+include-file = ./modules/separatorsModules
 
 [bar/main]
 monitor = ${env:MONITOR:}
@@ -86,9 +77,9 @@ font-4 = "Iosevka Nerd Font:size=18;4"
 
 
 
-modules-left = LDmpd  LDmod xdomenu RDmod  RDmpd space bspwm space LDmpd  LDmod info-cava RDmod  RDmpd space LDmpd  LDmod mod RDmod  RDmpd sep xkeyboard
+modules-left   = LDmod xdomenu RDmod space space bspwm space space LDmod info-cava RDmod space LDmod mod RDmod sep xkeyboard
 modules-center = LDmpd space mpd space RDmpd  
-modules-right = cpu sep cpuTemp sep network sep volume sep backlight space LDmpd2 LDB battery date RDD  RDmpd2
+modules-right  = cpu sep cpuTemp sep network sep volume sep backlight space LDB battery date RDD
 
 separator =
 spacing = 0

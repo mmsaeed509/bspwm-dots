@@ -1,21 +1,11 @@
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
-
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
 
 ;; Global WM Settings ;;
 
@@ -23,20 +13,20 @@
 margin-bottom = 0
 margin-top = 0
 
-include-file = ~/.config/bspwm/polybar/system
-include-file = ~/.config/bspwm/polybar/colors
+include-file = ../system
+include-file = ../colors
 
 # contains brightness, workspaces, Date, etc.... #
-include-file = ~/.config/bspwm/polybar/BlackArch/modules/modules
+include-file = ./modules/modules
 
 # contains Music, microphone, etc.... #
-include-file = ~/.config/bspwm/polybar/BlackArch/modules/mediaModules
+include-file = ./modules/mediaModules
 
 # contains CPU, Temperature, etc.... #
-include-file = ~/.config/bspwm/polybar/BlackArch/modules/monitoringModules
+include-file = ./modules/monitoringModules
 
 # contains the separators (e.g  , | , <| ,  ,etc..) #
-include-file = ~/.config/bspwm/polybar/BlackArch/modules/separatorsModules
+include-file = ./modules/separatorsModules
 
 
 [bar/main]

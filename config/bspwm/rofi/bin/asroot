@@ -1,29 +1,20 @@
 #!/usr/bin/env bash
 
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
 
 
 DIR="$HOME/.config/bspwm"
 
 rofi_command="rofi -theme $DIR/rofi/themes/asroot.rasi"
 
-# Apps
+# Apps #
 terminal=" Alacritty"
 files=" Thunar"
 editor=" Geany"
@@ -32,11 +23,10 @@ lpad=" Leafpad"
 vim=" Vim"
 caja=" Caja"
 
-# Variable passed to rofi
+# Variable passed to rofi #
 options="$terminal\n$files\n$editor\n$clifm\n$lpad\n$vim\n$caja"
 
-# Functions
-
+# Functions #
 chosen="$(echo -e "$options" | $rofi_command -p "Run Apps With Root Privileges" -dmenu -selected-row 0)"
 case $chosen in
     $terminal)

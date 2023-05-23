@@ -1,20 +1,11 @@
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
 
 ;; Global WM Settings ;;
 
@@ -22,53 +13,53 @@
 margin-bottom = 0
 margin-top = 0
 
-include-file = ~/.config/bspwm/polybar/system
-include-file = ~/.config/bspwm/polybar/black-red/colors
+# load files #
+include-file = ../system
+include-file = ../colors
 
 # contains brightness, workspaces, Date, etc.... #
-include-file = ~/.config/bspwm/polybar/black-red/modules/modules
+include-file = ./modules/modules
 
 # contains Music, microphone, etc.... #
-include-file = ~/.config/bspwm/polybar/black-red/modules/mediaModules
+include-file = ./modules/mediaModules
+
+# network #
+include-file = ./modules/networkModules
 
 # contains CPU, Temperature, etc.... #
-include-file = ~/.config/bspwm/polybar/black-red/modules/monitoringModules
+include-file = ./modules/monitoringModules
 
 # contains the separators (e.g  , | , <| ,  ,etc..) #
-include-file = ~/.config/bspwm/polybar/black-red/modules/separatorsModules
+include-file = ./modules/separatorsModules
 
+# contains the Apps (e.g chrome, etc..) #
+include-file = ./modules/Apps
 
 [bar/main]
 monitor = ${env:MONITOR:}
 monitor-strict = false
 override-redirect = false
 
-bottom = false
+bottom = true
 fixed-center = true
 
-; width = 99s%
-; height = 27
+width = 100%
+height = 31
 
-; offset-x = 0.5%
-; offset-y = 0.5%
-
-width = 99%
-height = 35
-
-offset-x = 0.5%
-offset-y = 0.5%
+offset-x = 0%
+offset-y = 0
 
 background = ${color.BACKGROUND}
 foreground = ${color.FOREGROUND}
-
-radius-top = 0.0
-radius-bottom = 0.0
+#01161B
+radius-top    = 2
+radius-bottom = 2
 
 line-size = 2
 line-color = ${color.BLUE}
 
-border-size = 1
-border-color = #BA0000
+border-top-size = 2
+border-top-color = #F5040D
 
 padding = 0
 module-margin-left = 0
@@ -78,17 +69,17 @@ module-margin-right = 0
 font-0 = "Iosevka Nerd Font:size=10;3"
 font-1 = "Iosevka Nerd Font:size=12;3"
 font-2 = "google\-mdi:size=12;3"
-font-3 = "Iosevka:style=bold:"size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
-font-5 = JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3
-font-6 = JetBrainsMono Nerd Font:size=13;4
-font-7 = Material Design Icons:style=Bold:size=9;3
-font-8 = unifont:fontformat=truetype:size=9;3
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-8 = "unifont:fontformat=truetype:size=9;3"
 font-9 = "Iosevka:style=bold:size=15;4"
 
-modules-left   = xdomenu  pip  bspwm  pip  info-cava  pip  notification-github pip mod pip
-modules-center = space mpd space   
-modules-right  = pip xkeyboard pip cpu Dspace cpuTemp pip volume space network space backlight space memory pip battery space date space
+modules-left   = space song-icon space song space mpd space 
+modules-center = network_ext checknet
+modules-right  = volume sep backlight sep info-cava space
 
 separator =
 spacing = 0
@@ -98,16 +89,6 @@ dim-value = 1.0
 wm-name = bspwm
 locale = 
 
-tray-position = right
-tray-detached = false
-tray-maxsize = 16
-tray-transparent = false
-tray-background = ${color.BACKGROUND}
-tray-offset-x = 0
-tray-offset-y = 0
-tray-padding = 0
-tray-scale = 1.0
-
 wm-restack = bspwm
 
 enable-ipc = true
@@ -115,6 +96,144 @@ enable-ipc = true
 ; bspwm
 scroll-up = bspc desktop -f prev.local
 scroll-down = bspc desktop -f next.local
+
+## ----------------------------------  [bar/sec] ---------------------------------- ##
+
+[bar/sec]
+monitor = ${env:MONITOR:}
+monitor-strict = false
+override-redirect = false
+
+bottom = false
+fixed-center = true
+
+width = 85%
+height = 30
+
+offset-x = 0%
+offset-y = 0
+
+background = ${color.BACKGROUND}
+foreground = ${color.FOREGROUND}
+
+radius-top    = 0
+radius-bottom = 0
+
+border-bottom-size = 2
+border-bottom-color = #F5040D
+
+
+line-size = 2
+line-color = ${color.BLUE}
+
+border-size = 0
+border-color = #CB42EF
+
+padding = 0
+module-margin-left = 0
+module-margin-right = 0
+
+
+font-0 = "Iosevka Nerd Font:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "google\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
+
+modules-left   = space menu sep cpu sep memory sep filesystem sep cpuTemp
+modules-center = pipL mod pipR sep space bspwm
+modules-right  = xkeyboard sep notification-github sep updates-pacman sep battery sep date sep sysmenu space
+ 
+separator =
+spacing = 0
+
+dim-value = 1.0
+
+wm-restack = bspwm
+
+enable-ipc = true
+
+
+wm-name = bspwm
+locale = 
+
+## ----------------------------------  [bar/third] ---------------------------------- ##
+
+[bar/third]
+monitor = ${env:MONITOR:}
+monitor-strict = false
+override-redirect = false
+
+bottom = false
+fixed-center = true
+
+width = 15%
+height = 28
+
+offset-x = 85%
+offset-y = 0
+
+background = ${color.BACKGROUND}
+foreground = ${color.FOREGROUND}
+
+radius-top    = 0
+radius-bottom = 0
+
+line-size = 2
+line-color = ${color.BLUE}
+
+border-size = 2
+border-color = #F5040D
+
+padding = 0
+module-margin-left = 0
+module-margin-right = 0
+
+
+font-0 = "Iosevka Nerd Font:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "google\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
+
+modules-left   = space sysTray
+modules-center = 
+modules-right  = 
+ 
+separator =
+spacing = 0
+
+dim-value = 1.0
+
+wm-restack = bspwm
+
+enable-ipc = true
+
+
+wm-name = bspwm
+locale = 
+
+tray-position = right
+tray-detached = false
+tray-maxsize = 16
+tray-transparent = false
+tray-background = #00
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+tray-scale = 1.0
+
+;; _-_-_-_-_-_-_-_-_-_-_ Settings -_-_-_-_-_-_-_-_-_-_-_ ;;
 
 [settings]
 throttle-output = 5

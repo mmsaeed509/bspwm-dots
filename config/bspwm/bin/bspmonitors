@@ -1,0 +1,87 @@
+#!/bin/bash
+
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS        #
+#                                   #
+#####################################
+
+## ------------ COLORS ------------ ##
+
+# Reset #
+RESET_COLOR='\033[0m' # Text Reset
+
+# Bold #
+BBlack='\033[1;30m' BRed='\033[1;31m'    BGreen='\033[1;32m' BYellow='\033[1;33m'
+BBlue='\033[1;34m'  BPurple='\033[1;35m' BCyan='\033[1;36m'  BWhite='\033[1;37m'
+
+# Run xrandr command to get monitor information #
+XRANDR=$(xrandr)
+
+# Parse the output to get connected monitors #
+MONITORS=($(echo "$XRANDR" | grep -w "connected" | cut -d" " -f1))
+
+# Arrange the monitors according to the specified layout #
+NUM_OF_MONITORS=${#MONITORS[@]}
+
+case $NUM_OF_MONITORS in
+
+    # Only one monitor connected, set the external monitor to the right of the main monitor #
+    2)
+        
+        # get position and resolutions #
+        MAIN_RESOLUTION=$(xrandr | grep -w ${MONITORS[0]} -A1 | tail -n 1 | awk '{print $1}')
+        RESOLUTION=$(xrandr | grep -w ${MONITORS[1]} -A1 | tail -n 1 | awk '{print $1}')
+        POSITION=$(xrandr | grep -w ${MONITORS[$i]} -A1 | tail -n 1 | awk -F'x' '{print $1}' | tr -d ' ')
+        PRIMARY_HIGHEST_REFRESH_RATE=$(xrandr | grep -w ${MONITORS[0]} -A1 | tail -n 1 | awk '{print $2}' | tr -d '+*')
+        SECONDARY_HIGHEST_REFRESH_RATE=$(xrandr | grep -w ${MONITORS[1]} -A1 | tail -n 1 | awk '{print $2}' | tr -d '+*')
+
+        # Apply The Settings #
+        xrandr --output ${MONITORS[0]} --primary --mode ${MAIN_RESOLUTION} --pos 0x0 --auto --rate ${PRIMARY_HIGHEST_REFRESH_RATE} 
+        xrandr --output ${MONITORS[1]} --mode ${RESOLUTION} --pos ${POSITION}x0 --auto --rate ${SECONDARY_HIGHEST_REFRESH_RATE}
+        ;;
+
+    # case No. 3 -> more than one monitor #
+    *)
+        # More than one monitor connected, arrange them with all monitors on right of the main monitor #
+
+        # get resolutions #
+        MAIN_RESOLUTION=$(xrandr | grep -w ${MONITORS[0]} -A1 | tail -n 1 | awk '{print $1}')
+        PRIMARY_HIGHEST_REFRESH_RATE=$(xrandr | grep -w ${MONITORS[0]} -A1 | tail -n 1 | awk '{print $2}' | tr -d '+*')
+
+        # Apply The Settings #
+        xrandr --output ${MONITORS[0]} --primary --mode ${MAIN_RESOLUTION} --pos 0x0 --auto --rate ${PRIMARY_HIGHEST_REFRESH_RATE}
+        
+        for (( i=1; i<NUM_OF_MONITORS; i++ ))
+            do
+
+                # get position and resolutions #
+                RESOLUTION=$(xrandr | grep -w ${MONITORS[$i]} -A1 | tail -n 1 | awk '{print $1}')
+                POSITION=$(xrandr | grep -w ${MONITORS[$i]} -A1 | tail -n 1 | awk -F'x' '{print $1}' | tr -d ' ')
+                OTHER_HIGHEST_REFRESH_RATE=$(xrandr | grep -w ${MONITORS[$i]} -A1 | tail -n 1 | awk '{print $2}' | tr -d '+*')
+
+                # Apply The Rest Of The Settings #
+                xrandr --output ${MONITORS[$i]} --mode ${RESOLUTION} --pos ${POSITION}x0 --auto --rate ${OTHER_HIGHEST_REFRESH_RATE}
+
+        done
+        ;;
+esac
+
+
+# Print the connected monitors and their resolutions and refresh rate  #
+echo -e "${BCyan}\n[*] Connected Monitors and Their Resolutions and Refresh Rate:- \n" ${RESET_COLOR}
+
+for monitor in "${MONITORS[@]}"
+    do
+
+        RESOLUTION=$(echo "$XRANDR" | grep -w "$monitor" -A1 | tail -n 1 | awk '{print $1}')
+        REFRESH_RATE=$(echo "$XRANDR" | grep -w "$monitor" -A1 | tail -n 1 | awk '{print $2}' | tr -d '+*')
+        echo -e "${BPurple}   [+] ${BYellow}$monitor${BPurple}: Resolution : $RESOLUTION | Refresh Rate : $REFRESH_RATE " ${RESET_COLOR}
+
+done
+
+# D O N E! #
+echo -e "\n${BGreen}[✔] D O N E \n${RESET_COLOR}"

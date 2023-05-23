@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+###################################################
+#                                                 #
+#  @author      : 00xWolf                         #
+#    GitHub    : @mmsaeed509                     #
+#    Developer : Mahmoud Mohamed                 #
+#  﫥  Copyright : Exodia OS                       #
+#  Credits : Aditya Shakya (Github : @adi1090x)   #
+#                                                 #
+###################################################
+
 DIR="$HOME/.config/bspwm"
 
 rofi_command="rofi -theme $DIR/rofi/themes/mpd.rasi"

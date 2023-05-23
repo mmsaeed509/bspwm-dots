@@ -1,23 +1,13 @@
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
 
 [module/battery]
 type = internal/battery
@@ -27,55 +17,60 @@ full-at = 99
 battery = ${system.battery}
 adapter = ${system.adapter}
 
+poll-interval = 2
+time-format = %H:%M
+
 format-charging = <animation-charging><label-charging>
-label-charging = %percentage%%
-format-charging-foreground = #06CCD7
-format-charging-background = ${colors.background}
-format-charging-font = 
+format-charging-prefix = 
 
 format-discharging = <ramp-capacity><label-discharging>
-label-discharging = %percentage%%
-format-discharging-foreground = #06CCD7
-format-discharging-background = ${colors.background}
-format-discharging-font = 
 
-format-full-prefix = " "
-format-full-prefix-foreground = #06CCD7
-format-foreground = #06CCD7
-format-background = ${colors.background}
-format-full-prefix-font = 
-label-full = %percentage%%
-label-full-font = 
+format-full = <label-full>
+format-full-prefix = ""
+format-full-prefix-font = 3
+format-full-prefix-foreground = #80E6FE
+format-full-prefix-background = ${color.BACKGROUND}
 
-label-discharging-foreground =#06CCD7
-label-discharging-font = 
+label-charging = "%percentage%%"
+label-discharging = "%percentage%%"
+label-full = "%percentage%%"
 
-ramp-capacity-foreground =  #06CCD7
-label-charging-foreground = #06CCD7
-label-charging-font = 
+label-charging-background = ${color.BACKGROUND}
+label-discharging-background = ${color.BACKGROUND}
+label-full-background = ${color.BACKGROUND}
 
-label-padding = 1
+label-charging-foreground = #80E6FE
+label-discharging-foreground = #80E6FE
+label-full-foreground = #80E6FE
 
-ramp-capacity-0 = " " 
-ramp-capacity-1 = " " 
-ramp-capacity-2 = " " 
-ramp-capacity-3 = " " 
-ramp-capacity-4 = " "
+label-charging-font = 3
+label-discharging-font = 3
+label-full-font = 3
 
-
-animation-charging-0 = " " 
-animation-charging-1 = " " 
-animation-charging-2 = " " 
-animation-charging-3 = " " 
-animation-charging-4 = " "
+ramp-capacity-0 = ""
+ramp-capacity-1 = ""
+ramp-capacity-2 = ""
+ramp-capacity-3 = ""
+ramp-capacity-4 = ""
 
 
-animation-charging-foreground = #06CCD7
+animation-charging-0 = ""
+animation-charging-1 = ""
+animation-charging-2 = ""
+animation-charging-3 = ""
+animation-charging-4 = ""
+
+
+ramp-capacity-font = 3
+
+ramp-capacity-foreground = #80E6FE
+ramp-capacity-background = ${color.BACKGROUND}
+
+animation-charging-font = 3
+
+animation-charging-foreground = #80E6FE
+animation-charging-background = ${color.BACKGROUND}
 animation-charging-framerate = 750
-animation-charging-font = 4
-
-format-charging-padding = 1
-format-discharging-padding = 1
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -86,13 +81,15 @@ interval = 1
 
 format = <label>
 
-format-prefix = " "
-format-prefix-font = 5
-format-prefix-foreground = #06CCD7
-format-prefix-background = ${color.BGL}
-label = "%{A1:stacer &:}CPU %percentage%%%{A}"
+format-prefix = ""
+format-prefix-font = 3
+format-prefix-foreground = #80E6FE
+format-prefix-background = ${color.BACKGROUND}
+label = "%{A1:stacer &:} %percentage%%%{A}"
 label-font = 3
-label-background = ${color.BGL}
+label-background = ${color.BACKGROUND}
+label-foreground = #80E6FE
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/filesystem]
@@ -103,21 +100,24 @@ interval = 30
 fixed-values = true
 
 format-mounted = <label-mounted>
-format-mounted-prefix = " "
-format-mounted-prefix-foreground = ${color.background}
-format-mounted-prefix-background = ${color.cyan}
+format-mounted-prefix = ""
+format-mounted-prefix-font = 3
+format-mounted-prefix-foreground = #80E6FE
+format-mounted-prefix-background = ${color.BACKGROUND}
 
 format-unmounted = <label-unmounted>
-format-unmounted-prefix = " "
-format-unmounted-prefix-foreground = ${color.background}
-format-unmounted-prefix-background = ${color.cyan}
+format-unmounted-prefix = ""
+format-unmounted-prefix-font = 3
+format-unmounted-prefix-foreground = #80E6FE
+format-unmounted-prefix-background = ${color.BACKGROUND}
 
-label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e duf &:} %free%%{A}"
+label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e ncdu &:} %free%%{A}"
+; label-mounted = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e ncdu &:} %free%%{A}"
 label-unmounted = " %mountpoint%: NA"
-label-mounted-foreground = ${color.background}
+label-mounted-foreground = #80E6FE
 
-label-mounted-background = ${color.cyan}
-label-unmounted-background = ${color.cyan}
+label-mounted-background = ${color.BACKGROUND}
+label-unmounted-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -126,21 +126,25 @@ type = custom/script
 exec = ~/.config/bspwm/polybar/hack/modules/heatSensors
 interval = 1
 click-left = xsensors
-format-foreground = #06CCD7
+format-foreground = #80E6FE
+format-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/memory]
-type = custom/script
-exec = free -g | sed -n 's/^Mem:\s\+[0-9]\+\s\+\([0-9]\+\)\s.\+/\1/p'
-format = <label>
-format-prefix = "" 
-format-prefix-font = 
 
-label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e htop &:}%output%GB%{A}"
-label-padding = 1
-label-font = 
-format-prefix-foreground =#06CCD7
+type = internal/memory
+interval = 2
+
+format = <label>
+format-prefix = ""
+format-prefix-foreground = #80E6FE
+
+
+; label = "%mb_used%"
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e htop &:} %gb_used%%{A}"
+label-foreground = #80E6FE
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/updates-pacman]
@@ -149,19 +153,9 @@ exec = ~/.config/bspwm/polybar/scripts/updates-pacman.sh
 interval = 180
 format = <label>
 
-;label = %output% Updates
-label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e sudo pacman -Syyu &:} %output% Updates%{A}"
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e sudo pacman -Syyu &:} %output%%{A}"
 
-format-font = 4
-label-foreground = #e92ef0
-;label-foreground = #BF616A
-label-background = ${color.BGL}
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/time]
-type = custom/script
-exec = date '+%I:%M:%S%P'
-interval = 1.0
+format-font = 3
+label-foreground = #80E6FE
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

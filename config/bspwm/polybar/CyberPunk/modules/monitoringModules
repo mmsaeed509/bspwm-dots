@@ -1,20 +1,11 @@
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -26,54 +17,60 @@ full-at = 99
 battery = ${system.battery}
 adapter = ${system.adapter}
 
+poll-interval = 2
+time-format = %H:%M
+
 format-charging = <animation-charging><label-charging>
-label-charging = %percentage%%
-format-charging-foreground = ${color.yellow}
-format-charging-font = 4
+format-charging-prefix = 
 
 format-discharging = <ramp-capacity><label-discharging>
-label-discharging = %percentage%%
-format-discharging-foreground = ${color.red}
-format-discharging-font = 4
 
-format-full-prefix = " "
-format-full-prefix-foreground = #A0E8A2
-format-full-prefix-font = 4
+format-full = <label-full>
+format-full-prefix = " "
+format-full-prefix-font = 3
+format-full-prefix-foreground = ${color.BACKGROUND}
+format-full-prefix-background = #0ABDC6
 
+label-charging = "%percentage%% "
+label-discharging = "%percentage%% "
+label-full = "%percentage%% "
 
-label-full = %percentage%%
-label-full-foreground = #A0E8A2
-label-full-font = 4
+label-charging-background = #0ABDC6
+label-discharging-background = #0ABDC6
+label-full-background = #0ABDC6
 
-label-discharging-foreground = ${color.red}
-label-discharging-font = 4
+label-charging-foreground = ${color.BACKGROUND}
+label-discharging-foreground = ${color.BACKGROUND}
+label-full-foreground = ${color.BACKGROUND}
 
-ramp-capacity-foreground =  ${color.red}   
-label-charging-foreground = ${color.yellow}
-label-charging-font = 4
+label-charging-font = 3
+label-discharging-font = 3
+label-full-font = 3
 
-label-padding = 1
-
-ramp-capacity-0 = " " 
-ramp-capacity-1 = " " 
-ramp-capacity-2 = " " 
-ramp-capacity-3 = " " 
-ramp-capacity-4 = " "
-
-
-animation-charging-0 = " " 
-animation-charging-1 = " " 
-animation-charging-2 = " " 
-animation-charging-3 = " " 
-animation-charging-4 = " "
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
 
 
-animation-charging-foreground = ${color.yellow}
+animation-charging-0 = " "
+animation-charging-1 = " "
+animation-charging-2 = " "
+animation-charging-3 = " "
+animation-charging-4 = " "
+
+
+ramp-capacity-font = 3
+
+ramp-capacity-foreground = ${color.BACKGROUND}
+ramp-capacity-background = #0ABDC6
+
+animation-charging-font = 3
+
+animation-charging-foreground = ${color.BACKGROUND}
+animation-charging-background = #0ABDC6
 animation-charging-framerate = 750
-animation-charging-font = 4
-
-format-charging-padding = 1
-format-discharging-padding = 1
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -84,13 +81,14 @@ interval = 1
 
 format = <label>
 
-format-prefix = ""
-format-prefix-font = 4
-format-prefix-foreground = ${color.red}
-label = "%{A1:stacer &:} %percentage%%%{A}"
-label-font = 4
-label-foreground = ${color.red}
-
+format-prefix = " "
+format-prefix-font = 3
+format-prefix-foreground = ${color.BACKGROUND}
+format-prefix-background = ${color.GREEN}
+label = "%{A1:stacer &:} %percentage%% |%{A}"
+label-font = 3
+label-background = ${color.GREEN}
+label-foreground = ${color.BACKGROUND}
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/filesystem]
@@ -121,11 +119,25 @@ label-unmounted-background = ${color.cyan}
 
 [module/cpuTemp]
 type = custom/script
-exec = ~/.config/bspwm/polybar/Pamela/modules/heatSensors
+exec = ~/.config/bspwm/polybar/Hacker/modules/heatSensors
 interval = 1
 click-left = xsensors
-format-foreground = ${color.cyan}
+format-foreground = ${color.BACKGROUND}
+format-background = ${color.GREEN}
 
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/memory]
+type = custom/script
+exec = free -g | sed -n 's/^Mem:\s\+[0-9]\+\s\+\([0-9]\+\)\s.\+/\1/p'
+format = <label>
+format-prefix = "" 
+format-prefix-font = 3
+
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e htop &:}%output%GB%{A}"
+label-padding = 1
+label-font = 4
+format-prefix-foreground = #d19a66
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/updates-pacman]
@@ -135,10 +147,9 @@ interval = 180
 format = <label>
 
 ;label = %output% Updates
-label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e sudo pacman -Syyu &:} %output%%{A}"
+label = "%{A1:alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e sudo pacman -Syyu &:}  %output% updates %{A}"
 
-format-font = 4
-label-foreground = #e92ef0
-;label-foreground = #BF616A
+format-font = 3
+label-foreground = #C17BDE
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

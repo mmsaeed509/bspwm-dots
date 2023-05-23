@@ -1,20 +1,11 @@
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
 
 ;; Global WM Settings ;;
 
@@ -22,20 +13,21 @@
 margin-bottom = 0
 margin-top = 0
 
-include-file = ~/.config/bspwm/polybar/system
-include-file = ~/.config/bspwm/polybar/colors
+# load files #
+include-file = ../system
+include-file = ../colors
 
 # contains brightness, workspaces, Date, etc.... #
-include-file = ~/.config/bspwm/polybar/Melissa/modules/modules
+include-file = ./modules/modules
 
 # contains Music, microphone, etc.... #
-include-file = ~/.config/bspwm/polybar/Melissa/modules/mediaModules
+include-file = ./modules/mediaModules
 
 # contains CPU, Temperature, etc.... #
-include-file = ~/.config/bspwm/polybar/Melissa/modules/monitoringModules
+include-file = ./modules/monitoringModules
 
 # contains the separators (e.g  , | , <| ,  ,etc..) #
-include-file = ~/.config/bspwm/polybar/Melissa/modules/separatorsModules
+include-file = ./modules/separatorsModules
 
 [bar/main]
 monitor = ${env:MONITOR:}
@@ -94,16 +86,6 @@ dim-value = 1.0
 wm-name = bspwm
 locale = 
 
-tray-position = right
-tray-detached = false
-tray-maxsize = 16
-tray-transparent = false
-tray-background = ${color.BACKGROUND}
-tray-offset-x = 0
-tray-offset-y = 0
-tray-padding = 0
-tray-scale = 1.0
-
 wm-restack = bspwm
 
 enable-ipc = true
@@ -158,7 +140,7 @@ font-9 = "Iosevka Nerd Font:size=20;4"
 
 modules-left   = LD xdomenu LD2 mod LD bspwm LD2 updates-pacman notification-github netDownSpeed LD xkeyboard LD2 mpd LD space themes RD RD2 menu
 modules-center =
-modules-right  =
+modules-right  = sysTray
 
 separator =
 dim-value = 1.0
@@ -169,6 +151,15 @@ enable-ipc = true
 cursor-click = pointer 
 cursor-scroll = ns-resize
 
+tray-position = right
+tray-detached = false
+tray-maxsize = 16
+tray-transparent = false
+tray-background = ${color.BACKGROUND}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+tray-scale = 1.0
 
 [settings]
 throttle-output = 5

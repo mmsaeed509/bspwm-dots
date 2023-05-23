@@ -1,37 +1,30 @@
 #!/usr/bin/env bash
 
-
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
 
 # A script to get colours from xrdb & deploy it to polybar, alacritty, rofi, jgmenu, dunst. #
 
 DIR="$HOME/.config/bspwm"
-DUNST_DIR="$HOME/.config/dunst"
 JGMENU_DIR="$HOME/.config/jgmenu"
 
 # get icons for jgmenus #
-ICONS=$(head $DIR/VALUES/icons)
+ICONS=$(grep -oP 'icons = \K.*' "${DIR}/exodia.conf")
 
 # get the theme name to launch its bar #
-IMG=$(head $DIR/VALUES/theme)
+IMG=$(grep -oP 'polybar = \K.*' "${DIR}/exodia.conf")
 
-getcolors () {
+# get No. themes #
+NUM_OF_THEMES=$(cd ${DIR}/notify && ls -l | grep -v "^d" | wc -l)
+NUM_OF_THEMES=$((NUM_OF_THEMES-2)) # subtracted by 2, as we don't calculate `notify` script #
+
+GET_COLORS () {
 
 	FOREGROUND="$(xrdb -query | grep 'foreground:'| awk '{print $NF}')"
 	BACKGROUND="$(xrdb -query | grep 'background:'| awk '{print $NF}')"
@@ -55,7 +48,7 @@ getcolors () {
 	
 }
 
-bspbar () {
+BSP_BAR () {
 
 	cat > $DIR/polybar/colors <<- EOF	
 	[color]
@@ -82,7 +75,7 @@ bspbar () {
 
 }
 
-bspterm () {
+BSP_TERM () {
 
 	cat > "$DIR"/alacritty/colors.yml <<- _EOF_
 		## Colors configuration
@@ -117,10 +110,20 @@ bspterm () {
 
 }
 
-bsprofi () {
+BSP_ROFI () {
 
 	cat > $DIR/rofi/themes/colors.rasi <<- EOF	
+	/* 
+	
+  	@author      : 00xWolf
+  	  GitHub    : @mmsaeed509
+  	  Developer : Mahmoud Mohamed
+  	﫥  Copyright : Exodia OS
+
+ 	*/
+
 	* {
+
 		background:			${BACKGROUND};
 		foreground:			${FOREGROUND};
 		selected:			${BLUE};
@@ -128,58 +131,16 @@ bsprofi () {
 		urgent:				${RED};
 		active:				${GREEN};
 		off:				${RED};
+
 	}
 	EOF
 
 }
 
-bspdunst () {
+BSP_DUNST () {
 
-	cat > $DUNST_DIR/dunstrc <<- EOF	
-############################################################################
-# Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509> #
-# LICENSE © GNU-GPL3                                                       #
-############################################################################
-
-[global]
-monitor = 0
-follow = mouse
-geometry = "280x50-10+48"
-indicate_hidden = yes
-shrink = no
-separator_height = 4
-separator_color = auto
-padding = 15
-horizontal_padding = 15
-frame_width = 6
-sort = no
-idle_threshold = 120
-font = JetBrains Mono 10
-line_height = 4
-markup = full
-format = %s\n%b
-alignment = left
-show_age_threshold = 60
-word_wrap = yes
-ignore_newline = no
-stack_duplicates = false
-hide_duplicate_count = yes
-show_indicators = no
-icon_position = left
-max_icon_size = 48
-sticky_history = yes
-history_length = 20
-browser = x-www-browser -new-tab
-always_run_script = true
-title = Dunst
-class = Dunst
-
-[shortcuts]
-close = ctrl+shift+space
-close_all = ctrl+shift+space
-history = ctrl+grave
-context = ctrl+shift+period
-
+    sed -i '/urgency_low/Q' ${DIR}/dunst/dunstrc
+	cat >> ${DIR}/dunst/dunstrc <<- _EOF_
 [urgency_low]
 timeout = 2
 background  = "${BACKGROUND}"
@@ -197,213 +158,31 @@ timeout = 0
 background  = "${BACKGROUND}"
 foreground  = "${FOREGROUND}"
 frame_color = "${BLUE}"
-
-	EOF
-
-}
-
-bspjgmenu () {
-
-	cat > $JGMENU_DIR/jgmenurc <<- EOF	
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;;    Copyright © 2022 To Cyb3rTh1eveZ																	 
-;;																										 
-;;     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-;;    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-;;    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-;;    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-;;    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-;;     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-;;																										 
-;;																										 
-;;																										 
-;;    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-;;    LICENSE © GNU-GPL3
-;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-at_pointer           = 1
-stay_alive           = 1
-csv_cmd              = pmenu
-csv_no_dirs          = 0
-tint2_look           = 0
-terminal_exec        = bspterm -float &
-terminal_args        = 
-menu_width           = 300
-menu_padding_top     = 42
-menu_padding_right   = 5
-menu_padding_bottom  = 5
-menu_padding_left    = 5
-menu_radius          = 15
-menu_border          = 2
-menu_halign          = left
-sub_hover_action     = 1
-item_margin_y        = 3
-item_height          = 38
-item_padding_x       = 10
-item_radius          = 7
-item_border          = 0
-sep_height           = 5
-font                 = JetBrainsMono Nerd Font 15px
-icon_size            = 16
-icon_theme           = ${ICONS}
-arrow_string         = 
-
-;; colors ;;
-color_menu_bg        = ${BACKGROUND} 100
-color_menu_border    = ${FOREGROUND}
-color_norm_bg        = ${BACKGROUND} 0
-color_norm_fg        = ${FOREGROUND} 100
-color_sel_bg         = ${FOREGROUND} 50
-color_sel_fg         = ${FOREGROUND} 100
-color_sep_fg         = ${FOREGROUND} 40       
-
-
-	EOF
+	_EOF_
 
 }
 
-bsp_rofi_themes_menu () {
+BSP_JGMENU () {
 
-	cat > $DIR/rofi/themes/themes.rasi <<- EOF	
-	/* 
+    # set the new values #
+    sed -i "s/icon_theme\s*=\s*.*/icon_theme = ${ICONS}/" ${JGMENU_DIR}/jgmenurc
+    sed -i "s/color_menu_bg\s*=\s*.*/color_menu_bg = ${BACKGROUND} 100/" ${JGMENU_DIR}/jgmenurc
+    sed -i "s/color_menu_border\s*=\s*.*/color_menu_border = ${FOREGROUND}/" ${JGMENU_DIR}/jgmenurc
+    sed -i "s/color_norm_bg\s*=\s*.*/color_norm_bg = ${BACKGROUND} 0/" ${JGMENU_DIR}/jgmenurc
+    sed -i "s/color_norm_fg\s*=\s*.*/color_norm_fg = ${FOREGROUND} 100/" ${JGMENU_DIR}/jgmenurc
+    sed -i "s/color_sel_bg\s*=\s*.*/color_sel_bg = ${FOREGROUND} 50/" ${JGMENU_DIR}/jgmenurc
+    sed -i "s/color_sel_fg\s*=\s*.*/color_sel_fg = ${FOREGROUND} 100/" ${JGMENU_DIR}/jgmenurc
+    sed -i "s/color_sep_fg\s*=\s*.*/color_sep_fg = ${FOREGROUND} 40/" ${JGMENU_DIR}/jgmenurc
 
-    Copyright © 2022 To Cyb3rTh1eveZ																	 
-
-     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-
-    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-    LICENSE © GNU-GPL3
-
- */
-
-configuration {
-    show-icons:                 false;
-	drun-display-format:        "{name}";
-	disable-history:                true;
-	sidebar-mode: 					false;
 }
 
-/*****----- Global Properties -----*****/
-@import "colors.rasi"
+BSP_ROFI_THEMES_MENU () {
 
-* {
-    font:                        "JetBrainsMono Nerd Font Bold 10";
-}
+    sed -i "s/background-image: .*/background-image:            url(\"~\/.config\/bspwm\/notify\/${IMG}.png\", width);/" ${DIR}/rofi/themes/themes.rasi
+    sed -i "s/str:.*/str: \" [${NUM_OF_THEMES}] Bspwm Themes Are Available In Exodia OS \\\n   Have fun with your favorite theme \";/" ${DIR}/rofi/themes/themes.rasi
 
-/*****----- Main Window -----*****/
-window {
-    /* properties for window widget */
-    transparency:                "real";
-    location:                    center;
-    anchor:                      center;
-    fullscreen:                  false;
-    width:                       680px;
-    height:                      42%;
-    x-offset:                    0px;
-    y-offset:                    0px;
-
-    /* properties for all widgets */
-    enabled:                     true;
-    border-radius:               8px;
-    cursor:                      "default";
-    background-color:            @background;
-}
-
-/*****----- Main Box -----*****/
-mainbox {
-    enabled:                     true;
-    spacing:                     0px;
-    background-color:            transparent;
-    orientation:                 vertical;
-    children:                    [ "inputbar", "listbox" ];
-}
-
-listbox {
-    spacing:                     7px;
-    padding:                     35px;
-    background-color:            transparent;
-    orientation:                 vertical;
-    children:                    [ "message", "listview" ];
-}
-
-/*****----- Inputbar -----*****/
-inputbar {
-    enabled:                     true;
-    spacing:                     10px;
-    padding:                     40px 40px 45px;
-    background-color:            transparent;
-    background-image:            url("~/.config/bspwm/rofi/imgs/theme-menu-imgs/${IMG}.png", width);
-    text-color:                  @foreground;
-    orientation:                 horizontal;
-    children:                    [ "textbox-prompt-colon", "entry" ];
-}
-textbox-prompt-colon {
-    enabled:                     true;
-    expand:                      true;
-    str:                         " [20] Bspwm Themes Are Available In Exodia OS \n   Have fun with your favorite theme ";
-    padding:                     12px 15px;
-    border-radius:               8px;
-    background-color:            @background-alt;
-    text-color:                  @background;
-}
-entry {
-    enabled:                     true;
-    expand:                      false;
-    padding:                     12px 16px;
-    border-radius:               8px;
-    background-color:            @background-alt;
-    text-color:                  @background;
-    cursor:                      text;
-    placeholder:                 " Search \n     ";
-    placeholder-color:           inherit;
-}
-dummy {
-    expand:                      true;
-    background-color:            transparent;
-}
-
-
-
-/*****----- Listview -----*****/
-listview {
-    enabled:                     true;
-    columns:                     4;
-    lines:                       4;
-    cycle:                       false;
-    dynamic:                     true;
-    scrollbar:                   false;
-    layout:                      vertical;
-    reverse:                     false;
-    fixed-height:                true;
-    fixed-columns:               true;
-    
-    spacing:                     15px;
-    background-color:            transparent;
-    text-color:                  @foreground;
-    cursor:                      "default";
-}
-
-/*****----- Elements -----*****/
-element {
-    enabled:                     true;
-    spacing:                     10px;
-    padding:                     8px;
-    border-radius:               4px;
-    background-color:            transparent;
-    text-color:                  @foreground;
-    cursor:                      pointer;
-}
-element normal.normal {
-    background-color:            inherit;
-    text-color:                  inherit;
-}
+    sed -i '/element selected.normal/Q' ${DIR}/rofi/themes/themes.rasi
+	cat >> ${DIR}/rofi/themes/themes.rasi <<- _EOF_
 element selected.normal {
     background-image: linear-gradient(${FOREGROUND}, ${FOREGROUND}, ${BACKGROUND});
     text-color:                  @background;
@@ -434,20 +213,18 @@ error-message {
     background-color:            @background;
     text-color:                  @foreground;
 }
-
-	EOF
-
+	_EOF_
 }
 
 main () {
 
-	getcolors
-	bspbar
-	bspterm
-	bsprofi
-	bspdunst
-	bspjgmenu
-	bsp_rofi_themes_menu
+	GET_COLORS
+	BSP_BAR
+	BSP_TERM
+	BSP_ROFI
+	BSP_DUNST
+	BSP_JGMENU
+	BSP_ROFI_THEMES_MENU
 	
 }
 

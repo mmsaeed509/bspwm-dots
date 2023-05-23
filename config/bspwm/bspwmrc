@@ -1,264 +1,118 @@
 #!/usr/bin/env bash
 
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
 
 # Environtment path #
 export PATH="${PATH}:$HOME/.config/bspwm/bin:$HOME/.config/bspwm/rofi/bin:$HOME/.local/bin"
 
+# bspwm config directory #
+BSPWM_DIR="$HOME/.config/bspwm"
 
-# Get colors from .Xresources #
-xrdb ~/.Xresources
-getcolors() {
-	FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
-	BACKGROUND=$(xrdb -query | grep 'background:'| awk '{print $NF}')
-	BLACK=$(xrdb -query | grep 'color0:'| awk '{print $NF}')
-	RED=$(xrdb -query | grep 'color1:'| awk '{print $NF}')
-	GREEN=$(xrdb -query | grep 'color2:'| awk '{print $NF}')
-	YELLOW=$(xrdb -query | grep 'color3:'| awk '{print $NF}')
-	BLUE=$(xrdb -query | grep 'color4:'| awk '{print $NF}')
-	MAGENTA=$(xrdb -query | grep 'color5:'| awk '{print $NF}')
-	CYAN=$(xrdb -query | grep 'color6:'| awk '{print $NF}')
-	WHITE=$(xrdb -query | grep 'color7:'| awk '{print $NF}')
-}
-getcolors
+# colors directory #
+XRES="$HOME/.Xresources.d"
 
 ##  ------------------------- Configurations -------------------------  ##
 
-# ----- set En & Ar for keyboard ----- #
-# setxkbmap -layout us,ar # change 'us,ar' for your own uses #
-# setxkbmap -option 'grp:alt_shift_toggle'
+# set keyboard Layouts #
+setxkbmap -layout $(grep -oP 'keyboard-layouts = \K.*' "${BSPWM_DIR}/exodia.conf")
+setxkbmap -option 'grp:alt_shift_toggle'
+
+# Updating Color Schemes #
+cat ${BSPWM_DIR}/colorSchemes/$(grep -oP 'color-scheme = \K.*' "${BSPWM_DIR}/exodia.conf")> "${XRES}"/colors
 
 # Solve java apps issues (e.g. JetBrains IDEs like PyCharm, CLion, etc). #
 export _JAVA_AWT_WM_NONREPARENTING=1 
 
-##  ----- Dual monitor setup -----  ##
-#
-# run xrandr -q | grep " connected" | cut -d ' ' -f1   to list monitors
-# in my case eDP1 , HDMI-1-0
-# change 'HDMI-1-0' to your output
- 
-# if [[ $(xrandr -q | grep 'HDMI-1-0 connected') ]]; then
+# setup connected monitors #
 
-#  		# use arandr or xrandr to set monitors config, in my case, i use laptop monitor (eDP1) as Primary display
-#  		# and the second monitor (HDMI-1-0) as external display (extended to right)
-# 		# add your config to this directory `~/.config/bspwm/bin/` , If it doesn't exist, create one
-# 		mainLeftExternalRight
+# No. monitors #
+NUM_OF_MONITORS=$(xrandr --listmonitors | grep -c "^ ")
 
-		  
-# fi
+if [[ ${NUM_OF_MONITORS} -ge 1 ]]; 
+	then
+    	bspmonitors
+fi
 
-
-
-# ----- workspaces config ----- #
+# Workspaces Configurations #
 workspaces() {
+	
 	name=1
-	for monitor in `bspc query -M`; do
-		
-    bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '' ''      
-		let name++
+	
+	for monitor in `bspc query -M`; 
+		do
+
+			bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '' ''
+			let name++
 
 	done
+
 }
 
 workspaces
 
-bspc config border_width 2
-bspc config window_gap 10
-bspc config split_ratio 0.50
+# load bspwm Configurations #
+bspconfig
 
-bspc config focused_border_color "$BLUE" 
-bspc config normal_border_color "$BACKGROUND"
-bspc config active_border_color "$MAGENTA"
-bspc config presel_feedback_color "$GREEN"
+# Manage all the unmanaged windows remaining from a previous session. #
+bspc wm --adopt-orphans
 
-bspc config borderless_monocle true
-bspc config gapless_monocle true
-bspc config paddingless_monocle true
-bspc config single_monocle false
-bspc config focus_follows_pointer true
-
-##  ------------------------- workspaces config -------------------------  ##
-
-
-# ----- Window rules ----- #
-#  remove all rules first  #
-bspc rule -r *:*
-
-
-# ----- apps open in terminal workspaces ----- #
-
-bspc rule -a Alacritty desktop='^1' follow=on focus=on
-bspc rule -a Xfce4-terminal desktop='^1' follow=on focus=on
-bspc rule -a gnome-calculator desktop='^1' state=floating follow=on focus=on
-
-
-# ----- apps open in web workspaces ----- #
-
-bspc rule -a firefox desktop='^2' follow=on focus=on
-bspc rule -a chromium desktop='^2' follow=on focus=on
-bspc rule -a Google-chrome desktop='^2' follow=on focus=on
-bspc rule -a Brave-browser desktop='^2' follow=on focus=on
-bspc rule -a guiscrcpy desktop='^2' state=floating follow=on focus=on
-bspc rule -a kdeconnect.app desktop='^2' state=floating follow=on focus=on
-bspc rule -a MEGAsync desktop='^2' state=floating follow=on focus=on
-bspc rule -a Element desktop='^2' state=floating follow=on focus=on
-
-#  free download manager  #
-bspc rule -a Free desktop='^2' state=floating follow=on focus=on
-bspc rule -a qBittorrent desktop='^2' state=floating follow=on focus=on
-
-#  VPNs  #
-bspc rule -a Windscribe2 desktop='^2' state=floating follow=on focus=on
-bspc rule -a Protonvpn desktop='^2' state=floating follow=on focus=on
-
-
-# ----- apps open in files workspaces ----- #
-
-declare -a files=(Pcmanfm Thunar Caja dolphin)
-for i in ${files[@]}; do
-   bspc rule -a $i desktop='^3' follow=on focus=on; done
-
-
-
-# ----- apps open in code workspaces ----- #
-
-declare -a code=(Geany code-oss)
-for i in ${code[@]}; do
-   bspc rule -a $i desktop='^4' follow=on focus=on; done
-   
-bspc rule -a Code desktop ='^4' follow=on focus=on
-bspc rule -a kate desktop ='^4' follow=on focus=on
-bspc rule -a Leafpad desktop ='^4' follow=on focus=on
-bspc rule -a github-desktop desktop ='^4' state=floating follow=on focus=on
-
-#  jetBrains IDEs  #
-bspc rule -a jetbrains-clion desktop ='^4' state=floating follow=on focus=on
-bspc rule -a jetbrains-idea desktop ='^4' state=floating follow=on focus=on
-bspc rule -a jetbrains-pycharm desktop ='^4' state=floating follow=on focus=on
-
-#  Markdown editors  #
-bspc rule -a inkdrop desktop ='^4' state=floating follow=on focus=on
-
-
-# ----- apps open in office and docs workspaces ----- #
-
-declare -a office=(Gucharmap Atril Evince \
-libreoffice-writer libreoffice-calc libreoffice-impress \
-libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice)
-for i in ${office[@]}; do
-   bspc rule -a $i desktop='^5' follow=on focus=on; done
-
-#  WPS Office  #
-bspc rule -a wps desktop='^5' follow=on focus=on
-bspc rule -a wpp desktop='^5' follow=on focus=on
-bspc rule -a et desktop='^5' follow=on focus=on
-bspc rule -a pdf desktop='^5' follow=on focus=on
-
-
-# ----- apps open in Communication workspaces ----- #
-
-declare -a comm=(Thunderbird TelegramDesktop Hexchat streamlink-twitch-gui discord)
-for i in ${comm[@]}; do
-   bspc rule -a $i desktop='^6' state=floating follow=on focus=on; done
-
-
-# ----- apps open in media workspaces ----- #
-
-declare -a media=(Audacity Music MPlayer Lxmusic Inkscape Gimp-2.10 obs vlc Spotify)
-for i in ${media[@]}; do
-   bspc rule -a $i desktop='^7' state=floating follow=on focus=on; done
-
-# bspc rule -a Spotify desktop ='^7' state=floating follow=on focus=on
-
-# ----- apps open in settings workspaces ----- #
-
-bspc rule -a 'VirtualBox Manager' desktop='^8' follow=on focus=on
-bspc rule -a GParted desktop='^8' follow=on focus=on
-declare -a settings=(Lxappearance Lxtask Lxrandr Arandr \
-System-config-printer.py Pavucontrol Exo-helper-1 \
-Xfce4-power-manager-settings)
-for i in ${settings[@]}; do
-   bspc rule -a $i desktop='^8' state=floating follow=on focus=on; done
-
-bspc rule -a stacer desktop ='^8' state=floating follow=on focus=on
-bspc rule -a Xsensors desktop ='^8' state=floating follow=on focus=on
-
-# ----- special rules ----- #
-
-declare -a floating=(alacritty-float Pcmanfm Onboard Yad 'Firefox:Places' \
-Viewnior feh Nm-connection-editor)
-for i in ${floating[@]}; do
-   bspc rule -a $i state=floating follow=on focus=on; done
-
-bspc rule -a Conky state=floating manage=off
-bspc rule -a stalonetray state=floating manage=off
-bspc rule -a gwenview state=floating follow=on focus=on
+# Window rules #
+bsprules
 
 ##  ------------------------- Autostart Apps -------------------------  ##
 
-# ----- Kill if already running ----- #
+# Kill if already running #
 killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager bspc picom
 
-# set system colors #
-bspcolors
+# Lauch xsettingsd daemon #
+xsettingsd --config="${BSPWM_DIR}"/xsettingsd &
 
-# ----- Lauch xsettingsd daemon ----- #
-xsettingsd &
-
-# ----- polkit agent ----- #
+# polkit agent #
 if [[ ! `pidof xfce-polkit` ]]; then
 	/usr/lib/xfce-polkit/xfce-polkit &
 fi
 
-# ----- Lauch keybindings daemon ----- #
-sxhkd &
+# Lauch keybindings daemon #
+sxhkd -c "${BSPWM_DIR}"/keybinding/$(grep -oP 'keybinding = \K.*' "${BSPWM_DIR}/exodia.conf") &
 
-# ----- start compositor ----- #
-while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
-picom -b --experimental-backends --config $HOME/.config/bspwm/picom.conf &
-
-# ----- Enable Super Keys For Menu ----- #
+# Enable Super Keys For Menu #
 ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
 
-# ----- Enable power management ----- #
+# Enable power manager #
 xfce4-power-manager &
 
-# ----- Fix cursor ----- #
+# Fix cursor #
 xsetroot -cursor_name left_ptr
 
-# ----- Restore wallpaper ----- #
-bash $HOME/.fehbg
+# restore wallpaper #
+feh --no-fehbg --bg-fill /usr/share/backgrounds/$(grep -oP 'background = \K.*' "${BSPWM_DIR}/exodia.conf")
 
-# ----- enable num lock ----- #
+# enable num lock #
 numlockx &
 
-# ----- Start mpd ----- #
+# Start mpd #
 exec mpd &
 
-# ----- Start bspwm scripts ----- #
-# bspcolors
+# start bspwm scripts #
+bspcolors
 bspcomp
 bspbar
+bspdunst 
 bspfloat &
 
-# ----- Lauch notification daemon ----- #
-dunst &
+# Lauch Exodia OS Assistant #
 
-exodia-welcome &
+STATUS=$(grep -Po 'exoida-assistant-auto-start\s*=\s*\K.*' ${BSPWM_DIR}/exodia.conf)
+
+if [[ ${STATUS} == "true" ]]; 
+	then
+    	exodia-assistant
+fi

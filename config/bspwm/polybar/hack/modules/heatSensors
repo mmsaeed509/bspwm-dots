@@ -1,22 +1,13 @@
 #!/bin/sh
 
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
 
 # Select the right temperature file. # 
 for temp_dir in /sys/class/hwmon/*; do
@@ -54,18 +45,18 @@ if [[ "$deg_no_format" -le 40 ]]
 	then
 		# the ' %{T3} ' -> pass font type to polybar config file 
 		# the selected font type is number 3, which is (font-3 = "Iosevka:style=bold:"size=12;3" )
-		echo "%{F#06CCD7}%{T2} %{F}$deg"
+		echo "%{T3} $deg"
 
 # from 40°C to 60°C print -> 
 elif [[ "$deg_no_format" -le 60 ]] 
 	then
-		echo "%{F#06CCD7}%{T2} %{F}$deg"
+		echo "%{T3} $deg"
 
 
 # from 60°C to 85°C print -> 
 elif [[ "$deg_no_format" -le 85 ]]
 	then
-		echo "%{F#06CCD7}%{T2} %{F}$deg"
+		echo "%{T3} $deg"
 
 # from 85°C to +... print ->  
 elif [[ "$deg_no_format" -gt 85 ]] 
@@ -73,4 +64,3 @@ elif [[ "$deg_no_format" -gt 85 ]]
 		# the  ' -n "%{F#FF0008}"  ' -> red font as 85°C to +... is the default warn temperature
 		echo -n "%{T3}%{F#FF0008} %{F#FF0008}$deg"
 fi
-

@@ -1,88 +1,214 @@
 #!/usr/bin/env bash
 
-DIR="$HOME/.config/bspwm"
-rofi_command="rofi -theme $DIR/rofi/themes/screenshot.rasi"
+################################################################
+#                                   						               #
+#  Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>  #
+#                                   						               #
+#  Reconfigured For Exodia OS                                  #
+#                                   						               #
+#  @author      : 00xWolf           						               #
+#    GitHub    : @mmsaeed509       						               #
+#    Developer : Mahmoud Mohamed   						               #
+#  﫥  Copyright : Exodia OS        						                #
+#                                   						               #
+################################################################
 
-time=`date +%Y-%m-%d-%I-%M-%S`
-geometry=`xrandr | head -n1 | cut -d',' -f2 | tr -d '[:blank:],current'`
+# Import Current Theme
+DIR="$HOME/.config/bspwm"
+ROFI_THEME="$DIR/rofi/themes/screenshot.rasi"
+
+# Theme Elements
+prompt='Screenshot Tool'
+mesg="Screenshots are saved in the : 
+\``xdg-user-dir PICTURES`/Screenshots\` Directory"
+
+# Options
+layout=$(cat "${ROFI_THEME}" | grep 'USE_ICON' | cut -d'=' -f2)
+if [[ "$layout" == 'NO' ]];
+	then
+		option_1="  Capture an Area"
+		option_2="  Capture a Window"
+		option_3="  Capture a Desktop"
+		option_4="     Capture a Monitor"	
+		option_5="  Capture in 5s"	
+		option_6="  Capture in 10s"	
+			
+else
+
+	option_1=""
+	option_2=""
+	option_3=""
+	option_4=""
+	option_5=""
+	option_6=""
+	
+fi
+
+# Rofi CMD
+rofi_cmd() {
+  rofi -dmenu \
+    -p "$prompt" \
+    -mesg "$mesg" \
+    -markup-rows \
+    -theme "${ROFI_THEME}"
+}
+
+# Pass variables to rofi dmenu
+run_rofi() {
+  echo -e "$option_1\n$option_3\n$option_5\n$option_2\n$option_4\n$option_6" | rofi_cmd
+}
+
+# Screenshot
+time=$(date +%Y-%m-%d-%H-%M-%S)
+geometry=$(xrandr | grep 'connected' | awk '{print $3}' | tr 'x' '\n' | sort -nr | awk 'NR==1')
 dir="`xdg-user-dir PICTURES`/Screenshots"
 file="Screenshot_${time}_${geometry}.png"
 
-# Buttons
-screen=""
-area=""
-window=""
-infive=""
-inten=""
+# Directory
+if [[ ! -d "$dir" ]]; then
+  mkdir -p "$dir"
+fi
 
-# notify
-notify_user () {
-	if [[ -e "$dir/$file" ]]; then
-		dunstify -u low --replace=699 -i /usr/share/archcraft/icons/dunst/picture.png "Saved in $dir"
-	else
-		dunstify -u low --replace=699 -i /usr/share/archcraft/icons/dunst/picture.png "Screenshot Deleted."
-	fi
+# notify and view screenshot
+notify_view() {
+  notify_cmd_shot='dunstify -u low -h string:x-dunst-stack-tag:obscreenshot -i /usr/share/icons/dunst/picture.png'
+  ${notify_cmd_shot} "Copied to clipboard."
+  paplay /usr/share/sounds/freedesktop/stereo/screen-capture.oga &>/dev/null &
+  viewnior "${dir}/$file"
+  if [[ -e "$dir/$file" ]]; then
+    ${notify_cmd_shot} "Screenshot Saved."
+  else
+    ${notify_cmd_shot} "Screenshot Deleted."
+  fi
+}
+
+# Copy screenshot to clipboard
+copy_shot () {
+  tee "$file" | xclip -selection clipboard -t image/png
 }
 
 # countdown
 countdown () {
-	for sec in `seq $1 -1 1`; do
-		dunstify -t 1000 --replace=699 -i /usr/share/archcraft/icons/dunst/timer.png "Taking shot in : $sec"
-		sleep 1
-	done
+  for sec in $(seq "$1" -1 1); do
+    dunstify -t 1000 -h string:x-dunst-stack-tag:screenshottimer -i /usr/share/icons/dunst/timer.png "Taking shot in : $sec"
+    sleep 1
+  done
 }
 
 # take shots
 shotnow () {
-	cd ${dir} && sleep 0.5 && maim -u -f png "$file" && viewnior ${dir}/"$file"
-	notify_user
+  cd "${dir}" && sleep 0.5 && maim -u -f png | copy_shot
+  notify_view
 }
 
 shot5 () {
-	countdown '5'
-	sleep 1 && cd ${dir} && maim -u -f png "$file" && viewnior ${dir}/"$file"
-	notify_user
+  countdown '5'
+  sleep 1 && cd "${dir}" && maim -u -f png | copy_shot
+  notify_view
 }
 
 shot10 () {
-	countdown '10'
-	sleep 1 && cd ${dir} && maim -u -f png "$file" && viewnior ${dir}/"$file"
-	notify_user
+  countdown '10'
+  sleep 1 && cd "${dir}" && maim -u -f png | copy_shot
+  notify_view
 }
 
 shotwin () {
-	cd ${dir} && maim -u -f png -i `xdotool getactivewindow` "$file" && viewnior ${dir}/"$file"
-	notify_user
+  cd "${dir}" && maim -u -f png -i "$(xdotool getactivewindow)" | copy_shot
+  notify_view
 }
 
 shotarea () {
-	cd ${dir} && maim -u -f png -s -b 2 -c 0.35,0.55,0.85,0.25 -l "$file" && viewnior ${dir}/"$file"
-	notify_user
+
+  cd "${dir}" && maim -u -f png -s -b 2 -c 0.35,0.55,0.85,0.25 -l | copy_shot
+  notify_view
+  
 }
 
-if [[ ! -d "$dir" ]]; then
-	mkdir -p "$dir"
-fi
+shotmonitor () {
 
-# Variable passed to rofi
-options="$screen\n$area\n$window\n$infive\n$inten"
+  MONITORS=$(xrandr | grep -o '[0-9]*x[0-9]*[+-][0-9]*[+-][0-9]*')
+  # Get the location of the mouse
+  XMOUSE=$(xdotool getmouselocation | awk -F "[: ]" '{print $2}')
+  YMOUSE=$(xdotool getmouselocation | awk -F "[: ]" '{print $4}')
 
-chosen="$(echo -e "$options" | $rofi_command -p 'Take Screenshot' -dmenu -selected-row 0)"
-case $chosen in
-    $screen)
-		shotnow
-        ;;
-    $area)
-		shotarea
-        ;;
-    $window)
-		shotwin
-		;;
-    $infive)
-		shot5
-		;;
-    $inten)
-		shot10
-        ;;
+  for mon in ${MONITORS}; do
+    # Parse the geometry of the monitor
+    MONW=$(echo ${mon} | awk -F "[x+]" '{print $1}')
+    MONH=$(echo ${mon} | awk -F "[x+]" '{print $2}')
+    MONX=$(echo ${mon} | awk -F "[x+]" '{print $3}')
+    MONY=$(echo ${mon} | awk -F "[x+]" '{print $4}')
+    # Use a simple collision check
+    if (( ${XMOUSE} >= ${MONX} )); then
+      if (( ${XMOUSE} <= ${MONX}+${MONW} )); then
+        if (( ${YMOUSE} >= ${MONY} )); then
+          if (( ${YMOUSE} <= ${MONY}+${MONH} )); then
+            # We have found our monitor!
+            GEOMETRY=${MONW}x${MONH}+${MONX}+${MONY}
+        
+          fi
+        fi
+      fi
+    fi
+  done
+
+  sleep 1
+
+  cd ${dir} && maim -u -f png -g ${GEOMETRY} | copy_shot
+  notify_view
+  
+}
+
+
+# Execute Command
+run_cmd() {
+  if [[ "$1" == '--opt1' ]];
+  	then
+    	shotarea
+
+  elif [[ "$1" == '--opt2' ]];
+  	then
+    	shotwin
+
+  elif [[ "$1" == '--opt3' ]];
+  	then
+    	shotnow
+		
+  elif [[ "$1" == '--opt4' ]];
+  	then
+    	shotmonitor
+
+  elif [[ "$1" == '--opt5' ]];
+  	then
+    	shot5
+
+  elif [[ "$1" == '--opt6' ]];
+  	then
+    	shot10
+		
+  fi
+  
+}
+
+# Actions
+chosen="$(run_rofi)"
+case ${chosen} in
+  $option_1)
+    run_cmd --opt1
+    ;;
+  $option_2)
+    run_cmd --opt2
+    ;;
+  $option_3)
+    run_cmd --opt3
+    ;;
+  $option_4)
+    run_cmd --opt4
+    ;;
+  $option_5)
+    run_cmd --opt5
+    ;;
+  $option_6)
+    run_cmd --opt6
+    ;;
 esac
-

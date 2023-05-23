@@ -1,35 +1,25 @@
 #!/usr/bin/env bash
 
-##########################################################################################################
-#
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3
-#
-#
-#    Credits : Aditya Shakya (Github : @adi1090x)
-#
-##########################################################################################################
+###################################################
+#                                                 #
+#  @author      : 00xWolf                         #
+#    GitHub    : @mmsaeed509                     #
+#    Developer : Mahmoud Mohamed                 #
+#  﫥  Copyright : Exodia OS                       #
+#  Credits : Aditya Shakya (Github : @adi1090x)   #
+#                                                 #
+###################################################
 
-
-# Current Theme
+# Current Theme #
 dir="$HOME/.config/bspwm/rofi/themes"
 theme='powermenu'
 
-# CMDs
+# CMDs #
 lastlogin="`last $USER | head -n1 | tr -s ' ' | cut -d' ' -f5,6,7`"
 uptime="`uptime -p | sed -e 's/up //g'`"
 host=`hostname`
 
-# Options
+# Options #
 hibernate=''
 shutdown=''
 reboot=''
@@ -39,15 +29,15 @@ logout=''
 yes=''
 no=''
 
-# Rofi CMD
+# Rofi CMD #
 rofi_cmd() {
 	rofi -dmenu \
-		-p "Goodbye  Mr. $USER" \
+		-p "Goodbye  Mr.$USER" \
 		-mesg " Uptime: $uptime" \
 		-theme ${dir}/${theme}.rasi
 }
 
-# Confirmation CMD
+# Confirmation CMD #
 confirm_cmd() {
 	rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 350px;}' \
 		-theme-str 'mainbox {orientation: vertical; children: [ "message", "listview" ];}' \
@@ -60,17 +50,17 @@ confirm_cmd() {
 		-theme ${dir}/${theme}.rasi
 }
 
-# Ask for confirmation
+# Ask for confirmation #
 confirm_exit() {
 	echo -e "$yes\n$no" | confirm_cmd
 }
 
-# Pass variables to rofi dmenu
+# Pass variables to rofi dmenu #
 run_rofi() {
 	echo -e "$lock\n$suspend\n$logout\n$hibernate\n$reboot\n$shutdown" | rofi_cmd
 }
 
-# Execute Command
+# Execute Command #
 run_cmd() {
 	selected="$(confirm_exit)"
 	if [[ "$selected" == "$yes" ]]; then
@@ -100,7 +90,7 @@ run_cmd() {
 	fi
 }
 
-# Actions
+# Actions #
 chosen="$(run_rofi)"
 case ${chosen} in
     $shutdown)

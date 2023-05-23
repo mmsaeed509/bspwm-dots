@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+################################################################
+#                                   						   #
+#  Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>  #
+#                                   						   #
+#  Reconfigured For Exodia OS                                  #
+#                                   						   #
+#  @author      : 00xWolf           						   #
+#    GitHub    : @mmsaeed509       						   #
+#    Developer : Mahmoud Mohamed   						   #
+#  﫥  Copyright : Exodia OS        						    #
+#                                   						   #
+################################################################
+
+count=0
+connected=" ∙ 說"
+disconnected=" ∙ ﲁ"
+
+ID="$(ip link | awk '/state UP/ {print $2}')"
+
+while true; do
+    if (ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null; then
+        if [[ $ID == e* ]]; then
+            echo -e "%{F#00eb15}$connected Online" ; sleep 25
+        else
+            echo -e "%{F#00eb15}$connected Online" ; sleep 25
+        fi
+    else
+        echo -e "%{F#FF0008}$disconnected Offline" ; sleep 5
+    fi
+done
