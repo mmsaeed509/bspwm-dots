@@ -1,0 +1,273 @@
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/sysTray]
+type = custom/text
+
+content = "[SysTray] : "
+content-background = #00
+content-foreground = #00eb15
+content-padding = 0
+content-font = 4
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/bna]
+type = custom/text
+
+content = " NON"
+content-background = #00
+content-foreground = #80E6FE
+content-prefix = ""
+content-prefix-font = 2
+content-prefix-foreground = #80E6FE
+content-prefix-background = #00
+content-padding = 0
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/backlight]
+type = internal/xbacklight
+
+card = intel_backlight
+
+format = <ramp><label>
+
+
+label-foreground = #80E6FE
+label-background = #00
+
+label = " %percentage%%"
+
+ramp-0 = ""
+ramp-1 = ""
+ramp-2 = ""
+ramp-3 = ""
+ramp-4 = ""
+ramp-5 = ""
+ramp-6 = ""
+ramp-7 = ""
+ramp-8 = ""
+ramp-9 = ""
+ramp-font = 3
+ramp-foreground = #80E6FE
+ramp-background = #00
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/brightness]
+type = internal/backlight
+
+card = ${system.graphics_card}
+
+enable-scroll = true
+format = <ramp><label>
+
+
+label-foreground = #80E6FE
+label-background = #00
+
+label = " %percentage%%"
+
+ramp-0 = ""
+ramp-1 = ""
+ramp-2 = ""
+ramp-3 = ""
+ramp-4 = ""
+ramp-5 = ""
+ramp-6 = ""
+ramp-7 = ""
+ramp-8 = ""
+ramp-9 = ""
+ramp-font = 3
+ramp-foreground = #80E6FE
+ramp-background = #00
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = true
+inline-mode = false
+enable-click = true
+enable-scroll = true
+reverse-scroll = true
+fuzzy-match = true
+
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI;
+ws-icon-6 = VII;
+ws-icon-7 = VIII;
+ws-icon-8 = IX;
+ws-icon-default = 
+
+format = <label-state>
+format-font = 2
+
+label-monitor = %name%
+
+
+label-focused = [%name%]
+label-focused-foreground = #ff0000
+label-focused-background = #00
+label-focused-underline = #ff0000
+label-focused-padding = 0
+
+label-occupied = %name%
+label-occupied-foreground = #FFFF00
+label-occupied-background = #00
+label-occupied-underline = #00
+label-occupied-padding = 0
+
+label-urgent = %name%
+label-urgent-foreground = #80E6FE
+label-urgent-background = #00
+label-urgent-underline = #80E6FE
+label-urgent-padding = 0
+
+label-empty = %name%
+label-empty-foreground = #0a7a76
+label-empty-background = #00
+label-empty-padding = 0
+
+; Separator in between workspaces
+label-separator = "◆"
+label-separator-padding = 1
+label-separator-foreground = #80E6FE
+label-separator-background = #00
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/mod]
+type = internal/bspwm
+
+format = <label-mode>
+format-background = #00
+format-foreground = #0ABDC6
+format-padding = 1
+format-font = 4
+
+label-monocle     = "Monocle"
+label-tiled       = "Tiled"
+label-floating    = ", Float"
+label-pseudotiled = ", Pseudo"
+label-fullscreen  = ", Full"
+label-locked      = ", Locked"
+label-sticky      = ", Sticky"
+label-private     = ", Private"
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/date]
+type = internal/date
+
+interval = 1.0
+
+time = %I:%M %p
+time-alt = %A, %d %B %Y
+
+format = <label>
+format-prefix = " "
+format-prefix-font = 3
+format-prefix-foreground = #000B1E
+format-prefix-background = #80E6FE
+
+label = " %time% "
+label-font = 3
+label-foreground = #000B1E
+label-background = #80E6FE
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+label-layout = "%layout%"
+label-layout-foreground = #80E6FE
+label-layout-background = #00
+label-layout-font = 3
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-foreground = #80E6FE
+label-indicator-background = #00
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/sysmenu]
+type = custom/text
+
+; content = ""
+content = ""
+content-font = 5
+content-foreground = #80E6FE
+content-padding = 0
+
+click-left = ~/.config/bspwm/rofi/bin/powermenu
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/notification-github]
+type = custom/script
+exec = ~/.config/bspwm/polybar/scripts/notification-github.sh
+interval = 60
+label-foreground = #80E6FE
+label-font = 3
+click-left = google-chrome-stable --newtab https://github.com/notifications
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/menu]
+type = custom/text
+
+content = " Apps"
+content-font = 3
+content-prefix = ""
+content-prefix-font= 5
+content-foreground = #80E6FE
+content-padding = 0
+
+click-left  = ~/.config/bspwm/rofi/bin/launcher
+click-right = jgmenu_run
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/xdomenu]
+type = custom/text
+interval = 1
+
+content = ""
+content-font = 5
+content-foreground = #bb00ff
+content-padding = 0
+click-left = jgmenu_run
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+[module/themes]
+type = custom/text
+
+content = " Themes"
+content-font = 3
+content-prefix = ""
+content-prefix-font= 5
+content-foreground = #80E6FE
+content-background = #00
+content-padding = 0
+
+click-left = ~/.config/bspwm/rofi/bin/themes
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

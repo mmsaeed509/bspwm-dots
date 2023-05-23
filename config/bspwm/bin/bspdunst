@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+# Files and Directories #
+DIR="$HOME/.config/bspwm"
+
+# kill dunst daemon #
+if [[ `pidof dunst` ]]; then
+	pkill dunst
+fi
+
+# Launch dunst daemon #
+dunst -config "$DIR"/dunst/dunstrc &

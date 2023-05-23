@@ -1,29 +1,20 @@
 #!/usr/bin/env bash
 
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
 
+# directories #
 DIR="$HOME/.config/bspwm"
 BSP="$HOME/.config/bspwm/themes"
-rofi_command="rofi -theme $DIR/rofi/themes/themes.rasi"
+ROFI_THEME="rofi -theme $DIR/rofi/themes/themes.rasi"
 
 # Available Themes #
-
 theme_1=" Red Jungles"
 theme_2=" Emilia"
 theme_3=" Chad WM"
@@ -32,7 +23,7 @@ theme_5=" Black And Red"
 theme_6=" Rick"
 theme_7=" Hack The Box"
 theme_8=" BlackArch"
-theme_9=" Neon"
+theme_9=" Islamic Knights"
 theme_10=" JS Coffee"
 theme_11=" Exodia"
 theme_12=" Japanese City"
@@ -40,83 +31,81 @@ theme_13=" Tokyo City"
 theme_14=" VALORANT"
 theme_15=" Melissa"
 theme_16=" Cristina"
-theme_17=" Pamela"
-theme_18=" CyberPunk"
-theme_19=" A Hacker Den"
-theme_20=" Amarena"
+theme_17=" CyberPunk"
+theme_18=" A Hacker Den"
+theme_19=" Amarena"
+
 
 # pass available themes to rofi #
-availableThemes="$theme_1\n$theme_2\n$theme_3\n$theme_4\
+AVAILABLE_THEMES="$theme_1\n$theme_2\n$theme_3\n$theme_4\
 \n$theme_5\n$theme_6\n$theme_7\n$theme_8\n$theme_9\
 \n$theme_10\n$theme_11\n$theme_12\n$theme_13\n$theme_14\
 \n$theme_15\n$theme_16\n$theme_17\n$theme_18\n$theme_19\
-\n$theme_20"
+"
 
-chosen="$(echo -e "$availableThemes" | $rofi_command -dmenu -selected-row 0)"
+chosen="$(echo -e "${AVAILABLE_THEMES}" | ${ROFI_THEME} -dmenu -selected-row 0)"
 #
-# the 1st var -> background, the 2th var -> color scheme name, the 3th var -> the theme name, 
-# the 4th var -> icons name, the 5th var -> the cursor name, the 6th var -> RGB mood for keyboard
-# the 7th var ( if it exists )-> for customized polybar
+# the 1st arg -> background , the 2th arg -> color scheme name , the 3th arg -> the theme name
+# the 4th arg -> icons name , the 5th arg -> the cursor name , the 6th arg -> RGB mood for keyboard
+# the 7th arg -> polybar , the 8th arg -> picom
 #
 case $chosen in
     $theme_1)
-        bash apply-theme  'BloodJungles.jpg' 'Jungles' 'Blade2' 'Red-Icons' 'ScarleTrix' 'RedJungles' 'Jungles'
+        bash apply-theme  'BloodJungles.jpg' 'Jungles' 'Blade2' 'Red-Icons' 'ScarleTrix' 'RedJungles' 'Jungles' 'default.conf'
         ;;
     $theme_2)
-        bash apply-theme  'amilia.jpg' 'Emilia' 'Dracula' 'Elena-dark-icons' 'Rage-Purple-Cursor' 'Emilia' 'Emilia'
+        bash apply-theme  'amilia.jpg' 'Emilia' 'Dracula' 'Elena-dark-icons' 'Rage-Purple-Cursor' 'Emilia' 'Emilia' 'default.conf'
         ;;
     $theme_3)
-        bash apply-theme  'chad.png' 'ChadWM' 'Qogir-dark' 'Qogir-dark' 'ManjaTrix' 'ChadWM' 'ChadWM'
+        bash apply-theme  'chad.png' 'ChadWM' 'Qogir-dark' 'Qogir-dark' 'ManjaTrix' 'ChadWM' 'ChadWM' 'default.conf'
         ;;
     $theme_4)
-        bash apply-theme  'hack.jpg' 'hack' 'Hack' 'Hack' 'ArchTrix' 'Hack' 'hack'
+        bash apply-theme  'hack.jpg' 'hack' 'Hack-Dark' 'Hack' 'ArchTrix' 'Hack' 'hack' 'default.conf'
         ;;
     $theme_5)
-        bash apply-theme  'Arch-red.png' 'black-red' 'SIth Empire' 'Red-Black' 'lightSaber-dark' 'BlackRed' 'black-red'
+        bash apply-theme  'Arch-red.png' 'black-red' 'SIth Empire' 'Red-Black' 'lightSaber-dark' 'BlackRed' 'black-red' 'default.conf'
         ;;
     $theme_6)
-        bash apply-theme  'rick.jpg' 'rick' 'Rick' 'Zafiro' 'lightSaber' 'Rick' 'rick'
+        bash apply-theme  'rick.jpg' 'rick' 'Rick' 'Zafiro' 'lightSaber' 'Rick' 'rick' 'default.conf'
         ;;
     $theme_7)
-        bash apply-theme  'hackthebox4.jpg' 'HackTheBox' 'Tokyonight-Dark-BL' 'Green-Icons' 'broodwar' 'HackTheBox' 'HackTheBox'
+        bash apply-theme  'hackthebox4.jpg' 'HackTheBox' 'Tokyonight-Dark-BL' 'Green-Icons' 'broodwar' 'HackTheBox' 'HackTheBox' 'default.conf'
         ;;
     $theme_8)
-        bash apply-theme  'hacktheplanet.png' 'BlackArch' 'BlackArch-theme' 'Blue-Icons' 'Azenis' 'BlackArch' 'BlackArch'
+        bash apply-theme  'hacktheplanet.png' 'BlackArch' 'BlackArch-theme' 'Blue-Icons' 'Azenis' 'BlackArch' 'BlackArch' 'default.conf'
         ;;
     $theme_9)
-        bash apply-theme  'women.jpg' 'neon' 'Tokyonight-Dark-BL' 'neon-icon' 'WineTrix' 'Neon' 'neon'
+        bash apply-theme  'Islamic_warrior_9.jpg' 'IslamicWarrior' 'Tokyonight-Dark-BL' 'neon-icon' 'ArchTrix' 'IslamicWarrior' 'IslamicWarrior' 'shadow-animation.conf'
         ;;
     $theme_10)
-        bash apply-theme  'JScoffee.jpg' 'JScoffee' 'everblush' 'Zafiro' 'ManjaTrix' 'ChadWM' 'JScoffee'
+        bash apply-theme  'JScoffee.jpg' 'JScoffee' 'everblush' 'Zafiro' 'ManjaTrix' 'ChadWM' 'JScoffee' 'default.conf'
         ;;
     $theme_11)
-        bash apply-theme  'wolf.jpeg' 'exodia' 'Dracula' 'Green-Icons' 'Rage-Purple-Cursor' 'Emilia' 'exodia'
+        bash apply-theme  'wolf.jpeg' 'exodia' 'Tokyonight-Dark-B' 'Green-Icons' 'Rage-Purple-Cursor' 'Emilia' 'exodia' 'animation.conf'
         ;;
     $theme_12)
-        bash apply-theme  'dark.jpg' 'JapaneseCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'JapaneseCity'
+        bash apply-theme  'dark.jpg' 'JapaneseCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'JapaneseCity' 'default.conf'
         ;;
     $theme_13)
-        bash apply-theme  'tokyo-night03.png' 'TokyoCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'tokyo'
+        bash apply-theme  'tokyo-night29.png' 'TokyoCity' 'Tokyonight-Dark-B' 'Elena-dark-icons' 'WineTrix' 'JapaneseCity' 'tokyo' 'default.conf'
         ;;
     $theme_14)
-        bash apply-theme  'valorant.jpg' 'valorant' 'Tokyonight-Dark-B' 'Red-Black' 'Rage-Gothic' 'RedJungles' 'valorant'
+        bash apply-theme  'valorant.jpg' 'valorant' 'Tokyonight-Dark-B' 'Red-Black' 'Rage-Gothic' 'RedJungles' 'valorant' 'shadow-animation.conf'
         ;;
     $theme_15)
-        bash apply-theme  'Melissa.png' 'Melissa' 'Arc-Dark' 'Arc-Circle' 'ArchTrix' 'Melissa' 'Melissa'
+        bash apply-theme  'Melissa.png' 'Melissa' 'Arc-Dark' 'Arc-Circle' 'ArchTrix' 'Melissa' 'Melissa' 'default.conf'
         ;;
     $theme_16)
-        bash apply-theme  'Cristina.png' 'Cristina' 'Dracula' 'Elena-dark-icons' 'Rage-Purple-Cursor' 'Emilia' 'Cristina'
+        bash apply-theme  'Cristina.png' 'Cristina' 'Dracula' 'Elena-dark-icons' 'Rage-Purple-Cursor' 'Emilia' 'Cristina' 'default.conf'
         ;;
     $theme_17)
-        bash apply-theme  'Pamela.png' 'Pamela' 'Tokyonight-Dark-B' 'Blue-Icons' 'Rage-Purple-Cursor' 'Emilia' 'Pamela'
+        bash apply-theme  'KakashiCyberpunk.jpg' 'CyberPunk' 'Tokyonight-Dark-B' 'candy-icons' 'Rage-Purple-Cursor' 'CyberPunk' 'CyberPunk' 'animation.conf'
         ;;
     $theme_18)
-        bash apply-theme  'CyberPunk.png' 'CyberPunk' 'Tokyonight-Dark-B' 'candy-icons' 'Rage-Purple-Cursor' 'Emilia' 'CyberPunk'
+        bash apply-theme  'hacker.jpeg' 'Hacker' 'Tokyonight-Dark-B' 'Green-Icons' 'ManjaTrix' 'HackTheBox' 'Hacker' 'animation.conf'
         ;;
     $theme_19)
-        bash apply-theme  'hacker.jpeg' 'Hacker' 'HackTheBox' 'Green-Icons' 'ManjaTrix' 'HackTheBox' 'Hacker'
+        bash apply-theme  'amarena.jpg' 'Amarena' 'amarena' 'Elena-dark-icons' 'lightSaber' 'Amarena' 'Amarena' 'animation.conf'
         ;;
-    $theme_20)
-        bash apply-theme  'amarena.jpg' 'Amarena' 'amarena' 'Elena-dark-icons' 'lightSaber' 'Amarena' 'Amarena'
-        ;;
+
 esac

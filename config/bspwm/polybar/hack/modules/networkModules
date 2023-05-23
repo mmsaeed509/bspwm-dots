@@ -1,0 +1,127 @@
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+; If you use both a wired and a wireless network, add both modules in config.
+[module/ethernet]
+type = internal/network
+interface = ${system.network_interface}
+
+interval = 1.0
+accumulate-stats = true
+unknown-as-up = true
+
+format-connected = <label-connected>
+format-connected-prefix = "  "
+format-connected-prefix-font = 3
+format-connected-prefix-foreground = ${color.GREEN}
+format-connected-prefix-background = ${color.BACKGROUND}
+
+format-disconnected = <label-disconnected>
+format-disconnected-prefix = "  "
+format-disconnected-prefix-font = 3
+format-disconnected-prefix-foreground = ${color.GREEN}
+format-disconnected-prefix-background = ${color.BACKGROUND}
+
+; label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
+label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %downspeed% ◆  %upspeed% %{A}"
+label-connected-background = ${color.BACKGROUND}
+label-connected-foreground = ${color.GREEN}
+
+label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}Offline %{A}"
+label-disconnected-background = ${color.BACKGROUND}
+label-disconnected-foreground = ${color.GREEN}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/network]
+type = internal/network
+interface = ${system.network_interface}
+
+interval = 1.0
+
+;;ping-interval = 3
+;;udspeed-minwidth = 5
+
+accumulate-stats = true
+unknown-as-up = true
+
+format-connected = <ramp-signal><label-connected>
+
+format-disconnected = <label-disconnected>
+format-disconnected-prefix = " "
+format-disconnected-prefix-font = 3
+format-disconnected-prefix-foreground = ${color.BACKGROUND}
+format-disconnected-prefix-background = ${color.GREEN}
+
+label-connected = "%{A1:nmd &:} %essid% %{A}"
+label-connected-foreground = ${color.BACKGROUND}
+label-connected-background = ${color.GREEN}
+
+label-disconnected = "%{A1:nmd &:} Disconnected %{A}"
+label-disconnected-foreground = ${color.BACKGROUND}
+label-disconnected-background = ${color.GREEN}
+
+ramp-signal-0 = " "
+ramp-signal-1 = " "
+ramp-signal-2 = " "
+ramp-signal-3 = " "
+ramp-signal-4 = " "
+ramp-signal-font = 3
+ramp-signal-foreground = ${color.BACKGROUND}
+ramp-signal-background = ${color.GREEN}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/network_ext]
+type = internal/network
+interface = ${system.network_interface}
+
+interval = 1.0
+accumulate-stats = true
+unknown-as-up = true
+
+
+format-connected = <label-connected>
+format-connected-prefix = 直
+format-connected-foreground = #80E6FE
+
+format-disconnected = <label-disconnected>
+format-disconnected-prefix = 睊
+format-disconnected-foreground = #FF0008
+
+label-connected = "%{A1:nmd &:} %ifname% ∙  %signal% ∙ 歷 %local_ip% ∙ ﬉ %essid% ∙  %downspeed% ∙ 祝 %upspeed%%{A}"
+
+label-disconnected = "%{A1:nmd &:} Disconnected%{A}"
+label-disconnected-foreground = #FF0008
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/checknet]
+type = custom/script
+exec = ~/.config/bspwm/polybar/hack/modules/check-network
+tail = true
+interval = 1
+
+label = %output%
+
+format = <label>
+format-foreground = #80E6FE
+click-left = sh ~/.config/bspwm/rofi/bin/network
+click-right = nmd &
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

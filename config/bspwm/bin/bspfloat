@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 
-## All windows are floating on desktop 8
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+# All windows are floating on desktop 8 #
 FLOATING_DESKTOP_ID=$(bspc query -D -d '^8')
 
 bspc subscribe node_add | while read -a msg ; do

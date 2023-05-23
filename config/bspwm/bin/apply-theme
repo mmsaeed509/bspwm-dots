@@ -1,85 +1,106 @@
 #!/usr/bin/env bash
 
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
 
 # paths #
 CFG="$HOME/.config"
 BSP="$HOME/.config/bspwm"
 XRES="$HOME/.Xresources.d"
+EXODIA_CONFIG_FILE="${BSP}/exodia.conf"
+ICON="/usr/share/icons/dunst/themes.png"
 
 # Set Style #
-set_style () {
+apply-theme () {
 
-	# ----- launch a custom Polybar if it exists ----- #
+	# Notify the user #
+	dunstify -i "${ICON}" "[*] Applying The Theme!"
+
+	# --- writing the new values to the config file `exodia.conf` and updating the config --- #
+
+	# Updating Background #
+	dunstify -i "" "[+] Updating Background"
+	sed -i "s/background = .*/background = ${1}/" ${EXODIA_CONFIG_FILE}
 	
-	pkill polybar
-
-	echo "$7" > "$BSP"/VALUES/theme
-
-    # ----- icons for jgmenus ----- #
-	dunstify -i "" "[*] Updating jgmenus icons"
-    echo "$4" > "$BSP"/VALUES/icons
-	
-	# ----- apply color-scheme ----- #
+	# Updating Color Schemes #
 	dunstify -i "" "[+] Updating Color Schemes"
-	cat "$BSP"/colorSchemes/${2} > "$XRES"/colors
+	sed -i "s/color-scheme = .*/color-scheme = ${2}/" ${EXODIA_CONFIG_FILE}
+	# cat "$BSP"/colorSchemes/${2} > "${XRES}"/colors
 
-	# ----- apply wallpaper ----- #
-	dunstify -i "" "[+] Setting Desktop Background"
-	feh --bg-fill /usr/share/backgrounds/${1}
-	
-	# ----- set gtk theme, icons and cursor ----- #
+	# set gtk theme, icons and cursor #
 	dunstify -i "" "[+] Setting gtk theme, icons and cursor"
+	sed -i "s/theme = .*/theme = ${3}/" ${EXODIA_CONFIG_FILE}
+	sed -i "s/icons = .*/icons = ${4}/" ${EXODIA_CONFIG_FILE}
+	sed -i "s/cursor = .*/cursor = ${5}/" ${EXODIA_CONFIG_FILE}
 
 	if [[ `pidof xsettingsd` ]]; then
-		sed -i -e "s|Net/ThemeName .*|Net/ThemeName \"$3\"|g" ${HOME}/.xsettingsd
-		sed -i -e "s|Net/IconThemeName .*|Net/IconThemeName \"$4\"|g" ${HOME}/.xsettingsd
-		sed -i -e "s|Gtk/CursorThemeName .*|Gtk/CursorThemeName \"$5\"|g" ${HOME}/.xsettingsd
-		sed -i -e "s|Inherits=.*|Inherits=$5|g" ${HOME}/.icons/default/index.theme
-	
-		sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=\"$3\"/g" ${HOME}/.gtkrc-2.0
-		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=\"$4\"/g" ${HOME}/.gtkrc-2.0
-		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=\"$5\"/g" ${HOME}/.gtkrc-2.0
+
+		# Update Theme for `xsettingsd` #
+		sed -i -e "s|Net/ThemeName .*|Net/ThemeName \"$(grep -oP 'theme = \K.*' "${EXODIA_CONFIG_FILE}")\"|g" ${BSP}/xsettingsd
+
+		# Update Icons for `xsettingsd` #
+		sed -i -e "s|Net/IconThemeName .*|Net/IconThemeName \"$(grep -oP 'icons = \K.*' "${EXODIA_CONFIG_FILE}")\"|g" ${BSP}/xsettingsd
+
+		# Update Cursor for `xsettingsd` #
+		sed -i -e "s|Gtk/CursorThemeName .*|Gtk/CursorThemeName \"$(grep -oP 'cursor = \K.*' "${EXODIA_CONFIG_FILE}")\"|g" ${BSP}/xsettingsd
+		sed -i -e "s|Inherits=.*|Inherits=$(grep -oP 'cursor = \K.*' "${EXODIA_CONFIG_FILE}")|g" ${HOME}/.icons/default/index.theme
+
+	else
 		
-		sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=$3/g" ${CFG}/gtk-3.0/settings.ini
-		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=$4/g" ${CFG}/gtk-3.0/settings.ini
-		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$5/g" ${CFG}/gtk-3.0/settings.ini
-		sed -i -e "s/cursor_theme_name=.*/cursor_theme_name=$5/g" ${CFG}/gtk-3.0/settings.ini
+		# Update Theme for `gtk-2` #
+		sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=\"$(grep -oP 'theme = \K.*' "${EXODIA_CONFIG_FILE}")\"/g" ${HOME}/.gtkrc-2.0
+		# Update Icons for `gtk-2` #
+		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=\"$(grep -oP 'icons = \K.*' "${EXODIA_CONFIG_FILE}")\"/g" ${HOME}/.gtkrc-2.0
+		# Update Cursor for `gtk-2` #
+		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=\"$(grep -oP 'cursor = \K.*' "${EXODIA_CONFIG_FILE}")\"/g" ${HOME}/.gtkrc-2.0
+		
+		# Update Theme for `gtk-3` #
+		sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=$(grep -oP 'theme = \K.*' "${EXODIA_CONFIG_FILE}")/g" ${CFG}/gtk-3.0/settings.ini
+		# Update Icons for `gtk-3` #
+		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=$(grep -oP 'icons = \K.*' "${EXODIA_CONFIG_FILE}")/g" ${CFG}/gtk-3.0/settings.ini
+		# Update Cursor for `gtk-3` #
+		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$(grep -oP 'cursor = \K.*' "${EXODIA_CONFIG_FILE}")/g" ${CFG}/gtk-3.0/settings.ini
+		# Update Cursor for `gtk-3` #
+		sed -i -e "s/cursor_theme_name=.*/cursor_theme_name=$(grep -oP 'cursor = \K.*' "${EXODIA_CONFIG_FILE}")/g" ${CFG}/gtk-3.0/settings.ini
+
 	fi
+
+	# Setting polybar theme #
+	dunstify -i "" "[+] Setting polybar theme"
+	pkill polybar
+	sed -i "s/polybar = .*/polybar = ${7}/" ${EXODIA_CONFIG_FILE}
+
+	# Setting Picom Config #
+	dunstify -i "" "[+] Setting Picom Config"
+	sed -i "s/picom = .*/picom = ${8}/" ${EXODIA_CONFIG_FILE}
+		
 	
 	# ----- Apply RGB Colors For Keyboard ----- #
 	dunstify -i "" "[+] Changing RGB colors For the Keyboard"
-	# KeyProfileColor -$6
-	
-	echo "#!/bin/bash
-KeyProfileColor -$6" > "$BSP"/bin/keyColorProfileForStartup
+	sed -i "s/RGB-keyboard = .*/RGB-keyboard = ${6}/" ${EXODIA_CONFIG_FILE}
 
 	# ----- set background for betterlockscreen based on the selected theme ----- #
-	# dunstify -i "" "[+] Updating betterlockscreen Background"
-	# betterlockscreen -u /usr/share/backgrounds/${1}
+	STATUS=$(grep -Po 'change-betterlockscreen\s*=\s*\K.*' ${BSPWM_DIR}/exodia.conf)
+
+	if [[ ${STATUS} == "true" ]];
+		then
+    		dunstify -i "" "[+] Updating betterlockscreen Background"
+			betterlockscreen -u /usr/share/backgrounds/${1}
+	fi
 
 	# ----- reload config ----- #
+	dunstify -i "" "[+] Reload The Configurations"
 	bspc wm --restart
 
 	# ----- notify ----- #
-	bash ~/.config/bspwm/notify/notify
+	bash ${BSP}/notify/notify
 
 }
 
-set_style "${1}" "${2}" "${3}" "${4}" "${5}" "${6}" "${7}"
+apply-theme "${1}" "${2}" "${3}" "${4}" "${5}" "${6}" "${7}" "${8}"

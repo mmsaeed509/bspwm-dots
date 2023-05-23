@@ -1,7 +1,16 @@
 #!/usr/bin/env bash
 
-## rofi sudo askpass helper
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+# ask for sudo password #
 export SUDO_ASKPASS=~/.config/bspwm/bin/askpass
 
-## execute the application
+# execute the application #
 sudo -A $1

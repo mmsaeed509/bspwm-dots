@@ -1,47 +1,40 @@
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
-
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/volume]
-
 type = internal/pulseaudio
 
 sink = alsa_output.pci-0000_12_00.3.analog-stereo
-
-
 use-ui-max = false
-
 interval = 5
 
-format-volume = <ramp-volume> <label-volume>
+; format-volume = <ramp-volume> <label-volume>
+format-volume = <bar-volume><label-volume>
+format-volume-font = 8
+format-volume-foreground = #F5040D
 
 format-muted = <label-muted>
 format-muted-prefix = 婢
-format-muted-prefix-font = 
-format-muted-prefix-foreground = #BA0000
+format-muted-prefix-font = 4
+format-muted-prefix-foreground = #FD0000
+
+label-muted = " Mute"
+muted-label-font = 4
+label-muted-foreground = #FD0000
+
 
 label-volume = %percentage%%
-label-volume-font = 
-label-muted = " Mute"
-muted-label-font = 
-label-muted-foreground = #BA0000
+label-volume-foreground = #F5040D
+label-volume-font = 4
+
 
 ramp-volume-0 = 奄
 ramp-volume-1 = 奄
@@ -53,56 +46,107 @@ ramp-volume-6 = 墳
 ramp-volume-7 = 墳
 ramp-volume-8 = 墳
 ramp-volume-9 = 墳
-ramp-volume-font = 3
-ramp-volume-foreground = #BA0000
+ramp-volume-font = 4
+ramp-volume-foreground = #F5040D
 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
 
+; Only applies if <bar-volume> is used
+bar-volume-width = 10
+bar-volume-gradient = false
+
+bar-volume-indicator = 󰮯
+bar-volume-indicator-font = 8
+bar-volume-indicator-foreground = #F5040D
+
+bar-volume-fill = ━
+bar-volume-fill-font = 8
+bar-volume-foreground-0 = #F5040D
+bar-volume-foreground-1 = #F5040D
+bar-volume-foreground-2 = #F5040D
+bar-volume-foreground-3 = #F5040D
+bar-volume-foreground-4 = #F5040D
+
+bar-volume-empty = 
+bar-volume-empty-font = 8
+bar-volume-empty-foreground = ${color.BGL}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/mpd]
 type = internal/mpd
-
-;;host = 127.0.0.1
-;;port = 6600
-;;password = mysecretpassword
-
 interval = 2
 
-format-online = <label-song> <icon-prev> <toggle> <icon-next>
-format-online-prefix = " "
-format-online-prefix-foreground = #BA0000
-
+; format-online = <label-song> <icon-prev> <toggle> <icon-next>
+format-online = <icon-prev> <toggle> <icon-next>
+; format-online-prefix = "  "
+format-online-foreground = #F5040D
 format-playing = ${self.format-online}
-format-paused = <label-song> <toggle>
+format-paused = <icon-prev> <toggle> <icon-next>
 
 format-offline = <label-offline>
-format-offline-prefix = " "
-format-offline-prefix-foreground = #BA0000
-label-offline = "Offline"
+format-offline-prefix = "  "
+format-offline-prefix-foreground = #F5040D
+
+label-offline = "Offline "
+format-offline-foreground = #F5040D
 
 label-song =  "%title% | %artist%"
 ; label-song =  "%title% "
-label-song-maxlen = 40
+label-song-maxlen = 50
 label-song-ellipsis = true
 
-icon-play = 
+icon-play = ""
 icon-play-font = 2
-icon-play-foreground = #BA0000
-icon-pause = 
+icon-play-foreground = #F5040D
+icon-pause = ""
 icon-pause-font = 2
-icon-pause-foreground = #BA0000
-icon-stop = 
-icon-stop-foreground = #BA0000
-icon-prev = 玲
+icon-pause-foreground = #F5040D
+icon-stop = " "
+icon-stop-foreground = #F5040D
+icon-prev = "玲"
 icon-prev-font = 2
-icon-prev-foreground = #BA0000
-icon-next = 怜
+icon-prev-foreground = #F5040D
+icon-next = "怜 "
 icon-next-font = 2
-icon-next-foreground = #BA0000
+icon-next-foreground = #F5040D
 
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/song]
+type = internal/mpd
+
+interval = 2
+
+format-online = <label-song>
+format-online-foreground = #F5040D
+
+format-playing = ${self.format-online}
+format-paused = ${self.format-online}
+format-stopped = ${self.format-online}
+
+; label-song =  "[ %title% ]"
+label-song =  "%title% - %artist%"
+
+label-song-foreground = #F5040D
+label-song-maxlen = 50
+label-song-ellipsis = true
+
+icon-repeat = ""
+icon-repeat-foreground = #F5040D
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/song-icon]
+
+type = custom/text
+
+content = ""
+content-font = 3
+content-foreground = #F5040D
+content-padding = 0
+click-left = music --albumArtCover
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -111,9 +155,9 @@ type = custom/script
 exec =  ~/.config/bspwm/polybar/scripts/cava
 
 format = <label>
-label = %output%
-format-foreground = #BA0000
-format-background = ${color.BGL}
+label = " %output% "
+format-foreground = #F5040D
+; format-background = #F5040D
 tail = true
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

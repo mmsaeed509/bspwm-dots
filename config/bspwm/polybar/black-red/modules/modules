@@ -1,21 +1,22 @@
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
 
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/sysTray]
+type = custom/text
+
+content = "[SysTray] : "
+content-background = ${color.BACKGROUND}
+content-foreground = #00eb15
+content-padding = 0
+content-font = 4
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -23,9 +24,12 @@
 type = custom/text
 
 content = " NON"
-content-prefix = 
+content-background = ${color.BACKGROUND}
+content-foreground = #F5040D
+content-prefix = ""
 content-prefix-font = 2
-content-prefix-foreground = #BA0000
+content-prefix-foreground = #F5040D
+content-prefix-background = ${color.BACKGROUND}
 content-padding = 0
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -35,24 +39,27 @@ type = internal/xbacklight
 
 card = intel_backlight
 
-format = <ramp> <label>
+format = <ramp><label>
 
-label = %percentage%%
-label-font = 
-; label-foreground = #BA0000
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
-ramp-4 = 
-ramp-5 = 
-ramp-6 = 
-ramp-7 = 
-ramp-8 = 
-ramp-9 = 
-ramp-font = 2 
-ramp-foreground = #BA0000
+label-foreground = #F5040D
+label-background = ${color.BACKGROUND}
+
+label = " %percentage%%"
+
+ramp-0 = ""
+ramp-1 = ""
+ramp-2 = ""
+ramp-3 = ""
+ramp-4 = ""
+ramp-5 = ""
+ramp-6 = ""
+ramp-7 = ""
+ramp-8 = ""
+ramp-9 = ""
+ramp-font = 3
+ramp-foreground = #F5040D
+ramp-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -62,25 +69,27 @@ type = internal/backlight
 card = ${system.graphics_card}
 
 enable-scroll = true
+format = <ramp><label>
 
-format = <ramp> <label>
 
-label = %percentage%%
-; label-font = 7
+label-foreground = #F5040D
+label-background = ${color.BACKGROUND}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
-ramp-4 = 
-ramp-5 = 
-ramp-6 = 
-ramp-7 = 
-ramp-8 = 
-ramp-9 = 
-ramp-font = 2
-ramp-foreground = #BA0000
+label = " %percentage%%"
 
+ramp-0 = ""
+ramp-1 = ""
+ramp-2 = ""
+ramp-3 = ""
+ramp-4 = ""
+ramp-5 = ""
+ramp-6 = ""
+ramp-7 = ""
+ramp-8 = ""
+ramp-9 = ""
+ramp-font = 3
+ramp-foreground = #F5040D
+ramp-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -112,34 +121,33 @@ label-monitor = %name%
 
 
 label-focused = [%name%]
-label-focused-foreground = #A3B5B8
-label-focused-background = ${color.BGL}
-label-focused-underline = #A3B5B8
+label-focused-foreground = #ff0000
+label-focused-background = ${color.BACKGROUND}
+label-focused-underline = #ff0000
 label-focused-padding = 0
 
 label-occupied = %name%
-label-occupied-foreground = #F66D78
-label-occupied-background = ${color.BGL}
-label-occupied-underline = ${color.GREEN}
+label-occupied-foreground = #FFFF00
+label-occupied-background = ${color.BACKGROUND}
+label-occupied-underline = ${color.BACKGROUND}
 label-occupied-padding = 0
 
 label-urgent = %name%
-label-urgent-foreground = #BA0000
-label-urgent-background = ${color.BGL}
-label-urgent-underline = ${color.RED}
+label-urgent-foreground = #80E6FE
+label-urgent-background = ${color.BACKGROUND}
+label-urgent-underline = #80E6FE
 label-urgent-padding = 0
 
 label-empty = %name%
-label-empty-foreground = #5E0F0B
-label-empty-background = ${color.BGL}
+label-empty-foreground = #8c0308
+label-empty-background = ${color.BACKGROUND}
 label-empty-padding = 0
 
 ; Separator in between workspaces
-label-separator = " "
-label-separator-padding = 0
-label-separator-foreground = #BA0000
-label-separator-background = ${color.BGL}
-
+label-separator = "◆"
+label-separator-padding = 1
+label-separator-foreground = #80E6FE
+label-separator-background = ${color.BACKGROUND}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -147,21 +155,19 @@ label-separator-background = ${color.BGL}
 type = internal/bspwm
 
 format = <label-mode>
-format-background = ${color.BGL}
-format-foreground = #BA0000
+format-background = ${color.BACKGROUND}
+format-foreground = #00eb15
 format-padding = 1
 format-font = 4
 
-label-monocle = "Monocle"
-label-tiled = "Tiled"
-
-label-floating = " | Float"
-label-pseudotiled = " | Pseudo"
-label-fullscreen = " | Full"
-
-label-locked = " | Locked"
-label-sticky = " | Sticky"
-label-private = " | Private"
+label-monocle     = "Monocle"
+label-tiled       = "Tiled"
+label-floating    = ", Float"
+label-pseudotiled = ", Pseudo"
+label-fullscreen  = ", Full"
+label-locked      = ", Locked"
+label-sticky      = ", Sticky"
+label-private     = ", Private"
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -174,73 +180,15 @@ time = %I:%M %p
 time-alt = %A, %d %B %Y
 
 format = <label>
-format-prefix = " "
-format-prefix-font = 
-format-prefix-foreground = #BA0000
-format-prefix-background = ${color.BGL}
+format-prefix = " "
+format-prefix-font = 3
+format-prefix-foreground = #F5040D
+; format-prefix-background = #F5040D
 
-label = %time%
-label-font = 
-label-foreground = ${color.CYAN2}
-label-background = ${color.BGL}
-
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-; If you use both a wired and a wireless network, add both modules in config.
-[module/ethernet]
-type = internal/network
-interface = ${system.network_interface}
-
-interval = 1.0
-accumulate-stats = true
-unknown-as-up = true
-
-format-connected = <label-connected>
-format-connected-prefix = " "
-format-connected-prefix-font = 3
-format-connected-prefix-foreground = #BA0000
-
-format-disconnected = <label-disconnected>
-format-disconnected-prefix = " "
-format-disconnected-prefix-font = 3
-format-disconnected-prefix-foreground = #BA0000
-
-; label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
-label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %downspeed% ◆  %upspeed%%{A}"
-
-label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}Offline%{A}"
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/network]
-type = internal/network
-interface = ${system.network_interface}
-
-interval = 1.0
-
-
-accumulate-stats = true
-unknown-as-up = true
-
-format-connected = <ramp-signal> <label-connected>
-
-format-disconnected = <label-disconnected>
-format-disconnected-prefix = " "
-format-disconnected-prefix-font = 
-format-disconnected-prefix-foreground =  #BA0000
-
-label-connected = "%{A1:nmd &:}%essid%%{A}"
-label-disconnected = "%{A1:nmd &:}disconnected%{A}"
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-font = 
-ramp-signal-foreground = #BA0000
-
+label = " %time% "
+label-font = 3
+label-foreground = #F5040D
+; label-background = #F5040D
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -248,14 +196,28 @@ ramp-signal-foreground = #BA0000
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-label-layout = %layout%
-label-layout-foreground = #BA0000
-label-layout-font = 4
+label-layout = "%layout%"
+label-layout-foreground = #F5040D
+label-layout-background = ${color.BACKGROUND}
+label-layout-font = 3
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-foreground = #BA0000
-label-indicator-background = ${colors.secondary}
+label-indicator-foreground = #F5040D
+label-indicator-background = ${color.BACKGROUND}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/sysmenu]
+type = custom/text
+
+; content = ""
+content = ""
+content-font = 5
+content-foreground = #F5040D
+content-padding = 0
+
+click-left = ~/.config/bspwm/rofi/bin/powermenu
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -263,33 +225,49 @@ label-indicator-background = ${colors.secondary}
 type = custom/script
 exec = ~/.config/bspwm/polybar/scripts/notification-github.sh
 interval = 60
-label-background = ${color.BGL}
-label-foreground = #BA0000
+label-foreground = #F5040D
+label-font = 3
 click-left = google-chrome-stable --newtab https://github.com/notifications
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/themes]
+[module/menu]
 type = custom/text
 
-; content = ""
-content = ""
-content-font = 5
-content-foreground = #BA0000
-
+content = " Apps"
+content-font = 3
+content-prefix = ""
+content-prefix-font= 5
+content-foreground = #F5040D
 content-padding = 0
 
-click-left = ~/.config/bspwm/rofi/bin/themes
+click-left  = ~/.config/bspwm/rofi/bin/launcher
+click-right = jgmenu_run
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/xdomenu]
 type = custom/text
 interval = 1
-content = " "
+
+content = ""
 content-font = 5
-content-foreground = #BA0000
+content-foreground = #F5040D
 content-padding = 0
 click-left = jgmenu_run
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+[module/themes]
+type = custom/text
+
+content = " Themes"
+content-font = 3
+content-prefix = ""
+content-prefix-font= 5
+content-foreground = #F5040D
+content-background = ${color.BACKGROUND}
+content-padding = 0
+
+click-left = ~/.config/bspwm/rofi/bin/themes
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

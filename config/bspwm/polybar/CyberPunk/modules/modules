@@ -1,32 +1,35 @@
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/sysTray]
+type = custom/text
+
+content = " SysTray : "
+; content-background = #8B60E5
+content-foreground = #CB42EF
+content-padding = 0
+content-font = 4
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/bna]
 type = custom/text
 
-content = " NON"
-content-foreground = ${color.pink}
-
-content-prefix = 
+content = " NON "
+content-background = ${color.GREEN}
+content-foreground = ${color.BACKGROUND}
+content-prefix = " "
 content-prefix-font = 2
-content-prefix-foreground = ${color.pink}
+content-prefix-foreground = ${color.BACKGROUND}
+content-prefix-background = ${color.GREEN}
 content-padding = 0
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -37,22 +40,26 @@ type = internal/xbacklight
 card = intel_backlight
 
 format = <ramp><label>
-label = %percentage%%
-label-font = 4
-label-foreground = ${color.pink}
 
-ramp-0 = " "
-ramp-1 = " "
-ramp-2 = " "
-ramp-3 = " "
-ramp-4 = " "
-ramp-5 = " "
-ramp-6 = " "
-ramp-7 = " "
-ramp-8 = " "
-ramp-9 = " "
-ramp-font = 7
-ramp-foreground = ${color.pink}
+
+label-foreground = ${color.BACKGROUND}
+label-background = ${color.GREEN}
+
+label = " %percentage%% "
+
+ramp-0 = " "
+ramp-1 = " "
+ramp-2 = " "
+ramp-3 = " "
+ramp-4 = " "
+ramp-5 = " "
+ramp-6 = " "
+ramp-7 = " "
+ramp-8 = " "
+ramp-9 = " "
+ramp-font = 3
+ramp-foreground = ${color.BACKGROUND}
+ramp-background = ${color.GREEN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -62,24 +69,27 @@ type = internal/backlight
 card = ${system.graphics_card}
 
 enable-scroll = true
-
 format = <ramp><label>
-label = %percentage%%
-label-font = 4
-label-foreground = ${color.pink}
 
-ramp-0 = " "
-ramp-1 = " "
-ramp-2 = " "
-ramp-3 = " "
-ramp-4 = " "
-ramp-5 = " "
-ramp-6 = " "
-ramp-7 = " "
-ramp-8 = " "
-ramp-9 = " "
-ramp-font = 7
-ramp-foreground = ${color.pink}
+
+label-foreground = ${color.BACKGROUND}
+label-background = ${color.GREEN}
+
+label = " %percentage%% "
+
+ramp-0 = " "
+ramp-1 = " "
+ramp-2 = " "
+ramp-3 = " "
+ramp-4 = " "
+ramp-5 = " "
+ramp-6 = " "
+ramp-7 = " "
+ramp-8 = " "
+ramp-9 = " "
+ramp-font = 3
+ramp-foreground = ${color.BACKGROUND}
+ramp-background = ${color.GREEN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -110,39 +120,48 @@ format-font = 2
 label-monitor = %name%
 
 
-label-focused = %name%
-label-focused-foreground = #05D0D3
+label-focused = [%name%]
+label-focused-foreground = ${color.GREEN}
+label-focused-background = ${color.BGL}
+label-focused-underline = ${color.GREEN}
 label-focused-padding = 0
 
 label-occupied = %name%
-label-occupied-foreground = #BD00E4
+label-occupied-foreground = #FF0064
+label-occupied-background = ${color.BGL}
+label-occupied-underline = #FF0064
 label-occupied-padding = 0
 
 label-urgent = %name%
-label-urgent-foreground = #4142B0
+label-urgent-foreground = ${color.BLUE}
+label-urgent-background = ${color.BGL}
+label-urgent-underline = ${color.BLUEs}
 label-urgent-padding = 0
 
 label-empty = %name%
-label-empty-foreground = ${color.grey}
+label-empty-foreground = #0a7a76
+label-empty-background = ${color.BGL}
 label-empty-padding = 0
 
 ; Separator in between workspaces
-label-separator = "  "
+label-separator = " ◆ "
 label-separator-padding = 0
-label-separator-foreground = ${color.bg-alt}
+label-separator-foreground = ${color.ALTBLACK}
+label-separator-background = ${color.BGL}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/mod]
 type = internal/bspwm
 
-format = [<label-mode>]
-format-foreground = ${color.cyan}
+format = <label-mode>
+; format-background = ${color.FOREGROUND}
+format-foreground = #0ABDC6
 format-padding = 1
 format-font = 4
 
 label-monocle = "Monocle"
-label-tiled = " Tiled"
+label-tiled = "Tiled"
 
 label-floating = " | Float"
 label-pseudotiled = " | Pseudo"
@@ -160,16 +179,42 @@ type = internal/date
 interval = 1.0
 
 time = %I:%M %p
-time-alt = %d %b %Y
+time-alt = %A, %d %B %Y
 
 format = <label>
-format-prefix = " "
+format-prefix = "  "
 format-prefix-font = 3
-format-prefix-foreground = ${color.purple}
+format-prefix-foreground = ${color.BACKGROUND}
+format-prefix-background = #0ABDC6
 
-label = %time%
+label = "%time% "
 label-font = 4
-label-foreground = ${color.purple}
+label-foreground = ${color.BACKGROUND}
+label-background = #0ABDC6
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+; If you use both a wired and a wireless network, add both modules in config.
+[module/netDownSpeed]
+type = internal/network
+interface = ${system.network_interface}
+
+interval = 1.0
+accumulate-stats = true
+unknown-as-up = true
+
+
+label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed% %{A}"
+; label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
+
+label-connected-background = ${color.GREEN}
+label-connected-foreground = ${color.BACKGROUND}
+label-connected-font = 4
+
+label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} Offline %{A}"
+label-disconnected-background = ${color.GREEN}
+label-disconnected-foreground = ${color.BACKGROUND}
+label-disconnected-font = 4
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -183,21 +228,25 @@ accumulate-stats = true
 unknown-as-up = true
 
 format-connected = <label-connected>
-format-connected-prefix = " "
+format-connected-prefix = "  "
 format-connected-prefix-font = 3
-format-connected-prefix-foreground = ${color.purple}
+format-connected-prefix-foreground = ${color.GREEN}
+format-connected-prefix-background = #0E1623
 
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = " "
+format-disconnected-prefix = "  "
 format-disconnected-prefix-font = 3
-format-disconnected-prefix-foreground = ${color.purple}
+format-disconnected-prefix-foreground = ${color.GREEN}
+format-disconnected-prefix-background = #0E1623
 
-; label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed%%{A}"
-label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %downspeed% ◆  %upspeed%%{A}"
-label-connected-foreground = ${color.purple}
+; label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}  %downspeed%   %upspeed% %{A}"
+label-connected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:} %downspeed% ◆  %upspeed% %{A}"
+label-connected-background = #0E1623
+label-connected-foreground = ${color.GREEN}
 
-label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}Offline%{A}"
-label-disconnected-foreground = ${color.purple}
+label-disconnected = "%{A1:sh ~/.config/bspwm/rofi/bin/network &:}Offline %{A}"
+label-disconnected-background = #0E1623
+label-disconnected-foreground = ${color.GREEN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -215,25 +264,28 @@ unknown-as-up = true
 
 format-connected = <ramp-signal><label-connected>
 
-
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = " "
-format-disconnected-prefix-font = 7
-format-disconnected-prefix-foreground = ${color.purple}
+format-disconnected-prefix = " "
+format-disconnected-prefix-font = 3
+format-disconnected-prefix-foreground = ${color.BACKGROUND}
+format-disconnected-prefix-background = ${color.GREEN}
 
-label-connected = "%{A1:nmd &:} %essid%%{A}"
-label-connected-foreground = ${color.purple}
+label-connected = "%{A1:nmd &:} %essid% %{A}"
+label-connected-foreground = ${color.BACKGROUND}
+label-connected-background = ${color.GREEN}
 
-label-disconnected = "%{A1:nmd &:} dis%{A}"
-label-disconnected-foreground = ${color.purple}
+label-disconnected = "%{A1:nmd &:} Disconnected %{A}"
+label-disconnected-foreground = ${color.BACKGROUND}
+label-disconnected-background = ${color.GREEN}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = " "
+ramp-signal-1 = " "
+ramp-signal-2 = " "
+ramp-signal-3 = " "
+ramp-signal-4 = " "
 ramp-signal-font = 3
-ramp-signal-foreground = ${color.purple}
+ramp-signal-foreground = ${color.BACKGROUND}
+ramp-signal-background = ${color.GREEN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -241,16 +293,15 @@ ramp-signal-foreground = ${color.purple}
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-label-layout = %layout%
-label-layout-foreground = ${colors.primary}
-label-layout-font = 4
-label-layout-background = #0C1018
+label-layout = " %layout% "
+label-layout-foreground = #0ABDC6
+; label-layout-background = ${color.GREEN}
+label-layout-font = 3
 
-# label-indicator-padding = 2
-# label-indicator-margin = 1
-label-indicator-foreground = ${colors.background}
-label-indicator-background = #0C1018
-label-indicator-font = 4
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-foreground = #0ABDC6
+; label-indicator-background = ${color.GREEN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -258,9 +309,9 @@ label-indicator-font = 4
 type = custom/text
 
 ; content = ""
-content = ""
+content = ""
 content-font = 5
-content-foreground = ${color.blue}
+content-foreground = ${color.GREEN}
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/powermenu
@@ -270,7 +321,7 @@ click-left = ~/.config/bspwm/rofi/bin/powermenu
 type = custom/script
 exec = ~/.config/bspwm/polybar/scripts/notification-github.sh
 interval = 60
-label-background = ${color.BGL}
+label-foreground = #0ABDC6
 click-left = google-chrome-stable --newtab https://github.com/notifications
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -278,16 +329,13 @@ click-left = google-chrome-stable --newtab https://github.com/notifications
 [module/menu]
 type = custom/text
 
-; content = ""
-; content = ""
-; content = ""
 content = ""
 content-font = 5
 
 ;content-font = 3
-content-foreground = ${color.blue}
+content-foreground = #D0ECFE
 content-padding = 0
-; content-background = #0C1018
+
 click-left = ~/.config/bspwm/rofi/bin/launcher
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -298,35 +346,19 @@ interval = 1
 
 content = ""
 content-font = 5
-content-foreground = ${color.blue}
+content-foreground = ${color.GREEN}
 content-padding = 0
 click-left = jgmenu_run
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
 [module/themes]
 type = custom/text
 
-; content = ""
 content = ""
 content-font = 5
-content-foreground = ${color.blue}
+content-foreground = #CFD4E8
 content-padding = 0
 
 click-left = ~/.config/bspwm/rofi/bin/themes
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/title]
-type = internal/xwindow
-
-format = [<label>]
-format-foreground = ${color.blue}
-
-label = "%title%"
-label-maxlen = 6
-
-label-empty = "Exodia"
-label-empty-foreground = ${color.blue}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

@@ -1,30 +1,23 @@
 #!/usr/bin/env bash
 
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
 
 # Files and Directories #
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 POLYBAR_DIR="$HOME/.config/bspwm/polybar"
 SFILE="$POLYBAR_DIR/system"
+CONFIG_FILE="$HOME/.config/bspwm/exodia.conf"
+MONITORS=$(grep -Po 'multi-bar-monitors\s*=\s*\K.*' ${CONFIG_FILE})
 
 # Get system variable values for various modules #
-get_values() {
+GET_VALUES() {
 
 	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
 	BATTERY=$(upower -i `upower -e | grep 'BAT'` | grep 'native-path' | cut -d':' -f2 | tr -d '[:blank:]')
@@ -34,7 +27,7 @@ get_values() {
 }
 
 # Write values to `system` file #
-set_values() {
+SET_VALUES() {
 
 	if [[ "$ADAPTER" ]]; then
 		sed -i -e "s/adapter = .*/adapter = $ADAPTER/g" 						${SFILE}
@@ -51,8 +44,8 @@ set_values() {
 
 }
 
-# Launch Polybar with selected style #
-launch_bar() {
+# Launch Polybar with the selected style ONLY in the primary display #
+LAUNCH_SINGLE_BAR() {
 	
 	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
 	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
@@ -62,9 +55,32 @@ launch_bar() {
 	elif [[ "$CARD" != *"intel_"* ]]; then
 		sed -i -e 's/backlight/brightness/g' "$DIR"/config
 	fi
+	
+    # close polybar #
+	killall -q polybar
 
-	if [[ "$INTERFACE" == e* ]]; then
-		sed -i -e 's/network/ethernet/g' "$DIR"/config
+    # Wait until closing polybar # 
+	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+
+    # launch polybar #
+    polybar -q main -c "$DIR"/config &
+	polybar -q sec -c "$DIR"/config &
+	polybar -q third -c "$DIR"/config &
+	polybar -q fourth -c "$DIR"/config &
+	polybar -q fifth -c "$DIR"/config &
+	
+}
+
+# Launch Polybar with the selected style in all displays #
+LAUNCH_MULTI_BAR() {
+	
+	CARD=$(light -L | grep 'backlight' | head -n1 | cut -d'/' -f3)
+	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
+
+	if [[ -z "$CARD" ]]; then
+		sed -i -e 's/backlight/bna/g' "$DIR"/config
+	elif [[ "$CARD" != *"intel_"* ]]; then
+		sed -i -e 's/backlight/brightness/g' "$DIR"/config
 	fi
 	
     # close polybar #
@@ -74,18 +90,31 @@ launch_bar() {
 	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
     # launch polybar #
-    polybar -q pam1 -c "$DIR"/config &
-	polybar -q pam2 -c "$DIR"/config &
-	polybar -q pam3 -c "$DIR"/config &
-	polybar -q pam4 -c "$DIR"/config &
-	polybar -q pam5 -c "$DIR"/config &
-	polybar -q pam6 -c "$DIR"/config &
+	for mon in $(polybar --list-monitors | cut -d":" -f1); 
+		do
+
+			MONITOR=$mon polybar -q main -c "$DIR"/config &
+			MONITOR=$mon polybar -q sec -c "$DIR"/config &
+			MONITOR=$mon polybar -q third -c "$DIR"/config &
+			MONITOR=$mon polybar -q fourth -c "$DIR"/config &
+			MONITOR=$mon polybar -q fifth -c "$DIR"/config &
+
+	done
 	
 }
 
 # Execute functions #
-get_values
-set_values
+GET_VALUES
+SET_VALUES
 
 # launch polybar #
-launch_bar
+if [[ $MONITORS == "true" ]]; 
+	then
+
+    	LAUNCH_MULTI_BAR
+
+else
+
+    	LAUNCH_SINGLE_BAR
+
+fi

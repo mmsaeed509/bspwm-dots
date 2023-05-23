@@ -1,383 +1,287 @@
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
+;; Global WM Settings ;;
 
 [global/wm]
-
 margin-bottom = 0
 margin-top = 0
 
-include-file = ~/.config/bspwm/polybar/system
-include-file = ~/.config/bspwm/polybar/CyberPunk/colors.ini
+# load files #
+include-file = ../system
+include-file = ./colors
 
 # contains brightness, workspaces, Date, etc.... #
-include-file = ~/.config/bspwm/polybar/CyberPunk/modules/modules
+include-file = ./modules/modules
 
 # contains Music, microphone, etc.... #
-include-file = ~/.config/bspwm/polybar/CyberPunk/modules/mediaModules
+include-file = ./modules/mediaModules
 
 # contains CPU, Temperature, etc.... #
-include-file = ~/.config/bspwm/polybar/CyberPunk/modules/monitoringModules
+include-file = ./modules/monitoringModules
 
 # contains the separators (e.g  , | , <| ,  ,etc..) #
-include-file = ~/.config/bspwm/polybar/CyberPunk/modules/separatorsModules
+include-file = ./modules/separatorsModules
 
-## ----------------------------------  [bar/pam1] ---------------------------------- ##
+# contains the Apps (e.g chrome, etc..) #
+include-file = ./modules/Apps
 
-[bar/pam1]
-
+[bar/main]
 monitor = ${env:MONITOR:}
-monitor-fallback =
 monitor-strict = false
-
 override-redirect = false
 
-bottom = false
+bottom = true
 fixed-center = true
 
-width = 2.5%
-height = 40
+width = 60%
+height = 31
 
-offset-x = 2%
-offset-y = 10
+offset-x = 20%
+offset-y = 5
 
-background = ${color.bg-alt}
-foreground = ${color.fg}
+background = #0B1521
+foreground = ${color.FOREGROUND}
 
-radius = 6
+radius-top    = 2
+radius-bottom = 2
 
 line-size = 2
-line-color = #C200E9
+line-color = ${color.BLUE}
 
-border-size = 2
-border-color = #C200E9
+border-size = 3
+border-color = #CB42EF
 
 padding = 0
-
 module-margin-left = 0
 module-margin-right = 0
+
 
 font-0 = "Iosevka Nerd Font:size=10;3"
 font-1 = "Iosevka Nerd Font:size=12;3"
 font-2 = "google\-mdi:size=12;3"
 font-3 = "Iosevka:style=bold:size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
-font-5 = "Iosevka:style=bold:size=18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
 
-modules-left = 
-modules-center = xdomenu
-modules-right = 
-
+modules-left   = space xdomenu space pip space bspwm space pip space chrome space whatsapp space VirtualBox space discord space music space nvim space PowerShell space MS_VisualStudioCode space notification-github
+modules-center = pipL mod pipR
+modules-right  = xkeyboard space battery space date space sysmenu space
+ 
 separator =
+spacing = 0
+
 dim-value = 1.0
 
-wm-restack = bspwm
-enable-ipc = true
-
-cursor-click = pointer 
-cursor-scroll = ns-resize
-
-## ----------------------------------  [bar/pam2] ---------------------------------- ##
-
-[bar/pam2]
-
-monitor = ${env:MONITOR:}
-monitor-fallback =
-monitor-strict = false
-
-override-redirect = false
-
-bottom = false
-fixed-center = false
-
-width = 17%
-height = 40
-
-offset-x = 5%
-offset-y = 10
-
-background = ${color.bg-alt}
-foreground = ${color.fg}
-
-radius = 6
-
-line-size = 2
-line-color = #C200E9
-
-border-size = 2
-border-color = #C200E9
-
-padding = 1
-
-module-margin-left = 0
-module-margin-right = 0
-
-font-0 = "Iosevka Nerd Font:size=10;3"
-font-1 = "Iosevka Nerd Font:size=12;3"
-font-2 = "google\-mdi:size=12;3"
-font-3 = "Iosevka:style=bold:size=12;3"
-font-4 = "Iosevka Nerd Font:size=18;4"
-font-5 = "Iosevka:style=bold:size=18;4"
-
-modules-left = title space bspwm
-modules-center =
-modules-right = 
-
-separator =
-dim-value = 1.0
+wm-name = bspwm
+locale = 
 
 wm-restack = bspwm
+
 enable-ipc = true
 
-cursor-click = pointer 
-cursor-scroll = ns-resize
+; bspwm
+scroll-up = bspc desktop -f prev.local
+scroll-down = bspc desktop -f next.local
 
-## ----------------------------------  [bar/pam3] ---------------------------------- ##
+## ----------------------------------  [bar/sec] ---------------------------------- ##
 
-[bar/pam3]
-
+[bar/sec]
 monitor = ${env:MONITOR:}
-monitor-fallback =
 monitor-strict = false
-
 override-redirect = false
 
 bottom = false
 fixed-center = true
 
-width = 21.5%
-height = 40
+width = 12%
+height = 30
 
-offset-x = 43.5%
-offset-y = 10
+offset-x = 0.5%
+offset-y = 5
 
-background = ${color.bg-alt}
-foreground = ${color.fg}
+background = #0E1623
+foreground = ${color.FOREGROUND}
 
-radius = 6
+radius-top    = 2
+radius-bottom = 2
 
 line-size = 2
-line-color = #C200E9
+line-color = ${color.BLUE}
 
-border-size = 2
-border-color = #C200E9
+border-size = 3
+border-color = #CB42EF
 
-padding = 1
-
+padding = 0
 module-margin-left = 0
 module-margin-right = 0
+
 
 font-0 = "Iosevka Nerd Font:size=10;3"
 font-1 = "Iosevka Nerd Font:size=12;3"
 font-2 = "google\-mdi:size=12;3"
 font-3 = "Iosevka:style=bold:size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
-font-5 = "Iosevka:style=bold:size=18;4"
-font-6 = "Material Design Icons:style=Bold:size18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
 
-modules-left   = volume space cpu space cpuTemp space updates-pacman space notification-github space battery
-modules-center = 
-modules-right  = 
-
+modules-left   = space menu
+modules-center = updates-pacman
+modules-right  = themes space
+ 
 separator =
+spacing = 0
+
 dim-value = 1.0
 
 wm-restack = bspwm
+
 enable-ipc = true
 
-cursor-click = pointer 
-cursor-scroll = ns-resize
 
-## ----------------------------------  [bar/pam4] ---------------------------------- ##
+wm-name = bspwm
+locale = 
 
-[bar/pam4]
+## ----------------------------------  [bar/third] ---------------------------------- ##
 
+[bar/third]
 monitor = ${env:MONITOR:}
-monitor-fallback =
 monitor-strict = false
+override-redirect = false
 
+bottom = false
+fixed-center = true
+
+width = 37%
+height = 30
+
+offset-x = 45.5%
+offset-y = 5
+
+background = #0E1623
+foreground = ${color.FOREGROUND}
+
+radius-top    = 2
+radius-bottom = 2
+
+line-size = 2
+line-color = ${color.BLUE}
+
+border-size = 3
+border-color = #CB42EF
+
+padding = 0
+module-margin-left = 0
+module-margin-right = 0
+
+
+font-0 = "Iosevka Nerd Font:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "google\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
+
+modules-left   = ethernet
+modules-center = 
+modules-right  = empty info-cava empty space cpu cpuTemp space volume backlight space network
+ 
+separator =
+spacing = 0
+
+dim-value = 1.0
+
+wm-restack = bspwm
+
+enable-ipc = true
+
+
+wm-name = bspwm
+locale = 
+
+
+## ----------------------------------  [bar/fourth] ---------------------------------- ##
+
+[bar/fourth]
+monitor = ${env:MONITOR:}
+monitor-strict = false
 override-redirect = false
 
 bottom = false
 fixed-center = true
 
 width = 20%
-height = 40
+height = 30
 
-offset-x = 65.5%
-offset-y = 10
+offset-x = 17.5%
+offset-y = 5
 
-background = ${color.bg-alt}
-foreground = ${color.fg}
+background = #0E1623
+foreground = ${color.FOREGROUND}
 
-radius = 6
+radius-top    = 2
+radius-bottom = 2
 
 line-size = 2
-line-color = #C200E9
+line-color = ${color.BLUE}
 
-border-size = 2
-border-color = #C200E9
+border-size = 3
+border-color = #CB42EF
 
-padding = 1
-
+padding = 0
 module-margin-left = 0
 module-margin-right = 0
+
 
 font-0 = "Iosevka Nerd Font:size=10;3"
 font-1 = "Iosevka Nerd Font:size=12;3"
 font-2 = "google\-mdi:size=12;3"
 font-3 = "Iosevka:style=bold:size=12;3"
 font-4 = "Iosevka Nerd Font:size=18;4"
-font-5 = "Iosevka:style=bold:size=18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
 
-modules-left   = themes space backlight space network space mod
-modules-center = 
-modules-right  = 
+modules-left   = space song-icon
+modules-center = song
+modules-right  = mpd space
 
 separator =
+spacing = 0
+
 dim-value = 1.0
 
 wm-restack = bspwm
+
 enable-ipc = true
 
-cursor-click = pointer 
-cursor-scroll = ns-resize
 
-## ----------------------------------  [bar/pam5] ---------------------------------- ##
-
-[bar/pam5]
-
-monitor = ${env:MONITOR:}
-monitor-fallback =
-monitor-strict = false
-
-override-redirect = false
-
-bottom = false
-fixed-center = false
-
-width = 11.5%
-height = 40
-
-offset-x = 86%
-offset-y = 10
-
-background = ${color.bg-alt}
-foreground = ${color.fg}
-
-radius = 6
-
-line-size = 2
-line-color = #C200E9
-
-border-size = 2
-border-color = #C200E9
-
-padding = 1
-
-module-margin-left = 0
-module-margin-right = 0
-
-font-0 = "Iosevka Nerd Font:size=10;3"
-font-1 = "Iosevka Nerd Font:size=12;3"
-font-2 = "google\-mdi:size=12;3"
-font-3 = "Iosevka:style=bold:size=12;3"
-font-4 = "Iosevka Nerd Font:size=18;4"
-font-5 = "Iosevka:style=bold:size=18;4"
-
-modules-left = sysmenu space date
-modules-center = 
-modules-right = 
-
-separator =
-dim-value = 1.0
-
-tray-position = right
-tray-detached = true
-tray-maxsize = 16
-tray-background = ${color.bg-alt}
-tray-offset-x = 0
-tray-offset-y = 0
-tray-padding = 0
-tray-scale = 1.0
-
-wm-restack = bspwm
-enable-ipc = true
-
-cursor-click = pointer 
-cursor-scroll = ns-resize
-
-## ----------------------------------  [bar/pam6] ---------------------------------- ##
-
-[bar/pam6]
-
-monitor = ${env:MONITOR:}
-monitor-fallback =
-monitor-strict = false
-
-override-redirect = false
-
-bottom = false
-fixed-center = true
-
-width = 20.5%
-height = 40
-
-offset-x = 22.5%
-offset-y = 10
-
-background = ${color.bg-alt}
-foreground = ${color.fg}
-
-radius = 6
-
-line-size = 2
-line-color = #C200E9
-
-border-size = 2
-border-color = #C200E9
-
-padding = 1
-
-module-margin-left = 0
-module-margin-right = 0
-
-font-0 = "Iosevka Nerd Font:size=10;3"
-font-1 = "Iosevka Nerd Font:size=12;3"
-font-2 = "google\-mdi:size=12;3"
-font-3 = "Iosevka:style=bold:size=12;3"
-font-4 = "Iosevka Nerd Font:size=18;4"
-font-5 = "Iosevka:style=bold:size=18;4"
-
-
-modules-left = song  
-modules-center = info-cava 
-modules-right = mpd
-
-separator =
-dim-value = 1.0
-
-wm-restack = bspwm
-enable-ipc = true
-
-cursor-click = pointer 
-cursor-scroll = ns-resize
+wm-name = bspwm
+locale = 
 
 [settings]
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
 
 screenchange-reload = false
 
@@ -387,4 +291,90 @@ compositing-overline = over
 compositing-underline = over
 compositing-border = over
 
-pseudo-transparency = false
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+## ----------------------------------  [bar/fifth] ---------------------------------- ##
+
+[bar/fifth]
+monitor = ${env:MONITOR:}
+monitor-strict = false
+override-redirect = false
+
+bottom = false
+fixed-center = true
+
+width = 10%
+height = 30
+
+offset-x = 89.5%
+offset-y = 5
+
+background = #0E1726
+foreground = ${color.FOREGROUND}
+
+radius-top    = 2
+radius-bottom = 2
+
+line-size = 2
+line-color = ${color.BLUE}
+
+border-size = 3
+; border-color = #67C976
+border-color = #CB42EF
+
+padding = 0
+module-margin-left = 0
+module-margin-right = 0
+
+
+font-0 = "Iosevka Nerd Font:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "google\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
+
+modules-left   = sysTray
+modules-center = 
+modules-right  = 
+
+separator =
+spacing = 0
+
+dim-value = 1.0
+
+wm-restack = bspwm
+
+enable-ipc = true
+
+tray-position = right
+tray-detached = false
+tray-maxsize = 16
+tray-transparent = false
+tray-background = #0E1726
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+tray-scale = 1.0
+
+wm-name = bspwm
+locale = 
+
+; [settings]
+; throttle-output = 5
+; throttle-output-for = 10
+; throttle-input-for = 30
+
+; screenchange-reload = false
+
+; compositing-background = source
+; compositing-foreground = over
+; compositing-overline = over
+; compositing-underline = over
+; compositing-border = over
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

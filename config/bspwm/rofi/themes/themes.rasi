@@ -1,28 +1,17 @@
 /* 
 
-    Copyright © 2022 To Cyb3rTh1eveZ																	 
-
-     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-
-    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-    LICENSE © GNU-GPL3
+  @author      : 00xWolf
+    GitHub    : @mmsaeed509
+    Developer : Mahmoud Mohamed
+  﫥  Copyright : Exodia OS
 
  */
- 
- 
-
-
 
 configuration {
     show-icons:                 false;
-	drun-display-format:        "{name}";
-	disable-history:                true;
-	sidebar-mode: 					false;
+drun-display-format:        "{name}";
+disable-history:                true;
+sidebar-mode: 					false;
 }
 
 /*****----- Global Properties -----*****/
@@ -39,14 +28,16 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       680px;
-    height:                      42%;
+    width:                       800px;
+    height:                      50%;
     x-offset:                    0px;
     y-offset:                    0px;
 
     /* properties for all widgets */
     enabled:                     true;
-    border-radius:               8px;
+    border-radius:               3px;
+    // border:                      3px;
+    border-color:                @foreground;
     cursor:                      "default";
     background-color:            @background;
 }
@@ -71,10 +62,10 @@ listbox {
 /*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
-    spacing:                     10px;
-    padding:                     40px 40px 45px;
+    spacing:                     5px;
+    padding:                     100px;
     background-color:            transparent;
-    background-image:            url("~/.config/bspwm/rofi/imgs/flowers.png", width);
+    background-image:            url("~/.config/bspwm/notify/IslamicWarrior.png", width);
     text-color:                  @foreground;
     orientation:                 horizontal;
     children:                    [ "textbox-prompt-colon", "entry" ];
@@ -82,7 +73,7 @@ inputbar {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      true;
-    str:                         " [20] Bspwm Themes Are Available In Exodia OS \n   Have fun with your favorite theme ";
+    str: " [19] Bspwm Themes Are Available In Exodia OS \n   Have fun with your favorite theme ";
     padding:                     12px 15px;
     border-radius:               8px;
     background-color:            @background-alt;
@@ -119,7 +110,7 @@ listview {
     fixed-height:                true;
     fixed-columns:               true;
     
-    spacing:                     15px;
+    spacing:                     10px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      "default";
@@ -140,7 +131,7 @@ element normal.normal {
     text-color:                  inherit;
 }
 element selected.normal {
-    background-image: linear-gradient(#1c9ee0, #afa4ec);
+    background-image: linear-gradient(#0abdc6, #0abdc6, #1a1f26);
     text-color:                  @background;
 }
 element-text {

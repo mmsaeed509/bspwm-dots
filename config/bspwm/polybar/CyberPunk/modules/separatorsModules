@@ -1,22 +1,68 @@
-##########################################################################################################
-#																										 
-#    Copyright © 2022 To Cyb3rTh1eveZ																	 
-#																										 
-#     ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ ████████╗██╗  ██╗ ██╗███████╗██╗   ██╗███████╗███████╗	 
-#    ██╔════╝╚██╗ ██╔╝██╔══██╗╚════██╗██╔══██╗╚══██╔══╝██║  ██║███║██╔════╝██║   ██║██╔════╝╚══███╔╝     
-#    ██║      ╚████╔╝ ██████╔╝ █████╔╝██████╔╝   ██║   ███████║╚██║█████╗  ██║   ██║█████╗    ███╔╝      
-#    ██║       ╚██╔╝  ██╔══██╗ ╚═══██╗██╔══██╗   ██║   ██╔══██║ ██║██╔══╝  ╚██╗ ██╔╝██╔══╝   ███╔╝       
-#    ╚██████╗   ██║   ██████╔╝██████╔╝██║  ██║   ██║   ██║  ██║ ██║███████╗ ╚████╔╝ ███████╗███████╗     
-#     ╚═════╝   ╚═╝   ╚═════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     
-#																										 
-#																										 
-#																										 
-#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
-#    LICENSE © GNU-GPL3																					 
-#																										 
-##########################################################################################################
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
 
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/empty]
+type = custom/text
+content = " "
+
+content-background = ${color.GREEN}
+content-foreground = ${color.BACKGROUND}
+content-padding = 0
+content-font = 5
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/dots]
+type = custom/text
+content = "  "
+
+content-background = ${color.BACKGROUND}
+content-foreground = ${color.RED}
+content-padding = 0
+content-font = 5
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/pip]
+type = custom/text
+content = "|"
+
+content-background = #0B1521
+content-foreground = #CB42EF
+content-padding = 0
+content-font = 5
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/pipL]
+type = custom/text
+content = "["
+
+; content-background = ${color.BACKGROUND}
+content-foreground = #8632E6
+content-padding = 0
+content-font = 5
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/pipR]
+type = custom/text
+content = "]"
+
+; content-background = ${color.BACKGROUND}
+content-foreground = #8632E6
+content-padding = 0
+content-font = 5
+
+; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/space]
 type = custom/text
@@ -25,17 +71,28 @@ content-background = ${color.background}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/Blankspace]
+[module/Dspace]
 type = custom/text
 content = " "
-content-background = #0C1018
+content-background = #CB42EF
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/spaceB]
+[module/spaceCava]
 type = custom/text
 content = " "
+content-background = ${color.GREEN}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/sep]
+type = custom/text
+;content = ◆
+content = 
+
 content-background = ${color.BACKGROUND}
+content-foreground = ${color.YELLOW}
+content-padding = 1
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -46,18 +103,20 @@ content-background = ${color.BACKGROUND}
 
 [module/LD]
 type = custom/text
-content = "%{T5}█%{T-}"
-
-content-foreground = #0C1018
+content = "%{T5}%{T-}"
+content-background = ${color.background}
+content-foreground = ${color.BGL}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/LT]
+[module/LDmpd]
 type = custom/text
 
-content = "%{T6}%{T5}█%{T-}"
+;content = "%{T5}(|%{T-}"
+content = "%{T5}(%{T-}"
 
-content-foreground = #0C1018
+content-background = ${color.BACKGROUND}
+content-foreground = #989cff
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -68,17 +127,20 @@ content-foreground = #0C1018
 [module/RD]
 type = custom/text
 
-content = "%{T5}█%{T-}"
+;content = "%{T5}█%{T-}"
+content = "%{T5}%{T-}"
 
-content-foreground = #0C1018
+content-background = ${color.background}
+content-foreground = ${color.BGL}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/RT]
+[module/RDmpd]
 type = custom/text
 
-content = "%{T5}█%{T-}"
+content = "%{T5})%{T-}"
+;content = "%{T5}|)%{T-}"
 
-content-foreground = #0C1018
-
+content-background = ${color.BACKGROUND}
+content-foreground = #989cff
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

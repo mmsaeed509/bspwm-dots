@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
+#####################################
+#                                   #
+#  @author      : 00xWolf           #
+#    GitHub    : @mmsaeed509       #
+#    Developer : Mahmoud Mohamed   #
+#  﫥  Copyright : Exodia OS         #
+#                                   #
+#####################################
+
 masked=$(bspc query -N -n .hidden -d focused)
 
 if [ -z "$masked" ]; then
