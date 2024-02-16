@@ -8,7 +8,7 @@
 echo ""
 echo "Installing Xorg Packages.... "
 
-sudo pacman -S --noconfirm --needed xorg-serverxorg-xbacklight xorg-fonts-misc xorg-xfd xorg-xkill xorg-xrandr xorg-xrdb xorg-xset xorg-xev xorg-xmodmap xorg-xwininfo xorg-xsetroot
+sudo pacman -S --noconfirm --needed xorg-server xorg-xbacklight xorg-fonts-misc xorg-xfd xorg-xkill xorg-xrandr xorg-xrdb xorg-xset xorg-xev xorg-xmodmap xorg-xwininfo xorg-xsetroot
 
 echo ""
 echo "Installing GPU/Touchpad/Mouse Drivers ...."
@@ -42,8 +42,14 @@ fi
 echo ""
 echo "Installing WM Packages.... "
 
-sudo pacman -S --noconfirm --needed bspwm wmname sxhkd picom-ibhagwan-git xclip i3-wm
+sudo pacman -S --noconfirm --needed bspwm wmname sxhkd xclip i3-wm
 
+echo ""
+echo "Installing yay.... "
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 
 echo ""
 echo "Installing Networking/wireless Programs.... "
@@ -53,19 +59,19 @@ sudo pacman -S --noconfirm --needed inetutils networkmanager networkmanager-open
 echo ""
 echo "Installing multimedia Programs.... "
 
-sudo pacman -S --noconfirm --needed alsa-plugins alsa-tools alsa-utils pavucontrol pulseaudio pulseaudio-alsa pulseaudio-equalizer-ladspa cava viewnior gwenview ffmpeg ffmpegthumbnailer mpc mpd mplayer ncmpcpp tumbler feh
+sudo pacman -S --noconfirm --needed alsa-plugins alsa-tools alsa-utils pavucontrol pulseaudio pulseaudio-alsa pulseaudio-equalizer-ladspa viewnior gwenview ffmpeg ffmpegthumbnailer mpc mpd mplayer ncmpcpp tumbler feh
 
 
 echo ""
 echo "Installing Files/Terminals/Docs/Editors/Fonts Programs.... "
 
-sudo pacman -S --noconfirm --needed ranger highlight trash-cli ueberzug thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman zip p7zip unzip unrar xarchiver xdg-user-dirs xdg-user-dirs-gtk alacritty xfce4-terminal atril geany geany-plugins vim nvim noto-fonts noto-fonts-emoji terminus-font ttf-dejavu
+sudo pacman -S --noconfirm --needed ranger highlight trash-cli ueberzug thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman zip p7zip unzip unrar xarchiver xdg-user-dirs xdg-user-dirs-gtk alacritty xfce4-terminal atril geany geany-plugins vim neovim noto-fonts noto-fonts-emoji terminus-font ttf-dejavu
 
 
 echo ""
 echo "Installing System Programs.... "
 
-sudo pacman -S --noconfirm --needed  acpi autoconf automake binutils bison calc fakeroot gcc gparted gtk-engine-murrine gvfs gvfs-mtp gvfs-afc gvfs-gphoto2 gvfs-smb gvfs-google inotify-tools jq make patch pkg-config polkit powertop python2 sshfs udisks2 wmctrl xclip xdotool xmlstarlet yad sndio
+sudo pacman -S --noconfirm --needed  acpi autoconf automake binutils bison calc fakeroot gcc gparted gtk-engine-murrine gvfs gvfs-mtp gvfs-afc gvfs-gphoto2 gvfs-smb gvfs-google inotify-tools jq make patch pkg-config polkit powertop sshfs udisks2 wmctrl xclip xdotool xmlstarlet yad sndio
 
 
 echo ""
@@ -76,8 +82,14 @@ sudo pacman -S --noconfirm --needed baobab dialog dunst gpick htop lxappearance 
 echo ""
 echo "Installing AUR Packages.... "
 
-sudo pacman -S --noconfirm --needed betterlockscreen downgrade i3lock-color ksuperkey light networkmanager-dmenu-git obmenu-generator perl-linux-desktopfiles picom-ibhagwan-git polybar timeshift xfce-polkit yay
+yay -S --noconfirm --needed betterlockscreen downgrade i3lock-color ksuperkey light networkmanager-dmenu-git python2 obmenu-generator perl-linux-desktopfiles polybar timeshift xfce-polkit cava
 
+echo ""
+echo "Installing Picom "
+
+git clone https://github.com/ibhagwan/picom-ibhagwan-git.git
+cd picom
+makepkg -si
 
 echo "#################"
 echo "#    D O N E    #"
